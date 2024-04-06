@@ -15,7 +15,6 @@ theme:
     - navigation.footer
     - toc.follow
 
-
 repo_url: https://github.com/opendatasicilia/emergenza-idrica-sicilia
 edit_uri: edit/main/docs/
 
@@ -40,3 +39,5 @@ markdown_extensions:
       anchor_linenums: true
   - pymdownx.smartsymbols
   - pymdownx.snippets
+  - toc:
+      permalink: ↵
