@@ -7,9 +7,9 @@ theme:
   icon:
     logo: material/water
     annotation: material/star-four-points-circle
-    
-  favicon: img/favicon.ico  
-    
+
+  favicon: img/favicon.ico
+
   features:
     - navigation.tracking
     - navigation.tabs
@@ -47,4 +47,4 @@ markdown_extensions:
   - pymdownx.smartsymbols
   - pymdownx.snippets
   - toc:
-      permalink: ↵
+      permalink: true
