@@ -1,6 +1,7 @@
 *.Identifier
 tmp*
 script/output/*
+risorse/*
 
 package-lock.json
 package.json
