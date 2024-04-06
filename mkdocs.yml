@@ -6,6 +6,10 @@ theme:
   language: it
   icon:
     logo: material/water
+    annotation: material/star-four-points-circle
+    
+  favicon: img/favicon.ico  
+    
   features:
     - navigation.tracking
     - navigation.tabs
@@ -21,6 +25,7 @@ edit_uri: edit/main/docs/
 ## Page tree
 nav:
   - Home: index.md
+  - Mappa: mappa/index.md
   - Buone pratiche: buone-pratiche/index.md
   - Documenti utili: documenti-utili/index.md
 
@@ -30,6 +35,8 @@ plugins:
 
 markdown_extensions:
   - admonition
+  - attr_list
+  - md_in_html
   - pymdownx.details
   - pymdownx.superfences
   - pymdownx.caret
