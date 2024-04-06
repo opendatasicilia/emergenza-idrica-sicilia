@@ -13,6 +13,7 @@ theme:
     - search.suggest
     - search.share
     - navigation.footer
+    - toc.follow
 
 
 repo_url: https://github.com/opendatasicilia/emergenza-idrica-sicilia
@@ -21,8 +22,14 @@ edit_uri: edit/main/docs/
 ## Page tree
 nav:
   - Home: index.md
+  - Buone pratiche: buone-pratiche/index.md
   - Documenti utili: documenti-utili/index.md
 
 
 plugins:
 - search
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
