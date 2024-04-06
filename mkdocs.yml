@@ -1,3 +1,4 @@
 site_name: Emergenza idrica in Sicilia
 theme:
   name: material
+  language: it
