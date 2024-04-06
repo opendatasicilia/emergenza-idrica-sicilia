@@ -2,3 +2,6 @@ site_name: Emergenza idrica in Sicilia
 theme:
   name: material
   language: it
+
+
+repo_url: https://github.com/opendatasicilia/emergenza-idrica-sicilia
