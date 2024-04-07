@@ -45,7 +45,7 @@ questo **vademecum,** contenente suggerimenti e buone pratiche (**fonte ENEA**),
 e tecnologie per ottenere un buon risparmio idrico - e anche energetico - soprattutto in ambito
 residenziale.
 
-## Buone pratiche per il risparmio idrico
+## Buone pratiche per il risparmio idrico :pinching_hand_tone4:
 
 1. Controllare l'**efficienza dell'impianto idrico** e verificare la presenza di **eventuali perdite** : con
     un rubinetto che gocciola si possono perdere fino a 5 litri al giorno d'acqua.
