@@ -2,6 +2,8 @@
 hide:
   - navigation
   - toc
+title: Emergenza idrica in Sicilia
+description: Vademecum delle azioni e buone pratiche finalizzate al risparmio idrico potabile ed alla riduzione dei consumi
 ---
 
 !!! note

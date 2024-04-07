@@ -2,6 +2,8 @@
 hide:
   - navigation
   - toc
+title: Emergenza idrica in Sicilia
+description: Mappa e elenco dei Comuni siciliani soggetti alla riduzione della fornitura idrica
 ---
 
 !!! note
