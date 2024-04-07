@@ -2,6 +2,7 @@
 tmp*
 script/output/*
 risorse/*
+.cache/*
 
 package-lock.json
 package.json
