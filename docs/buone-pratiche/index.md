@@ -20,7 +20,7 @@ La quotidianità e la falsa illusione di una risorsa idrica illimitata ci fa con
 necessario. Per ridurre gli sprechi e quindi anche le spese in bolletta, possiamo adottare alcune buone e
 semplici soluzioni volte a limitare l'uso di acqua potabile.
 
-## Quanta acqua usiamo ogni giorno?  :material-water:
+## Quanta acqua usiamo ogni giorno? :material-water-plus:
 
 Ecco alcuni numeri, tratti dalle ricerche portati avanti negli ultimi anni di Università ed Enti Scientifici e di Ricerca, e che forse non tutti sanno:
 
