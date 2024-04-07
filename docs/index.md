@@ -11,10 +11,16 @@ description: Un progetto per la trasparenza e la condivisione di dati sulla cris
 
 La **Sicilia** sta affrontando una grave **crisi** **idrica**, che mette a rischio non solo l'approvvigionamento di acqua per la popolazione ma anche le attività agricole e zootecniche, vitali per l'economia regionale. Questa emergenza è causata da una combinazione di fattori: precipitazioni notevolmente inferiori alla media, temperature più elevate del solito e una gestione delle risorse idriche che stenta a soddisfare le crescenti esigenze.
 
+## La dichiarazione regionale dello stato di emergenza
+
 Il Governo Regionale Siciliano ha avanzato una [richiesta formale per la dichiarazione dello **stato di emergenza nazionale**](./documenti-utili/emergenza_nazionale_art7e24_dlvo2018n1.pdf). L'obiettivo è di poter attivare risorse supplementari e misure straordinarie per combattere questa emergenza.
+
+## Informazione, trasparenza
 
 Un elemento cruciale per affrontare efficacemente questa crisi è l'**informazione**. La **trasparenza** e la **condivisione** di **dati** **aggiornati** sulla situazione idrica sono fondamentali per **sensibilizzare** la **popolazione** sull'urgenza del problema e sull'importanza di un **uso responsabile dell'acqua**.<br>
 La pubblicazione regolare di questi dati, accessibili a tutti, può giocare un ruolo determinante nell'incrementare la consapevolezza collettiva e nel promuovere comportamenti virtuosi da parte dei cittadini.
+
+## Perchè questo sito
 
 Questo sito è stato creato a supporto di un progetto con questi **obiettivi** ideali:
 
