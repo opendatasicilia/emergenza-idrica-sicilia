@@ -1,4 +1,4 @@
-Coordinate,Lat,long,Diga,Fiume,Lago,Comune,Provincia,Capacita,Utilizzazione,Gestore
+coordinate,lat,long,diga,fiume,lago,comune,provincia,capacita,utilizzazione,gestore
 "37.83622226913473, 14.562872780452834",37.83622227,14.56287278,Àncipa,Troina,Lago Àncipa,Cesarò,ME,"30,40",Potabile - Irriguo - Elettrico,E.N.E.L.
 "37.6344907735086, 13.065183892983589",37.63449077,13.06518389,Arancio,Carboj,Lago Arancio,Sambuca di Sicilia,AG,"34,80",Irriguo,Dipartimento dell'acqua e dei rifiuti
 "37.582494138000314, 13.420304304533298",37.58249414,13.4203043,Castello,Magazzolo,Lago di Magazzolo,Bivona,AG,"21,00",Potabile - Irriguo,Dipartimento dell'acqua e dei rifiuti
