@@ -20,7 +20,7 @@ Il Governo Regionale Siciliano ha avanzato una [richiesta formale per la dichiar
 Un elemento cruciale per affrontare efficacemente questa crisi è l'**informazione**. La **trasparenza** e la **condivisione** di **dati** **aggiornati** sulla situazione idrica sono fondamentali per **sensibilizzare** la **popolazione** sull'urgenza del problema e sull'importanza di un **uso responsabile dell'acqua**.<br>
 La pubblicazione regolare di questi dati, accessibili a tutti, può giocare un ruolo determinante nell'incrementare la consapevolezza collettiva e nel promuovere comportamenti virtuosi da parte dei cittadini.
 
-## Perchè questo sito
+## Perché questo sito
 
 Questo sito è stato creato a supporto di un progetto con questi **obiettivi** ideali:
 
