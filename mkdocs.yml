@@ -69,13 +69,13 @@ extra_javascript:
 extra:
   social:
     - icon: fontawesome/brands/x-twitter
-      link: http://twitter.com/opendatasicilia
+      link: https://twitter.com/opendatasicilia
       name: account X
     - icon: fontawesome/brands/facebook
       link: https://www.facebook.com/groups/opendatasicilia/
       name: gruppo facebook
     - icon: fontawesome/brands/telegram
-      link: http://twitter.com/opendatasicilia
+      link: https://t.me/opendatasicilia
       name: gruppo Telegram
     - icon: fontawesome/solid/envelope
       link: https://groups.google.com/forum/#!forum/opendatasicilia
