@@ -4,10 +4,10 @@
 
 Nella realizzazione di questo progetto siamo stati:
 
-  - [Andrea Borruso](https://aborruso.github.io/), che ha dato il via,
-  - [Ciro Spataro](https://cirospat.readthedocs.io/it/latest/), che ha colto il via,
-  - [Giovan Battista Vitrano](https://coseerobe.it/), che con uMap ci prepara anche le ricette,
-  - [Salvatore Fiandaca](https://pigrecoinfinito.com/)
+  - [Andrea Borruso](https://aborruso.github.io/),
+  - [Ciro Spataro](https://cirospat.readthedocs.io/it/latest/),
+  - [Giovan Battista Vitrano](https://coseerobe.it/),
+  - [Salvatore Fiandaca](https://pigrecoinfinito.com/).
 
 ![](https://raw.githubusercontent.com/opendatasicilia/emergenza-idrica-sicilia/main/docs/img/4.png)
 
