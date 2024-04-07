@@ -10,7 +10,7 @@ description: Azioni e buone pratiche finalizzate al risparmio idrico potabile ed
 
     La fonte di questa pagina è l'[ordinanza commissariale n. 1 del 4 aprile 2024](../documenti-utili/risparmio_idrico_azioni_pratiche.pdf), dell'Autorità di Bacino del Distretto Idrografico della Sicilia.
 
-# Vademecum delle azioni e buone pratiche finalizzate al risparmio idrico potabile ed alla riduzione dei consumi
+# Vademecum di azioni e buone pratiche per il risparmio idrico potabile e la riduzione dei consumi
 
 ## L'acqua è senza dubbio uno dei beni più preziosi che possediamo 
 
