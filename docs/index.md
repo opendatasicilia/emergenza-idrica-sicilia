@@ -6,7 +6,7 @@ title: Emergenza idrica in Sicilia
 description: Un progetto per la trasparenza e la condivisione di dati sulla crisi idrica in Sicilia
 ---
 
-![](https://raw.githubusercontent.com/opendatasicilia/emergenza-idrica-sicilia/main/docs/img/water.PNG)
+![](https://raw.githubusercontent.com/opendatasicilia/emergenza-idrica-sicilia/main/docs/img/water-small.png)
 
 # Introduzione
 
