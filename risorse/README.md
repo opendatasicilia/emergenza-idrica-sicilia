@@ -21,12 +21,13 @@
 
 ## volume_invasi_melted
 
-È un file elaborato a partire da dighe_sicilia
+È un file elaborato a partire da dighe_sicilia e arrichhito con i dati scrapati dai [PDF](https://www.regione.sicilia.it/sites/default/files/2024-01/2024.01.01_A_Tabella_volumi_invasi.pdf)
+
 
 | attributo     | descrizione                                                | esempio                               |
 | ------------- | ---------------------------------------------------------- | ------------------------------------- |
 | id            | identificativo univoco                                     | 1                                     |
-| coordinate    | concatenazione delle due coordinate Lat e Long (EPSG:4326) | 37.836222, 14.5628727                 |
+| coordinate    | concatenazione delle due coordinate Lat e Long (EPSG:4326) | 37.836222, 14.562872                  |
 | lat           | latitudine (EPSG:4326)                                     | 37.836222                             |
 | long          | longitudine (EPSG:4326)                                    | 14.562872                             |
 | diga          | nome della diga                                            | Àncipa                                |
@@ -44,12 +45,12 @@
 
 È un file csv estratto dal [PDF](https://www.regione.sicilia.it/sites/default/files/2024-04/Mappa%20pdf.pdf)
 
-| attributo | descrizione                               | esempio |
-| --------- | ----------------------------------------- | ------- |
-| pro_com_t | codice stringa ISTAT                      | 081001  |
-| comune    | denominazione del Comune                  | Alcamo  |
-| provincia | Denominazione della Provincia             | Trapani |
-| sigla     | sigla provincia                           | TP      |
-| riduzione | riduzione fornitura idrica in %           | 10 - 20 |
-| area_kmq  | superficie Comune                         | 130,89  |
-| pop_2024  | popolazione residente ISTAT al 01/01/2024 | 44683   |
+| attributo | descrizione                                    | esempio |
+| --------- | ---------------------------------------------- | ------- |
+| pro_com_t | codice stringa ISTAT                           | 081001  |
+| comune    | denominazione del Comune                       | Alcamo  |
+| provincia | Denominazione della Provincia                  | Trapani |
+| sigla     | sigla provincia                                | TP      |
+| riduzione | riduzione fornitura idrica in %                | 10 - 20 |
+| area_kmq  | superficie Comune                              | 130,89  |
+| pop_2024  | popolazione residente ISTAT al 01/gennaio/2024 | 44683   |
