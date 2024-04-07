@@ -18,6 +18,8 @@ theme:
     - search.share
     - navigation.footer
     - toc.follow
+    - content.action.edit
+    - content.action.view
 
 repo_url: https://github.com/opendatasicilia/emergenza-idrica-sicilia
 edit_uri: edit/main/docs/
