@@ -47,15 +47,15 @@ residenziale.
 
 ## Buone pratiche per il risparmio idrico :pinching_hand_tone4:
 
-1. Controllare l'**efficienza dell'impianto idrico** e verificare la presenza di **eventuali perdite** : con
+1. Controllare l'**efficienza dell'impianto idrico** e verificare la presenza di **eventuali perdite**: con
     un rubinetto che gocciola si possono perdere fino a 5 litri al giorno d'acqua.
 2. **Non fare scorrere inutilmente l'acqua**. L'esempio più classico? Lavarsi i denti con il rubinetto
     aperto, sprecando fino a 30 litri d'acqua, a fronte di un solo litro e mezzo con un utilizzo corretto.
-3. **Razionalizzare gli utilizzi anche in cucina** , usando bacinelle per il lavaggio della verdura
+3. **Razionalizzare gli utilizzi anche in cucina**, usando bacinelle per il lavaggio della verdura
     invece dell'acqua corrente. Attenzione anche quando si lavano i piatti a mano: tenere il rubinetto
     aperto significa lasciare scorrere 12 litri al minuto se non si chiude il rubinetto.
 4. **Scongelare** gli alimenti all'aria ed in una bacinella L'abitudine di lasciarli sotto l'acqua corrente
-    calda o fredda comporta un consumo di circa sei litri al minuto
+    calda o fredda comporta un consumo di circa sei litri al minuto.
 5. **Riutilizzare** l'acqua tolta dall'acquario Si può usare per annaffiare le piante e i fiori in quanto è
     ricca di sostanze fertilizzanti.
 6. Nel caso in cui si usi la lavastoviglie, i piatti possono prima essere **sciacquati con l'acqua di**
@@ -70,7 +70,7 @@ residenziale.
     risparmiare il 50% d'acqua e di regolare la quantità erogata in base al carico. Per avere il massimo
     dell'efficienza e del risparmio, selezionare la modalità eco.
 9. Se possibile utilizzare **rubinetti con sensori o comunque utilizzare dispositivi che riducono**
-    **il flusso dell'acqua (valvole rompigetto).**
+    **il flusso dell'acqua (valvole rompigetto)**.
 10. **Installare sciacquoni a doppio tasto**. In questo modo è possibile risparmiare anche 100 litri
     d'acqua al giorno, considerando che con lo scarico monopulsante si usano fino a 16 litri di acqua.
 11. **Preferire l'uso della doccia a quello della vasca da bagno**. Nel primo caso si usano 40 litri
@@ -86,7 +86,7 @@ residenziale.
     **5)**. L'acqua evaporerà più lentamente, per un risparmio medio complessivo di circa 5-10 mila litri
     all'anno.
 16. **Non utilizzare l'acqua potabile per il lavaggio dei veicoli privati e in ogni caso utilizzando**
-    **il secchio anziché il getto continuo** , in questo modo potremmo risparmiare 400-500 litri.
+    **il secchio anziché il getto continuo**, in questo modo potremmo risparmiare 400-500 litri.
 17. **Non utilizzare l'acqua potabile** per il lavaggio di aree cortilizie e piazzali.
 18. **Non utilizzare l'acqua potabile per alimentare fontane ornamentali, vasche e piscine**. La
     grave crisi che attraversiamo ne impone il non utilizzo.
@@ -94,12 +94,12 @@ residenziale.
     domestici, ad esempio per il ferro da stiro (è molto simile all'acqua distillata o demineralizzata).
 20. **Diversificare l'uso dell'acqua a seconda della sua qualità:** tra acqua potabile, piovana, grigia
     e nera.
-21. Utilizzare, se possibile **, tecnologie per il riutilizzo delle acque** generate dalle operazioni di
+21. Utilizzare, se possibile, **tecnologie per il riutilizzo delle acque** generate dalle operazioni di
     igiene personale (acque grigie).
 22. In giardino, effettuare operazioni sul terreno per **trattenere il più possibile l'acqua**.
 23. Installare **coperture vegetali sui tetti e giardini pensili.** Esse possono assorbire fino al 50% di
     acqua piovana, riducono la possibilità di allagamenti in caso di forti precipitazioni. Non solo: esse
     favoriscono l'isolamento termico del tetto, riducono le polveri sottili e creano un microclima più
     gradevole, con meno calore dovuto all'irraggiamento.
-24. Utilizzare **pavimentazioni drenanti nelle superfici esterne agli edifici** , favorendo la ricarica
+24. Utilizzare **pavimentazioni drenanti nelle superfici esterne agli edifici**, favorendo la ricarica
     delle falde e mitigando l'effetto "isola di calore".
