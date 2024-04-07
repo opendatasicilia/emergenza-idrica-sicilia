@@ -1,3 +1,12 @@
+---
+hide:
+  - navigation
+  - toc
+title: Chi siamo
+description: La comunità di OpenDataSicilia
+---
+
+
 # Informazioni  :information_source:
 
 ## Chi siamo :fontawesome-solid-people-group:
@@ -33,14 +42,14 @@ Siamo tutti appassionati di open data :octicons-book-24: e facciamo parte della 
 
 ## Quando abbiamo iniziato a creare questo progetto  :material-timetable:
 
-Abbiamo avviato il lavoro per realizzare questa guida ad aprile 2024. Il lavoro prosegue nel tempo:
+Abbiamo avviato il lavoro per realizzare questo progetto ad aprile 2024. Il lavoro prosegue nel tempo:
 
-   - soprattutto con i post del blog;
-   - con gli aggiornamenti - ove necessario.
+   - con i post del blog;
+   - con gli aggiornamenti delle informazioni, quando necessario.
 
 
 ## Questa guida è realizzata con  :simple-materialformkdocs:
 
 [![Built with Material for MkDocs](https://img.shields.io/badge/Material_for_MkDocs-526CFE?style=for-the-badge&logo=MaterialForMkDocs&logoColor=white)](https://squidfunk.github.io/mkdocs-material/)
 
-Ci teniamo molto a sottolinearlo perchè è uno strumento davvero eccezionale per la documentazione di progetti :octicons-heart-fill-24:{ .heart }  
+Ci teniamo molto a sottolinearlo perchè è uno strumento davvero eccezionale per la documentazione di progetti.  
