@@ -48,7 +48,7 @@ Abbiamo avviato il lavoro per realizzare questo progetto ad aprile 2024. Il lavo
    - con gli aggiornamenti delle informazioni, quando necessario.
 
 
-## Questa guida è realizzata con  :simple-materialformkdocs:
+## Questo progetto è realizzato con  :simple-materialformkdocs:
 
 [![Built with Material for MkDocs](https://img.shields.io/badge/Material_for_MkDocs-526CFE?style=for-the-badge&logo=MaterialForMkDocs&logoColor=white)](https://squidfunk.github.io/mkdocs-material/)
 
