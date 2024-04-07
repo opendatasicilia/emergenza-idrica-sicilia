@@ -13,10 +13,10 @@ description: La comunità di OpenDataSicilia
 
 Nella realizzazione di questo progetto siamo stati:
 
+  - [Salvatore Fiandaca](https://pigrecoinfinito.com/),
   - [Andrea Borruso](https://aborruso.github.io/),
   - [Ciro Spataro](https://cirospat.readthedocs.io/it/latest/),
-  - [Giovan Battista Vitrano](https://coseerobe.it/),
-  - [Salvatore Fiandaca](https://pigrecoinfinito.com/).
+  - [Giovan Battista Vitrano](https://coseerobe.it/).
 
 ![](https://raw.githubusercontent.com/opendatasicilia/emergenza-idrica-sicilia/main/docs/img/4.png)
 
