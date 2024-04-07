@@ -2,8 +2,8 @@
 hide:
   - navigation
   - toc
-title: Emergenza idrica in Sicilia
-description: Elenco di documenti utili per approfondire il tema dell'emergenza idrica in Sicilia
+title: Documenti utili
+description: Per approfondire il tema dell'emergenza idrica in Sicilia
 ---
 
 # Documenti utili
