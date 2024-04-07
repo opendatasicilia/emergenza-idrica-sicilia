@@ -30,6 +30,6 @@ I primi output di progetto sono:
 
 - la [**Mappa** ed elenco dei **Comuni** siciliani soggetti alla **riduzione** della **fornitura** **idrica**](mappe/riduzione/index.md);
 
-- la [**Mappa** delle pincipali **risorse idriche**, **dighe, laghi e fiumi**](mappe/risorse/index.md)
+- la [**Mappa** delle principali **risorse idriche**, **dighe, laghi e fiumi**](mappe/risorse/index.md)
 - la versione web (in origine è un PDF) del [**Vademecum** delle azioni e **buone** **pratiche** finalizzate al **risparmio** **idrico** potabile ed alla riduzione dei consumi](buone-pratiche/index.md);
 - la raccolta di [**documenti utili ufficiali**](documenti-utili/index.md) correlati, pubblicati da Pubbliche Amministrazioni, aziende e organizzazioni che si occupano della gestione delle risorse idriche in Sicilia.
