@@ -1,0 +1,141 @@
+PRO_COM_T,COMUNE,provincia,sigla,riduzione,area_kmq,pop_2024
+081001,Alcamo,Trapani,TP,10 - 20,130.89,44683
+081002,Buseto Palizzolo,Trapani,TP,10 - 20,72.81,2758
+081003,Calatafimi-Segesta,Trapani,TP,10 - 20,154.86,6056
+081005,Castellammare del Golfo,Trapani,TP,10 - 20,127.32,14660
+081007,Custonaci,Trapani,TP,10 - 20,69.9,5268
+081008,Erice,Trapani,TP,10 - 20,47.34,26002
+081010,Gibellina,Trapani,TP,10 - 20,46.57,3684
+081013,Paceco,Trapani,TP,10 - 20,58.01,10676
+081015,Partanna,Trapani,TP,10 - 20,82.73,9822
+081016,Poggioreale,Trapani,TP,10 - 20,37.46,1291
+081017,Salaparuta,Trapani,TP,10 - 20,41.42,1547
+081018,Salemi,Trapani,TP,10 - 20,182.42,9974
+081019,Santa Ninfa,Trapani,TP,10 - 20,60.94,4728
+081021,Trapani,Trapani,TP,10 - 20,181.04,55218
+081022,Valderice,Trapani,TP,10 - 20,52.96,11389
+081023,Vita,Trapani,TP,10 - 20,9.1,1761
+081025,Misiliscemi,Trapani,TP,10 - 20,92.09,8417
+082001,Alia,Palermo,PA,20 - 30,45.97,3242
+082002,Alimena,Palermo,PA,0 - 10,59.7,1789
+082003,Aliminusa,Palermo,PA,20 - 30,13.68,1021
+082006,Bagheria,Palermo,PA,0 - 10,29.84,53021
+082010,Bisacquino,Palermo,PA,20 - 30,64.97,4059
+082011,Bolognetta,Palermo,PA,0 - 10,27.63,4115
+082012,Bompietro,Palermo,PA,0 - 10,42.41,1153
+082014,Caccamo,Palermo,PA,20 - 30,188.23,7612
+082016,Campofelice di Fitalia,Palermo,PA,0 - 10,35.46,436
+082019,Camporeale,Palermo,PA,10 - 20,38.72,2931
+082020,Capaci,Palermo,PA,0 - 10,6.12,11348
+082021,Carini,Palermo,PA,20 - 30,76.59,40150
+082023,Casteldaccia,Palermo,PA,0 - 10,33.92,11652
+082024,Castellana Sicula,Palermo,PA,0 - 10,73.2,2973
+082026,Cefalà Diana,Palermo,PA,0 - 10,9.06,976
+082029,Chiusa Sclafani,Palermo,PA,10 - 20,57.55,2472
+082032,Collesano,Palermo,PA,30 - 70,108.16,3616
+082034,Corleone,Palermo,PA,0 - 10,229.45,10276
+082036,Gangi,Palermo,PA,20 - 30,127.46,6013
+082039,Giuliana,Palermo,PA,10 - 20,24.14,1672
+082040,Godrano,Palermo,PA,20 - 30,39.2,1019
+082043,Isola delle Femmine,Palermo,PA,0 - 10,3.57,7039
+082045,Lercara Friddi,Palermo,PA,20 - 30,37.49,6113
+082046,Marineo,Palermo,PA,0 - 10,33.22,6063
+082047,Mezzojuso,Palermo,PA,20 - 30,49.25,2578
+082053,Palermo,Palermo,PA,0 - 10,160.59,628894
+082054,Partinico,Palermo,PA,10 - 20,108.06,30746
+082055,Petralia Soprana,Palermo,PA,0 - 10,56.1,2908
+082056,Petralia Sottana,Palermo,PA,0 - 10,178.34,2415
+082057,Piana degli Albanesi,Palermo,PA,0 - 10,64.92,5451
+082058,Polizzi Generosa,Palermo,PA,0 - 10,134.66,2851
+082062,Roccapalumba,Palermo,PA,20 - 30,31.57,2131
+082063,San Cipirello,Palermo,PA,0 - 10,20.85,4884
+082064,San Giuseppe Jato,Palermo,PA,0 - 10,29.78,8019
+082066,Santa Cristina Gela,Palermo,PA,20 - 30,38.74,993
+082067,Santa Flavia,Palermo,PA,0 - 10,14.6,11035
+082076,Valledolmo,Palermo,PA,0 - 10,25.78,3115
+082078,Vicari,Palermo,PA,20 - 30,85.95,2390
+082080,Villafrati,Palermo,PA,30 - 70,25.64,3104
+082082,Blufi,Palermo,PA,0 - 10,21.98,862
+083008,Capizzi,Messina,ME,20 - 30,70.17,2815
+083017,Cesarò,Messina,ME,0 - 10,216.93,2114
+083054,Monforte San Giorgio,Messina,ME,0 - 10,32.26,2448
+083057,Montalbano Elicona,Messina,ME,0 - 10,67.8,2077
+084001,Agrigento,Agrigento,AG,20 - 30,243.5,55317
+084002,Alessandria della Rocca,Agrigento,AG,20 - 30,62.24,2382
+084003,Aragona,Agrigento,AG,20 - 30,74.77,8725
+084004,Bivona,Agrigento,AG,20 - 30,88.57,3129
+084005,Burgio,Agrigento,AG,20 - 30,42.23,2480
+084006,Calamonaci,Agrigento,AG,20 - 30,32.89,1145
+084007,Caltabellotta,Agrigento,AG,20 - 30,124.09,3148
+084008,Camastra,Agrigento,AG,20 - 30,16.32,1992
+084009,Cammarata,Agrigento,AG,20 - 30,192.45,5837
+084010,Campobello di Licata,Agrigento,AG,20 - 30,81.33,9022
+084011,Canicattì,Agrigento,AG,20 - 30,91.86,34447
+084012,Casteltermini,Agrigento,AG,20 - 30,99.98,7212
+084013,Castrofilippo,Agrigento,AG,20 - 30,18.08,2593
+084014,Cattolica Eraclea,Agrigento,AG,20 - 30,62.16,3249
+084015,Cianciana,Agrigento,AG,20 - 30,38.08,3040
+084016,Comitini,Agrigento,AG,20 - 30,21.89,846
+084017,Favara,Agrigento,AG,20 - 30,83.62,31451
+084018,Grotte,Agrigento,AG,20 - 30,23.98,5140
+084019,Joppolo Giancaxio,Agrigento,AG,20 - 30,19.14,1061
+084021,Licata,Agrigento,AG,20 - 30,179.95,34189
+084022,Lucca Sicula,Agrigento,AG,20 - 30,18.63,1697
+084023,Menfi,Agrigento,AG,20 - 30,113.58,11817
+084024,Montallegro,Agrigento,AG,20 - 30,27.41,2349
+084025,Montevago,Agrigento,AG,10 - 20,32.91,2661
+084026,Naro,Agrigento,AG,20 - 30,207.49,7034
+084027,Palma di Montechiaro,Agrigento,AG,20 - 30,77.06,21336
+084028,Porto Empedocle,Agrigento,AG,20 - 30,25.23,15584
+084029,Racalmuto,Agrigento,AG,20 - 30,68.1,7531
+084030,Raffadali,Agrigento,AG,20 - 30,22.3,11855
+084031,Ravanusa,Agrigento,AG,20 - 30,49.5,10259
+084032,Realmonte,Agrigento,AG,20 - 30,20.37,4378
+084033,Ribera,Agrigento,AG,20 - 30,118.52,17761
+084034,Sambuca di Sicilia,Agrigento,AG,20 - 30,96.37,5321
+084035,San Biagio Platani,Agrigento,AG,20 - 30,42.67,2829
+084036,San Giovanni Gemini,Agrigento,AG,20 - 30,26.56,7469
+084037,Santa Elisabetta,Agrigento,AG,20 - 30,16.17,2184
+084038,Santa Margherita di Belice,Agrigento,AG,10 - 20,67.28,5958
+084039,Sant'Angelo Muxaro,Agrigento,AG,20 - 30,64.52,1168
+084040,Santo Stefano Quisquina,Agrigento,AG,20 - 30,85.52,3998
+084041,Sciacca,Agrigento,AG,20 - 30,191.67,38712
+084042,Siculiana,Agrigento,AG,20 - 30,40.99,4159
+084043,Villafranca Sicula,Agrigento,AG,20 - 30,17.63,1320
+085001,Acquaviva Platani,Caltanissetta,CL,30 - 70,14.63,855
+085002,Bompensiere,Caltanissetta,CL,30 - 70,19.95,479
+085003,Butera,Caltanissetta,CL,30 - 70,298.52,4123
+085004,Caltanissetta,Caltanissetta,CL,10 - 20,421.25,58342
+085005,Campofranco,Caltanissetta,CL,30 - 70,36.11,2596
+085006,Delia,Caltanissetta,CL,30 - 70,12.4,3864
+085007,Gela,Caltanissetta,CL,20 - 30,279.22,70811
+085008,Marianopoli,Caltanissetta,CL,0 - 10,13.07,1561
+085009,Mazzarino,Caltanissetta,CL,20 - 30,295.59,10827
+085010,Milena,Caltanissetta,CL,30 - 70,24.63,2660
+085011,Montedoro,Caltanissetta,CL,10 - 20,14.53,1356
+085012,Mussomeli,Caltanissetta,CL,30 - 70,164.42,9919
+085014,Resuttano,Caltanissetta,CL,0 - 10,38.27,1717
+085015,Riesi,Caltanissetta,CL,20 - 30,67,10401
+085016,San Cataldo,Caltanissetta,CL,10 - 20,72.77,20659
+085017,Santa Caterina Villarmosa,Caltanissetta,CL,0 - 10,75.81,4578
+085018,Serradifalco,Caltanissetta,CL,30 - 70,41.94,5454
+085019,Sommatino,Caltanissetta,CL,30 - 70,34.76,6339
+085020,Sutera,Caltanissetta,CL,30 - 70,35.58,1162
+085021,Vallelunga Pratameno,Caltanissetta,CL,10 - 20,39.37,3057
+085022,Villalba,Caltanissetta,CL,10 - 20,41.82,1390
+086001,Agira,Enna,EN,20 - 30,164.08,7593
+086003,Assoro,Enna,EN,20 - 30,112.15,4772
+086004,Barrafranca,Enna,EN,20 - 30,53.71,11617
+086005,Calascibetta,Enna,EN,20 - 30,89.12,4031
+086008,Cerami,Enna,EN,20 - 30,95.05,1850
+086009,Enna,Enna,EN,20 - 30,358.74,25367
+086010,Gagliano Castelferrato,Enna,EN,20 - 30,56.24,3201
+086011,Leonforte,Enna,EN,20 - 30,84.39,12183
+086012,Nicosia,Enna,EN,20 - 30,218.51,12589
+086013,Nissoria,Enna,EN,20 - 30,61.82,2828
+086014,Piazza Armerina,Enna,EN,20 - 30,304.54,20709
+086015,Pietraperzia,Enna,EN,20 - 30,118.11,6304
+086017,Sperlinga,Enna,EN,20 - 30,59.14,675
+086018,Troina,Enna,EN,20 - 30,168.28,8423
+086019,Valguarnera Caropepe,Enna,EN,20 - 30,9.41,6837
+086020,Villarosa,Enna,EN,20 - 30,54.89,4328
