@@ -1,10 +1,8 @@
 # LEGGIMI
 
-## Dighe_Sicilia
+## dighe_sicilia
 
 È un file csv estratto dal [PDF](https://www.regione.sicilia.it/sites/default/files/2024-01/2024.01.01_A_Tabella_volumi_invasi.pdf)
-
-dove:
 
 | attributo     | descrizione                                                | esempio                               |
 | ------------- | ---------------------------------------------------------- | ------------------------------------- |
@@ -20,7 +18,7 @@ dove:
 | utilizzazione | come viene utilizzata l'acqua della diga                   | Potabile - Irriguo - Elettrico        |
 | gestore       | gestore della diga                                         | Dipartimento dell'acqua e dei rifiuti |
 
-## Riduzione_idrica_datawrapper
+## riduzione_idrica_datawrapper
 
 È un file csv estratto dal [PDF](https://www.regione.sicilia.it/sites/default/files/2024-04/Mappa%20pdf.pdf)
 
