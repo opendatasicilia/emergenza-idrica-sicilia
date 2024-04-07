@@ -4,8 +4,6 @@
 
 È un file csv estratto dal [PDF](https://www.regione.sicilia.it/sites/default/files/2024-01/2024.01.01_A_Tabella_volumi_invasi.pdf)
 
-dove:
-
 | attributo     | descrizione                                                | esempio                               |
 | ------------- | ---------------------------------------------------------- | ------------------------------------- |
 | coordinate    | concatenazione delle due coordinate Lat e Long (EPSG:4326) | 37.836222, 14.5628727                 |
