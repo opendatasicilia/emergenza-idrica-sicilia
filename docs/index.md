@@ -11,7 +11,7 @@ description: Un progetto per la trasparenza e la condivisione di dati sulla cris
 
 La **Sicilia** sta affrontando una grave **crisi** **idrica**, che mette a rischio non solo l'approvvigionamento di acqua per la popolazione ma anche le attività agricole e zootecniche, vitali per l'economia regionale. Questa emergenza è causata da una combinazione di fattori: precipitazioni notevolmente inferiori alla media, temperature più elevate del solito e una gestione delle risorse idriche che stenta a soddisfare le crescenti esigenze.
 
-## La dichiarazione regionale dello stato di emergenza
+## La dichiarazione regionale dello stato di emergenza del 2024
 
 Il Governo Regionale Siciliano ha avanzato una [richiesta formale per la dichiarazione dello **stato di emergenza nazionale**](./documenti-utili/emergenza_nazionale_art7e24_dlvo2018n1.pdf). L'obiettivo è di poter attivare risorse supplementari e misure straordinarie per combattere questa emergenza.
 
