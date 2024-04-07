@@ -12,15 +12,17 @@ description: Azioni e buone pratiche finalizzate al risparmio idrico potabile ed
 
 # Vademecum delle azioni e buone pratiche finalizzate al risparmio idrico potabile ed alla riduzione dei consumi
 
-**L'acqua è senza dubbio uno dei beni più preziosi che possediamo**. Una risorsa però non
-inesauribile, che è fondamentale non sprecare. Sono tante le occasioni quotidiane in cui l'utilizzo è
+## L'acqua è senza dubbio uno dei beni più preziosi che possediamo 
+
+Una risorsa però non inesauribile, che è fondamentale non sprecare. Sono tante le occasioni quotidiane in cui l'utilizzo è
 continuo e costante: dall'igiene personale alle pulizie di casa fino all'irrigazione delle piante e del giardino.
 La quotidianità e la falsa illusione di una risorsa idrica illimitata ci fa consumare molta più acqua del
 necessario. Per ridurre gli sprechi e quindi anche le spese in bolletta, possiamo adottare alcune buone e
 semplici soluzioni volte a limitare l'uso di acqua potabile.
 
-**Quanta acqua usiamo ogni giorno?** Ecco alcuni numeri, tratti dalle ricerche portati avanti negli ultimi
-anni di Università ed Enti Scientifici e di Ricerca, e che forse non tutti sanno:
+## Quanta acqua usiamo ogni giorno?
+
+Ecco alcuni numeri, tratti dalle ricerche portati avanti negli ultimi anni di Università ed Enti Scientifici e di Ricerca, e che forse non tutti sanno:
 
 - **30 litri** : È lo spreco di acqua se si lascia il rubinetto aperto per tre minuti mentre ci si lava i denti;
 - **20 litri** : È lo spreco quando facciamo scorrere acqua per sciacquare il rasoio mentre ci si rade;
