@@ -63,3 +63,23 @@ markdown_extensions:
 
 extra_javascript:
   - javascripts/varie.js
+  
+  
+## Social Media
+extra:
+  social:
+    - icon: fontawesome/brands/x-twitter
+      link: http://twitter.com/opendatasicilia
+      name: account X
+    - icon: fontawesome/brands/facebook
+      link: https://www.facebook.com/groups/opendatasicilia/
+      name: gruppo facebook
+    - icon: fontawesome/brands/telegram
+      link: http://twitter.com/opendatasicilia
+      name: gruppo Telegram
+    - icon: fontawesome/solid/envelope
+      link: https://groups.google.com/forum/#!forum/opendatasicilia
+      name: mailing list OpenDataSicilia
+    - icon: fontawesome/brands/creative-commons
+      link: https://creativecommons.org/licenses/by-sa/4.0/deed.it
+      name: Attribuzione - Condividi allo stesso modo 4.0 Internazionale (CC BY-SA 4.0)       
