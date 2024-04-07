@@ -6,6 +6,7 @@
 
 | attributo     | descrizione                                                | esempio                               |
 | ------------- | ---------------------------------------------------------- | ------------------------------------- |
+| id            | identificativo univoco                                     | 1                                     |
 | coordinate    | concatenazione delle due coordinate Lat e Long (EPSG:4326) | 37.836222, 14.5628727                 |
 | lat           | latitudine (EPSG:4326)                                     | 37.836222                             |
 | long          | longitudine (EPSG:4326)                                    | 14.562872                             |
