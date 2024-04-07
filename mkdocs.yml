@@ -32,6 +32,7 @@ nav:
 
 plugins:
 - search
+- social
 
 markdown_extensions:
   - admonition
