@@ -42,3 +42,15 @@ description: Dal documento del Comm Straord. Naz. interventi urgenti per scarsit
 | Siciliacque SpA | Manutenzione straordinaria del sistema di approvvigionamento primario della Sicilia centromeridionale | 1 | 49.194.059 |
 | Siciliacque SpA | Nuova bretella serbatoio San Leo di Gela - Potabilizzatore di Gela | 1 | 12.067.242 |
 |  | **Totale interventi** | **27** | **829.137.753** |
+
+## Nota
+
+Nel documento del 27 febbraio 2024 del Commissario Straordinario Nazionale per l’adozione di interventi urgenti connessi al fenomeno della scarsità idrica, nella "Premessa", a pagina 5, è specificato quanto segue in merito alla realizzazione degli interventi:
+
+*"In questo contesto di riferimento si inquadra anche la logica che ha mosso il Commissario
+nell’avvalersi delle sette Autorità di bacino distrettuali, con l’intento di presentare una “Prima
+proposta d’azione alla cabina di regia (PPAC)”, suggerendo di utilizzare le risorse a tal
+riguardo messe a disposizione dal MIT, nell’ambito della più ampia programmazione
+incardinata sul “Piano nazionale di interventi infrastrutturali e per la sicurezza nel settore
+idrico” (di seguito PNIISSI), che rappresenta una preziosa opportunità per la realizzazione e
+la manutenzione di infrastrutture idriche strategiche per l’approvvigionamento d’acqua."*
