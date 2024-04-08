@@ -48,7 +48,6 @@ description: Dal documento del Comm Straord. Naz. interventi urgenti per scarsit
 ### Nota
 
 Nel documento del 27 febbraio 2024 del Commissario Straordinario Nazionale per l’adozione di interventi urgenti connessi al fenomeno della scarsità idrica, nella "Premessa", a pagina 5, è specificato quanto segue in merito alla realizzazione degli interventi:
-
 *"In questo contesto di riferimento si inquadra anche la logica che ha mosso il Commissario
 nell’avvalersi delle sette Autorità di bacino distrettuali, con l’intento di presentare una “Prima
 proposta d’azione alla cabina di regia (PPAC)”, suggerendo di utilizzare le risorse a tal
