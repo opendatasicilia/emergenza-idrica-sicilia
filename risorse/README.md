@@ -54,3 +54,7 @@
 | riduzione | riduzione fornitura idrica in %                | 10 - 20 |
 | area_kmq  | superficie Comune                              | 130,89  |
 | pop_2024  | popolazione residente ISTAT al 01/gennaio/2024 | 44683   |
+
+## cartella pdf
+
+Contiene tutti i pdf delle tabelle e grafici degli invasi dal 2011 al 2024
