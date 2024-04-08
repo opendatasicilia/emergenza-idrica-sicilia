@@ -5,11 +5,12 @@ hide:
 title: Emergenza idrica in Sicilia
 description: Un progetto per la trasparenza e la condivisione di dati sulla crisi idrica in Sicilia
 ---
-
-
-# Introduzione
+# La crisi idrica
 
 2024, la **Sicilia** sta affrontando una grave **crisi** **idrica**, che mette a rischio non solo l'approvvigionamento di acqua per la popolazione ma anche le attività agricole e zootecniche, vitali per l'economia regionale. Questa emergenza è causata da una combinazione di fattori: precipitazioni notevolmente inferiori alla media, temperature più elevate del solito e una gestione delle risorse idriche che stenta a soddisfare le crescenti esigenze.
+
+![Emergenza idrica in Sicilia](img/sicilia_01.png "Emergenza idrica in Sicilia"){ width="458" height="328" style="display: block; margin: 0 auto" }
+
 
 ## La dichiarazione regionale dello stato di emergenza (aprile 2024)
 
@@ -38,4 +39,5 @@ I primi output di progetto sono:
 - la [**Mappa** delle principali **risorse idriche**, **dighe, laghi e fiumi**](mappe/risorse/index.md)
 - la [**Mappa** delle **dighe** e prostetto dei **volumi invasati**](mappe/volumi/index.md)
 - la versione web (in origine è un PDF) del [**Vademecum** delle azioni e **buone** **pratiche** finalizzate al **risparmio** **idrico** potabile ed alla riduzione dei consumi](buone-pratiche/index.md);
-- la raccolta di [**documenti utili ufficiali**](documenti-utili/index.md) correlati, pubblicati da Pubbliche Amministrazioni, aziende e organizzazioni che si occupano della gestione delle risorse idriche in Sicilia.
+- la raccolta di [**documenti utili ufficiali**](documenti-utili/index.md) correlati, pubblicati da Pubbliche Amministrazioni, aziende e organizzazioni che si occupano della gestione delle risorse idriche in Sicilia;
+- l'[**elenco degli interventi prioritari**](documenti-utili/interventi-prioritari.md).
