@@ -5,9 +5,9 @@
 
 Roma, 27 febbraio 2024.
 
-**ANNESSO II – ELENCO DEGLI INTERVENTI PRIORITARI PER LA SICILIA**
+**ANNESSO II – Elenco degli interventi prioritari per la Sicilia**
 
-| Soggetto attuatore | Titolo intervento | n. interventi | Importo fabbisogno |
+| Soggetto attuatore | Titolo intervento | n. interventi | Importo fabbisogno (€) |
 | --- | --- | --- | --- |
 | CdB 1 Trapani | Interconnessione del Sistema Garcia-Arancio con il sistema irriguo alimentato dalla Diga Trinità. | 1 | 18.000.000 |
 | CdB 1 Trapani | Interconnessione Diga Rubino con vasca di carico stazione di rilascio Castellaccio-Paceco | 1 | 28.600.000 |
@@ -36,4 +36,4 @@ Roma, 27 febbraio 2024.
 | Siciliacque SpA | Automazione, controllo, modellazione e monitoraggio dell'infrastruttura idropotabile sovrambito della Regione Sicilia | 1 | 50.000.000 |
 | Siciliacque SpA | Manutenzione straordinaria del sistema di approvvigionamento primario della Sicilia centromeridionale | 1 | 49.194.059 |
 | Siciliacque SpA | Nuova bretella serbatoio San Leo di Gela - Potabilizzatore di Gela | 1 | 12.067.242 |
-|  | Totale interventi | 27 | 829.137.753 |
+|  | **Totale interventi** | **27** | **829.137.753** |
