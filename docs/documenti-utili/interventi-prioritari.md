@@ -61,7 +61,7 @@ la manutenzione di infrastrutture idriche strategiche per l’approvvigionamento
 
 ## Progetti PNRR finanziati alla Sicilia nell’ambito del settore idrico
 
-Dal sito del [Dipartimento per le opere pubbliche, le politiche abitative e urbane, le infrastrutture idriche e le risorse umane e strumentali](https://dgdighe.mit.gov.it/categoria/_investimenti/_Programmazione/_PNRR), è stato possibile consultare i decreti di finanziamento del PNRR [misure 4.1](https://dgdighe.mit.gov.it/categoria/articolo/_investimenti/_Programmazione/_PNRR/misura_4_1_) (Investimenti in infrastrutture idriche primarie per la sicurezza dell'approvvigionamento idrico) e [4.2](https://dgdighe.mit.gov.it/categoria/articolo/_investimenti/_Programmazione/_PNRR/misura_4_2_) (Riduzione delle perdite nelle reti di distribuzione dell'acqua, compresa la digitalizzazione e il monitoraggio delle reti).
+Dal sito del [Dipartimento per le opere pubbliche, le politiche abitative e urbane, le infrastrutture idriche e le risorse umane e strumentali](https://dgdighe.mit.gov.it/categoria/_investimenti/_Programmazione/_PNRR), è stato possibile consultare i decreti di finanziamento del PNRR misure [**4.1**](https://dgdighe.mit.gov.it/categoria/articolo/_investimenti/_Programmazione/_PNRR/misura_4_1_) (**Investimenti in infrastrutture idriche primarie per la sicurezza dell'approvvigionamento idrico**) e [**4.2**](https://dgdighe.mit.gov.it/categoria/articolo/_investimenti/_Programmazione/_PNRR/misura_4_2_) (**Riduzione delle perdite nelle reti di distribuzione dell'acqua, compresa la digitalizzazione e il monitoraggio delle reti**).
 
 Dai decreti sono state estratte le informazioni e dati dei progetti finanziati alla Sicilia ed è stata costruita una tabella che si riporta:
 
