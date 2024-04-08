@@ -6,11 +6,13 @@ title: Interventi prioritari per la Sicilia
 description: Dal documento del Comm Straord. Naz. interventi urgenti per scarsità idrica
 ---
 
-# Commissario Straordinario Nazionale per l’adozione di interventi urgenti connessi al fenomeno della scarsità idrica.
+# Interventi
+
+## Commissario Straordinario Nazionale per l’adozione di interventi urgenti connessi al fenomeno della scarsità idrica.
 
 [**2° Relazione alla cabina di regia ai sensi dell’articolo 1, comma 11 del decreto legge 14 aprile 2023, n. 39, convertito con modificazioni dalla legge 13 giugno 2023, n. 68**](https://opendatasicilia.github.io/emergenza-idrica-sicilia/documenti-utili/relazione_cabina-regia_commissario-straordinario-nazionale_interventi-scarsita-idrica.pdf#page=116).  <kbd>Roma, 27 febbraio 2024</kbd>
 
-## ANNESSO II – Elenco degli interventi prioritari per la Sicilia
+### ANNESSO II – Elenco degli interventi prioritari per la Sicilia
 
 | Soggetto attuatore | Titolo intervento | n. interventi | Importo fabbisogno (€) |
 | --- | --- | --- | --- |
@@ -43,7 +45,7 @@ description: Dal documento del Comm Straord. Naz. interventi urgenti per scarsit
 | Siciliacque SpA | Nuova bretella serbatoio San Leo di Gela - Potabilizzatore di Gela | 1 | 12.067.242 |
 |  | **Totale interventi** | **27** | **829.137.753** |
 
-## Nota
+### Nota
 
 Nel documento del 27 febbraio 2024 del Commissario Straordinario Nazionale per l’adozione di interventi urgenti connessi al fenomeno della scarsità idrica, nella "Premessa", a pagina 5, è specificato quanto segue in merito alla realizzazione degli interventi:
 
@@ -54,3 +56,36 @@ riguardo messe a disposizione dal MIT, nell’ambito della più ampia programmaz
 incardinata sul “Piano nazionale di interventi infrastrutturali e per la sicurezza nel settore
 idrico” (di seguito PNIISSI), che rappresenta una preziosa opportunità per la realizzazione e
 la manutenzione di infrastrutture idriche strategiche per l’approvvigionamento d’acqua."*
+
+</br> </br>
+
+## Progetti PNRR finanziati alla Sicilia nell’ambito del settore idrico
+
+Dal sito del [Dipartimento per le opere pubbliche, le politiche abitative e urbane, le infrastrutture idriche e le risorse umane e strumentali](https://dgdighe.mit.gov.it/categoria/_investimenti/_Programmazione/_PNRR), è stato possibile consultare i decreti di finanziamento del PNRR [misure 4.1](https://dgdighe.mit.gov.it/categoria/articolo/_investimenti/_Programmazione/_PNRR/misura_4_1_) (Investimenti in infrastrutture idriche primarie per la sicurezza dell'approvvigionamento idrico) e [4.2](https://dgdighe.mit.gov.it/categoria/articolo/_investimenti/_Programmazione/_PNRR/misura_4_2_) (Riduzione delle perdite nelle reti di distribuzione dell'acqua, compresa la digitalizzazione e il monitoraggio delle reti).
+
+Dai decreti sono state estratte le informazioni e dati dei progetti finanziati alla Sicilia ed è stata costruita una tabella che si riporta:
+
+| PNRR misura | decreto | allegato | Soggetto proponente | Soggetto attuatore | Titolo intervento | Costo intervento | Finanziamento ammissibile PNRR | CUP |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 4.1 - M2C4-I.4.1 Investimenti in infrastrutture idriche primarie per la sicurezza dell'approvvigionamento idrico | DM 517_2021 | 1 |  | AMAP S.p.A. | Potabilizzatore Presidiana | €25.000.000,00 | €23.950.000,00 | D89B20000000008 |
+| 4.1 - M2C4-I.4.1 Investimenti in infrastrutture idriche primarie per la sicurezza dell'approvvigionamento idrico | DM 517_2021 | 1 |  | Siciliacque S.p.A | Interventi per il potenziamento del sistema idrico della Sicilia sud-occidentale: Volumi compenso sistemi Garcia, Montescuro Ovest, Favara di Burgio | €12.799.005,00 | €10.000.000,00 | C41B21006990001 |
+| 4.1 - M2C4-I.4.1 Investimenti in infrastrutture idriche primarie per la sicurezza dell'approvvigionamento idrico | DM 517_2021 | 2 |  | AMAP S.p.A | Potabilizzatore Jato - Rifacimento | €24.400.000,00 | €23.446.000,00 | D89B20000010008 |
+| 4.1 - M2C4-I.4.1 Investimenti in infrastrutture idriche primarie per la sicurezza dell'approvvigionamento idrico | DM 517_2021 | 2 |  | Siciliacque S.p.A. | Raddoppio del II tratto dell'acquedotto Garcia dalla vasca di disconnessione al potabilizzatore Garcia di Sambuca di Sicilia e revamping della stazione di sollevamento Garcia | €8.412.100,00 | €6.895.163,67 | C61B12000670001 |
+| 4.1 - M2C4-I.4.1 Investimenti in infrastrutture idriche primarie per la sicurezza dell'approvvigionamento idrico | DM 517_2021 | 2 |  | Siciliacque S.p.A. | Interventi per il potenziamento del sistema idrico della Sicilia sud-occidentale: Adduzione da Montescuro Ovest per Mazara, Petrosino, Marsala | €62.200.000,00 | €54.080.153,22 | C21B21012820001 |
+| 4.1 - M2C4-I.4.1 Investimenti in infrastrutture idriche primarie per la sicurezza dell'approvvigionamento idrico | DM 517_2021 | 3 |  | ENEL GREEN POWER ITALIA SRL | Realizzazione Nuovo Scarico di Fondo della Diga Pozzillo | €25.000.000,00 | €25.000.000,00 | E53E18001100001 |
+| 4.1 - M2C4-I.4.1 Investimenti in infrastrutture idriche primarie per la sicurezza dell'approvvigionamento idrico | DM 517_2021 | 3 |  | Regione Siciliana | Adduttore alle zone irrigue dipendenti dal serbatoio "Castello" - 1° tronco dalla Diga di Castello alla diramazione Tavernola - progetto di completamento | €8.250.000,00 | €8.250.000,00 | G98H19000020001 |
+| 4.1 - M2C4-I.4.1 Investimenti in infrastrutture idriche primarie per la sicurezza dell'approvvigionamento idrico | DM 517_2021 | 3 |  | Regione Siciliana | Diga Rosamarina - Lavori di adeguamento del sistema di tenuta e drenaggio della diga e il miglioramento delle opere utili alla gestione dell'infrastruttura | €8.000.000,00 | €8.000.000,00 | G49E18000010001 |
+| 4.1 - M2C4-I.4.1 Investimenti in infrastrutture idriche primarie per la sicurezza dell'approvvigionamento idrico | DM 517_2021 | 3 |  | Regione Siciliana | Diga Olivo - Manutenzione straordinaria scarichi e sistema di tenuta | €20.000.000,00 | €20.000.000,00 | G39E18000020001 |
+| 4.1 - M2C4-I.4.1 Investimenti in infrastrutture idriche primarie per la sicurezza dell'approvvigionamento idrico | DM 517_2021 | 3 |  | Regione Siciliana | Diga Pietrarossa - Interventi per il completamento della diga | €60.000.000,00 | €60.000.000,00 | G95E18000180001 |
+| 4.2 - M2C4-I4.2 Riduzione delle perdite nelle reti di distribuzione dell'acqua, compresa la digitalizzazione e il monitoraggio delle reti | DD n.181_24.03.2023 |  | Assemblea Territoriale Idrica di Catania | Acoset S.p.A | Riduzione delle perdite nelle reti di distribuzione dell'acqua, compresa la digitalizzazione e il monitoraggio delle reti idriche gestite da Acoset S.p.A. | €19.493.682,20 | €15.993.682,20 | H71D22000080003 |
+| 4.2 - M2C4-I4.2 Riduzione delle perdite nelle reti di distribuzione dell'acqua, compresa la digitalizzazione e il monitoraggio delle reti | DD n.181_24.03.2023 |  | Assemblea Territoriale Idrica 1 Palermo | Unione Comuni Madonie: Caltavuturo, Campofelice Roccella, Castelbuono, Collesano, Gangi, Geraci Siculo, Gratteri, Isnello, PetraliaSoprana, PetraliaSottana, Polizzi Generosa, Pollina, Scillato, Sclafani Bagni | PROGETTO DI MAPPATURA, MODELLIZZAZIONE, RICERCA PERDITE E INTERVENTI DI DISTRETTUALIZZAZIONE E DI MANUTENZIONE E RIPRISTINO PER L’EFFICIENTAMENTO DELLE RETI DI APPROVVIGIONAMENTO IDRICO UNIONE MADONIE | €17.398.325,00 | €15.794.690,50 | B37J22000030006 |
+| 4.2 - M2C4-I4.2 Riduzione delle perdite nelle reti di distribuzione dell'acqua, compresa la digitalizzazione e il monitoraggio delle reti | DD n.181_24.03.2023 |  | Assemblea Territoriale Idrica di Catania | Acque Aurora S.r.l. | Progetto di riduzione delle perdite nelle reti di distribuzione dell’acqua gestite da Reti Acquedotti Riuniti Srl - Intervento 2 gestore Acque Aurora Srl | €793.044,15 | €693.044,15 | G27J22000000004 |
+| 4.2 - M2C4-I4.2 Riduzione delle perdite nelle reti di distribuzione dell'acqua, compresa la digitalizzazione e il monitoraggio delle reti | DD n.181_24.03.2023 |  | Assemblea Territoriale Idrica di Catania | Comune di Bronte | PROGETTO PER LA RIDUZIONE DELLE PERDITE DELLE RETI DI DISTRIBUZIONE DELL’ACQUA COMPRESA LA DIGITALIZZAZIONE E IL MONITORAGGIO DELLE RETI GESTITE DAL COMUNE DI BRONTE (CT) | €3.496.866,00 | €3.440.916,00 | D91D22000070006 |
+| 4.2 - M2C4-I4.2 Riduzione delle perdite nelle reti di distribuzione dell'acqua, compresa la digitalizzazione e il monitoraggio delle reti | DD n.181_24.03.2023 |  | Assemblea Territoriale Idrica di Catania | Sidra S.p.A. | COMPLETAMENTO DEGLI INTERVENTI PER LA RIDUZIONE DELLE PERDITE NELLE RETI DI DISTRIBUZIONE DELL’ACQUA, COMPRESA LA DIGITALIZZAZIONE ED IL MONITORAGGIO DELLE RETI - GESTORE SIDRA SPA | €34.340.679,00 | €31.000.000,00 | H81D22000010004 |
+| 4.2 - M2C4-I4.2 Riduzione delle perdite nelle reti di distribuzione dell'acqua, compresa la digitalizzazione e il monitoraggio delle reti | DD n.181_24.03.2023 |  | Assemblea Territoriale Idrica 1 Palermo | AMAP spa | Completamento della nuova rete idrica di Palermo: condotte di alimentazione primaria dai Serbatoi, rinnovo del piping dei serbatoi e rete di distribuzione in dx Oreto | €49.550.000,00 | €49.550.000,00 | D75H22000010002 |
+| 4.2 - M2C4-I4.2 Riduzione delle perdite nelle reti di distribuzione dell'acqua, compresa la digitalizzazione e il monitoraggio delle reti | DD n.181_24.03.2023 |  | Assemblea Territoriale Idrica di Catania | Servizi Idrici Etnei S.p.A. | Progetto di riduzione delle perdite nelle reti di distribuzioni dell’acqua gestite da SERVIZI IDRICI ETNEI S.p.A. | €16.899.026,60 | €16.730.036,00 | I44G22000000006 |
+| 4.2 - M2C4-I4.2 Riduzione delle perdite nelle reti di distribuzione dell'acqua, compresa la digitalizzazione e il monitoraggio delle reti | DD n.181_24.03.2023 |  | Assemblea Territoriale Idrica di Catania | Sogip e Ama Rete di'imprese | PROGETTO DI COMPLETAMENTO DELLA DIGITALIZZAZIONE E LA RIDUZIONE DELLE PERDITE DELLE RETI DI DISTRIBUZIONE GESTITE DA SO.G.I.P. e A.M.A. | €13.300.000,00 | €13.000.000,00 | E62E22000670003 |
+| 4.2 - M2C4-I4.2 Riduzione delle perdite nelle reti di distribuzione dell'acqua, compresa la digitalizzazione e il monitoraggio delle reti | Decreto n. 594_24.08.2022 |  | ATI MESSINA | A.M.A.M. Azienda Meridionale Acque Messina S.p.A. | INTERVENTI DI RAZIONALIZZAZIONE, EFFICIENTAMENTO E RIDUZIONE DELLE PERDITE DELLE RETI IDRICHE INTERNE DI MESSINA | €20.727.496,65 | €17.217.565,96 | F49J21017740006 |
+|  |  |  |  |  |  | €430.060.224,60 | €403.041.251,70 |  |
+
+
