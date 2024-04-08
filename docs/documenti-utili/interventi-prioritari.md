@@ -86,6 +86,6 @@ Dai decreti sono state estratte le informazioni e dati dei progetti finanziati a
 | 4.2 | DD n.181_24.03.2023 |  | Assemblea Territoriale Idrica di Catania | Servizi Idrici Etnei S.p.A. | Progetto di riduzione delle perdite nelle reti di distribuzioni dell’acqua gestite da SERVIZI IDRICI ETNEI S.p.A. | €16.899.026,60 | €16.730.036,00 | I44G22000000006 |
 | 4.2 | DD n.181_24.03.2023 |  | Assemblea Territoriale Idrica di Catania | Sogip e Ama Rete di'imprese | PROGETTO DI COMPLETAMENTO DELLA DIGITALIZZAZIONE E LA RIDUZIONE DELLE PERDITE DELLE RETI DI DISTRIBUZIONE GESTITE DA SO.G.I.P. e A.M.A. | €13.300.000,00 | €13.000.000,00 | E62E22000670003 |
 | 4.2 | Decreto n. 594_24.08.2022 |  | ATI MESSINA | A.M.A.M. Azienda Meridionale Acque Messina S.p.A. | INTERVENTI DI RAZIONALIZZAZIONE, EFFICIENTAMENTO E RIDUZIONE DELLE PERDITE DELLE RETI IDRICHE INTERNE DI MESSINA | €20.727.496,65 | €17.217.565,96 | F49J21017740006 |
-|  |  |  |  |  |  | €430.060.224,60 | €403.041.251,70 |  |
+|  |  |  |  |  | **Totali**  | **Costo: €430.060.224,60** | **Fiananziato PNRR: €403.041.251,70** |  |
 
 
