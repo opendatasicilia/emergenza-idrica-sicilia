@@ -39,4 +39,5 @@ I primi output di progetto sono:
 - la [**Mappa** delle principali **risorse idriche**, **dighe, laghi e fiumi**](mappe/risorse/index.md)
 - la [**Mappa** delle **dighe** e prostetto dei **volumi invasati**](mappe/volumi/index.md)
 - la versione web (in origine è un PDF) del [**Vademecum** delle azioni e **buone** **pratiche** finalizzate al **risparmio** **idrico** potabile ed alla riduzione dei consumi](buone-pratiche/index.md);
-- la raccolta di [**documenti utili ufficiali**](documenti-utili/index.md) correlati, pubblicati da Pubbliche Amministrazioni, aziende e organizzazioni che si occupano della gestione delle risorse idriche in Sicilia.
+- la raccolta di [**documenti utili ufficiali**](documenti-utili/index.md) correlati, pubblicati da Pubbliche Amministrazioni, aziende e organizzazioni che si occupano della gestione delle risorse idriche in Sicilia;
+- l'elenco degli interventi prioritari, estratti dalla [**2° Relazione alla cabina di regia nazionale**](documenti-utili/interventi-2-relazione-cabinaregia-nazionale.md)
