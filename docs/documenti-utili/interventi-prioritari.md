@@ -8,6 +8,9 @@ description: Dal documento del Comm Straord. Naz. interventi urgenti per scarsit
 
 # Interventi
 
+In questa pagina sono riportati gli interventi che saranno effettuati. Come di seguito riportate, le fonti dei dati sono diverse.
+
+
 ## Commissario Straordinario Nazionale per l’adozione di interventi urgenti connessi al fenomeno della scarsità idrica.
 
 [**2° Relazione alla cabina di regia ai sensi dell’articolo 1, comma 11 del decreto legge 14 aprile 2023, n. 39, convertito con modificazioni dalla legge 13 giugno 2023, n. 68**](https://opendatasicilia.github.io/emergenza-idrica-sicilia/documenti-utili/relazione_cabina-regia_commissario-straordinario-nazionale_interventi-scarsita-idrica.pdf#page=116).  <kbd>Roma, 27 febbraio 2024</kbd>
@@ -45,16 +48,11 @@ description: Dal documento del Comm Straord. Naz. interventi urgenti per scarsit
 | Siciliacque SpA | Nuova bretella serbatoio San Leo di Gela - Potabilizzatore di Gela | 1 | 12.067.242 |
 |  | **Totale interventi** | **27** | **829.137.753** |
 
-### Nota
+!!! note
 
-Nel documento del 27 febbraio 2024 del Commissario Straordinario Nazionale per l’adozione di interventi urgenti connessi al fenomeno della scarsità idrica, nella "Premessa", a pagina 5, è specificato quanto segue in merito alla realizzazione degli interventi:
-*"In questo contesto di riferimento si inquadra anche la logica che ha mosso il Commissario
-nell’avvalersi delle sette Autorità di bacino distrettuali, con l’intento di presentare una “Prima
-proposta d’azione alla cabina di regia (PPAC)”, suggerendo di utilizzare le risorse a tal
-riguardo messe a disposizione dal MIT, nell’ambito della più ampia programmazione
-incardinata sul “Piano nazionale di interventi infrastrutturali e per la sicurezza nel settore
-idrico” (di seguito PNIISSI), che rappresenta una preziosa opportunità per la realizzazione e
-la manutenzione di infrastrutture idriche strategiche per l’approvvigionamento d’acqua."*
+    Nel documento del 27 febbraio 2024 del Commissario Straordinario Nazionale per l’adozione di interventi urgenti connessi al fenomeno della scarsità idrica, nella "Premessa", a pagina 5, è specificato quanto segue in merito alla realizzazione degli interventi: *"In questo contesto di riferimento si inquadra anche la logica che ha mosso il Commissario nell’avvalersi delle sette Autorità di bacino distrettuali, con l’intento di presentare una “Prima proposta d’azione alla cabina di regia (PPAC)”, suggerendo di utilizzare le risorse a tal riguardo messe a disposizione dal MIT, nell’ambito della più ampia programmazione incardinata sul “Piano nazionale di interventi infrastrutturali e per la sicurezza nel settore idrico” (di seguito PNIISSI), che rappresenta una preziosa opportunità per la realizzazione e la manutenzione di infrastrutture idriche strategiche per l’approvvigionamento d’acqua."*
+
+
 
 </br> </br>
 
