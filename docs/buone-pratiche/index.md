@@ -26,12 +26,10 @@ Ecco alcuni numeri, tratti dalle ricerche portati avanti negli ultimi anni di Un
 
 - **30 litri** : È lo spreco di acqua se si lascia il rubinetto aperto per tre minuti mentre ci si lava i denti;
 - **20 litri** : È lo spreco quando facciamo scorrere acqua per sciacquare il rasoio mentre ci si rade;
-- **20 litri** : Ogni giorno, sono i litri risparmiati se installiamo nei wc cassette di scarico a flusso
-    differenziato;
+- **20 litri** : Ogni giorno, sono i litri risparmiati se installiamo nei wc cassette di scarico a flusso differenziato;
 - **40 - 60 litri** : È il risparmio per ogni lavaggio di lavastoviglie e lavatrice a pieno carico;
-- **100** litri: È il risparmio di acqua se si lava l'auto con un secchio anziché con il tubo di una pompa;
-- **4 litri** : È il risparmio giornaliero se si lavano le verdure lasciandole in ammollo invece di usare
-    l'acqua corrente.
+- **100 litri**: È il risparmio di acqua se si lava l'auto con un secchio anziché con il tubo di una pompa;
+- **4 litri** : È il risparmio giornaliero se si lavano le verdure lasciandole in ammollo invece di usare l'acqua corrente.
 
 Secondo le stime più recenti, nelle abitazioni il **consumo medio di acqua ad uso civile** (residenziale e
 terziario) rappresenta circa il **20% dei consumi totali** , con una dotazione idrica pro capite (al netto delle
