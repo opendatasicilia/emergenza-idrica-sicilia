@@ -6,7 +6,7 @@ title: Interventi prioritari per la Sicilia
 description: Dal documento del Comm Straord. Naz. interventi urgenti per scarsità idrica
 ---
 
-# Interventi
+# Interventi  :man_factory_worker_tone1:
 
 In questa pagina sono riportati gli interventi che saranno realizzati. Come di seguito riportate, le fonti dei dati degli interventi sono diverse:
 
