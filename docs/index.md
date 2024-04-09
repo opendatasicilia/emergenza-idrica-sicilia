@@ -31,9 +31,7 @@ Questo sito è stato creato dalla comunità di [**OpenDataSicilia**](https://ope
 
 ---
 
-## Primi output di progetto  :material-checkbox-multiple-outline:
-
-I primi output di progetto sono:
+## Output di progetto  :material-checkbox-multiple-outline:
 
 - la [**Mappa** ed elenco dei **Comuni** siciliani soggetti alla **riduzione** della **fornitura** **idrica**](mappe/riduzione/index.md);
 - la [**Mappa** delle principali **risorse idriche**, **dighe, laghi e fiumi**](mappe/risorse/index.md)
