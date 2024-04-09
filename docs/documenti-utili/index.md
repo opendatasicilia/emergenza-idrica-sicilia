@@ -6,7 +6,7 @@ title: Documenti utili
 description: Per approfondire il tema dell'emergenza idrica in Sicilia
 ---
 
-# Documenti utili
+# Documenti utili  :material-file-document-multiple-outline:
 
 | titolo | a cura di | data |
 | --- | --- | --- |
