@@ -11,7 +11,6 @@ description: Un progetto per la trasparenza e la condivisione di dati sulla cris
 
 ![Emergenza idrica in Sicilia](img/sicilia_01.png "Emergenza idrica in Sicilia"){ width="458" height="328" style="display: block; margin: 0 auto" }
 
-
 ## La dichiarazione regionale dello stato di emergenza (aprile 2024)
 
 Il Governo Regionale Siciliano ha avanzato una [richiesta formale per la dichiarazione dello **stato di emergenza nazionale**](./documenti-utili/emergenza_nazionale_art7e24_dlvo2018n1.pdf). L'obiettivo è di poter attivare risorse supplementari e misure straordinarie per combattere questa emergenza.
