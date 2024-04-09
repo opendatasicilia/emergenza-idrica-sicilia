@@ -8,7 +8,10 @@ description: Dal documento del Comm Straord. Naz. interventi urgenti per scarsit
 
 # Interventi
 
-In questa pagina sono riportati gli interventi che saranno effettuati. Come di seguito riportate, le fonti dei dati sono diverse.
+In questa pagina sono riportati gli interventi che saranno realizzati. Come di seguito riportate, le fonti dei dati degli interventi sono diverse:
+
+- interventi previsti dalla 2° Relazione alla cabina di regia (27 febbraio 2024) del Commissario Straordinario Nazionale per l’adozione di interventi urgenti connessi al fenomeno della scarsità idrica;
+- interventi previsti da decreti di finanziamento del PNRR misura **4.1** (Investimenti in infrastrutture idriche primarie per la sicurezza dell'approvvigionamento idrico) e  misura **4.2** (Riduzione delle perdite nelle reti di distribuzione dell'acqua, compresa la digitalizzazione e il monitoraggio delle reti).
 
 
 ## Commissario Straordinario Nazionale per l’adozione di interventi urgenti connessi al fenomeno della scarsità idrica.
