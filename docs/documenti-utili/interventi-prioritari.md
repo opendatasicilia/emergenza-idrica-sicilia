@@ -18,7 +18,7 @@ In questa pagina sono riportati gli interventi che saranno realizzati. Come di s
 
 [**2° Relazione alla cabina di regia ai sensi dell’articolo 1, comma 11 del decreto legge 14 aprile 2023, n. 39, convertito con modificazioni dalla legge 13 giugno 2023, n. 68**](https://opendatasicilia.github.io/emergenza-idrica-sicilia/documenti-utili/relazione_cabina-regia_commissario-straordinario-nazionale_interventi-scarsita-idrica.pdf#page=116).  <kbd>Roma, 27 febbraio 2024</kbd>
 
-### ANNESSO II – Elenco degli interventi prioritari per la Sicilia
+### Annesso II – Elenco degli interventi prioritari per la Sicilia
 
 | Soggetto attuatore | Titolo intervento | n. interventi | Importo fabbisogno (€) |
 | --- | --- | --- | --- |
