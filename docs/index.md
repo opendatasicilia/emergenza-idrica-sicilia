@@ -31,7 +31,7 @@ Questo sito è stato creato dalla comunità di [**OpenDataSicilia**](https://ope
 
 ---
 
-## Primi output di progetto
+## Primi output di progetto  :material-checkbox-multiple-outline:
 
 I primi output di progetto sono:
 
