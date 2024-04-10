@@ -22,7 +22,7 @@ La pubblicazione regolare di questi dati, accessibili a tutti, può giocare un r
 
 ## Perché questo sito
 
-Questo sito è stato creato dalla comunità di [**OpenDataSicilia**](https://opendatasicilia.it) a supporto di un progetto con questi **obiettivi** ideali:
+Questo sito è stato creato nell'aprile 2024 dalla comunità di [**OpenDataSicilia**](https://opendatasicilia.it) a supporto di un progetto con questi **obiettivi** ideali:
 
 - **rendere** più **leggibili** e **accessibili** alcune **informazioni** correlate alla crisi idrica in Sicilia;
 - **stimolare le Pubbliche Amministrazioni** e le aziende che gestiscono questi dati a **pubblicarli** in **formati** **aperti** e **accessibili**, con **continuità** e **qualità**;
