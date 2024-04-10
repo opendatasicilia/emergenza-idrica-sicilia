@@ -3,8 +3,7 @@ site_name: Emergenza idrica in Sicilia
 site_author: by OpenDataSicilia.it
 
 # Copyright
-copyright: <a href="https://opendatasicilia.github.io/emergenza-idrica-sicilia/ods/" target="_self" title="Chi Siamo" ><b>About</b></a>  |  <a href="https://opendatasicilia.it" target="_self" title="opendatasicilia" >@opendatasicilia</a> 2024 | 
-<a href="https://creativecommons.org/licenses/by/4.0/deed.it" target="_self">Licenza CC-BY 4.0</a> 
+copyright: <a href="https://opendatasicilia.github.io/emergenza-idrica-sicilia/ods/" target="_self" title="Chi Siamo" ><b>About</b></a>  |  <a href="https://opendatasicilia.it" target="_self" title="opendatasicilia" >@opendatasicilia</a> 2024 | <a href="https://creativecommons.org/licenses/by/4.0/deed.it">Licenza CC-BY 4.0</a> 
 
 
 theme:
