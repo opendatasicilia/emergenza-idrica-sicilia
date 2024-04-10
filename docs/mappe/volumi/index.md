@@ -17,7 +17,7 @@ description: Mappa delle dighe e prostetto dei volumi invasati dal 2010 a marzo 
 
 ???+ note
 
-    All'avvio l dashboard visualizza il totale delle riserva idrica negli anni (serie storica), dal 2010 a marzo del 2024. Per visializzare la serire storica di una singola diga, è sufficiente cliccalre sull'icona della diga nella **mappa**. <br>  (vedi immagine 1)
+    All'avvio la dashboard visualizza il totale delle riserva idrica negli anni (serie storica), dal 2010 a marzo del 2024. Per visualizzare la serie storica di una singola diga, è sufficiente cliccare sull'icona della diga nella **mappa**. <br>  (vedi immagine 1)
 	
 
      ![Selezione 1](risorsa_01.png "immagine 1"){ width="800" height="533" style="display: block; margin: 0 auto" }
