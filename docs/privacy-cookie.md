@@ -23,22 +23,23 @@ Questi cookie sono essenziali al fine di permettere la navigazione del sito web 
 **Cookie sulle prestazioni**<br>
 Questi cookie raccolgono informazioni su come gli utenti utilizzano il sito web, ad esempio quali pagine vengono visitate più spesso e se gli utenti ricevono messaggi di errore da queste pagine. Questi cookie non raccolgono informazioni che identificano un visitatore specifico. Tutte le informazioni raccolte da questi cookie sono aggregate e quindi anonime. Vengono utilizzate unicamente per migliorare il funzionamento del sito web.
 
-**Cookie di analisi di traffico anonimizzati**<br><br>
+**Cookie di analisi di traffico anonimizzati**<br>
 Questo sito web utilizza inoltre i **cookie di Google Analytics**, un servizio di analisi web fornito da Google. Le informazioni generate dal cookie sull’utilizzo del sito web da parte vostra (compreso il vostro indirizzo IP) verranno trasmesse e depositate presso i server di Google che utilizzerà queste informazioni allo scopo di tracciare ed esaminare il vostro utilizzo del sito web, compilare report sulle attività svolte sul sito web e fornire altri servizi relativi alle attività e all’utilizzo di Internet. I dati generati da Google Analytics sono conservati da Google così come indicato nella Informativa reperibile al seguente link.<br>
 
 L’utente può disabilitare in modo selettivo l’azione di Google Analytics installando sul proprio browser la componente di opt-out fornito da Google. Per disabilitare l’azione di Google Analytics, si rinvia al link di seguito indicato: https://tools.google.com/dlpage/gaoptout
 
-**Cookie funzionali**<br><br>
+**Cookie funzionali**<br>
 Questi cookie consentono al sito web di ricordare le scelte che avete effettuato (come il vostro username, la vostra lingua o l’area geografica in cui vivete) al fine di ottimizzare e fornire funzionalità più avanzate. Questi cookie possono inoltre essere utilizzati per fornire funzionalità da voi richieste come ad esempio la visualizzazione di un video o la possibilità di commentare sul sito. Queste informazioni raccolte dai cookie possono essere anonime e non devono tracciare la navigazione e le attività dell’utente su altri siti web. Vi preghiamo di considerare che alcune funzionalità del sito web potrebbero essere ridotte o non disponibili disabilitando i cookie. Nel dettaglio, gli utenti possono controllare, eliminare o impedire il caricamento di cookie agendo sui loro browser così come sotto indicato.
 
 ## Cookie di terze parti
-**Google Analytics**<br><br>
+
+**Google Analytics**<br>
 Il Sito non impiega Google Analytics. Si tratta di un servizio di analisi web fornito da Google Inc. (“Google”) che utilizza cookie depositati sul computer dell’utente per consentire analisi statistiche in forma aggregata in ordine all’utilizzo del sito web visitato.
 
 I dati generati da Google Analytics sono conservati da Google così come indicato nella Informativa reperibile al seguente link – https://developers.google.com/analytics/devguides/collection/analyticsjs/cookie-usage
 Per consultare l’informativa privacy della società Google Inc., titolare autonomo del trattamento dei dati relativi al servizio Google Analytics, si rinvia al sito Internet.
 
-**Google Fonts** [(What does using the Google Fonts API mean for the privacy of my users?)](https://developers.google.com/fonts/faq#what_does_using_the_google_fonts_api_mean_for_the_privacy_of_my_users)<br><br>
+**Google Fonts** [(What does using the Google Fonts API mean for the privacy of my users?)](https://developers.google.com/fonts/faq#what_does_using_the_google_fonts_api_mean_for_the_privacy_of_my_users)<br>
 Questo sito web utilizza API di Google Fonts, l’uso di Google Fonts non è autenticato. Nessun cookie viene inviato dai visitatori del sito web all’API di Google Fonts. Le richieste all’API di Google Fonts vengono eseguite su domini specifici delle risorse, come [fonts.googleapis.com](fonts.googleapis.com) o [fonts.gstatic.com](fonts.gstatic.com), in modo che le richieste per i caratteri siano separate e non contengano credenziali inviate a google.com mentre utilizzando altri servizi Google autenticati, come Gmail.  Le richieste per le risorse CSS vengono memorizzate nella cache per 1 giorno. Per ulteriori informazioni sulle informazioni raccolte da Google e su come vengono utilizzate e protette, consulta le [Norme sulla privacy di Google](https://policies.google.com/privacy)<br><br>
 
 
