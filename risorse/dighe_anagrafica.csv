@@ -8,7 +8,7 @@ coordinate,lat,long,cod,diga,fiume,lago,comune,provincia,capacita,utilizzazione,
 "37.662685,13.551506",37.662685,13.551506,dig-07,Fanaco,Platani,Lago Fanaco,Castronovo di Sicilia,PA,20.70,Potabile,Siciliacque
 "37.260498,13.726155",37.260498,13.726155,dig-08,Furore,Burraito,Diga Furore,Naro,AG,7.00,Irriguo,Dipartimento dell'acqua e dei rifiuti
 "37.793124,13.098185",37.793124,13.098185,dig-09,Garcia (M. Francese),Belice Sinistro,Diga Garcia,Monreale,PA,80.00,Potabile - Irriguo,Consorzio di Bonifica 2 Palermo
-"37.611633,12.651286",37.611633,12.651286,dig-10,Gorgo Lago,Fosso Gurra,Riserva Naturale Lago Preola e Gorghi Tondi,Mazzara del Vallo,Tp,3.41,Irriguo,Dipartimento dell'acqua e dei rifiuti
+"37.40578038214244, 13.326928729516547",37.40578038,13.32692873,dig-10,Gorgo Lago,Fosso Gurra,Laghetto Gorgo,Montallegro,AG,"3,41",Irriguo,Dipartimento dell'acqua e dei rifiuti
 "37.324914,14.94739",37.324914,14.947390,dig-11,Lentini,Fuori Alveo,Lago di Lentini,Lentini,SR,134.55,Irriguo - Industriale,Dipartimento dell'acqua e dei rifiuti
 "37.671567,13.468441",37.671567,13.468441,dig-12,Leone,Verdura,Diga Pian del Leone,Castronovo di Sicilia,PA,4.19,Potabile - Elettrico,Siciliacque
 "37.604822,14.346314",37.604822,14.346314,dig-13,Nicoletti,Crisà,Nicoletti,Enna,EN,20.20,Irriguo,Dipartimento dell'acqua e dei rifiuti
