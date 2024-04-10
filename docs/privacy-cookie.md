@@ -134,4 +134,4 @@ Eseguire il Browser Internet Explorer
 
 Come indicato, l’Utente potrà negare il consenso all’installazione dei cookie per il mezzo del browser di navigazione in uso seguendo le istruzioni ivi fornite o accedendo al sito [http://www.youronlinechoices.com/it/le-tue-scelte/](http://www.youronlinechoices.com/it/le-tue-scelte/).
 
-Per ulteriori informazioni su come cancellare e controllare i cookie archiviati sul computer, si prega di consultare [http://www.allaboutcookies.org/manage-cookies/index](http://www.allaboutcookies.org/manage-cookies/index). Non possiamo tuttavia garantire la correttezza e l’aggiornamento delle informazioni ivi contenute.
+Per ulteriori informazioni su come cancellare e controllare i cookie archiviati sul computer, si prega di consultare [http://www.allaboutcookies.org](https://allaboutcookies.org). Non possiamo tuttavia garantire la correttezza e l’aggiornamento delle informazioni ivi contenute.
