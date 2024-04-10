@@ -13,7 +13,7 @@ description: La cartografia digitale che segue riporta la localizzazione delle g
 # Cartografia delle grandi dighe  :map:  
 <iframe title="Cartografia delle grandi dighe" aria-label="Mappa" src="https://dgdighe.mit.gov.it/CartografiaDighe/mappa-dighe" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="950" data-external="1"></iframe>
 
-Fonte dati: Ministero delle Infrastrutture e dei Trasporti - Direzione generale per le dighe le infrastrutture idriche[MIT](https://dgdighe.mit.gov.it/categoria/articolo/_cartografie_e_dati/_cartografie/cartografia_dighe)
+Fonte dati: MIT - [Ministero delle Infrastrutture e dei Trasporti - Direzione generale per le dighe le infrastrutture idriche](https://dgdighe.mit.gov.it/categoria/articolo/_cartografie_e_dati/_cartografie/cartografia_dighe)
 
 <hr>
 
@@ -21,6 +21,3 @@ Fonte dati: Ministero delle Infrastrutture e dei Trasporti - Direzione generale 
 </script>
 
 Fonte dati: MIT - [Elenco delle dighe di competenza dell'ufficio tecnico per le dighe di Palermo](https://dgdighe.mit.gov.it/categoria/articolo/_cartografie_e_dati/_dighe_di_competenza/UTDPA)
-
-
-
