@@ -3,7 +3,7 @@ site_name: Emergenza idrica in Sicilia
 site_author: by OpenDataSicilia.it
 
 # Copyright
-copyright: <a href="https://opendatasicilia.github.io/emergenza-idrica-sicilia/ods/" target="_self" title="Chi Siamo" ><b>About</b></a>  |  <a href="https://opendatasicilia.it" target="_self" title="opendatasicilia" >@opendatasicilia</a> 2024 
+copyright: <a href="https://opendatasicilia.github.io/emergenza-idrica-sicilia/ods/" target="_self" title="Chi Siamo" ><b>About</b></a>  |  <a href="https://opendatasicilia.it" target="_self" title="opendatasicilia" >@opendatasicilia</a> 2024
 
 
 theme:
@@ -26,7 +26,7 @@ theme:
     - content.action.edit
     - content.action.view
     - content.code.copy
-    
+
 
 repo_url: https://github.com/opendatasicilia/emergenza-idrica-sicilia
 edit_uri: edit/main/docs/
@@ -34,19 +34,42 @@ edit_uri: edit/main/docs/
 ## Page tree
 nav:
   - Home: index.md
-  - Mappe: 
+  - Mappe:
      - Comuni con riduzione della fornitura idrica: mappe/riduzione/index.md
      - Principali risorse idriche: mappe/risorse/index.md
      - Dighe e prospetto dei volumi invasati: mappe/volumi/index.md
   - Buone pratiche: buone-pratiche/index.md
   - Documenti utili: documenti-utili/index.md
   - Interventi prioritari: documenti-utili/interventi-prioritari.md
+  - Aggiornamenti:
+    - aggiornamenti/index.md
  # - Chi siamo: ods/index.md
 
 
 plugins:
 - search
 - social
+- blog:
+    blog_dir: aggiornamenti
+    post_dir: "{blog}/articoli"
+    blog_toc: false
+    post_url_format: "{date}/{slug}"
+    post_slugify_separator: "-"
+    categories_toc: false
+    pagination_per_page: 5
+    authors: false
+    post_url_date_format: yyyy/MM/dd
+    post_slugify: !!python/object/apply:pymdownx.slugs.slugify
+      kwds:
+        case: lower
+    post_excerpt: optional
+    archive: false
+    post_readtime: false
+    categories_slugify_separator: "-"
+    categories_slugify: !!python/object/apply:pymdownx.slugs.slugify
+      kwds:
+        case: lower
+
 
 markdown_extensions:
   - admonition
@@ -71,8 +94,8 @@ markdown_extensions:
 
 extra_javascript:
   - javascripts/varie.js
-  
-  
+
+
 ## Social Media
 extra:
   social:
