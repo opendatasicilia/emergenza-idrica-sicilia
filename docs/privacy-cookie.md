@@ -33,7 +33,7 @@ Questi cookie consentono al sito web di ricordare le scelte che avete effettuato
 
 ## Cookie di terze parti
 **Google Analytics**<br><br>
-Il Sito impiega Google Analytics. Si tratta di un servizio di analisi web fornito da Google Inc. (“Google”) che utilizza cookie depositati sul computer dell’utente per consentire analisi statistiche in forma aggregata in ordine all’utilizzo del sito web visitato.
+Il Sito non impiega Google Analytics. Si tratta di un servizio di analisi web fornito da Google Inc. (“Google”) che utilizza cookie depositati sul computer dell’utente per consentire analisi statistiche in forma aggregata in ordine all’utilizzo del sito web visitato.
 
 I dati generati da Google Analytics sono conservati da Google così come indicato nella Informativa reperibile al seguente link – https://developers.google.com/analytics/devguides/collection/analyticsjs/cookie-usage
 Per consultare l’informativa privacy della società Google Inc., titolare autonomo del trattamento dei dati relativi al servizio Google Analytics, si rinvia al sito Internet.
@@ -41,20 +41,21 @@ Per consultare l’informativa privacy della società Google Inc., titolare auto
 **Google Fonts** [(What does using the Google Fonts API mean for the privacy of my users?)](https://developers.google.com/fonts/faq#what_does_using_the_google_fonts_api_mean_for_the_privacy_of_my_users)<br><br>
 Questo sito web utilizza API di Google Fonts, l’uso di Google Fonts non è autenticato. Nessun cookie viene inviato dai visitatori del sito web all’API di Google Fonts. Le richieste all’API di Google Fonts vengono eseguite su domini specifici delle risorse, come [fonts.googleapis.com](fonts.googleapis.com) o [fonts.gstatic.com](fonts.gstatic.com), in modo che le richieste per i caratteri siano separate e non contengano credenziali inviate a google.com mentre utilizzando altri servizi Google autenticati, come Gmail.  Le richieste per le risorse CSS vengono memorizzate nella cache per 1 giorno. Per ulteriori informazioni sulle informazioni raccolte da Google e su come vengono utilizzate e protette, consulta le [Norme sulla privacy di Google](https://policies.google.com/privacy)<br><br>
 
+
 ## Widget Social Network
 I widget dei social network sono quei particolari “pulsanti” o “blocchi” presenti sul sito che raffigurano le icone di social network (esempio, Facebook e Twitter) e consentono agli utenti che stanno navigando di interagire con un “click” direttamente con le piattaforme social. Si riportano i link ove l’utente può prendere visione dell’informativa privacy relativa alla gestione dei dati da parte dei social cui i pulsanti e le widget rinviano. Nessuna informazione viene condivisa dal sito in cui il widget è incorporato.
 
 Per maggiori informazioni, anche sulla disattivazione di tali cookie, si consiglia di consultare i seguenti link:
 
-- [Twitter](http://twitter.com/privacy)
+- [X](http://twitter.com/privacy)
 - [Facebook](https://www.facebook.com/help/cookies)
 - [LinkedIn](https://www.linkedin.com/legal/cookie_policy)
-- [Google Plus](http://www.google.it/intl/it/policies/technologies/cookies/)
-- [AddThis](http://www.addthis.com/privacy/privacy-policy)
+
 
 ## Pubblicità 
 
-Sono presenti annunci di pubblicità etica di [**Read the Docs**](https://docs.readthedocs.io/en/latest/advertising/index.html) che rispetta la privacy degli utenti. <br>La pubblicità etica è la fonte princiaple del progetto [Read the Docs](https://docs.readthedocs.io/en/latest/index.html).
+Questo sito non pubblica articoli di pubblicità
+
 
 ## Come disabilitare i cookie mediante configurazione del browser
 
@@ -131,6 +132,6 @@ Eseguire il Browser Internet Explorer
   -   Accetta i cookie solo dal sito che si visita: i cookie di terze parti e che vengono inviati da un dominio diverso da quello che si sta visitando verranno rifiutati
   -   Non accettare mai i cookie: tutti i cookie non verranno mai salvati
 
-Come indicato, l’Utente potrà negare il consenso all’installazione dei cookie per il mezzo del browser di navigazione in uso seguendo le istruzioni ivi fornite o accedendo al sito http://www.youronlinechoices.com/it/le-tue-scelte/.
+Come indicato, l’Utente potrà negare il consenso all’installazione dei cookie per il mezzo del browser di navigazione in uso seguendo le istruzioni ivi fornite o accedendo al sito [http://www.youronlinechoices.com/it/le-tue-scelte/](http://www.youronlinechoices.com/it/le-tue-scelte/).
 
-Per ulteriori informazioni su come cancellare e controllare i cookie archiviati sul computer, si prega di consultare http://www.allaboutcookies.org/manage-cookies/index. Non possiamo tuttavia garantire la correttezza e l’aggiornamento delle informazioni ivi contenute.
+Per ulteriori informazioni su come cancellare e controllare i cookie archiviati sul computer, si prega di consultare [http://www.allaboutcookies.org/manage-cookies/index](http://www.allaboutcookies.org/manage-cookies/index). Non possiamo tuttavia garantire la correttezza e l’aggiornamento delle informazioni ivi contenute.
