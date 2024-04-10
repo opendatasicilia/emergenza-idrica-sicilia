@@ -33,8 +33,8 @@ Questo sito è stato creato dalla comunità di [**OpenDataSicilia**](https://ope
 ## Output di progetto  :material-checkbox-multiple-outline:
 
 - la [**Mappa** ed elenco dei **Comuni** siciliani soggetti alla **riduzione** della **fornitura** **idrica**](mappe/riduzione/index.md);
-- la [**Mappa** delle principali **risorse idriche**, **dighe, laghi e fiumi**](mappe/risorse/index.md)
-- la [**Mappa** delle **dighe** e prostetto dei **volumi invasati**](mappe/volumi/index.md)
+- la [**Mappa** delle principali **risorse idriche**, **dighe, laghi e fiumi**](mappe/risorse/index.md);
+- la [**Mappa** delle **dighe** e prostetto dei **volumi invasati**](mappe/volumi/index.md);
 - la versione web (in origine è un PDF) del [**Vademecum** delle azioni e **buone** **pratiche** finalizzate al **risparmio** **idrico** potabile ed alla riduzione dei consumi](buone-pratiche/index.md);
 - la raccolta di [**documenti utili ufficiali**](documenti-utili/index.md) correlati, pubblicati da Pubbliche Amministrazioni, aziende e organizzazioni che si occupano della gestione delle risorse idriche in Sicilia;
 - l'[**elenco degli interventi prioritari**](documenti-utili/interventi-prioritari.md).
