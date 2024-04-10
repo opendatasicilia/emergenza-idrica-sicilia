@@ -1,31 +1,31 @@
-Coordinate,Lat,long,cod,Diga,Fiume,Lago,Comune,Provincia,Capacita,Utilizzazione,Gestore
-"37.83622226913473, 14.562872780452834",37.83622227,14.56287278,dig-01,Àncipa,Troina,Lago Àncipa,Cesarò,ME,"30,40",Potabile - Irriguo - Elettrico,E.N.E.L.
-"37.6344907735086, 13.065183892983589",37.63449077,13.06518389,dig-02,Arancio,Carboj,Lago Arancio,Sambuca di Sicilia,AG,"34,80",Irriguo,Dipartimento dell'acqua e dei rifiuti
-"37.582494138000314, 13.420304304533298",37.58249414,13.4203043,dig-03,Castello,Magazzolo,Lago di Magazzolo,Bivona,AG,"21,00",Potabile - Irriguo,Dipartimento dell'acqua e dei rifiuti
-"37.19351696828118, 14.35277772658952",37.19351697,14.35277773,dig-04,Cimia,Cimia,Bacino Cimia,Mazzarino,CL,"10,00",Irriguo,Dipartimento dell'acqua e dei rifiuti
-"37.15866905176196, 14.155129889961957",37.15866905,14.15512989,dig-05,Comunelli,Comunelli,Lago Comunelli,Butera,CL,"8,00",Irriguo,Dipartimento dell'acqua e dei rifiuti
-"37.19543380542971, 14.293770507280197",37.19543381,14.29377051,dig-06,Disueri,Gela,Lago Disueri,Mazzarino,CL,"23,60",Irriguo,Dipartimento dell'acqua e dei rifiuti
-"37.6626850721957, 13.551505700438739",37.66268507,13.5515057,dig-07,Fanaco,Platani,Lago Fanaco,Castronovo di Sicilia,PA,"20,70",Potabile,Siciliacque
-"37.26049834106852, 13.726154776144734",37.26049834,13.72615478,dig-08,Furore,Burraito,Diga Furore,Naro,AG,"7,00",Irriguo,Dipartimento dell'acqua e dei rifiuti
-"37.79312393520208, 13.098184652140981",37.79312394,13.09818465,dig-09,Garcia (M. Francese),Belice Sinistro,Diga Garcia,Monreale,PA,"80,00",Potabile - Irriguo,Consorzio di Bonifica 2 Palermo
-"37.611633046960705, 12.65128552366963",37.61163305,12.65128552,dig-10,Gorgo Lago,Fosso Gurra,Riserva Naturale Lago Preola e Gorghi Tondi,Mazzara del Vallo,Tp,"3,41",Irriguo,Dipartimento dell'acqua e dei rifiuti
-"37.32491447802334, 14.947389964388442",37.32491448,14.94738996,dig-11,Lentini,Fuori Alveo,Lago di Lentini,Lentini,SR,"134,55",Irriguo - Industriale,Dipartimento dell'acqua e dei rifiuti
-"37.67156681214582, 13.468441004937336",37.67156681,13.468441,dig-12,Leone,Verdura,Diga Pian del Leone,Castronovo di Sicilia,PA,"4,19",Potabile - Elettrico,Siciliacque
-"37.60482215888663, 14.34631420540615",37.60482216,14.34631421,dig-13,Nicoletti,Crisà,Nicoletti,Enna,EN,"20,20",Irriguo,Dipartimento dell'acqua e dei rifiuti
-"37.448800804657054, 14.572173733099481",37.4488008,14.57217373,dig-14,Ogliastro (Don Sturzo),Gornalunga,Lago Nicoletti,Raddusa,CT,"110,00",Irriguo,Consorzio di Bonifica 7 Caltagirone
-"37.4050480841272, 14.286603950313363",37.40504808,14.28660395,dig-15,Olivo,Olivo,Lago Olivo,Piazza Armerina,EN,"15,00",Irriguo,Dipartimento dell'acqua e dei rifiuti
-"37.9714491965346, 12.593899318903167",37.9714492,12.59389932,dig-16,Paceco,Baiata,Invaso diga Baita,Paceco,TP,"6,70",Irriguo,Dipartimento dell'acqua e dei rifiuti
-"37.96700955973354, 13.290807859280493",37.96700956,13.29080786,dig-17,Piana Degli Albanesi,Belice Destro,Lago di Piana degli Albanesi,Piana degli Albanesi,PA,"32,80",Potabile - Irriguo - Elettrico,E.N.E.L.
-"38.01103709494084, 13.05613472955368",38.01103709,13.05613473,dig-18,Poma,Jato,Lago Poma,Partinico,PA,"72,50",Potabile - Irriguo,Dipartimento dell'acqua e dei rifiuti
-"37.6740368414731, 14.610613489858828",37.67403684,14.61061349,dig-19,Pozzillo,Salso (Simeto),Lago Pozzillo,Regalbuto,EN,"150,50",Irriguo - Elettrico,E.N.E.L.
-"37.72875920191161, 13.404995690976383",37.7287592,13.40499569,dig-20,Prizzi,Raia,Lago di Prizzi,Prizzi,PA,"9,20",Potabile - Irriguo - Elettrico,E.N.E.L.
-"37.12888413947258, 14.699118889211253",37.12888414,14.69911889,dig-21,Ragoleto,Dirillo,Lago Dirillo,Licodia Eubea,CT,"20,10",Industriale - Potabile - Irriguo,Eni - Raffineria di Gela
-"37.96033571030573, 13.654664681397737",37.96033571,13.65466468,dig-22,Rosamarina,S. Leonardo,Lago Rosamarina,Caccamo,PA,"100,00",Potabile - Irriguo,Dipartimento dell'acqua e dei rifiuti
-"37.882618539054356, 12.718346939129798",37.88261854,12.71834694,dig-23,Rubino,Birgi,Lago Rubino,Trapani,TP,"11,50",Irriguo,Dipartimento dell'acqua e dei rifiuti
-"37.30383372051556, 13.757038285106866",37.30383372,13.75703829,dig-24,San Giovanni,Naro,Lago San Giovanni,Naro,AG,"16,30",Irriguo,Dipartimento dell'acqua e dei rifiuti
-"36.97097214986951, 14.777525424540842",36.97097215,14.77752542,dig-25,Santa Rosalia,Irminio,Lago Santa Rosalia,Ragusa,RG,"20,00",Irriguo,Dipartimento dell'acqua e dei rifiuti
-"37.92524516653996, 13.36939685095602",37.92524517,13.36939685,dig-26,Scanzano,Eleuterio,Lago dello scanzano,Monreale,PA,"18,00",Potabile - Irriguo,Dipartimento dell'acqua e dei rifiuti
-"37.60020877629379, 14.594737591228052",37.60020878,14.59473759,dig-27,Sciaguana,Sciaguana,Lago Sciaguana,Agira,EN,"11,35",Irriguo,Dipartimento dell'acqua e dei rifiuti
-"37.70765562563731, 12.762354264555682",37.70765563,12.76235426,dig-28,Trinità,Delia,Lago della Trinità,Castelvetrano,TP,"18,00",Irriguo,Dipartimento dell'acqua e dei rifiuti
-"37.85079982448156, 12.626218773181726",37.85079982,12.62621877,dig-29,Zaffarana,Zaffarana,Lago Zaffarana,Trapani,TP,"0,90",Irriguo,Dipartimento dell'acqua e dei rifiuti
-"37.018544011464684, 14.344418985428035",37.01854401,14.34441899,dig-30,Biviere,Naturale,Lago Biviere,Gela,CL,"4,80",Irriguo,Consorzio di Bonifica 5 Gela
+coordinate,lat,long,cod,diga,fiume,lago,comune,provincia,capacita,utilizzazione,gestore
+"37.836222,14.562873",37.836222,14.562873,dig-01,Àncipa,Troina,Lago Àncipa,Cesarò,ME,30.40,Potabile - Irriguo - Elettrico,E.N.E.L.
+"37.634491,13.065184",37.634491,13.065184,dig-02,Arancio,Carboj,Lago Arancio,Sambuca di Sicilia,AG,34.80,Irriguo,Dipartimento dell'acqua e dei rifiuti
+"37.582494,13.420304",37.582494,13.420304,dig-03,Castello,Magazzolo,Lago di Magazzolo,Bivona,AG,21.00,Potabile - Irriguo,Dipartimento dell'acqua e dei rifiuti
+"37.193517,14.352778",37.193517,14.352778,dig-04,Cimia,Cimia,Bacino Cimia,Mazzarino,CL,10.00,Irriguo,Dipartimento dell'acqua e dei rifiuti
+"37.158669,14.15513",37.158669,14.155130,dig-05,Comunelli,Comunelli,Lago Comunelli,Butera,CL,8.00,Irriguo,Dipartimento dell'acqua e dei rifiuti
+"37.195434,14.293771",37.195434,14.293771,dig-06,Disueri,Gela,Lago Disueri,Mazzarino,CL,23.60,Irriguo,Dipartimento dell'acqua e dei rifiuti
+"37.662685,13.551506",37.662685,13.551506,dig-07,Fanaco,Platani,Lago Fanaco,Castronovo di Sicilia,PA,20.70,Potabile,Siciliacque
+"37.260498,13.726155",37.260498,13.726155,dig-08,Furore,Burraito,Diga Furore,Naro,AG,7.00,Irriguo,Dipartimento dell'acqua e dei rifiuti
+"37.793124,13.098185",37.793124,13.098185,dig-09,Garcia (M. Francese),Belice Sinistro,Diga Garcia,Monreale,PA,80.00,Potabile - Irriguo,Consorzio di Bonifica 2 Palermo
+"37.611633,12.651286",37.611633,12.651286,dig-10,Gorgo Lago,Fosso Gurra,Riserva Naturale Lago Preola e Gorghi Tondi,Mazzara del Vallo,Tp,3.41,Irriguo,Dipartimento dell'acqua e dei rifiuti
+"37.324914,14.94739",37.324914,14.947390,dig-11,Lentini,Fuori Alveo,Lago di Lentini,Lentini,SR,134.55,Irriguo - Industriale,Dipartimento dell'acqua e dei rifiuti
+"37.671567,13.468441",37.671567,13.468441,dig-12,Leone,Verdura,Diga Pian del Leone,Castronovo di Sicilia,PA,4.19,Potabile - Elettrico,Siciliacque
+"37.604822,14.346314",37.604822,14.346314,dig-13,Nicoletti,Crisà,Nicoletti,Enna,EN,20.20,Irriguo,Dipartimento dell'acqua e dei rifiuti
+"37.448801,14.572174",37.448801,14.572174,dig-14,Ogliastro (Don Sturzo),Gornalunga,Lago Nicoletti,Raddusa,CT,110.00,Irriguo,Consorzio di Bonifica 7 Caltagirone
+"37.405048,14.286604",37.405048,14.286604,dig-15,Olivo,Olivo,Lago Olivo,Piazza Armerina,EN,15.00,Irriguo,Dipartimento dell'acqua e dei rifiuti
+"37.971449,12.593899",37.971449,12.593899,dig-16,Paceco,Baiata,Invaso diga Baita,Paceco,TP,6.70,Irriguo,Dipartimento dell'acqua e dei rifiuti
+"37.96701,13.290808",37.967010,13.290808,dig-17,Piana Degli Albanesi,Belice Destro,Lago di Piana degli Albanesi,Piana degli Albanesi,PA,32.80,Potabile - Irriguo - Elettrico,E.N.E.L.
+"38.011037,13.056135",38.011037,13.056135,dig-18,Poma,Jato,Lago Poma,Partinico,PA,72.50,Potabile - Irriguo,Dipartimento dell'acqua e dei rifiuti
+"37.674037,14.610613",37.674037,14.610613,dig-19,Pozzillo,Salso (Simeto),Lago Pozzillo,Regalbuto,EN,150.50,Irriguo - Elettrico,E.N.E.L.
+"37.728759,13.404996",37.728759,13.404996,dig-20,Prizzi,Raia,Lago di Prizzi,Prizzi,PA,9.20,Potabile - Irriguo - Elettrico,E.N.E.L.
+"37.128884,14.699119",37.128884,14.699119,dig-21,Ragoleto,Dirillo,Lago Dirillo,Licodia Eubea,CT,20.10,Industriale - Potabile - Irriguo,Eni - Raffineria di Gela
+"37.960336,13.654665",37.960336,13.654665,dig-22,Rosamarina,S. Leonardo,Lago Rosamarina,Caccamo,PA,100.00,Potabile - Irriguo,Dipartimento dell'acqua e dei rifiuti
+"37.882619,12.718347",37.882619,12.718347,dig-23,Rubino,Birgi,Lago Rubino,Trapani,TP,11.50,Irriguo,Dipartimento dell'acqua e dei rifiuti
+"37.303834,13.757038",37.303834,13.757038,dig-24,San Giovanni,Naro,Lago San Giovanni,Naro,AG,16.30,Irriguo,Dipartimento dell'acqua e dei rifiuti
+"36.970972,14.777525",36.970972,14.777525,dig-25,Santa Rosalia,Irminio,Lago Santa Rosalia,Ragusa,RG,20.00,Irriguo,Dipartimento dell'acqua e dei rifiuti
+"37.925245,13.369397",37.925245,13.369397,dig-26,Scanzano,Eleuterio,Lago dello scanzano,Monreale,PA,18.00,Potabile - Irriguo,Dipartimento dell'acqua e dei rifiuti
+"37.600209,14.594738",37.600209,14.594738,dig-27,Sciaguana,Sciaguana,Lago Sciaguana,Agira,EN,11.35,Irriguo,Dipartimento dell'acqua e dei rifiuti
+"37.707656,12.762354",37.707656,12.762354,dig-28,Trinità,Delia,Lago della Trinità,Castelvetrano,TP,18.00,Irriguo,Dipartimento dell'acqua e dei rifiuti
+"37.8508,12.626219",37.850800,12.626219,dig-29,Zaffarana,Zaffarana,Lago Zaffarana,Trapani,TP,0.90,Irriguo,Dipartimento dell'acqua e dei rifiuti
+"37.018544,14.344419",37.018544,14.344419,dig-30,Biviere,Naturale,Lago Biviere,Gela,CL,4.80,Irriguo,Consorzio di Bonifica 5 Gela
