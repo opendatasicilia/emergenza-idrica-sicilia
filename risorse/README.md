@@ -19,7 +19,7 @@
 | utilizzazione | come viene utilizzata l'acqua della diga                   | Potabile - Irriguo - Elettrico        |
 | gestore       | gestore della diga                                         | Dipartimento dell'acqua e dei rifiuti |
 
-## volume_invasi_melted
+## dighe_serie_storica_melted
 
 Dati scrapati dai [PDF](https://www.regione.sicilia.it/sites/default/files/2024-01/2024.01.01_A_Tabella_volumi_invasi.pdf)
 
