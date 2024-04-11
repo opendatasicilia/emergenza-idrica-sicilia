@@ -124,3 +124,6 @@ extra:
     - icon: material/cookie
       link: https://opendatasicilia.github.io/emergenza-idrica-sicilia/privacy-cookie
       name: privacy & cookies
+    - icon: material/rss
+      link: https://opendatasicilia.github.io/emergenza-idrica-sicilia/feed_rss_created.xml
+      name: feed RSS
