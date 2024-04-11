@@ -1,3 +1,3 @@
-# Benvenuti
+# Benvenuti 
 
-Qui a seguire, inseriremo gli aggiornamenti di questo progetto.
+In questa sezione, a seguire, inseriremo gli aggiornamenti di questo progetto. 
