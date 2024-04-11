@@ -42,14 +42,11 @@ Siamo tutti appassionati di open data :octicons-book-24: e facciamo parte della 
 
 ## Quando abbiamo iniziato a creare questo progetto  :material-timetable:
 
-Abbiamo avviato il lavoro per realizzare questo progetto ad aprile 2024. Il lavoro prosegue nel tempo:
-
-   - con i post del blog;
-   - con gli aggiornamenti delle informazioni, quando necessario.
+Abbiamo avviato il lavoro per realizzare questo progetto ad aprile 2024. Il lavoro prosegue nel tempo con gli aggiornamenti delle informazioni, quando necessario.
 
 
 ## Questo progetto è realizzato con  :simple-materialformkdocs:
 
 [![Built with Material for MkDocs](https://img.shields.io/badge/Material_for_MkDocs-526CFE?style=for-the-badge&logo=MaterialForMkDocs&logoColor=white)](https://squidfunk.github.io/mkdocs-material/)
 
-Ci teniamo molto a sottolinearlo perché è uno strumento davvero eccezionale per la documentazione di progetti.  
+Ci teniamo molto a sottolinearlo perché è uno strumento davvero eccezionale per la documentazione di progetti :octicons-heart-fill-24:{ .heart }  
