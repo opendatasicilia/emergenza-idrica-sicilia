@@ -7,4 +7,4 @@ description: Gli aggiornamenti per seguire l'evoluzione della crisi idrica in Si
 
 # Benvenuti
 
-`In questa sezione gli aggiornamenti per seguire l'evoluzione della crisi idrica in Sicilia e di questo progetto.`
+<span style="color: #ff0000;">In questa sezione gli aggiornamenti per seguire l'evoluzione della crisi idrica in Sicilia e di questo progetto.</span>
