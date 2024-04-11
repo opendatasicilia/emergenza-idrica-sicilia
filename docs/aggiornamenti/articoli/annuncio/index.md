@@ -1,6 +1,6 @@
 ---
 draft: false
-date: 2024-04-11
+date: 2024-01-31T11:00:00
 hide:
   - navigation
   - toc
@@ -8,7 +8,7 @@ categories:
   - generale
 ---
 
-# Benevenuti nella sezione aggiornamenti
+# Benevenuti nella sezione aggiornamenti :material-update:
 
 Questa sezione del sito è stata ideata per **dare evidenza degli aggiornamenti che riguarderanno principalemente i seguenti argomenti**:
 
