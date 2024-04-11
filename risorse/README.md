@@ -40,7 +40,7 @@ Dati scrapati dai [PDF](https://www.regione.sicilia.it/sites/default/files/2024-
 | latitudine                | latitudine (EPSG:4326)                  | 39.315861                                                      |
 | longitudine               | longitudine (EPSG:4326)                 | 9.288667                                                       |
 | n__arch_                  |                                         | 0087B                                                          |
-| udt                       |                                         | Cagliari                                                       |
+| utd                       | ufficio tecnico dighe                   | Cagliari                                                       |
 | regione                   | denominazione regione                   | Sardegna                                                       |
 | provincia                 | sigla provincia                         | CA                                                             |
 | comune                    | denominazione comune                    | Sinnai                                                         |
