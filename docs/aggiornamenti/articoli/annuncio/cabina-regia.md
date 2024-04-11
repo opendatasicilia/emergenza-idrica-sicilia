@@ -6,6 +6,8 @@ hide:
   - toc
 categories:
   - atti amministrativi
+tags:
+  - regione
 ---
 
 # Istituita la cabina regia regionale per la gestione dell'emergenza idrica
@@ -28,5 +30,5 @@ La cabina è composta dai seguenti membri:
 - Salvatore Barbagallo Professore ordinario di Idraulica agraria e sistemazioni idraulicoforestali dell'Università di Catania;
 - Salvatore Sammartano, Capo di Gabinetto.
 
-*Il Dipartimento regionale della Protezione civile assicurerà il supporto tecnico ed amministrativo nonché la realizzazione tecnico-operativa, anche avvalendosi dei Dipartimenti regionali eventualmente interessati, di tutti gli interventi che saranno pianificati.* 
+*Il Dipartimento regionale della Protezione civile assicurerà il supporto tecnico ed amministrativo nonché la realizzazione tecnico-operativa, anche avvalendosi dei Dipartimenti regionali eventualmente interessati, di tutti gli interventi che saranno pianificati.*
 

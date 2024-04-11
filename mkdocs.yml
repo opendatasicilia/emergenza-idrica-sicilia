@@ -50,6 +50,8 @@ nav:
 plugins:
 - search
 - social
+- tags:
+    tags_file: tag.md
 - blog:
     blog_dir: aggiornamenti
     post_dir: "{blog}/articoli"
