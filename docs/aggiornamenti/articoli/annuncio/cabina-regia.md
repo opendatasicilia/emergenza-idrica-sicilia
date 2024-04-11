@@ -15,7 +15,7 @@ settore idrico agricolo/zootecnico e in quello idropotabile civile e produttivo.
 
 <!-- more -->
 
-La cabina è cmposta dai seguenti membri:
+La cabina è composta dai seguenti membri:
 
 - Salvatore Cocina, Dirigente Generale del Dipartimento regionale della Protezione Civile, con il ruolo di coordinatore tecnico;
 - Duilio Alongi, Dirigente Generale del Dipartimento Regionale Tecnico;
