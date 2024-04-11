@@ -127,6 +127,6 @@ extra:
     - icon: material/rss
       link: https://opendatasicilia.github.io/emergenza-idrica-sicilia/feed_rss_created.xml
       name: feed RSS
-    - icon: material/octicons-tag-24
+    - icon: material/tag
       link: https://opendatasicilia.github.io/emergenza-idrica-sicilia/tag
       name: tag
