@@ -6,6 +6,8 @@ hide:
   - toc
 categories:
   - atti amministrativi
+tags:
+  - regione
 ---
 
 # Istituita la cabina regia regionale per la gestione dell'emergenza idrica
