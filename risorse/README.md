@@ -41,6 +41,31 @@
 | data          | data rilievo  (anno-mese-giorno)                           | 2024-02-18                            |
 | valore        | volume d'acqua rilevato in Mm³                             | 12.50                                 |
 
+## grandi_dighe_italiane
+
+È un file csv elaborato a partire dal [sito](https://dgdighe.mit.gov.it/categoria/articolo/_cartografie_e_dati/_cartografie/cartografia_dighe)
+
+| attributo                 | descrizione                             | esempio                                                        |
+| ------------------------- | --------------------------------------- | -------------------------------------------------------------- |
+| nome                      | nome della diga                         | Santa Vittoria                                                 |
+| latitudine                | latitudine (EPSG:4326)                  | 39.315861                                                      |
+| longitudine               | longitudine (EPSG:4326)                 | 9.288667                                                       |
+| n__arch_                  |                                         | 0087B                                                          |
+| udt                       |                                         | Cagliari                                                       |
+| regione                   | denominazione regione                   | Sardegna                                                       |
+| provincia                 | sigla provincia                         | CA                                                             |
+| comune                    | denominazione comune                    | Sinnai                                                         |
+| corso_d_acqua             | denominazione corso d'acqua             | Rio Bau Filixi                                                 |
+| tipologia                 | tipo di costruzione diga                | A gravità ordinaria in muratura di pietrame con malta (a.1.1.) |
+| altezza_ndt_2014__m_      |                                         | 41.00                                                          |
+| altezza_dm_marzo_82__m_   |                                         | 44.75                                                          |
+| vol__di_invaso__Mmc_      | volume dell'invaso in Mm³               | 4.30                                                           |
+| quota_max_di_reg___m_slm_ |                                         | 201.00                                                         |
+| uso_prevalente            | uso prevalente della diga               | Potabile                                                       |
+| anno_inizio_lavori        | anno inizio lavori                      | 1931                                                           |
+| anno_fine_lavori          | anno fine lavori                        | 1937                                                           |
+| indirizzo_google_maps     | indirizzo web della diga in Goolge Maps | https://goo.gl/maps/ZbgCAjdc6RLExSyx8                          |
+
 ## riduzione_idrica_datawrapper
 
 È un file csv estratto dal [PDF](https://www.regione.sicilia.it/sites/default/files/2024-04/Mappa%20pdf.pdf)
