@@ -17,6 +17,8 @@ Questa sezione del sito è stata ideata per **dare evidenza degli aggiornamenti 
 - news che gli enti competenti pubblicheranno nei rispettivi siti web concernenti l'emergenza idrica;
 - mappe e infografiche realizzate dallo staff redazione di questo sito per illustrare i dati che gli enti pubblici preposti pubblicheranno nel corso del tempo.
 
+<!-- more -->
+
 Si tratta di una sezione con lo scopo di aggregare ordinatamente le informazioni provenienti "**esclusivamente**" dagli enti pubblici preposti alla gestione della crisi idrica e alla progettazione e realizzazione degli interventi risolutivi. 
 
 **Cosa non conterrà la sezione aggiornamenti?**
