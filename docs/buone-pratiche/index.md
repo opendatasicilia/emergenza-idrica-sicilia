@@ -12,7 +12,7 @@ description: Azioni e buone pratiche finalizzate al risparmio idrico potabile ed
 
 # Vademecum di azioni e buone pratiche per il risparmio idrico potabile e la riduzione dei consumi
 
-## L'acqua è senza dubbio uno dei beni più preziosi che possediamo 
+## L'acqua è senza dubbio uno dei beni più preziosi che possediamo
 
 Una risorsa però non inesauribile, che è fondamentale non sprecare. Sono tante le occasioni quotidiane in cui l'utilizzo è
 continuo e costante: dall'igiene personale alle pulizie di casa fino all'irrigazione delle piante e del giardino.
@@ -50,7 +50,7 @@ residenziale.
 3. **Razionalizzare gli utilizzi anche in cucina**, usando bacinelle per il lavaggio della verdura invece dell'acqua corrente. Attenzione anche quando si lavano i piatti a mano: tenere il rubinetto aperto significa lasciare scorrere 12 litri al minuto se non si chiude il rubinetto.
 4. **Scongelare** gli alimenti all'aria ed in una bacinella L'abitudine di lasciarli sotto l'acqua corrente calda o fredda comporta un consumo di circa sei litri al minuto.
 5. **Riutilizzare** l'acqua tolta dall'acquario Si può usare per annaffiare le piante e i fiori in quanto è ricca di sostanze fertilizzanti.
-6. Nel caso in cui si usi la lavastoviglie, i piatti possono prima essere **sciacquati con l'acqua di cottura** della pasta o usata per lavare le verdure.
+6. Nel caso in cui si usi la lavastoviglie, i piatti possono prima essere **sciacquati con l'acqua di cottura** della pasta o con quella usata per lavare le verdure.
 7. **Utilizzare lavastoviglie e lavatrici sempre a pieno carico**. Questi i consumi medi stimati: fino a 15 litri per un carico di lavastoviglie (classe A) senza prelavaggio (7 litri in classe A+++), 45 litri per un carico di lavatrice (classe A), preferendo lavaggi a temperature basse. ENEA inoltre specifica che con l'installazione di pannelli solari si eviterebbero i consumi elettrici per scaldare l'acqua necessaria agli elettrodomestici.
 8. **Sostituire** i vecchi elettrodomestici con modello a **risparmio energetico**. Dovendo sostituire una nuova lavatrice o lavastoviglie, acquista quelle di nuova generazione che consentono di risparmiare il 50% d'acqua e di regolare la quantità erogata in base al carico. Per avere il massimo dell'efficienza e del risparmio, selezionare la modalità eco.
 9. Se possibile utilizzare **rubinetti con sensori o comunque utilizzare dispositivi che riducono il flusso dell'acqua (valvole rompigetto)**.
