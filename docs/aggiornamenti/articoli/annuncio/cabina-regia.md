@@ -13,6 +13,8 @@ categories:
 Con [**Deliberazione dell Giunta Regionale n. 148 del 9 aprile 2024**](https://www2.regione.sicilia.it/deliberegiunta/file/giunta/allegati/N.148_09.04.2024.pdf) è stata istituita la cabina di regia regionale per  fronteggiare lo stato di crisi e di emergenza nel territorio della Regione Siciliana nel
 settore idrico agricolo/zootecnico e in quello idropotabile civile e produttivo.
 
+<!-- more -->
+
 La cabina è cmposta dai seguenti membri:
 
 - Salvatore Cocina, Dirigente Generale del Dipartimento regionale della Protezione Civile, con il ruolo di coordinatore tecnico;
