@@ -5,3 +5,5 @@ script/output/*
 
 package-lock.json
 package.json
+
+*.qgz
