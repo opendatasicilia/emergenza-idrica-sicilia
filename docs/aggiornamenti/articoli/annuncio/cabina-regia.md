@@ -31,4 +31,3 @@ La cabina è composta dai seguenti membri:
 - Salvatore Sammartano, Capo di Gabinetto.
 
 *Il Dipartimento regionale della Protezione civile assicurerà il supporto tecnico ed amministrativo nonché la realizzazione tecnico-operativa, anche avvalendosi dei Dipartimenti regionali eventualmente interessati, di tutti gli interventi che saranno pianificati.*
-
