@@ -5,7 +5,7 @@ title: Aggiornamenti
 description: Gli aggiornamenti per seguire l'evoluzione della crisi idrica in Sicilia e di questo progetto
 ---
 
-# Benvenuti
+# Aggiornamenti
 
 <style> .md-nav__item .md-nav__link--active {    display: none;}</style>
 
