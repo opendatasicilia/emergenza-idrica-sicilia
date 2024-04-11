@@ -50,6 +50,10 @@ nav:
 plugins:
 - search
 - social
+- rss:
+    match_path: aggiornamenti/articoli/.*
+    date_from_meta:
+      as_creation: date
 - tags:
     tags_file: tag.md
 - blog:
