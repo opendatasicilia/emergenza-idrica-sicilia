@@ -80,6 +80,27 @@
 | area_kmq  | superficie Comune                              | 130,89  |
 | pop_2024  | popolazione residente ISTAT al 01/gennaio/2024 | 44683   |
 
+## UTD_Palermo
+
+È un file csv scaricato da [qui](https://dgdighe.mit.gov.it/categoria/articolo/_cartografie_e_dati/_dighe_di_competenza/UTDPA/)
+
+```
+vd "https://dgdighe.mit.gov.it/categoria/articolo/_cartografie_e_dati/_dighe_di_competenza/UTDPA/" +:table_0::
+```
+
+| attributo      | descrizione              | esempio                |
+| -------------- | ------------------------ | ---------------------- |
+| id             | identificativo univoco   | 1                      |
+| diga           | denominazione della diga | ANCIPA                 |
+| narch          |                          | 527                    |
+| sub            |                          | A                      |
+| s1             |                          | NO                     |
+| s2             |                          | SC                     |
+| uso_prevalente |                          | IDROELETTRICO          |
+| regione        | denominazione regione    | SICILIA                |
+| provincia      | sigla della provincia    | EN                     |
+| concessionario |                          | ENEL PRODUZIONE S.P.A. |
+
 ## cartella pdf
 
 Contiene tutti i pdf delle tabelle e grafici degli invasi dal 2011 al 2024 scaricabili da [qui](https://www.regione.sicilia.it/istituzioni/regione/strutture-regionali/presidenza-regione/autorita-bacino-distretto-idrografico-sicilia/siti-tematici/risorse-idriche/volumi-invasati-nelle-dighe-della-sicilia)
