@@ -1,14 +1,16 @@
 ---
 draft: false
-date: 2024-04-04T12:00:00
+date: 2024-04-04
 hide:
   - navigation
   - toc
 categories:
-  - comunicati
+  - generale
 tags:
+  - amap
   - palermo
 ---
+
 
 # AMAP - Diminuzione del 50% degli invasi, scatta a Palermo il Piano di emergenza dell'AMAP. Riduzione della pressione in rete per garantire l'acqua sino al prossimo inverno
 
