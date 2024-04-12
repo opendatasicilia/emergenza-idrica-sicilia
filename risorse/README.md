@@ -9,7 +9,7 @@
 | coordinate    | concatenazione delle due coordinate Lat e Long (EPSG:4326) | 37.836222, 14.5628727                 |
 | lat           | latitudine (EPSG:4326)                                     | 37.836222                             |
 | long          | longitudine (EPSG:4326)                                    | 14.562872                             |
-| cod           | codice univoco                                             | dig-01                                |
+| cod           | codice univoco diga                                        | dig-01                                |
 | diga          | nome della diga                                            | Àncipa                                |
 | fiume         | fiume lungo il quale è presente la diga                    | Troina                                |
 | lago          | lago nel quale è presente la diga                          | Lago Àncipa                           |
@@ -21,7 +21,7 @@
 
 ## dighe_serie_storica_melted
 
-Dati scrapati dai [PDF](https://www.regione.sicilia.it/sites/default/files/2024-01/2024.01.01_A_Tabella_volumi_invasi.pdf)
+Dati scrapati dai [PDF](https://www.regione.sicilia.it/sites/default/files/2024-01/2024.01.01_A_Tabella_volumi_invasi.pdf) dal 2010 al 2024
 
 | attributo | descrizione              | esempio    |
 | --------- | ------------------------ | ---------- |
@@ -29,6 +29,8 @@ Dati scrapati dai [PDF](https://www.regione.sicilia.it/sites/default/files/2024-
 | diga      | denominazione della diga | Scanzano   |
 | data      | data (giorno-mese-anno)  | 01/01/2010 |
 | volume    | volume in Mm³            | 9.78       |
+
+NB: i due file csv `dighe_anagrafica` e `dighe_serie_storica_melted` hanno l'attributo `cod` correlato.
 
 ## grandi_dighe_italiane
 
@@ -71,7 +73,7 @@ Dati scrapati dai [PDF](https://www.regione.sicilia.it/sites/default/files/2024-
 
 ## UTD_Palermo
 
-È un file csv scaricato da [qui](https://dgdighe.mit.gov.it/categoria/articolo/_cartografie_e_dati/_dighe_di_competenza/UTDPA/)
+È un file csv scaricato da [qui](https://dgdighe.mit.gov.it/categoria/articolo/_cartografie_e_dati/_dighe_di_competenza/UTDPA/) Ufficio Tecnico Dighe
 
 
 | attributo      | descrizione              | esempio                |
