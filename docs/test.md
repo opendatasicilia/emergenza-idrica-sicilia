@@ -1,5 +1,5 @@
 
-<iframe title="CFD Idro Sicilia="Mappa" src="https://www.protezionecivilesicilia.it:8443/aegis/map/map2d" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="950"></iframe>
+<iframe title="CFD Idro Sicilia="Mappa" src="https://www.protezionecivilesicilia.it:8443/aegis/map/map2d" frameborder="0" height="950"></iframe>
 
 
 
