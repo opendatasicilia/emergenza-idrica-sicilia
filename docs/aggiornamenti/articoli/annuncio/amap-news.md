@@ -18,4 +18,4 @@ per i [53 Comuni Associati](https://www.amapspa.it/it/azienda/).
 
 Sicuramente è un iniziativa interessante per informare la comunità sugli ultimi aggiornamenti e le iniziative che via via saranno intraprese per far fronte all'emergenza.
 
-Al sito [comunicazione](https://www.amapspa.it/it/comunicazione/) l'AMAP informa sulle riparazioni effetuate sulla rete idrica.
+Al sito [comunicazione](https://www.amapspa.it/it/comunicazione/) l'AMAP informa sulle riparazioni effettuate sulla rete idrica.
