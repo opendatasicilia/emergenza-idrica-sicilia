@@ -1,0 +1,90 @@
+
+# --------
+# metadata: dighe_serie_storica_melted.csv dighe_anagrafica.csv
+# --------
+
+title: Dati sugli invasi delle dighe della Sicilia
+licenses:
+  - name: CC-BY-4.0
+    title: Creative Commons Attribution 4.0
+    path: https://creativecommons.org/licenses/by/4.0/
+resources:
+  - name: dighe_serie_storica_melted
+    description: Volumi invasati nelle dighe della Sicilia. Tabella estratta dai file PDF rilasciati dalla Regione Siciliana (vd. sources)
+    sources: 
+      - title: Volumi invasati nelle dighe della Sicilia
+        description: Pagina web della Regione Siciliana che raccoglie documenti PDF contenenti le serie storiche dei volumi invasati nelle dighe della Sicilia
+        path: https://www.regione.sicilia.it/istituzioni/regione/strutture-regionali/presidenza-regione/autorita-bacino-distretto-idrografico-sicilia/siti-tematici/risorse-idriche/volumi-invasati-nelle-dighe-della-sicilia
+    type: table
+    path: risorse/dighe_serie_storica_melted.csv
+    scheme: file
+    format: csv
+    mediatype: text/csv
+    encoding: utf-8
+    schema:
+      fields:
+        - name: cod
+          type: string
+          description: codice univoco diga
+        - name: diga
+          type: string
+          description: denominazione della diga
+        - name: data
+          type: date
+          format: "%d/%m/%Y"
+          description: data nel formato dd/mm/yyyy
+        - name: volume
+          type: number
+          description: volume in Mmc
+  
+  - name: dighe_anagrafica
+    description: Anagrafica delle dighe della Sicilia
+    sources: 
+      - title: Anagrafica delle dighe della Sicilia
+        description: Tabella estratta dal file PDF rilasciato dalla Regione Siciliana (vd. path)
+        path: https://www.regione.sicilia.it/sites/default/files/2024-01/2024.01.01_A_Tabella_volumi_invasi.pdf
+    type: table
+    path: risorse/dighe_anagrafica.csv
+    scheme: file
+    format: csv
+    mediatype: text/csv
+    encoding: utf-8
+    schema:
+      fields:
+        - name: coordinate
+          type: geopoint
+          description: concatenazione delle due coordinate Lat e Long (EPSG:4326)
+        - name: lat
+          type: number
+          description: latitudine (EPSG:4326)
+        - name: long
+          type: number
+          description: longitudine (EPSG:4326)
+        - name: cod
+          type: string
+          description: codice univoco diga
+        - name: diga
+          type: string
+          description: nome della diga
+        - name: fiume
+          type: string
+          description: fiume lungo il quale è presente la diga
+        - name: lago
+          type: string
+          description: lago nel quale è presente la diga
+        - name: comune
+          type: string
+          description: comune nel quale è presente la diga
+        - name: provincia
+          type: string
+          description: provincia nella quale è presente la diga
+        - name: capacita
+          title: capacità
+          type: number
+          description: capacità della diga espressa im Mmc
+        - name: utilizzazione
+          type: string
+          description: come viene utilizzata l'acqua della diga
+        - name: gestore
+          type: string
+          description: gestore della diga
