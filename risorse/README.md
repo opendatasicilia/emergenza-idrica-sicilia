@@ -13,8 +13,8 @@
 | diga          | nome della diga                                            | Àncipa                                |
 | fiume         | fiume lungo il quale è presente la diga                    | Troina                                |
 | lago          | lago nel quale è presente la diga                          | Lago Àncipa                           |
-| comune        | Comune nel quale è presente òa diga                        | Cesarò                                |
-| provincia     | Provincia nel quale è presente la diga                     | ME                                    |
+| comune        | comune nel quale è presente la diga                        | Cesarò                                |
+| provincia     | provincia nella quale è presente la diga                     | ME                                    |
 | capacita      | capacità della diga espressa im Mm³                        | 30.40                                 |
 | utilizzazione | come viene utilizzata l'acqua della diga                   | Potabile - Irriguo - Elettrico        |
 | gestore       | gestore della diga                                         | Dipartimento dell'acqua e dei rifiuti |
