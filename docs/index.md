@@ -33,6 +33,7 @@ Questo sito è stato creato nell'aprile 2024 dalla comunità di [**OpenDataSicil
 
 ## Output di progetto  :material-checkbox-multiple-outline:
 
+- la [**Mappa dei distretti di Palermo gestiti dall'AMAP S.p.A. soggetti a riduzione della pressione idrica**](https://opendatasicilia.github.io/emergenza-idrica-sicilia/mappe/distretti_pa/);
 - la [**Mappa** ed elenco dei **Comuni** siciliani soggetti alla **riduzione** della **fornitura** **idrica**](mappe/riduzione/index.md);
 - la [**Mappa** delle principali **risorse idriche**, **dighe, laghi e fiumi**](mappe/risorse/index.md);
 - la [**Mappa** delle **dighe** e prospetto dei **volumi invasati**](mappe/volumi/index.md);
