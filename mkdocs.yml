@@ -35,6 +35,7 @@ edit_uri: edit/main/docs/
 nav:
   - Home: index.md
   - Mappe:
+     - Palermo distretti rete AMAP S.p.A.: mappe/distretti_pa/index.md
      - Grandi dighe Italiane: mappe/grandi_dighe/index.md
      - Comuni con riduzione della fornitura idrica: mappe/riduzione/index.md
      - Principali risorse idriche: mappe/risorse/index.md
