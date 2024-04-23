@@ -11,7 +11,7 @@ description: Palermo, mappa dei distretti gestiti dall'AMAP S.p.A. soggetti a ri
 !!! info
 
     ## L'Emergenza Idrica 2024 — Informazoni ai cittadini
-	**Amap SPA** mette a disposzione dl **OpenDataScilia**, una community informatica informale che da circa 10 anni si propone di far conoscere e diffondere la cultura dell'open govemment e le prassi dell'open data, le informazioni disponibili sui distretti della rete idrica interessati dalle riduzioni di pressione a seguito dell'emergenza idrica in atto.<br>
+	**Amap SPA** mette a disposizione dl **OpenDataScilia**, una community informatica informale che da circa 10 anni si propone di far conoscere e diffondere la cultura dell'open govemment e le prassi dell'open data, le informazioni disponibili sui distretti della rete idrica interessati dalle riduzioni di pressione a seguito dell'emergenza idrica in atto.<br>
 	II percorso si innesta in un dialogo tra azienda e società civile, volto a fornire quante più informazioni di dettaglio alle utenze e al territorio.
 	Seguendo questa filosofia a breve verrà anche resa disponibile una app su smartphone che consentirà, in base alla posizione, di avere le necessarie informaztoni sulla qualità dell'acqua erogata nella rete idrica della Città di Palermo e, in una seconda fase, su tutti in 47 comuni gestiti.
 
