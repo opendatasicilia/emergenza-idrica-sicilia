@@ -23,6 +23,6 @@ Ci sembrava essenziale rendere disponibile una [**mappa interattiva dei distrett
 
 Così, per altri prossimi annunci che fanno riferimento a un distretto, sarà possibile individuarlo facilmente sulla mappa, e capire ad esempio se si è interessati o meno.
 
-Siamo lieti di **poter contribuire a questo dialogo**, e ringraziamo AMAP SpA per la collaborazione, perché purtroppo non avviene così spesso.
+Siamo lieti di **poter contribuire a questo dialogo**, e ringraziamo AMAP SpA per la collaborazione.
 
 [![](mappa-distretti-amap.png)](../../../../mappe/distretti_pa/index.md)
