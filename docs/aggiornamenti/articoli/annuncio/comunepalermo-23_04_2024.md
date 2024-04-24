@@ -20,4 +20,9 @@ Con [l'ordinanza n. 69 del 22.04.2024](https://www.comune.palermo.it/js/server/u
 Con il [comunicato stampa del 23 aprile 2024](https://www.comune.palermo.it/palermo-informa-dettaglio.php?tp=1&id=40564) il Comune di Palermo da evidenza dell'Ordinanza
 che vieta l'utilizzo di acqua potabile per innaffiare piante di balconi e giardini.
 
-Il divieto riguarda l'utilizzdo di acqua potabile per innaffiare le piante di balconi e giardini dalle ore 5 alle ore 23 e di lavare i veicoli privati, con esclusione degli autolavaggi.
+Si fa divieto di:
+
+- innaffiare le piante di balconi e giardini dalle ore **05:00 alle 23:00**;
+- lavare veicoli privati (con esclusione degli autolavaggi);
+- lavare cortili e piazzali;
+- alimentare fontane ornamentali, vasche e piscine, qualora non dotate di dispositivi per il riciclo artificiale dell'acqua.
