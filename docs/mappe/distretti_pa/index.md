@@ -18,4 +18,4 @@ description: Palermo, mappa dei distretti gestiti dall'AMAP S.p.A. soggetti a ri
 
   1. ```<iframe width="100%" height="850px" frameborder="0" allowfullscreen allow="geolocation" src="//umap.openstreetmap.fr/it/map/distretti-amap-interessati-dalla-riduzione-pressio_1059819?scaleControl=false&miniMap=false&scrollWheelZoom=true&zoomControl=true&editMode=disabled&moreControl=true&searchControl=null&tilelayersControl=false&embedControl=false&datalayersControl=false&onLoadPanel=none&captionBar=false&captionMenus=true&locateControl=true&editinosmControl=false&starControl=false"></iframe><p><a href="//umap.openstreetmap.fr/it/map/distretti-amap-interessati-dalla-riduzione-pressio_1059819?scaleControl=false&miniMap=false&scrollWheelZoom=true&zoomControl=true&editMode=disabled&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=none&captionBar=false&captionMenus=true">Visualizza a schermo intero</a></p>```
 
-Fonte dati: **AMAP S.p.A.*
+Fonte dati: **AMAP S.p.A.**
