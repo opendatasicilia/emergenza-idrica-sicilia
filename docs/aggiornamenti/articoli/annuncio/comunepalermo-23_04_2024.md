@@ -11,7 +11,7 @@ tags:
 ---
 
 
-# Comune di Palermo: divieto di utilizzo acqua potabile per innaffiare piante di balconi e giardini
+# Comune di Palermo: dal 22 aprile divieto di utilizzo dell'acqua potabile per innaffiare, lavare veicoli, cortili, ecc.
 
 Con [l'ordinanza n. 69 del 22.04.2024](https://www.comune.palermo.it/js/server/uploads/_23042024092207.pdf) il Comune di Palermo vieta l'utilizzo di acqua potabile per innaffiare piante di balconi e giardini.
 
