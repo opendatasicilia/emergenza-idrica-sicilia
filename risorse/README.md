@@ -2,7 +2,7 @@
 
 ## dighe_anagrafica
 
-È un file csv è stata costruito  *ad hoc*  per organizzare i dati scrapati dai [PDF](https://www.regione.sicilia.it/istituzioni/regione/strutture-regionali/presidenza-regione/autorita-bacino-distretto-idrografico-sicilia/siti-tematici/risorse-idriche/volumi-invasati-nelle-dighe-della-sicilia) dal 2010 al 2024
+È un file csv costruito  *ad hoc*  per organizzare i dati scrapati dai [PDF](https://www.regione.sicilia.it/istituzioni/regione/strutture-regionali/presidenza-regione/autorita-bacino-distretto-idrografico-sicilia/siti-tematici/risorse-idriche/volumi-invasati-nelle-dighe-della-sicilia) dal 2010 al 2024
 
 | attributo     | descrizione                                                | esempio                               |
 | ------------- | ---------------------------------------------------------- | ------------------------------------- |
