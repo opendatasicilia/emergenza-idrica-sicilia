@@ -8,6 +8,7 @@ licenses:
   - name: CC-BY-4.0
     title: Creative Commons Attribution 4.0
     path: https://creativecommons.org/licenses/by/4.0/
+
 resources:
   - name: dighe_serie_storica_melted
     description: Volumi invasati nelle dighe della Sicilia. Tabella estratta dai file PDF rilasciati dalla Regione Siciliana (vd. sources)
@@ -38,11 +39,7 @@ resources:
           description: volume in Mmc
   
   - name: dighe_anagrafica
-    description: Anagrafica delle dighe della Sicilia
-    sources: 
-      - title: Anagrafica delle dighe della Sicilia
-        description: Tabella estratta dal file PDF rilasciato dalla Regione Siciliana (vd. path)
-        path: https://www.regione.sicilia.it/sites/default/files/2024-01/2024.01.01_A_Tabella_volumi_invasi.pdf
+    description: Anagrafica delle dighe della Sicilia. File costruito e arricchito dalla comunità Open Data Sicilia.
     type: table
     path: risorse/dighe_anagrafica.csv
     scheme: file
