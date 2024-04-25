@@ -13,7 +13,7 @@ description: Risorse utili per approfondire il tema.
 Questo sito ha come obiettivo principale quello di stimolare le Pubbliche Amministrazioni e le aziende che gestiscono dati e informazioni sull'attuale crisi idrica siciliana, a farlo secondo i principi dei dati aperti.<br>
 **Non è quindi un sito di approfondimento scientifico e tecnico sulla siccità**. Però ci sembra utile **raccogliere** dei **link** a risorse utili per chi volesse **approfondire** il tema. Un punto di partenza consigliato è "[Cosa è la siccità](https://droughtcentral.it/siccita/)" (a cura dell'"Osservatorio Siccità").
 
-Risorse in cui inoltre sono **disponibili** molto spesso **dati** e **indici** che consentono di farsi un'idea "misurata" della situazione.
+Risorse in cui, inoltre, sono **disponibili** molto spesso **dati** e **indici** che consentono di farsi un'idea "misurata" della situazione.
 
 ## Siti di approfondimento
 
