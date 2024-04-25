@@ -27,7 +27,7 @@ Risorse in cui inoltre sono **disponibili** molto spesso **dati** e **indici** c
 
     Una piattaforma del Consiglio Nazionale delle Ricerche, dedicata al monitoraggio della siccità. Molto utile capire cosa è la siccità e come si "misura". Ricco di dati e servizi.
 
-    [:octicons-arrow-right-24: Apri]([#](https://droughtcentral.it/))
+    [:octicons-arrow-right-24: Apri](https://droughtcentral.it/)
 
 -   __Osservatorio europeo e globalle della siccità (EDO)__
 
