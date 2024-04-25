@@ -3,6 +3,7 @@ hide:
 - toc
 # - navigation
 title: Mappe
+description: Mappe by @opendatasicilia
 ---
 
 <style>
@@ -30,13 +31,6 @@ title: Mappe
 
     [:octicons-arrow-right-24: Apri](riduzione/index.md "Comuni con riduzione della fornitura idrica")
 	
--   __Principali risorse idriche__
-
-    ---
-
-    [![](../img/risorse.jpg "Principali risorse idriche")](risorse/index.md)
-
-    [:octicons-arrow-right-24: Apri](risorse/index.md "Principali risorse idriche")
 
 -   __Dighe e prospetto dei volumi invasati__
 
@@ -45,6 +39,14 @@ title: Mappe
     [![](../img/invasi.jpg "Dighe e prospetto dei volumi invasati")](volumi/index.md)
 
     [:octicons-arrow-right-24: Apri](volumi/index.md "Dighe e prospetto dei volumi invasati")	
+	
+-   __Principali risorse idriche__
+
+    ---
+
+    [![](../img/risorse.jpg "Principali risorse idriche")](risorse/index.md)
+
+    [:octicons-arrow-right-24: Apri](risorse/index.md "Principali risorse idriche")	
 	
 -   __Grandi dighe Italiane__
 
