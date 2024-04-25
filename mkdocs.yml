@@ -16,6 +16,7 @@ theme:
   favicon: img/favicon.ico
 
   features:
+    - navigation.indexes
     - navigation.tracking
     - navigation.tabs
     - navigation.top
@@ -35,6 +36,7 @@ edit_uri: edit/main/docs/
 nav:
   - Home: index.md
   - Mappe:
+     - mappe/index.md
      - Palermo distretti rete idrica AMAP SpA: mappe/distretti_pa/index.md
      - Grandi dighe Italiane: mappe/grandi_dighe/index.md
      - Comuni con riduzione della fornitura idrica: mappe/riduzione/index.md
