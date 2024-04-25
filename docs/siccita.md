@@ -29,7 +29,7 @@ Risorse in cui inoltre sono **disponibili** molto spesso **dati** e **indici** c
 
     [:octicons-arrow-right-24: Apri](https://droughtcentral.it/)
 
--   __Osservatorio europeo e globalle della siccità (EDO)__
+-   __Osservatorio europeo e globale della siccità (EDO)__
 
     ---
 
