@@ -22,14 +22,6 @@ title: Mappe
 
     [:octicons-arrow-right-24: Apri](distretti_pa/index.md "Palermo distretti rete idrica AMAP SpA")
 
--   __Grandi dighe Italiane__
-
-    ---
-
-    [![](../img/dighe_ita.jpg "Grandi dighe Italiane")](grandi_dighe/index.md)
-
-    [:octicons-arrow-right-24: Apri](grandi_dighe/index.md "Grandi dighe Italiane")
-
 -   __Comuni con riduzione della fornitura idrica__
 
     ---
@@ -54,3 +46,10 @@ title: Mappe
 
     [:octicons-arrow-right-24: Apri](volumi/index.md "Dighe e prospetto dei volumi invasati")	
 	
+-   __Grandi dighe Italiane__
+
+    ---
+
+    [![](../img/dighe_ita.jpg "Grandi dighe Italiane")](grandi_dighe/index.md)
+
+    [:octicons-arrow-right-24: Apri](grandi_dighe/index.md "Grandi dighe Italiane")
