@@ -52,4 +52,4 @@ I distretti interessati saranno:
 - Falsomiele
 - Galletti-Bandita-Favara
 
-Possibili correzioni alle misure adottate saranno attuate al fine di ridurre al minimo i disagi per le utenze servite e saranno puntualmente pubblicate sul sito [www.amapspa.it](www.amapspa.it).
+Possibili correzioni alle misure adottate saranno attuate al fine di ridurre al minimo i disagi per le utenze servite e saranno puntualmente pubblicate sul sito [www.amapspa.it](https://www.amapspa.it).

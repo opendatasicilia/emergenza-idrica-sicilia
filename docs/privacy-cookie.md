@@ -40,7 +40,7 @@ I dati generati da Google Analytics sono conservati da Google così come indicat
 
 **Google Fonts** <br>
 [(What does using the Google Fonts API mean for the privacy of my users?)](https://developers.google.com/fonts/faq#what_does_using_the_google_fonts_api_mean_for_the_privacy_of_my_users) <br>
-Questo sito web utilizza API di Google Fonts, l’uso di Google Fonts non è autenticato. Nessun cookie viene inviato dai visitatori del sito web all’API di Google Fonts. Le richieste all’API di Google Fonts vengono eseguite su domini specifici delle risorse, come [fonts.googleapis.com](fonts.googleapis.com) o [fonts.gstatic.com](fonts.gstatic.com), in modo che le richieste per i caratteri siano separate e non contengano credenziali inviate a google.com mentre utilizzando altri servizi Google autenticati, come Gmail.  Le richieste per le risorse CSS vengono memorizzate nella cache per 1 giorno. Per ulteriori informazioni sulle informazioni raccolte da Google e su come vengono utilizzate e protette, consulta le [Norme sulla privacy di Google](https://policies.google.com/privacy)<br><br>
+Questo sito web utilizza API di Google Fonts, l’uso di Google Fonts non è autenticato. Nessun cookie viene inviato dai visitatori del sito web all’API di Google Fonts. Le richieste all’API di Google Fonts vengono eseguite su domini specifici delle risorse, come [fonts.googleapis.com](https://fonts.googleapis.com) o [fonts.gstatic.com](https://fonts.gstatic.com), in modo che le richieste per i caratteri siano separate e non contengano credenziali inviate a google.com mentre utilizzando altri servizi Google autenticati, come Gmail.  Le richieste per le risorse CSS vengono memorizzate nella cache per 1 giorno. Per ulteriori informazioni sulle informazioni raccolte da Google e su come vengono utilizzate e protette, consulta le [Norme sulla privacy di Google](https://policies.google.com/privacy)<br><br>
 
 
 ## Widget Social Network
@@ -53,7 +53,7 @@ Per maggiori informazioni, anche sulla disattivazione di tali cookie, si consigl
 - [LinkedIn](https://www.linkedin.com/legal/cookie_policy)
 
 
-## Pubblicità 
+## Pubblicità
 
 Questo sito non pubblica articoli di pubblicità
 
