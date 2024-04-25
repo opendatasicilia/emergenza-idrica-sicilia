@@ -40,7 +40,7 @@ description: Mappe by @opendatasicilia
 
     [:octicons-arrow-right-24: Apri](volumi/index.md "Dighe e prospetto dei volumi invasati")	
 	
--   __Principali risorse idriche__
+-   __Principali risorse idriche in Sicilia__
 
     ---
 
