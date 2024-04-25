@@ -44,9 +44,9 @@ description: Mappe by @opendatasicilia
 
     ---
 
-    [![](../img/risorse.jpg "Principali risorse idriche")](risorse/index.md)
+    [![](../img/risorse.jpg "Principali risorse idriche in Sicilia")](risorse/index.md)
 
-    [:octicons-arrow-right-24: Apri](risorse/index.md "Principali risorse idriche")	
+    [:octicons-arrow-right-24: Apri](risorse/index.md "Principali risorse idriche in Sicilia")	
 	
 -   __Grandi dighe Italiane__
 
