@@ -34,7 +34,7 @@ Siamo tutti appassionati di open data :octicons-book-24: e facciamo parte della 
 
     :fontawesome-brands-x-twitter: [Twitter](http://twitter.com/opendatasicilia)
 
-    :simple-telegram: [Gruppo Telegram](https://t.me/opendatasicilia)
+    :simple-telegram: [Gruppo](https://t.me/opendatasicilia) & [Canale Telegram](https://t.me/opendatasicilia_channel)
 
     :material-email-newsletter: [Newsletter](http://eepurl.com/bPWYdj)
 
