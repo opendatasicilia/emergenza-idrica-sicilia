@@ -15,7 +15,7 @@ Queste alcune delle **aziende** che **gestiscono** il **servizio** **idrico** in
 
 - **AMAP SpA**, <https://www.amapspa.it/>
 - **Siciliacque**: <https://www.siciliacque.it>
-- **Aica Agrigento**: <https://www.aica.ag.it>
-- **Caltacque**: <https://www.caltacque.it>
+- **Aica Agrigento**: <https://www.aicaonline.it/>
+- **Caltacqua**: <https://www.caltaqua.it/>
 - **Acquaenna**: <http://www.acquaenna.it/>
 
