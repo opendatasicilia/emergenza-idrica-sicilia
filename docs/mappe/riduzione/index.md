@@ -30,6 +30,11 @@ description: Mappa e elenco dei Comuni siciliani soggetti alla riduzione della f
 
     1.  ```<iframe title="Sicilia | Comuni con riduzione della fornitura idrica" aria-label="Tabella" id="datawrapper-chart-Q3P9J" src="https://datawrapper.dwcdn.net/Q3P9J/6/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="1383" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();</script>
     ```
-    <hr>
-
-    Fonte dati: [Presidenza della Regione /Autorità di Bacino del Distretto Idrografico della Sicilia](https://www.regione.sicilia.it/istituzioni/regione/strutture-regionali/presidenza-regione/autorita-bacino-distretto-idrografico-sicilia/stato-emergenza-crisi-idrica "Fonte dati: Presidenza della Regione /Autorità di Bacino del Distretto Idrografico della Sicilia")
+<hr>
+	
+<iframe title="Sicilia | Comuni che hanno emanato ordinanze funzionali al risparmio idrico potabile" aria-label="Mappa" id="datawrapper-chart-8jG3R" src="https://datawrapper.dwcdn.net/8jG3R/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="474" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
+</script>
+ 
+ <hr>
+ 
+ Fonte dati: [Presidenza della Regione /Autorità di Bacino del Distretto Idrografico della Sicilia](https://www.regione.sicilia.it/istituzioni/regione/strutture-regionali/presidenza-regione/autorita-bacino-distretto-idrografico-sicilia/stato-emergenza-crisi-idrica "Fonte dati: Presidenza della Regione /Autorità di Bacino del Distretto Idrografico della Sicilia")
