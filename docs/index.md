@@ -4,6 +4,7 @@ hide:
   - toc
 title: Emergenza idrica in Sicilia
 description: Un progetto per la trasparenza e la condivisione di dati sulla crisi idrica in Sicilia
+glightbox-manual: true
 ---
 
 # La crisi idrica  :droplet:
