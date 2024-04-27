@@ -25,5 +25,5 @@ jobs:
           path: .cache
           restore-keys: |
             mkdocs-material-
-      - run: pip install mkdocs-material markdown mkdocstrings mkdocs-rss-plugin mkdocs-click mkdocs-table-reader-plugin pillow cairosvg
+      - run: pip install mkdocs-material markdown mkdocstrings mkdocs-rss-plugin mkdocs-click mkdocs-table-reader-plugin pillow cairosvg mkdocs-glightbox
       - run: mkdocs gh-deploy --force
