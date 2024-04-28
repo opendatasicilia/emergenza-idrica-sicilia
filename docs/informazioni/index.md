@@ -20,7 +20,7 @@ A seguire una serie di informazioni utili correlate al progetto.
 
 ### Dipartimento della Protezione Civile regionale
 
-- **Dati meteo e livello invasi**: <https://www.protezionecivilesicilia.it:8443/aegis/map/map2d>
+- **Dati meteo e livello invasi** (per visualizzarli prima fare *click* su "Filtri personalizzati" e poi su "Livello invasi"): <https://www.protezionecivilesicilia.it:8443/aegis/map/map2d>
 
 ## Aziende
 
