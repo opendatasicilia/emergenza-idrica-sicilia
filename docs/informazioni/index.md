@@ -23,13 +23,22 @@ A seguire una serie di informazioni utili correlate al progetto.
 
 - **Dati meteo e livello invasi** (per visualizzare il livello invasi, prima fare *click* su "Filtri personalizzati" e poi su "Livello invasi"): <https://www.protezionecivilesicilia.it:8443/aegis/map/map2d>
 
+## Enti di ricerca
+
+### CNR
+
+- **Osservatorio Siccità**: <https://droughtcentral.it/>
+
+### Joint Research Centre
+
+- **Copernicus Drought Observatories**: <https://drought.emergency.copernicus.eu/tumbo/>
+
 ## Aziende
 
 Queste alcune delle **aziende** che **gestiscono** il **servizio** **idrico** in Sicilia:
 
-- **AMAP SpA**, <https://www.amapspa.it/>
+- **AMAP SpA**: <https://www.amapspa.it/>
 - **Siciliacque**: <https://www.siciliacque.it>
 - **Aica Agrigento**: <https://www.aicaonline.it/>
 - **Caltacqua**: <https://www.caltaqua.it/>
 - **Acquaenna**: <http://www.acquaenna.it/>
-
