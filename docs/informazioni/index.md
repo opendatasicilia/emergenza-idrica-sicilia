@@ -14,6 +14,7 @@ A seguire una serie di informazioni utili correlate al progetto.
 ### Regione Siciliana
 
   - **Stato di Emergenza Crisi idrica**: <https://www.regione.sicilia.it/istituzioni/regione/strutture-regionali/presidenza-regione/autorita-bacino-distretto-idrografico-sicilia/stato-emergenza-crisi-idrica>
+  - **Verbali "Osservatorio Distrettuale Permanente sugli Utilizzi Idrici"**: https://www.regione.sicilia.it/istituzioni/regione/strutture-regionali/presidenza-regione/autorita-bacino-distretto-idrografico-sicilia/verbali
   - **Volumi invasati nelle dighe della Sicilia** <https://www.regione.sicilia.it/istituzioni/regione/strutture-regionali/presidenza-regione/autorita-bacino-distretto-idrografico-sicilia/siti-tematici/risorse-idriche/volumi-invasati-nelle-dighe-della-sicilia>
   - **Report siccità**: <https://www.regione.sicilia.it/istituzioni/regione/strutture-regionali/presidenza-regione/autorita-bacino-distretto-idrografico-sicilia/siti-tematici/risorse-idriche/report-siccit%C3%A0>
     - **Anno 2024**: <https://www.regione.sicilia.it/istituzioni/regione/strutture-regionali/presidenza-regione/autorita-bacino-distretto-idrografico-sicilia/report-siccita-sicilia-anno-2024>
