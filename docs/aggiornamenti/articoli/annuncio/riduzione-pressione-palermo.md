@@ -1,23 +1,55 @@
 ---
 draft: false
-date: 2024-05-04
-title: Osservatorio Utilizzi Idrici
+date: 2024-04-04
 hide:
   - navigation
   - toc
 categories:
-  - atti amministrativi
+  - generale
 tags:
-  - regione
+  - amap
+  - palermo
 ---
 
 
-# Osservatorio Distrettuale Permanente sugli Utilizzi Idrici: pubblicato verbale del 30 aprile 2024
+# AMAP - Diminuzione del 50% degli invasi, scatta a Palermo il Piano di emergenza dell'AMAP. Riduzione della pressione in rete per garantire l'acqua sino al prossimo inverno
 
-Uno dei modi per rimanere aggiornati sulla crisi idrica regionale è seguire i lavori dell'**Osservatorio Distrettuale Permanente sugli Utilizzi Idrici**. Il 30 aprile 2024 si è tenuta una riunione dell'Osservatorio, di cui [è stato pubblicato il **verbale**](https://www.regione.sicilia.it/sites/default/files/2024-05/Verbale_OPUI_30_aprile2024_def.pdf).
+L'Azienda AMAP con [comunicato del 4 aprile 2024](https://www.amapspa.it/it/diminuzione-del-50-degli-invasi-scatta-a-palermo-il-piano-di-emergenza-dellamap-riduzione-della-pressione-in-rete-per-garantire-lacqua-sino-al-prossimo-inverno/) informa che per quanto riguarda la città di Palermo, per cui erano già state individuate delle zone in cui sono state operate delle lievi riduzioni di pressione già dalla metà del mese di gennaio, verranno attuate, a partire da venerdì 5 aprile, ulteriori e più consistenti riduzioni della portata immessa in rete con conseguenti diminuzioni delle pressioni d’esercizio.  Tali misure potranno comportare, in alcuni punti dei distretti interessati, anche l’assenza di erogazione durante gli orari di massimo consumo.
 
-Si riportano come esempio informativo, queste note di AMAP per la città di **Palermo**: secondo le ultime simulazioni Palermo dovrebbe riuscire a gestire le sue esigenze idriche con **riduzioni moderate del 12-13%**, fino **a gennaio 2025**. Da febbraio - stante una situazione invariata - si prevederebbe un drastico incremento delle restrizioni con tagli previsti fino al 46%, rendendo la situazione insostenibile.
+I distretti interessati saranno:
 
-Per altre zone della Sicilia però la situazione è peggiore, ma preferiamo non redarre noi una sintesi, perché il documento è tecnico e potrebbe essere frainteso. Si lascia quindi al lettore la possibilità di leggere il verbale per avere un quadro completo della situazione.
+<!-- more -->
 
-**Tutti gli altri verbali** sono accessibili [qui](https://www.regione.sicilia.it/istituzioni/regione/strutture-regionali/presidenza-regione/autorita-bacino-distretto-idrografico-sicilia/verbali) e abbiamo aggiunto l'URL anche nella pagina [Informazioni utili](../../../informazioni/index.md#regione-siciliana).
+**ZONA NORD-OCCIDENTALE**
+
+- Strasburgo
+- San Lorenzo-Resuttana
+- Lazio-Piazza Leoni
+- San Filippo Neri
+- Pallavicino
+- Villaggio Ruffini
+- Arenella
+- Vergine Maria
+- Mondello
+- Partanna Mondello
+- Tommaso Natale
+- Sferracavallo
+- Cardillo
+
+**ZONA CENTRALE**
+
+- Libertà
+- Borgo Nuovo
+- Passo di rigano
+- Perpignano Alto
+- C.E.P.
+- Borgo Molara
+- Calatafimi
+
+**ZONA ORIENTALE**
+
+- Villagrazia
+- Falsomiele
+- Galletti-Bandita-Favara
+
+Possibili correzioni alle misure adottate saranno attuate al fine di ridurre al minimo i disagi per le utenze servite e saranno puntualmente pubblicate sul sito [www.amapspa.it](https://www.amapspa.it).
