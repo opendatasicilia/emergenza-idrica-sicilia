@@ -1,6 +1,7 @@
 ---
 draft: false
 date: 2024-05-04
+title: Osservatorio Utilizzi Idrici
 hide:
   - navigation
   - toc
