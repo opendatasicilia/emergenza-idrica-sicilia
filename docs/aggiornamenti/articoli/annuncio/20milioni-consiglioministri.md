@@ -1,6 +1,7 @@
 ---
 draft: false
 date: 2024-05-07
+title: stanziamento 20 milioni consiglio ministri
 hide:
   - navigation
   - toc
