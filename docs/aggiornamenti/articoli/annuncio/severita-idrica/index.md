@@ -25,4 +25,4 @@ Le attività degli [**Osservatori distrettuali permanenti per gli utilizzi idri
 
 È un'ulteriore pagina per **seguire** anche quello che avviene anche in **Sicilia**. Qui l'"Osservatorio del Distretto idrografico della Sicilia" - in data 8 maggio 2024 -  conferma uno **stato di severità ALTA**.
 
-![](severita.png)
+[![](severita.png)](https://www.isprambiente.gov.it/pre_meteo/idro/SeverIdrica.html)
