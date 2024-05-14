@@ -29,6 +29,10 @@ A seguire una serie di informazioni utili correlate al progetto.
 
 - **Osservatorio Siccità**: <https://droughtcentral.it/>
 
+### ISPRA - Istituto Superiore per la Protezione e la Ricerca Ambientale
+
+- **Lo stato di severità idrica a scala nazionale**: <https://www.isprambiente.gov.it/pre_meteo/idro/SeverIdrica.html>
+
 ### Joint Research Centre
 
 - **Copernicus Drought Observatories**: <https://drought.emergency.copernicus.eu/tumbo/>
