@@ -10,7 +10,7 @@ tags:
   - regione
 ---
 
-# Aggiormamento dati volumi invasati a maggio 2024
+# Aggiormamento dati volumi invasati maggio 2024
 
 A fine maggio 2024 l'[Autorità di Bacino del Distretto Idrografico della Sicilia](https://www.regione.sicilia.it/istituzioni/regione/strutture-regionali/presidenza-regione/autorita-bacino-distretto-idrografico-sicilia) ha pubblicato i [dati](https://www.regione.sicilia.it/istituzioni/regione/strutture-regionali/presidenza-regione/autorita-bacino-distretto-idrografico-sicilia/volumi-invasi-anno-2024) (tabelle e grafici in formato pdf) sui Volumi invasati nelle dighe della Sicilia. <br>
 
