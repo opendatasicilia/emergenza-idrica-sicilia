@@ -14,7 +14,7 @@ tags:
 
 # Eccesso di torbidità dell'acqua: fermati i prelievi dall'invaso Rosamarina. Possibili disservizi in alcune zone di Palermo e nei comuni del sistema metropolitano orientale
 
-Riportiamo [questo importante avviso di AMAP](https://www.amapspa.it/it/eccesso-di-torbidita-dellacqua-fermati-i-prelievi-dallinvaso-rosamarina-possibili-disservizi-in-alcune-zone-di-palermo-e-nei-comuni-del-sistema-metropolitano-orientale/), a cui abbiamo aggiunto una mappa interattiva, per fornire una visione più chiara delle zone interessate.
+Riportiamo [questo importante avviso di AMAP](https://www.amapspa.it/it/eccesso-di-torbidita-dellacqua-fermati-i-prelievi-dallinvaso-rosamarina-possibili-disservizi-in-alcune-zone-di-palermo-e-nei-comuni-del-sistema-metropolitano-orientale/), a cui abbiamo aggiunto una **mappa interattiva**, per fornire una **visione più chiara delle zone interessate**.
 
 ---
 
