@@ -14,7 +14,7 @@ tags:
 
 # Eccesso di torbidità dell’acqua: fermati i prelievi dall’invaso Rosamarina. Possibili disservizi in alcune zone di Palermo e nei comuni del sistema metropolitano orientale
 
-L’AMAP informa che nella mattinata del, 9 giugno, è stato riscontrato un valore di torbidità molto elevato dell’acqua in arrivo dall’invaso Rosamarina che ha determinato il fermo dei prelievi (circa 400 litri al secondo) per l’impossibilità di effettuare il trattamento presso il potabilizzatore di Risalaimi.
+L’AMAP informa che nella mattinata del 9 giugno, è stato riscontrato un valore di torbidità molto elevato dell’acqua in arrivo dall’invaso Rosamarina che ha determinato il fermo dei prelievi (circa 400 litri al secondo) per l’impossibilità di effettuare il trattamento presso il potabilizzatore di Risalaimi.
 
 Il Dipartimento Regionale dell’Acqua e dei Rifiuti, gestore dell’invaso, che è stato prontamente avvertito, ha attivato i necessari controlli finalizzati ad individuare sia le cause del problema sia le modalità di risoluzione. <!-- more -->
 
