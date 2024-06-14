@@ -1,6 +1,7 @@
 ---
 draft: false
 date: 2024-06-14
+title: "Osservatorio idrico: pubblicato verbale riunione maggio"
 hide:
   - navigation
   - toc
