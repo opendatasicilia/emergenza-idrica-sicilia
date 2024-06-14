@@ -1,7 +1,7 @@
 ---
 draft: false
 date: 2024-06-14
-title: "Osservatorio idrico: pubblicato verbale riunione maggio"
+title: "Osservatorio: verbale riunione fine maggio"
 hide:
   - navigation
   - toc
@@ -12,7 +12,7 @@ tags:
 ---
 
 
-# Osservatorio idrico: pubblicato verbale riunione fine maggio
+# Osservatorio: verbale riunione fine maggio
 
 Il 22 maggio 2024 si è riunito l'Osservatorio Distrettuale Permanente sugli Utilizzi Idrici del distretto Sicilia: sono stati affrontati temi riguardanti il monitoraggio della situazione idrica, l'autorizzazione di nuove fonti di approvvigionamento e l'attuazione di misure di risparmio e mitigazione.
 
