@@ -2,8 +2,8 @@
 hide:
 - toc
 # - navigation
-title: Mappe
-description: Mappe by @opendatasicilia
+title: Mappe e Tabelle
+description: Mappe e Tabelle by @opendatasicilia
 ---
 
 <style>
@@ -55,3 +55,11 @@ description: Mappe by @opendatasicilia
     [![](../img/dighe_ita.jpg "Grandi dighe Italiane")](grandi_dighe/index.md)
 
     [:octicons-arrow-right-24: Apri](grandi_dighe/index.md "Grandi dighe Italiane")
+
+-   __Regalbuto distretti rete idrica AcquaEnna__
+
+    ---
+
+    [![](../img/tabella-regalbuto-distretti.png "Regalbuto distretti rete idrica AcquaEnna")](../tabelle/distretti_regalbuto.md)
+
+    [:octicons-arrow-right-24: Apri](../tabelle/distretti_regalbuto.md "Regalbuto distretti rete idrica AcquaEnna")

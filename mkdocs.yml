@@ -35,13 +35,14 @@ edit_uri: edit/main/docs/
 ## Page tree
 nav:
   - Home: index.md
-  - Mappe:
+  - Mappe e Tabelle:
      - mappe/index.md
      - Palermo distretti rete idrica AMAP SpA: mappe/distretti_pa/index.md
      - Comuni con riduzione della fornitura idrica: mappe/riduzione/index.md
      - Dighe e prospetto dei volumi invasati: mappe/volumi/index.md
      - Principali risorse idriche in Sicilia: mappe/risorse/index.md
      - Grandi dighe Italiane: mappe/grandi_dighe/index.md
+     - Regalbuto distretti rete idrica AcquaEnna: tabelle/distretti_regalbuto.md
   - Buone pratiche: buone-pratiche/index.md
   - Documenti utili: documenti-utili/index.md
   - Interventi: documenti-utili/interventi-prioritari.md
