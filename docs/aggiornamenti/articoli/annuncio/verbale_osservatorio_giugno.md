@@ -22,6 +22,8 @@ irriguo e stato di attuazione misure di mitigazione;
 nuove risorse
 3. Varie ed eventuali.
 
+---
+
 Alcuni dei tantissimi punti che emergono dal [**verbale dell'incontro**](file/Verbale_OPUI_26_Giugno_2024_0.pdf):
 
 - la quota d'invaso di Piana degli Albanesi, sta per raggiungere quota 602 m s.l.m., quota strategica al di sotto della quale AMAP dovrà pagare indennizzi ad Enel per mancata produzione di energia elettrica
