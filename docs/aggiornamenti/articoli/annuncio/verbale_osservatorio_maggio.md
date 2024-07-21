@@ -8,7 +8,7 @@ hide:
 categories:
   - generale
 tags:
-  - osservavtorio
+  - osservatorio
 ---
 
 
