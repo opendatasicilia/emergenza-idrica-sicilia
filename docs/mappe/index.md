@@ -63,3 +63,11 @@ description: Mappe e Tabelle by @opendatasicilia
     [![](../img/tabella-regalbuto-distretti.png "Regalbuto distretti rete idrica AcquaEnna")](../tabelle/distretti_regalbuto.md)
 
     [:octicons-arrow-right-24: Apri](../tabelle/distretti_regalbuto.md "Regalbuto distretti rete idrica AcquaEnna")
+	
+-   __Regalbuto distretti rete idrica AcquaEnna__
+
+    ---
+
+    [![](../img/regalbuto_turnazione.jpg "Regalbuto distretti rete idrica AcquaEnna")](regalbuto/regalbuto_turnazione.md)
+
+    [:octicons-arrow-right-24: Apri](regalbuto/regalbuto_turnazione.md "Regalbuto distretti rete idrica AcquaEnna")	
