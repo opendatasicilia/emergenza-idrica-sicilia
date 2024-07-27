@@ -44,5 +44,5 @@ Qui sotto la pagina degli avvisi/comunicati di alcune delle **aziende** che **ge
 - **Acquaenna**: <https://www.acquaenna.it/index.php/category/avvisi/> ([feed RSS](http://www.acquaenna.it/index.php/category/avvisi/feed/))
 - **Aica Agrigento**: <https://www.aicaonline.it/argomenti/comunicati-stampa/> ([feed RSS](https://www.aicaonline.it/argomenti/comunicati-stampa/feed/))
 - **AMAP SpA**: <https://www.aicaonline.it/argomenti/comunicati-stampa/> ([feed RSS](https://www.amapspa.it/it/comunicazione/emergenza-idrica/feed/))
-- **Caltacqua**: <https://www.caltaqua.it/comunicati-stampa>
+- **Caltacqua**: <https://www.caltaqua.it/comunicati-stampa> ([feed RSS](https://www.caltaqua.it/index.php?option=com_content&view=featured&format=feed&type=rss))
 - **Siciliacque**: <https://www.siciliacque.it/comunicati-stampa/> ([feed RSS](https://www.siciliacque.it/comunicati-stampa/feed/))
