@@ -13,4 +13,4 @@ description: Gli aggiornamenti per seguire l'evoluzione della crisi idrica in Si
 
     In questa sezione gli **aggiornamenti** per seguire l'evoluzione della crisi idrica in Sicilia e di questo progetto.
 
-    In [**questa pagina**](../informazioni/index.md#aziende) gli indirizzi delle **pagine web** (e **feed RSS** se disponibili) con i **comunicati** e gli **avvisi** di alcune delle **aziende** che **gestiscono** il **servizio** **idrico** in Sicilia.
+    In 👉 [**questa pagina**](../informazioni/index.md#aziende) gli indirizzi delle **pagine web** (e **feed RSS** se disponibili) con i **comunicati** e gli **avvisi** di alcune delle **aziende** che **gestiscono** il **servizio** **idrico** in Sicilia.
