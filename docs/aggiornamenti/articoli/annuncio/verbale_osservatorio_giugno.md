@@ -22,7 +22,7 @@ irriguo e stato di attuazione misure di mitigazione;
 nuove risorse
 3. Varie ed eventuali.
 
----
+<!-- more -->
 
 Alcuni dei tantissimi punti che emergono dal [**verbale dell'incontro**](file/Verbale_OPUI_26_Giugno_2024_0.pdf):
 
