@@ -39,10 +39,10 @@ A seguire una serie di informazioni utili correlate al progetto.
 
 ## Aziende
 
-Queste alcune delle **aziende** che **gestiscono** il **servizio** **idrico** in Sicilia:
+Qui sotto la pagina degli avvisi/comunicati di alcune delle **aziende** che **gestiscono** il **servizio** **idrico** in Sicilia (ove disponibile abbiamo inserito anche il feed RSS):
 
-- **Acquaenna**: <http://www.acquaenna.it/>
-- **Aica Agrigento**: <https://www.aicaonline.it/>
-- **AMAP SpA**: <https://www.amapspa.it/>
-- **Caltacqua**: <https://www.caltaqua.it/>
-- **Siciliacque**: <https://www.siciliacque.it>
+- **Acquaenna**: <https://www.acquaenna.it/index.php/category/avvisi/> ([feed RSS](http://www.acquaenna.it/index.php/category/avvisi/feed/))
+- **Aica Agrigento**: <https://www.aicaonline.it/argomenti/comunicati-stampa/> ([feed RSS](https://www.aicaonline.it/argomenti/comunicati-stampa/feed/))
+- **AMAP SpA**: <https://www.aicaonline.it/argomenti/comunicati-stampa/> ([feed RSS](https://www.amapspa.it/it/comunicazione/emergenza-idrica/feed/))
+- **Caltacqua**: <https://www.caltaqua.it/comunicati-stampa>
+- **Siciliacque**: <https://www.siciliacque.it/comunicati-stampa/> ([feed RSS](https://www.siciliacque.it/comunicati-stampa/feed/))
