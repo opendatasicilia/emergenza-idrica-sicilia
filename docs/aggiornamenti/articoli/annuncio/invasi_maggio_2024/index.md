@@ -22,10 +22,10 @@ Nonostante le piogge del mese di maggio, (dati del [Servizio Agrometeorologico S
 <br>
 [Servizio Agrometeorologico Siciliano SIAS](http://www.sias.regione.sicilia.it/)
 
-[Consulta i dati relativi ai volumi invasati nelle dighe Siciliane dal 2010 a maggio 2024](../../../../../mappe/volumi/)
+[Consulta i dati relativi ai volumi invasati nelle dighe Siciliane dal 2010 a maggio 2024](../../../../mappe/volumi/index.md)
 
 
-[![](invasi_maggio_2024.png)](../../../../../mappe/volumi/ "Volume invasati aggiornati a Maggio 2024")
+[![](invasi_maggio_2024.png)](../../../../../mappe/volumi/index.md "Volume invasati aggiornati a Maggio 2024")
 
 ## Dati [Autorità di Bacino del Distretto Idrografico della Sicilia](https://www.regione.sicilia.it/istituzioni/regione/strutture-regionali/presidenza-regione/autorita-bacino-distretto-idrografico-sicilia)
 
@@ -34,15 +34,15 @@ Nonostante le piogge del mese di maggio, (dati del [Servizio Agrometeorologico S
 -   __Prospetto volumi invasi mese di Maggio 2024__
 
     ---
-     [![](tab.jpg "Prospetto volumi invasi mese di Maggio 2024 (143.04 KB)")](https://www.regione.sicilia.it/sites/default/files/2024-04/1__2024.04.01_A_Tabella_volumi_invasi_0.pdf) 
-	 
+     [![](tab.jpg "Prospetto volumi invasi mese di Maggio 2024 (143.04 KB)")](https://www.regione.sicilia.it/sites/default/files/2024-04/1__2024.04.01_A_Tabella_volumi_invasi_0.pdf)
+
     [:octicons-arrow-right-24: Scarica allegato](https://www.regione.sicilia.it/sites/default/files/2024-05/1__2024.05.01_A_Tabella_volumi_invasi_0.pdf)
 
 -   __Grafico volumi invasi mese di Maggio 2024__
 
     ---
-	 [![](graf.jpg "Grafico volumi invasi mese di Maggio 2024 (1.96 MB)")](https://www.regione.sicilia.it/sites/default/files/2024-04/0__2024.04.01_C_Grafici_volumi_invasi_0.pdf) 
-	
+	 [![](graf.jpg "Grafico volumi invasi mese di Maggio 2024 (1.96 MB)")](https://www.regione.sicilia.it/sites/default/files/2024-04/0__2024.04.01_C_Grafici_volumi_invasi_0.pdf)
+
 
     [:octicons-arrow-right-24: Scarica allegato](https://www.regione.sicilia.it/sites/default/files/2024-05/0__2024.05.01_C_Grafici_volumi_invasi_0.pdf)
 
