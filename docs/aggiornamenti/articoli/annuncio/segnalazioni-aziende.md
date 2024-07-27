@@ -14,10 +14,10 @@ tags:
 
 # Le segnalazioni delle aziende
 
-In Sicilia diverse aziende gestiscono il servizio idrico e spesso ha una pagina in cui vengono pubblicati avvisi e comunicati.
+In Sicilia diverse **aziende** **gestiscono** il **servizio idrico** e spesso hanno una pagina web in cui pubblicano **avvisi e comunicati**.
 
-Per questo le abbiamo raccolte e puoi usarle per seguire gli avvisi a te più vicini.<br>
-Sono disponibili anche i feed RSS, e quindi puoi attivare le notifiche per ricevere gli aggiornamenti automaticamente sul tuo *smartphone* o *computer*.
+Oggi può essere molto utili seguirli ed essere aggiornato. Per questo le abbiamo raccolte e potrai usarle per seguire gli avvisi a te più vicini.<br>
+Sono disponibili anche i *feed RSS*, e quindi potrai attivare le notifiche per ricevere automaticamente gli aggiornamenti sul tuo *smartphone* e/o *computer*.
 
 <!-- more -->
 
