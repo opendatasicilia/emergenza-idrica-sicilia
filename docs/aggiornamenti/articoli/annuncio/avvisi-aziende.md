@@ -1,7 +1,7 @@
 ---
 draft: false
 date: 2024-07-27
-title: "Le segnalazioni delle aziende"
+title: "Gli avvisi delle aziende"
 hide:
   - navigation
   - toc
@@ -11,8 +11,7 @@ tags:
   - aziende
 ---
 
-
-# Le segnalazioni delle aziende
+# Gli avvisi delle aziende
 
 In Sicilia diverse **aziende** **gestiscono** il **servizio idrico** e spesso hanno una pagina web in cui pubblicano **avvisi e comunicati**.
 
