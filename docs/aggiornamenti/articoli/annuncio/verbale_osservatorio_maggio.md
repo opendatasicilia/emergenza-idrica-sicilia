@@ -16,7 +16,7 @@ tags:
 
 Il 22 maggio 2024 si è riunito l'Osservatorio Distrettuale Permanente sugli Utilizzi Idrici del distretto Sicilia: sono stati affrontati temi riguardanti il monitoraggio della situazione idrica, l'autorizzazione di nuove fonti di approvvigionamento e l'attuazione di misure di risparmio e mitigazione.
 
----
+<!-- more -->
 
 **La situazione idrica in Sicilia rimane critica**. Gli invasi, come quello di Fanaco, hanno raggiunto livelli minimi storici. La scarsità d'acqua sta spingendo le autorità a intensificare il monitoraggio e a implementare misure di mitigazione per garantire l'approvvigionamento sia per uso potabile che irriguo.
 
