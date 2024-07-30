@@ -1,4 +1,4 @@
-# Dati sugli invasi delle dighe della Sicilia
+# Dati sugli invasi delle dighe e sulle riduzioni idriche in Sicilia
 
 ## Data Dictionary
 ### 📄 [sicilia_dighe_volumi](risorse/sicilia_dighe_volumi.csv)
