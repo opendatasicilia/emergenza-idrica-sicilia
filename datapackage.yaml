@@ -1,6 +1,6 @@
 
 # --------
-# metadata: dighe_serie_storica_melted.csv dighe_anagrafica.csv
+# metadata
 # --------
 
 title: Dati sugli invasi delle dighe della Sicilia
@@ -10,18 +10,20 @@ licenses:
     path: https://creativecommons.org/licenses/by/4.0/
 
 resources:
-  - name: dighe_serie_storica_melted
+  - name: sicilia_dighe_volumi
     description: Volumi invasati nelle dighe della Sicilia. Tabella estratta dai file PDF rilasciati dalla Regione Siciliana (vd. sources)
     sources: 
-      - title: Volumi invasati nelle dighe della Sicilia
+      - title: Volumi invasati nelle dighe della Sicilia (Regione Siciliana)
         description: Pagina web della Regione Siciliana che raccoglie documenti PDF contenenti le serie storiche dei volumi invasati nelle dighe della Sicilia
         path: https://www.regione.sicilia.it/istituzioni/regione/strutture-regionali/presidenza-regione/autorita-bacino-distretto-idrografico-sicilia/siti-tematici/risorse-idriche/volumi-invasati-nelle-dighe-della-sicilia
     type: table
-    path: risorse/dighe_serie_storica_melted.csv
+    path: risorse/sicilia_dighe_volumi.csv
     scheme: file
     format: csv
     mediatype: text/csv
     encoding: utf-8
+    dialect:
+      delimiter: ","
     schema:
       fields:
         - name: cod
@@ -38,14 +40,16 @@ resources:
           type: number
           description: volume in Mmc
   
-  - name: dighe_anagrafica
+  - name: sicilia_dighe_anagrafica
     description: Anagrafica delle dighe della Sicilia. File costruito e arricchito dalla comunità Open Data Sicilia.
     type: table
-    path: risorse/dighe_anagrafica.csv
+    path: risorse/sicilia_dighe_anagrafica.csv
     scheme: file
     format: csv
     mediatype: text/csv
     encoding: utf-8
+    dialect:
+      delimiter: ","
     schema:
       fields:
         - name: coordinate
@@ -85,3 +89,109 @@ resources:
         - name: gestore
           type: string
           description: gestore della diga
+
+  - name: italia_grandi_dighe_anagrafica
+    description: Anagrafica e localizzazione delle grandi dighe di competenza della Direzione Generale per le Dighe e le Infrastrutture idriche sul territorio nazionale. Tabella estratta dal sito della Direzione (vd. sources)
+    sources: 
+      - title: Cartografia delle grandi dighe (Direzione Generale per le Dighe e le Infrastrutture idriche)
+        description: Pagina web della Direzione Generale per le Dighe e le Infrastrutture idriche che espone la cartografia delle grandi dighe italiane.
+        path: https://dgdighe.mit.gov.it/categoria/articolo/_cartografie_e_dati/_cartografie/cartografia_dighe
+    type: table
+    path: risorse/italia_grandi_dighe_anagrafica.csv
+    scheme: file
+    format: csv
+    mediatype: text/csv
+    encoding: utf-8
+    dialect:
+      delimiter: ","
+    schema:
+      fields:
+        - name: nome
+          type: string
+          description: nome della diga
+        - name: latitudine
+          type: number
+          description: latitudine (EPSG:4326)
+        - name: longitudine
+          type: number
+          description: longitudine (EPSG:4326)
+        - name: n_arch
+          type: string
+        - name: utd
+          type: string
+          description: ufficio tecnico dighe
+        - name: regione
+          type: string
+          description: denominazione regione
+        - name: provincia
+          type: string
+          description: sigla provincia
+        - name: comune
+          type: string
+          description: denominazione comune
+        - name: corso_acqua
+          title: corso d'acqua
+          type: string
+          description: denominazione del corso d'acqua
+        - name: tipologia
+          type: string
+          description: tipo di costruzione diga
+        - name: altezza_ndt_2014_m
+          type: number
+        - name: altezza_dm_marzo_82_m
+          type: number
+        - name: vol_di_invaso_Mmc
+          type: number
+          description: volume dell'invaso in Mm³
+        - name: quota_max_di_reg_m_slm
+          type: number
+        - name: uso_prevalente
+          type: string
+          description: uso prevalente della diga
+        - name: anno_inizio_lavori
+          type: integer
+          title: anno di inizio lavori
+        - name: anno_fine_lavori
+          type: integer
+          title: anno di fine lavori
+        - name: indirizzo_google_maps
+          type: string
+          format: uri
+
+  - name: sicilia_dighe_competenza_utd_palermo
+    title: UTD Palermo - Registro delle grandi dighe
+    description: Elenco delle dighe di competenza dell'ufficio tecnico per le dighe di Palermo al 31/12/2023. Dati estratti dal sito della Direzione Generale per le Dighe e le Infrastrutture idriche (vd. sources). La legenda dei codici è disponibile nella pagina web indicata in sources.
+    sources: 
+      - title: Direzione Generale per le Dighe e le Infrastrutture idriche
+        description: Pagina web della Direzione Generale per le Dighe e le Infrastrutture idriche che espone l'elenco delle dighe di competenza dell'ufficio tecnico per le dighe di Palermo al 31/12/2023.
+        path: https://dgdighe.mit.gov.it/categoria/articolo/_cartografie_e_dati/_dighe_di_competenza/UTDPA
+    type: table
+    path: risorse/sicilia_dighe_competenza_utd_palermo.csv
+    scheme: file
+    format: csv
+    mediatype: text/csv
+    encoding: utf-8
+    dialect:
+      delimiter: ","
+    schema:
+      fields:
+        - name: id
+          type: integer
+        - name: diga
+          type: string
+        - name: narch
+          type: integer
+        - name: sub
+          type: string
+        - name: s1
+          type: string
+        - name: s2
+          type: string
+        - name: uso_prevalente
+          type: string
+        - name: regione
+          type: string
+        - name: provincia
+          type: string
+        - name: concessionario
+          type: string

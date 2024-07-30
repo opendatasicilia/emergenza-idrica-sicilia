@@ -1,94 +1,91 @@
-# LEGGIMI
+# Dati sugli invasi delle dighe della Sicilia
 
-## dighe_anagrafica
+## Data Dictionary
+### 📄 [sicilia_dighe_volumi](risorse/sicilia_dighe_volumi.csv)
+Volumi invasati nelle dighe della Sicilia. Tabella estratta dai [file PDF rilasciati dalla Regione Siciliana](https://www.regione.sicilia.it/istituzioni/regione/strutture-regionali/presidenza-regione/autorita-bacino-distretto-idrografico-sicilia/siti-tematici/risorse-idriche/volumi-invasati-nelle-dighe-della-sicilia).
+- Path: `risorse/sicilia_dighe_volumi.csv`
+- URL: https://raw.githubusercontent.com/opendatasicilia/emergenza-idrica-sicilia/main/risorse/sicilia_dighe_volumi.csv
+- Encoding: `utf-8`
 
-È un file csv costruito  *ad hoc*  per organizzare i dati scrapati dai [PDF](https://www.regione.sicilia.it/istituzioni/regione/strutture-regionali/presidenza-regione/autorita-bacino-distretto-idrografico-sicilia/siti-tematici/risorse-idriche/volumi-invasati-nelle-dighe-della-sicilia) dal 2010 al 2024
+| Field | Type | Description | Example |
+| --- | --- | --- | --- |
+| cod | string | codice univoco diga | dig-02 |
+| diga | string | denominazione della diga | Arancio |
+| data | date | data nel formato dd/mm/yyyy | 01/01/2010 |
+| volume | number | volume in Mmc | 27.04 |
 
-| attributo     | descrizione                                                | esempio                               |
-| ------------- | ---------------------------------------------------------- | ------------------------------------- |
-| coordinate    | concatenazione delle due coordinate Lat e Long (EPSG:4326) | 37.836222, 14.5628727                 |
-| lat           | latitudine (EPSG:4326)                                     | 37.836222                             |
-| long          | longitudine (EPSG:4326)                                    | 14.562872                             |
-| cod           | codice univoco diga                                        | dig-01                                |
-| diga          | nome della diga                                            | Àncipa                                |
-| fiume         | fiume lungo il quale è presente la diga                    | Troina                                |
-| lago          | lago nel quale è presente la diga                          | Lago Àncipa                           |
-| comune        | comune nel quale è presente la diga                        | Cesarò                                |
-| provincia     | provincia nella quale è presente la diga                     | ME                                    |
-| capacita      | capacità della diga espressa im Mm³                        | 30.40                                 |
-| utilizzazione | come viene utilizzata l'acqua della diga                   | Potabile - Irriguo - Elettrico        |
-| gestore       | gestore della diga                                         | Dipartimento dell'acqua e dei rifiuti |
+### 📄 [sicilia_dighe_anagrafica](risorse/sicilia_dighe_anagrafica.csv)
+Anagrafica delle dighe della Sicilia. File costruito e arricchito dalla comunità Open Data Sicilia.
+- Path: `risorse/sicilia_dighe_anagrafica.csv`
+- URL: https://raw.githubusercontent.com/opendatasicilia/emergenza-idrica-sicilia/main/risorse/sicilia_dighe_anagrafica.csv
+- Encoding: `utf-8`
 
-## dighe_serie_storica_melted
+| Field | Type | Description | Example |
+| --- | --- | --- | --- |
+| coordinate | geopoint | concatenazione delle due coordinate Lat e Long (EPSG:4326) | 37.836222,14.562873 |
+| lat | number | latitudine (EPSG:4326) | 37.836222 |
+| long | number | longitudine (EPSG:4326) | 14.562873 |
+| cod | string | codice univoco diga | dig-01 |
+| diga | string | nome della diga | Àncipa |
+| fiume | string | fiume lungo il quale è presente la diga | Troina |
+| lago | string | lago nel quale è presente la diga | Lago Àncipa |
+| comune | string | comune nel quale è presente la diga | Cesarò |
+| provincia | string | provincia nella quale è presente la diga | ME |
+| capacita | number | capacità: capacità della diga espressa im Mmc | 30.40 |
+| utilizzazione | string | come viene utilizzata l'acqua della diga | Potabile - Irriguo - Elettrico |
+| gestore | string | gestore della diga | E.N.E.L. |
 
-Dati scrapati dai [PDF](https://www.regione.sicilia.it/istituzioni/regione/strutture-regionali/presidenza-regione/autorita-bacino-distretto-idrografico-sicilia/siti-tematici/risorse-idriche/volumi-invasati-nelle-dighe-della-sicilia) dal 2010 al 2024
+### 📄 [italia_grandi_dighe_anagrafica](risorse/italia_grandi_dighe_anagrafica.csv)
+Anagrafica e localizzazione delle grandi dighe di competenza della Direzione Generale per le Dighe e le Infrastrutture idriche sul territorio nazionale. Tabella estratta dal [sito della Direzione (vd. sources)](https://dgdighe.mit.gov.it/categoria/articolo/_cartografie_e_dati/_cartografie/cartografia_dighe)
+- Path: `risorse/italia_grandi_dighe_anagrafica.csv`
+- URL: https://raw.githubusercontent.com/opendatasicilia/emergenza-idrica-sicilia/main/risorse/italia_grandi_dighe_anagrafica.csv
+- Encoding: `utf-8`
 
-| attributo | descrizione              | esempio    |
-| --------- | ------------------------ | ---------- |
-| cod       | codice univoco diga      | dig-26     |
-| diga      | denominazione della diga | Scanzano   |
-| data      | data (giorno-mese-anno)  | 01/01/2010 |
-| volume    | volume in Mm³            | 9.78       |
+| Field | Type | Description | Example |
+| --- | --- | --- | --- |
+| nome | string | nome della diga | Corongiu 2 |
+| latitudine | number | latitudine (EPSG:4326) | 39.312806 |
+| longitudine | number | longitudine (EPSG:4326) | 9.283889 |
+| n_arch | string |  | 0087A |
+| utd | string | ufficio tecnico dighe | Cagliari |
+| regione | string | denominazione regione | Sardegna |
+| provincia | string | sigla provincia | CA |
+| comune | string | denominazione comune | Sinnai |
+| corso_acqua | string | corso d'acqua: denominazione del corso d'acqua | Rio Bau Filixi - Rio Corr 'e Cerbu |
+| tipologia | string | tipo di costruzione diga | A gravità ordinaria in muratura di pietrame con malta (a.1.1.) |
+| altezza_ndt_2014_m | number |  | 19.50 |
+| altezza_dm_marzo_82_m | number |  | 21.30 |
+| vol_di_invaso_Mmc | number | volume dell'invaso in Mm³ | 0.37 |
+| quota_max_di_reg_m_slm | number |  | 154.94 |
+| uso_prevalente | string | uso prevalente della diga | Potabile |
+| anno_inizio_lavori | integer | anno di inizio lavori | 1913 |
+| anno_fine_lavori | integer | anno di fine lavori | 1915 |
+| indirizzo_google_maps | string |  | https://goo.gl/maps/ZDY7fp76gzVqXqHD6 |
 
-NB: i due file csv `dighe_anagrafica` e `dighe_serie_storica_melted` hanno l'attributo `cod` correlato.
+### 📄 [sicilia_dighe_competenza_utd_palermo](risorse/sicilia_dighe_competenza_utd_palermo.csv)
+Elenco delle dighe di competenza dell'ufficio tecnico per le dighe di Palermo al 31/12/2023. Dati estratti da [questa pagina](https://dgdighe.mit.gov.it/categoria/articolo/_cartografie_e_dati/_dighe_di_competenza/UTDPA) del sito della Direzione Generale per le Dighe e le Infrastrutture idriche (vd. sources). La legenda dei codici è disponibile nella pagina web indicata in sources.
+- Path: `risorse/sicilia_dighe_competenza_utd_palermo.csv`
+- URL: https://raw.githubusercontent.com/opendatasicilia/emergenza-idrica-sicilia/main/risorse/sicilia_dighe_competenza_utd_palermo.csv
+- Encoding: `utf-8`
 
-## grandi_dighe_italiane
+| Field | Type | Description | Example |
+| --- | --- | --- | --- |
+| id | integer |  | 1 |
+| diga | string |  | ANCIPA |
+| narch | integer |  | 527 |
+| sub | string |  | _ |
+| s1 | string |  | NO |
+| s2 | string |  | SC |
+| uso_prevalente | string |  | IDROELETTRICO |
+| regione | string |  | SICILIA |
+| provincia | string |  | EN |
+| concessionario | string |  | ENEL PRODUZIONE S.P.A. |
 
-È un file csv elaborato a partire dal [sito](https://dgdighe.mit.gov.it/categoria/articolo/_cartografie_e_dati/_cartografie/cartografia_dighe)
-
-| attributo                 | descrizione                             | esempio                                                        |
-| ------------------------- | --------------------------------------- | -------------------------------------------------------------- |
-| nome                      | nome della diga                         | Santa Vittoria                                                 |
-| latitudine                | latitudine (EPSG:4326)                  | 39.315861                                                      |
-| longitudine               | longitudine (EPSG:4326)                 | 9.288667                                                       |
-| n__arch_                  |                                         | 0087B                                                          |
-| utd                       | ufficio tecnico dighe                   | Cagliari                                                       |
-| regione                   | denominazione regione                   | Sardegna                                                       |
-| provincia                 | sigla provincia                         | CA                                                             |
-| comune                    | denominazione comune                    | Sinnai                                                         |
-| corso_d_acqua             | denominazione corso d'acqua             | Rio Bau Filixi                                                 |
-| tipologia                 | tipo di costruzione diga                | A gravità ordinaria in muratura di pietrame con malta (a.1.1.) |
-| altezza_ndt_2014__m_      |                                         | 41.00                                                          |
-| altezza_dm_marzo_82__m_   |                                         | 44.75                                                          |
-| vol__di_invaso__Mmc_      | volume dell'invaso in Mm³               | 4.30                                                           |
-| quota_max_di_reg___m_slm_ |                                         | 201.00                                                         |
-| uso_prevalente            | uso prevalente della diga               | Potabile                                                       |
-| anno_inizio_lavori        | anno inizio lavori                      | 1931                                                           |
-| anno_fine_lavori          | anno fine lavori                        | 1937                                                           |
-| indirizzo_google_maps     | indirizzo web della diga in Goolge Maps | https://goo.gl/maps/ZbgCAjdc6RLExSyx8                          |
-
-## riduzione_idrica_datawrapper
-
-È un file csv estratto dal [PDF](https://www.regione.sicilia.it/sites/default/files/2024-04/Mappa%20pdf.pdf)
-
-| attributo | descrizione                                    | esempio |
-| --------- | ---------------------------------------------- | ------- |
-| pro_com_t | codice stringa ISTAT                           | 081001  |
-| comune    | denominazione del Comune                       | Alcamo  |
-| provincia | Denominazione della Provincia                  | Trapani |
-| sigla     | sigla provincia                                | TP      |
-| riduzione | riduzione fornitura idrica in %                | 10 - 20 |
-| area_kmq  | superficie Comune                              | 130,89  |
-| pop_2024  | popolazione residente ISTAT al 01/gennaio/2024 | 44683   |
-
-## UTD_Palermo
-
-È un file csv scaricato da [qui](https://dgdighe.mit.gov.it/categoria/articolo/_cartografie_e_dati/_dighe_di_competenza/UTDPA/) Ufficio Tecnico Dighe
+## 📖 License
+This work is licensed under a [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/) (CC-BY-4.0) License
 
 
-| attributo      | descrizione              | esempio                |
-| -------------- | ------------------------ | ---------------------- |
-| id             | identificativo univoco   | 1                      |
-| diga           | denominazione della diga | ANCIPA                 |
-| narch          |                          | 527                    |
-| sub            |                          | A                      |
-| s1             |                          | NO                     |
-| s2             |                          | SC                     |
-| uso_prevalente |                          | IDROELETTRICO          |
-| regione        | denominazione regione    | SICILIA                |
-| provincia      | sigla della provincia    | EN                     |
-| concessionario |                          | ENEL PRODUZIONE S.P.A. |
+---
 
-## cartella pdf
+Generated from datapackage.yaml with [`frictionless2md`](https://github.com/dennisangemi/frictionless2md)
 
-Contiene tutti i pdf delle tabelle e grafici degli invasi dal 2011 al 2024 scaricabili da [qui](https://www.regione.sicilia.it/istituzioni/regione/strutture-regionali/presidenza-regione/autorita-bacino-distretto-idrografico-sicilia/siti-tematici/risorse-idriche/volumi-invasati-nelle-dighe-della-sicilia)
