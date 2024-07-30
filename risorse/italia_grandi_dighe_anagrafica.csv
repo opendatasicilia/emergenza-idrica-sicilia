@@ -1,4 +1,4 @@
-nome,latitudine,longitudine,n__arch_,utd,regione,provincia,comune,corso_d_acqua,tipologia,altezza_ndt_2014__m_,altezza_dm_marzo_82__m_,vol__di_invaso__Mmc_,quota_max_di_reg___m_slm_,uso_prevalente,anno_inizio_lavori,anno_fine_lavori,indirizzo_google_maps
+nome,latitudine,longitudine,n_arch,utd,regione,provincia,comune,corso_acqua,tipologia,altezza_ndt_2014_m,altezza_dm_marzo_82_m,vol_di_invaso_Mmc,quota_max_di_reg_m_slm,uso_prevalente,anno_inizio_lavori,anno_fine_lavori,indirizzo_google_maps
 Corongiu 2,39.312806,9.283889,0087A,Cagliari,Sardegna,CA,Sinnai,Rio Bau Filixi - Rio Corr 'e Cerbu,A gravità ordinaria in muratura di pietrame con malta (a.1.1.),19.50,21.30,0.37,154.94,Potabile,1913,1915,https://goo.gl/maps/ZDY7fp76gzVqXqHD6
 Corongiu 3,39.315861,9.288667,0087B,Cagliari,Sardegna,CA,Sinnai,Rio Bau Filixi,A gravità ordinaria in muratura di pietrame con malta (a.1.1.),41.00,44.75,4.30,201.00,Potabile,1931,1937,https://goo.gl/maps/ZbgCAjdc6RLExSyx8
 Bunnari Bassa,40.716601,8.635917,0088_,Cagliari,Sardegna,SS,Sassari,Rio Bunnari,A gravità ordinaria in muratura di pietrame con malta (a.1.1.),27.50,31.39,0.45,286.50,Potabile,1874,1879,https://goo.gl/maps/xdaXAVFdMsCmKVTr8
@@ -42,7 +42,7 @@ Rio Coxinas,39.462389,8.710944,1130_,Cagliari,Sardegna,CA,Villacidro,Rio Coxinas
 Pedra 'e Othoni,40.329278,9.545806,1141_,Cagliari,Sardegna,NU,Dorgali,Cedrino,Di pietrame con manto (b.3.),73.70,81.70,20.20,103.00,Laminazione,1964,1994,https://goo.gl/maps/S5mndmmRTNhLnyZA9
 Surigheddu,40.590806,8.393722,1172_,Cagliari,Sardegna,SS,Alghero,Rio Quidongias,Di terra omogenea (b.1.),15.75,16.00,1.93,42.00,Irriguo,1966,1968,https://goo.gl/maps/rWFeLP2hx7beY7pc6
 Sinnai,39.334361,9.240222,1192_,Cagliari,Sardegna,CA,Sinnai,Rio Santu Barzolu,A gravità ordinaria in calcestruzzo (a.1.1.),25.19,29.19,0.21,289.00,Potabile,1967,1969,https://goo.gl/maps/HSAwKGDLbBz44zsXA
-Santa Lucia,39.963167,9.603694,1255_,Cagliari,Sardegna,NU,Villagrande Strisaili,Rio Sa Teula,A gravità ordinaria in calcestruzzo (a.1.1.),,28.50,43.00,3.70,"59.39",,1978,"1985"
+Santa Lucia,39.963167,9.603694,1255_,Cagliari,Sardegna,NU,Villagrande Strisaili,Rio Sa Teula,A gravità ordinaria in calcestruzzo (a.1.1.),28.50,43.00,3.70,59.39,Irriguo,1978,1985,https://maps.app.goo.gl/zZniCSanVKrdzdT38
 Monti Nieddu (dati a fine costruzione),39.066722,8.962750,1293_,Cagliari,Sardegna,CA,Sarroch,Rio Monti Nieddu,A gravità ordinaria in calcestruzzo (a.1.1.),77.54,83.10,36.00,141.19,Irriguo,1998,,https://goo.gl/maps/vvq9YxugQuaRTnus5
 Medau Zirimilis,39.240361,8.830611,1298_,Cagliari,Sardegna,CA,Siliqua,Rio Casteddu,Di pietrame con manto (b.3.),52.00,53.00,17.19,145.50,Irriguo,1981,1990,https://goo.gl/maps/dVZ9nSWafUVk8x7h6
 Carru Segau,39.232339,8.823638,1298A,Cagliari,Sardegna,CA,Siliqua,Lago di Medau Zirimilis,Di pietrame con manto (b.3.),20.00,20.00,17.19,145.50,Irriguo,1981,1990,https://goo.gl/maps/GTjCGKsbEpnqRgbq6
