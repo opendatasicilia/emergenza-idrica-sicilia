@@ -195,3 +195,42 @@ resources:
           type: string
         - name: concessionario
           type: string
+
+  - name: sicilia_riduzione_idrica_20240405
+    title: Riduzioni delle forniture idriche aggiornata al 5 aprile 2024
+    description: I dati sono stati estratti da una mappa PDF rilasciata dalla Regione Siciliana (vd. sources)
+    sources:
+      - title: Autorità di bacino del distretto idrografico della Sicilia (Regione Siciliana)
+        description: Mappa PDF dell'Autorità di bacino del distretto idrografico della Sicilia che espone le riduzioni delle forniture idriche aggiornate al 5 aprile 2024.
+        path: https://www.regione.sicilia.it/sites/default/files/2024-04/Mappa%20pdf.pdf
+    type: table
+    path: risorse/sicilia_riduzione_idrica_20240405.csv
+    scheme: file
+    format: csv
+    mediatype: text/csv
+    encoding: utf-8
+    dialect:
+      delimiter: ","
+    schema:
+      fields:
+        - name: pro_com_t
+          type: string
+          description: Codice stringa ISTAT
+        - name: comune
+          type: string
+          description: Denominazione del Comune
+        - name: provincia
+          type: string
+          description: Denominazione della Provincia
+        - name: sigla
+          type: string
+          title: sigla della provincia
+        - name: riduzione
+          type: string
+          description: riduzione fornitura idrica in %
+        - name: area_kmq
+          type: number
+          description: superficie Comune
+        - name: pop_2024
+          type: integer
+          description: popolazione residente ISTAT al 1° gennaio 2024
