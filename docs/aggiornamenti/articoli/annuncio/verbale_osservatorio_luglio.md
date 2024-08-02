@@ -27,3 +27,7 @@ Il verbale è disponibile [qui](https://www.regione.sicilia.it/sites/default/fil
 II Segretario Generale sintetizza l'incontro evidenziando l'ulteriore aggravamento rispetto alla situazione affrontata durante l'ultima riunione.
 
 L'Osservatorio conclude i lavori confermando lo stato di severità idrica alto per tutto il distretto Sicilia.
+
+---
+
+Qui gli altri verbali: <https://www.regione.sicilia.it/istituzioni/regione/strutture-regionali/presidenza-regione/autorita-bacino-distretto-idrografico-sicilia/anno-2024>
