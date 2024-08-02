@@ -1,7 +1,7 @@
 ---
 draft: false
 date: 2024-08-02
-title: "Osservatorio: verbale riunione fine giugno"
+title: "Osservatorio: verbale riunione fine luglio"
 hide:
   - navigation
   - toc
