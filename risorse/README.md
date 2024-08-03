@@ -1,7 +1,7 @@
 # Dati sugli invasi delle dighe e sulle riduzioni idriche in Sicilia
 
 ## Data Dictionary
-### 📄 [sicilia_dighe_volumi](risorse/sicilia_dighe_volumi.csv)
+### 📄 [sicilia_dighe_volumi](sicilia_dighe_volumi.csv)
 Volumi invasati nelle dighe della Sicilia. Tabella estratta dai [file PDF rilasciati dalla Regione Siciliana](https://www.regione.sicilia.it/istituzioni/regione/strutture-regionali/presidenza-regione/autorita-bacino-distretto-idrografico-sicilia/siti-tematici/risorse-idriche/volumi-invasati-nelle-dighe-della-sicilia).
 - Path: `risorse/sicilia_dighe_volumi.csv`
 - URL: https://raw.githubusercontent.com/opendatasicilia/emergenza-idrica-sicilia/main/risorse/sicilia_dighe_volumi.csv
@@ -14,7 +14,7 @@ Volumi invasati nelle dighe della Sicilia. Tabella estratta dai [file PDF rilasc
 | data | date | data nel formato dd/mm/yyyy | 01/01/2010 |
 | volume | number | volume in Mmc | 27.04 |
 
-### 📄 [sicilia_dighe_anagrafica](risorse/sicilia_dighe_anagrafica.csv)
+### 📄 [sicilia_dighe_anagrafica](sicilia_dighe_anagrafica.csv)
 Anagrafica delle dighe della Sicilia. File costruito e arricchito dalla comunità Open Data Sicilia.
 - Path: `risorse/sicilia_dighe_anagrafica.csv`
 - URL: https://raw.githubusercontent.com/opendatasicilia/emergenza-idrica-sicilia/main/risorse/sicilia_dighe_anagrafica.csv
@@ -35,7 +35,7 @@ Anagrafica delle dighe della Sicilia. File costruito e arricchito dalla comunit�
 | utilizzazione | string | come viene utilizzata l'acqua della diga | Potabile - Irriguo - Elettrico |
 | gestore | string | gestore della diga | E.N.E.L. |
 
-### 📄 [italia_grandi_dighe_anagrafica](risorse/italia_grandi_dighe_anagrafica.csv)
+### 📄 [italia_grandi_dighe_anagrafica](italia_grandi_dighe_anagrafica.csv)
 Anagrafica e localizzazione delle grandi dighe di competenza della Direzione Generale per le Dighe e le Infrastrutture idriche sul territorio nazionale. Tabella estratta dal [sito della Direzione (vd. sources)](https://dgdighe.mit.gov.it/categoria/articolo/_cartografie_e_dati/_cartografie/cartografia_dighe)
 - Path: `risorse/italia_grandi_dighe_anagrafica.csv`
 - URL: https://raw.githubusercontent.com/opendatasicilia/emergenza-idrica-sicilia/main/risorse/italia_grandi_dighe_anagrafica.csv
@@ -62,7 +62,7 @@ Anagrafica e localizzazione delle grandi dighe di competenza della Direzione Gen
 | anno_fine_lavori | integer | anno di fine lavori | 1915 |
 | indirizzo_google_maps | string |  | https://goo.gl/maps/ZDY7fp76gzVqXqHD6 |
 
-### 📄 [sicilia_dighe_competenza_utd_palermo](risorse/sicilia_dighe_competenza_utd_palermo.csv)
+### 📄 [sicilia_dighe_competenza_utd_palermo](sicilia_dighe_competenza_utd_palermo.csv)
 Elenco delle dighe di competenza dell'ufficio tecnico per le dighe di Palermo al 31/12/2023. Dati estratti da [questa pagina](https://dgdighe.mit.gov.it/categoria/articolo/_cartografie_e_dati/_dighe_di_competenza/UTDPA) del sito della Direzione Generale per le Dighe e le Infrastrutture idriche (vd. sources). La legenda dei codici è disponibile nella pagina web indicata in sources.
 - Path: `risorse/sicilia_dighe_competenza_utd_palermo.csv`
 - URL: https://raw.githubusercontent.com/opendatasicilia/emergenza-idrica-sicilia/main/risorse/sicilia_dighe_competenza_utd_palermo.csv
@@ -81,7 +81,7 @@ Elenco delle dighe di competenza dell'ufficio tecnico per le dighe di Palermo al
 | provincia | string |  | EN |
 | concessionario | string |  | ENEL PRODUZIONE S.P.A. |
 
-### 📄 [sicilia_riduzione_idrica_20240405](risorse/sicilia_riduzione_idrica_20240405.csv)
+### 📄 [sicilia_riduzione_idrica_20240405](sicilia_riduzione_idrica_20240405.csv)
 I dati sono stati estratti da una [mappa PDF rilasciata dalla Regione Siciliana](https://www.regione.sicilia.it/sites/default/files/2024-04/Mappa%20pdf.pdf) 
 - Path: `risorse/sicilia_riduzione_idrica_20240405.csv`
 - URL: https://raw.githubusercontent.com/opendatasicilia/emergenza-idrica-sicilia/main/risorse/sicilia_riduzione_idrica_20240405.csv
