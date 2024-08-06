@@ -97,6 +97,24 @@ I dati sono stati estratti da una [mappa PDF rilasciata dalla Regione Siciliana]
 | area_kmq | number | superficie Comune | 130.89 |
 | pop_2024 | integer | popolazione residente ISTAT al 1° gennaio 2024 | 44683 |
 
+### 📄 [regalbuto_erogazione_idrica_20240722](risorse/regalbuto_erogazione_idrica_20240722.csv)
+Dettagli sulll'erogazione idrica del Comune di Regalbuto aggiornati al 22 luglio 2024. Le colonne relative alle strade e alle maglie rappresentano dati estratti da Giovan Battista Vitrano (Open Data Sicilia) a partire [da una mappa diffusa dal Sindaco Longo](https://www.facebook.com/photo/?fbid=3769636563307716&set=a.1999750763629647).
+- Path: `risorse/regalbuto_erogazione_idrica_20240722.csv`
+- URL: https://raw.githubusercontent.com/opendatasicilia/emergenza-idrica-sicilia/main/risorse/regalbuto_erogazione_idrica_20240722.csv
+- Encoding: `utf-8`
+
+| Field | Type | Description | Example |
+| --- | --- | --- | --- |
+| strada | string | Nome della strada | Strada statale Catanese |
+| maglia | string |  | 5B |
+| zona | string | Zona in cui è stituata la maglia (può assumere solo i valori `sud` e `nord`) | sud |
+| zona_type | string | Posizione della zona (può assumere solo i valori `centro` e `periferia`) | centro |
+| erogazione_type | integer | ID della tipologia di erogazione. Ogni ID corrisponde a un orario e un giorno di erogazione. | 3 |
+| start_h | string | Orario di inizio erogazione | 07:00 |
+| end_h | string | Orario di fine erogazione | 17:00 |
+| erogazione_description | string | Descrizione delle modalità di erogazione (utile per la comprensione dei valori numerici) | A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ... |
+| erogazione_description_2 | string | Descrizione alternativa a `erogazione_description` | Dalle ore **07:00** alle ore **17:00** |
+
 ## 📖 License
 This work is licensed under a [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/) (CC-BY-4.0) License
 

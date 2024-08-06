@@ -1,0 +1,254 @@
+strada,maglia,zona,zona_type,erogazione_type,start_h,end_h,erogazione_description,erogazione_description_2
+Strada statale Catanese,5B,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via dei Mille,5B,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via San Giovanni,5B,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Palermo,5B,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Caduti di Nassiria,5,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Vico Calogero Lagati,5,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Vico Lazio,5,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Vico Giulio Vaporetto,5,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via San Giovanni,5,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Palermo,5,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Giuseppe Garibaldi,5,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Gianfilippo Ingrassia,5,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Primo Maggio,5,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via del Fante,5,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Santa Lucia,5,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via del Piave,5,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Piazza Vittorio Veneto,5,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via San Giovanni,5A,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Salso,5A,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Pola,5A,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Salvatore Scaravilli,5A,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Napoli,5A,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Adige,5A,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Filippo Corridoni,5A,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Nunzio Palazzo,5A,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Vito Romano,5A,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Rosario Maccarrone,5A,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Francesco di Benedetto,5A,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Vico Vito Bisignano,5A,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Vincenzo Legname,5A,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Antonino Crimi,5A,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Brindisi,5A,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Giuseppe Garibaldi,5A,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Vito Terremoto,5A,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Primo Maggio,5A,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Francesco Pernicone,5A,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Bersagliere,5A,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Carmelo Vignera,5A,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Largo Saraceno,5A,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Piazza Giuseppe Mazzini,5A,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Vito Carosia,5A,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Contrada Saraceno,5A,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Alcantera,5A,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Gianfilippo Ingrassia,4,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via San Vito,4,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Giuseppe Fontana,4,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Vito Cardaci,4,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Filippo Di Salvo,4,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Alpi,4,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Vico Francesco Messina,4,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Giuseppe Angemi,4,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Luigi Cadorna,4,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Gaetano Costa,4,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Salvatore Baio,4,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Carmelo La Vignera,4,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Vito Scilletta,4,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Armando Diaz,4,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Piazza Vittorio Veneto,4,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Vico Nunzio Monachino,1,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Vito Leocata,1,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Fratelli Raisi,1,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Amaselo,1,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via San Rocco,1,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Largo Emilio Fridiano,1,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Crocifisso,1,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Re Manfredi,1,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Contrada Crocifisso,1,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Nunzio Assoro,1,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Strada provinciale Regalbuto-Catenanuova-SS192,1,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Stancanelli,1,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Sicilia,1,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Vincenzo Felici,1,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Nunzio,1,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Roma,1,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Giuseppe Taschetta,1,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Gianfilippo Ingrassia,3,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Palermo,3,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Amaselo,3,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Vito Marletta,3,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Sicilia,3,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Vico Tripoli,3,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Stancanelli,3,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Concezione,3,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Capitano Marletta,3,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Vincenzo Felici,3,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Cavour,3,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Rosario Maccarrone,3,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Vico Appennini,3,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Vico M. Felici,3,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Roma,3,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Giuseppe Mammana,3,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Giuseppe Taschetta,3,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Don Giuseppe Campione,3,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Largo S. Fiore,3,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Plebiscito,3,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Piazza Ventiquattro Maggio,3,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Sant'Ignazio,3,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Vito Ingrassia,3,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Sant'Antonio,3,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Vico Francesco di Piazza,3,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Piazza Alaimo,3,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Carmelo Naselli,3,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Salvatore Missorici,3,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Plebliscito,3,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Undici Febbraio,3,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Torino,3,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via San Giuseppe,3,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Messina,3,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Salvatore Baio,3,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Armando Diaz,3,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Zara,3,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Francesco Campagna,3,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Venezia,3,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Vico San Francesco,3,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Piazza della Repubblica,3,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Cesere Battisti,3,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via del Fante,3,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Trieste,3,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Trento,3,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Francesco Fichera,3,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via 11 Febbraio,3,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Catania,2,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Rosario Maccarrone,2,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Giuseppe di Benedetto,2,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Santa Caterina,2,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Giuseppe Tripi,2,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Giuseppe Parlavecchia,2,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Don Giuseppe Campione,2,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Roma,2,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Istria,2,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Sant'Ignazio,2,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Vito Milici,2,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Sassari,2,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Giuseppe Messina,2,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Vito Catania,2,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Siracusa,2,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Trapani,2,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Cavour,2,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Largo Luigi Bruno,2,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Francesco Statello,2,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Monsignor Salvatore Piemonte,2,sud,centro,3,07:00,17:00,"A giorni alterni a partire dal 23 luglio dalle ore 07:00 fino alle ore 17:00. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Giuseppe Garibaldi,6,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Carmelo Citelli,6,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Domenico Imbrosciano,6,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Largo Vito Cusmano,6,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Vico Salvatore Rapisarda,6,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Vico S. Rapisarda,6,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Fiume,6,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Vico Giuseppe Costa,6,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Vico S. Passero,6,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Regina Margherita,6,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Ignazio D'Amico,6,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Contrada Saraceno,6,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Alcantera,6,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Orto Signore,6,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Raspante,6,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Fratelli Cairoli,6,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Vincenzo Catania,6,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Francesco Crispi,6,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Nostra Donna,6,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Giuseppe Vignera,6,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Largo Francesco Cardaci,6,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Pietragrossa,6,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Bengasi,7,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Nazario Sauro,7,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Dittaino,7,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via San Giuseppe,7,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Tevere,7,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Largo Anfuso,7,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Vito Maccarrone,7,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Vico Vincenzo Oliva,7,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Arno,7,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Monsignor Salvatore Piemonte,7,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Genova,7,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Largo Manzoni,7,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Dante Alighieri,7,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via V. Stancanelli,7,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Largo San Sebastiano,7,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Goffredo Mameli,7,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Celestino Donato,7,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via San Domenico,7,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Fiume,7,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Carmelo Citelli,7,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Largo Firenze,7,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Largo Vito Cusmano,7,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Milano,7,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Giovanni Miano,7,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Vico Salvatore Rapisarda,7,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via F. Campagna,7,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Vico S. Rapisarda,7,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via San Lorenzo,7,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Vico Purgatorio,7,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Vittorio Emanuele,7,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Annunziato Mannino,7,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Largo Gen. La Bruna,7,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Piazza Savoia,7,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Vico Vincenzo Fiorenza,7,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Guarneri Abate,7,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via AbateGuarneri,7,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Vico P. Spezzi,7,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via dei Mille,7A,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Giuseppe Garibaldi,7A,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Strada Provinciale 233,7A,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Aldo Moro,7A,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Lombardi,7A,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Benedetto Croce,7A,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Alcide De Gasperi,7A,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Dante Alighieri,7A,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via V. Stancanelli,7A,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Strada provinciale Regalbuto-Scalo Ferroviario,7A,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Goffredo Mameli,7A,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Mons. Vito Pernicone,7A,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Cappuccini,7A,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Strada Provinciale 233,8A,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Giovanni Falcone,8A,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Papa Giovanni XXIII,8A,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Pio La Torre,8A,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Alcide De Gasperi,8A,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Largo Europa,8A,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Archimede,8A,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Paolo Borsellino,8A,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Strada provinciale Accesso Invaso Diga di Pozzillo,8A,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Giuseppe Garibaldi,8A,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Papa Giovanni XXIII,8,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Vincenzo Bellini,8,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Renato Guttuso,8,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Antonio Gramsci,8,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Leonardo Sciascia,8,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Paolo Borsellino,8,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Sandro Pertini,8,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Villaggio Unrra Casas,8,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Luigi Capuana,8,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via del Popolo,8,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Luigi Pirandello,8,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Govanni Verga,8,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Giovanni Verga,8,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Monsignor Salvatore Piemonte,8,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Fratelli Kennedy,8,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Isonzo,8,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Piazza Savoia,8,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Alcide De Gasperi,8B,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Paolo Borsellino,8B,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via del Popolo,8B,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Monsignor Salvatore Piemonte,8B,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Via Vito Timpanaro,6,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Vico Nicolò Bonanno,7,nord,centro,1,07:00,17:00,"A giorni alterni a partire dal 22 luglio dalle ore 07:00 alle ore 17:00. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **07:00** alle ore **17:00**
+Contrada Scalidda,,sud,periferia,4,17:00,sera,"A giorni alterni a partire dal 23 luglio dalle ore 17:00 fino a sera. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **17:00** fino a **sera**
+Contrada Ciappa Monte,,sud,periferia,4,17:00,sera,"A giorni alterni a partire dal 23 luglio dalle ore 17:00 fino a sera. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **17:00** fino a **sera**
+Contrada Savarino,,sud,periferia,4,17:00,sera,"A giorni alterni a partire dal 23 luglio dalle ore 17:00 fino a sera. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **17:00** fino a **sera**
+Contrada Pettoruta,,sud,periferia,4,17:00,sera,"A giorni alterni a partire dal 23 luglio dalle ore 17:00 fino a sera. Esempio: 25/07/2024, 27/07/2024, ...",Dalle ore **17:00** fino a **sera**
+Contrada Tre Vie,,nord,periferia,2,17:00,sera,"A giorni alterni a partire dal 22 luglio dalle ore 17:00 fino a sera. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **17:00** fino a **sera**
+Contrada Sparacollo,,nord,periferia,2,17:00,sera,"A giorni alterni a partire dal 22 luglio dalle ore 17:00 fino a sera. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **17:00** fino a **sera**
+Contrada Piano Arena,,nord,periferia,2,17:00,sera,"A giorni alterni a partire dal 22 luglio dalle ore 17:00 fino a sera. Esempio: 24/07/2024, 26/07/2024, ...",Dalle ore **17:00** fino a **sera**

@@ -234,3 +234,73 @@ resources:
         - name: pop_2024
           type: integer
           description: popolazione residente ISTAT al 1° gennaio 2024
+
+  - name: regalbuto_erogazione_idrica_20240722
+    type: table
+    path: risorse/regalbuto_erogazione_idrica_20240722.csv
+    scheme: file
+    format: csv
+    mediatype: text/csv
+    encoding: utf-8
+    description: Dettagli sulll'erogazione idrica del Comune di Regalbuto aggiornati al 22 luglio 2024. Le colonne relative alle strade e alle maglie rappresentano dati estratti da Giovan Battista Vitrano (Open Data Sicilia) a partire [da una mappa diffusa dal Sindaco Longo](https://www.facebook.com/photo/?fbid=3769636563307716&set=a.1999750763629647). (vd. sources)
+    sources:
+      - title: Comune di Regalbuto (su comunicato AcquaEnna)
+        description: Immagine della mappa di Regalbuto con poligoni dei distretti idrici e dettagli distribuzione. La mappa è stata diffusa tramite Facebook dal Sindaco Longo ma è stata realizzata dal gestore AcquaEnna.
+        path: https://www.facebook.com/photo/?fbid=3769636563307716&set=a.1999750763629647
+    schema:
+      fields:
+        - name: strada
+          type: string
+          description: Nome della strada 
+        - name: maglia
+          type: string
+          constraints:
+            enum: 
+              - '1'
+              - '2'
+              - '3'
+              - '4'
+              - '5'
+              - 5A
+              - 5B
+              - '6'
+              - '7'
+              - 7A
+              - '8'
+              - 8A
+              - 8B
+        - name: zona
+          type: string
+          description: Zona in cui è stituata la maglia (può assumere solo i valori `sud` e `nord`)
+          constraints:
+            enum: 
+              - sud
+              - nord
+        - name: zona_type
+          type: string
+          description: Posizione della zona (può assumere solo i valori `centro` e `periferia`)
+          constraints:
+            enum: 
+              - centro
+              - periferia
+        - name: erogazione_type
+          type: integer
+          description: ID della tipologia di erogazione. Ogni ID corrisponde a un orario e un giorno di erogazione.
+          constraints:
+            enum:
+              - 1
+              - 2
+              - 3
+              - 4
+        - name: start_h
+          type: string
+          description: Orario di inizio erogazione
+        - name: end_h
+          type: string
+          description: Orario di fine erogazione
+        - name: erogazione_description
+          type: string
+          description: Descrizione delle modalità di erogazione (utile per la comprensione dei valori numerici)
+        - name: erogazione_description_2
+          type: string
+          description: Descrizione alternativa a `erogazione_description`
