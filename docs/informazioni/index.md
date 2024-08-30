@@ -18,6 +18,7 @@ A seguire una serie di informazioni utili correlate al progetto.
   - **Volumi invasati nelle dighe della Sicilia** <https://www.regione.sicilia.it/istituzioni/regione/strutture-regionali/presidenza-regione/autorita-bacino-distretto-idrografico-sicilia/siti-tematici/risorse-idriche/volumi-invasati-nelle-dighe-della-sicilia>
   - **Report siccità**: <https://www.regione.sicilia.it/istituzioni/regione/strutture-regionali/presidenza-regione/autorita-bacino-distretto-idrografico-sicilia/siti-tematici/risorse-idriche/report-siccit%C3%A0>
     - **Anno 2024**: <https://www.regione.sicilia.it/istituzioni/regione/strutture-regionali/presidenza-regione/autorita-bacino-distretto-idrografico-sicilia/report-siccita-sicilia-anno-2024>
+  - [**Emergenza Idrica In Agricoltura E Zootecnia**](https://www.regione.sicilia.it/istituzioni/regione/strutture-regionali/assessorato-agricoltura-sviluppo-rurale-pesca-mediterranea/dipartimento-agricoltura/emergenza-idrica-agricoltura-zootecnia)
 
 ### Dipartimento della Protezione Civile regionale
 
