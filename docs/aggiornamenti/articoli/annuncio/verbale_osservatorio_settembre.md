@@ -13,11 +13,11 @@ tags:
 
 
 Il giorno 5 settembre 2024 si è riunito l'Osservatorio Distrettuale Permanente sugli Utilizzi Idrici del distretto Sicilia per discutere sul "Monitoraggio dell’evoluzione della situazione di severità idrica del sistema idropotabile e irriguo e stato di attuazione delle misure di mitigazione".<br>
-Viene confermato lo stato di severità idrica alto per tutto il distretto Sicilia ([qui il verbale](https://www.regione.sicilia.it/sites/default/files/2024-09/Verbale_OPUI_5_settembre_2024.pdf), pubblicato il 19 settembre 2024).
+Viene **confermato lo stato di severità idrica alto** per tutto il distretto Sicilia ([qui il verbale](https://www.regione.sicilia.it/sites/default/files/2024-09/Verbale_OPUI_5_settembre_2024.pdf), pubblicato il 19 settembre 2024).
 
 ---
 
-Gli invasi Fanaco e Ancipa sono ormai quasi esauriti, e i prelievi di acqua devono essere effettuati utilizzando zattere per accedere al volume residuo.
+Gli **invasi Fanaco** e **Ancipa** sono ormai **quasi** **esauriti**, e i prelievi di acqua devono essere effettuati utilizzando zattere per accedere al volume residuo.
 
 > Gli altri invasi sono in sofferenza ed in particolare quelli per **uso potabile**, in **assenza di precipitazioni**, esauriranno i volumi utili tra il **mese** di **novembre** e il **prossimo mese gennaio** si esauriranno i volumi utili.
 
