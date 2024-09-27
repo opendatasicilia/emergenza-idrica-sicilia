@@ -14,7 +14,7 @@ description: Mappe e Tabelle by @opendatasicilia
 
 <div class="grid cards" markdown>
 
--   __Palermo distretti rete idrica AMAP SpA__
+-   __Palermo distretti rete idrica - AMAP SpA__
 
     ---
 	
@@ -71,3 +71,11 @@ description: Mappe e Tabelle by @opendatasicilia
     [![](../img/regalbuto_turnazione.jpg "Regalbuto distretti rete idrica AcquaEnna")](regalbuto/regalbuto_turnazione.md)
 
     [:octicons-arrow-right-24: Apri](regalbuto/regalbuto_turnazione.md "Regalbuto distretti rete idrica AcquaEnna")	
+	
+-   __Palermo turnazione idrica - AMAP SpA__
+
+    ---
+
+    [![](../img/turnazione_pa.png "Palermo, dal giorno 7 ottobre scatta il piano di razionamento idrico: ecco la mappa dei distretti interessati")](distretti_pa_turnazione/index.md)
+
+    [:octicons-arrow-right-24: Apri](distretti_pa_turnazione/index.md "Palermo, dal giorno 7 ottobre scatta il piano di razionamento idrico: ecco la mappa dei distretti interessati")		
