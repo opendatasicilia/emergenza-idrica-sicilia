@@ -1,7 +1,7 @@
 ---
 draft: false
-date: 2024-10-20
-title: "Osservatorio: verbale riunione inizio ottobre"
+date: 2024-09-19
+title: "Osservatorio: verbale riunione inizio settembre"
 hide:
   - navigation
   - toc
@@ -12,21 +12,17 @@ tags:
 ---
 
 
-Il giorno **10 ottobre 2024** si è riunito l'Osservatorio Distrettuale Permanente sugli Utilizzi Idrici del distretto Sicilia per discutere sul "Monitoraggio dell'evoluzione della situazione di severità idrica del sistema idropotabile e irriguo e stato di attuazione delle misure di mitigazione".<br>
-Viene **confermato lo stato di severità idrica alto** per tutto il distretto Sicilia ([qui il verbale](https://www.regione.sicilia.it/sites/default/files/2024-10/Verbale_OPUI_10_ottobre2024.pdf), pubblicato il 18 ottobre 2024).
+Il giorno 5 settembre 2024 si è riunito l'Osservatorio Distrettuale Permanente sugli Utilizzi Idrici del distretto Sicilia per discutere sul "Monitoraggio dell’evoluzione della situazione di severità idrica del sistema idropotabile e irriguo e stato di attuazione delle misure di mitigazione".<br>
+Viene **confermato lo stato di severità idrica alto** per tutto il distretto Sicilia ([qui il verbale](https://www.regione.sicilia.it/sites/default/files/2024-09/Verbale_OPUI_5_settembre_2024.pdf), pubblicato il 19 settembre 2024).
 
 ---
 
-Gli invasi Ancipa e Fanaco sono stati identificati - ancora una volta - come i più critici, con l'Ancipa che sta già attingendo dal volume riservato all'ittiofauna e il Fanaco che sta esaurendo il volume morto. Altri invasi, come Castello e Ragoleto, sono previsti esaurirsi entro la fine dell'anno. I territori più colpiti sono quelli di Enna, Caltanissetta e Palermo
+Gli **invasi Fanaco** e **Ancipa** sono ormai **quasi** **esauriti**, e i prelievi di acqua devono essere effettuati utilizzando zattere per accedere al volume residuo.
 
-Le simulazioni condotte, considerando l'assenza di precipitazioni significative, indicano che diversi invasi, tra cui Garcia, Poma, Rosamarina e Piana degli Albanesi, potrebbero esaurire le risorse disponibili tra gennaio e febbraio 2025.
+> Gli altri invasi sono in sofferenza ed in particolare quelli per **uso potabile**, in **assenza di precipitazioni**, esauriranno i volumi utili tra il **mese** di **novembre** e il **prossimo mese gennaio** si esauriranno i volumi utili.
 
-Nelle conclusioni, tra le altre cose si legge:
+È interessante la nota finale riguardante le **misure di mitigazione**, i cui **effetti** saranno **riportati** nei **prossimi verbali** dell'Osservatorio. Si tratta degli interventi finanziati con l'ordinanza di [protezione civile 1084/2024](https://www.regione.sicilia.it/sites/default/files/2024-06/Disposizione%20n.550%20%20del.%2013.06.2024.pdf).
 
-> È emerso che l'invaso Garcia presenta ingenti perdite costanti dagli organi si prelievo/scarico. **È essenziale attivare un monitoraggio** delle perdite e un controllo sui lavori di riparazione delle perdite.
+Poter avere i dettagli degli effetti è essenziale, perché non è possibile fare affidamento soltanto sulle precipitazioni.
 
-Ci si chiede come mai non sia attivo da mesi.
-
-!!! note
-
-    Le piogge di questi giorni hanno portato un po' di sollievo, ma l'Osservatorio non ha ancora cambiato il suo giudizio sul livello di severità idrica e non è detto che avverrà a breve.
+Qui gli altri verbali: <https://www.regione.sicilia.it/istituzioni/regione/strutture-regionali/presidenza-regione/autorita-bacino-distretto-idrografico-sicilia/anno-2024>
