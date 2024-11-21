@@ -1,33 +1,5 @@
 cod,diga,data,volume
 dig-01,Àncipa,01/08/2024,3.65
-dig-02,Arancio,01/08/2024,11.28
-dig-03,Castello,01/08/2024,5.98
-dig-04,Cimia,01/08/2024,0.71
-dig-05,Comunelli,01/08/2024,0.00
-dig-06,Disueri,01/08/2024,0.00
-dig-07,Fanaco,01/08/2024,0.02
-dig-08,Furore,01/08/2024,0.97
-dig-09,Garcia (M. Francese),01/08/2024,16.82
-dig-10,Gorgo Lago,01/08/2024,0.55
-dig-11,Lentini,01/08/2024,69.49
-dig-12,Leone,01/08/2024,0.00
-dig-13,Nicoletti,01/08/2024,1.27
-dig-14,Ogliastro (Don Sturzo),01/08/2024,21.39
-dig-15,Olivo,01/08/2024,2.89
-dig-16,Paceco,01/08/2024,2.67
-dig-17,Piana Degli Albanesi,01/08/2024,8.41
-dig-18,Poma,01/08/2024,27.73
-dig-19,Pozzillo,01/08/2024,2.94
-dig-20,Prizzi,01/08/2024,2.11
-dig-21,Ragoleto,01/08/2024,6.05
-dig-22,Rosamarina,01/08/2024,16.02
-dig-23,Rubino,01/08/2024,0.94
-dig-24,San Giovanni,01/08/2024,5.33
-dig-25,Santa Rosalia,01/08/2024,10.20
-dig-26,Scanzano,01/08/2024,3.72
-dig-27,Sciaguana,01/08/2024,3.57
-dig-28,Trinità,01/08/2024,3.19
-dig-29,Zaffarana,01/08/2024,0.01
 dig-01,Àncipa,01/01/2010,8.97
 dig-01,Àncipa,01/02/2010,8.82
 dig-01,Àncipa,02/03/2010,8.94
@@ -201,8 +173,11 @@ dig-01,Àncipa,01/02/2024,8.01
 dig-01,Àncipa,01/03/2024,7.43
 dig-01,Àncipa,01/04/2024,8.89
 dig-01,Àncipa,01/05/2024,7.94
-dig-01,Àncipa,01/06/2024,7.18
 dig-01,Àncipa,01/07/2024,5.25
+dig-01,Àncipa,01/09/2024,2.28
+dig-01,Àncipa,01/10/2024,1.42
+dig-01,Àncipa,01/06/2024,6.78
+dig-02,Arancio,01/08/2024,11.28
 dig-02,Arancio,01/01/2010,27.04
 dig-02,Arancio,01/02/2010,27.03
 dig-02,Arancio,02/03/2010,25.7
@@ -376,8 +351,11 @@ dig-02,Arancio,01/02/2024,15.26
 dig-02,Arancio,01/03/2024,15.93
 dig-02,Arancio,01/04/2024,16.68
 dig-02,Arancio,01/05/2024,16.70
-dig-02,Arancio,01/06/2024,17.13
 dig-02,Arancio,01/07/2024,14.60
+dig-02,Arancio,01/09/2024,6.54
+dig-02,Arancio,01/10/2024,4.70
+dig-02,Arancio,01/06/2024,16.73
+dig-03,Castello,01/08/2024,5.98
 dig-03,Castello,01/01/2010,18.86
 dig-03,Castello,01/02/2010,21.14
 dig-03,Castello,02/03/2010,21
@@ -551,8 +529,11 @@ dig-03,Castello,01/02/2024,8.13
 dig-03,Castello,01/03/2024,8.52
 dig-03,Castello,01/04/2024,9.14
 dig-03,Castello,01/05/2024,9.07
-dig-03,Castello,01/06/2024,9.08
 dig-03,Castello,01/07/2024,8.32
+dig-03,Castello,01/09/2024,5.10
+dig-03,Castello,01/10/2024,4.51
+dig-03,Castello,01/06/2024,9.08
+dig-04,Cimia,01/08/2024,0.71
 dig-04,Cimia,01/01/2010,8.1
 dig-04,Cimia,01/02/2010,7.42
 dig-04,Cimia,02/03/2010,7.46
@@ -726,8 +707,11 @@ dig-04,Cimia,01/02/2024,0.73
 dig-04,Cimia,01/03/2024,1.11
 dig-04,Cimia,01/04/2024,0.84
 dig-04,Cimia,01/05/2024,0.94
-dig-04,Cimia,01/06/2024,1.26
 dig-04,Cimia,01/07/2024,0.79
+dig-04,Cimia,01/09/2024,0.64
+dig-04,Cimia,01/10/2024,0.61
+dig-04,Cimia,01/06/2024,0.86
+dig-05,Comunelli,01/08/2024,0.00
 dig-05,Comunelli,01/01/2010,0
 dig-05,Comunelli,01/02/2010,1.25
 dig-05,Comunelli,02/03/2010,1.35
@@ -901,8 +885,11 @@ dig-05,Comunelli,01/02/2024,0
 dig-05,Comunelli,01/03/2024,0.1
 dig-05,Comunelli,01/04/2024,0.14
 dig-05,Comunelli,01/05/2024,0.01
-dig-05,Comunelli,01/06/2024,0
 dig-05,Comunelli,01/07/2024,0.00
+dig-05,Comunelli,01/09/2024,0.00
+dig-05,Comunelli,01/10/2024,0.00
+dig-05,Comunelli,01/06/2024,0.00
+dig-06,Disueri,01/08/2024,0.00
 dig-06,Disueri,01/01/2010,4.4
 dig-06,Disueri,01/02/2010,4.64
 dig-06,Disueri,02/03/2010,3.28
@@ -1076,8 +1063,11 @@ dig-06,Disueri,01/02/2024,0.92
 dig-06,Disueri,01/03/2024,0.75
 dig-06,Disueri,01/04/2024,0.38
 dig-06,Disueri,01/05/2024,0.23
-dig-06,Disueri,01/06/2024,0.21
 dig-06,Disueri,01/07/2024,0.11
+dig-06,Disueri,01/09/2024,0.16
+dig-06,Disueri,01/10/2024,0.20
+dig-06,Disueri,01/06/2024,0.21
+dig-07,Fanaco,01/08/2024,0.02
 dig-07,Fanaco,01/01/2010,18.57
 dig-07,Fanaco,01/02/2010,19.58
 dig-07,Fanaco,02/03/2010,19.28
@@ -1251,8 +1241,11 @@ dig-07,Fanaco,01/02/2024,2.22
 dig-07,Fanaco,01/03/2024,1.57
 dig-07,Fanaco,01/04/2024,1.52
 dig-07,Fanaco,01/05/2024,1.17
-dig-07,Fanaco,01/06/2024,1.25
 dig-07,Fanaco,01/07/2024,0.36
+dig-07,Fanaco,01/09/2024,0.00
+dig-07,Fanaco,01/10/2024,0.00
+dig-07,Fanaco,01/06/2024,0.85
+dig-08,Furore,01/08/2024,0.97
 dig-08,Furore,01/03/2022,3.73
 dig-08,Furore,01/04/2022,3.58
 dig-08,Furore,01/05/2022,3.33
@@ -1280,8 +1273,11 @@ dig-08,Furore,01/02/2024,1.87
 dig-08,Furore,01/03/2024,1.84
 dig-08,Furore,01/04/2024,3.1
 dig-08,Furore,01/05/2024,2.64
-dig-08,Furore,01/06/2024,2.25
 dig-08,Furore,01/07/2024,0.94
+dig-08,Furore,01/09/2024,0.75
+dig-08,Furore,01/10/2024,0.66
+dig-08,Furore,01/06/2024,2.25
+dig-09,Garcia (M. Francese),01/08/2024,16.82
 dig-09,Garcia (M. Francese),01/01/2010,66.83
 dig-09,Garcia (M. Francese),01/02/2010,63.76
 dig-09,Garcia (M. Francese),02/03/2010,61.92
@@ -1455,8 +1451,11 @@ dig-09,Garcia (M. Francese),01/02/2024,22.6
 dig-09,Garcia (M. Francese),01/03/2024,23.14
 dig-09,Garcia (M. Francese),01/04/2024,26.72
 dig-09,Garcia (M. Francese),01/05/2024,25.60
-dig-09,Garcia (M. Francese),01/06/2024,0.25
 dig-09,Garcia (M. Francese),01/07/2024,21.69
+dig-09,Garcia (M. Francese),01/09/2024,14.77
+dig-09,Garcia (M. Francese),01/10/2024,13.00
+dig-09,Garcia (M. Francese),01/06/2024,24.25
+dig-10,Gorgo Lago,01/08/2024,0.55
 dig-10,Gorgo Lago,01/01/2010,0.76
 dig-10,Gorgo Lago,01/02/2010,0.78
 dig-10,Gorgo Lago,02/03/2010,0.79
@@ -1630,8 +1629,11 @@ dig-10,Gorgo Lago,01/02/2024,0.95
 dig-10,Gorgo Lago,01/03/2024,0.94
 dig-10,Gorgo Lago,01/04/2024,0.93
 dig-10,Gorgo Lago,01/05/2024,0.88
-dig-10,Gorgo Lago,01/06/2024,1.26
 dig-10,Gorgo Lago,01/07/2024,0.79
+dig-10,Gorgo Lago,01/09/2024,0.48
+dig-10,Gorgo Lago,01/10/2024,0.43
+dig-10,Gorgo Lago,01/06/2024,0.86
+dig-11,Lentini,01/08/2024,69.49
 dig-11,Lentini,01/01/2018,74.5
 dig-11,Lentini,01/02/2018,75.18
 dig-11,Lentini,01/03/2018,93.3
@@ -1709,8 +1711,11 @@ dig-11,Lentini,01/02/2024,80.94
 dig-11,Lentini,01/03/2024,80.4
 dig-11,Lentini,01/04/2024,78.81
 dig-11,Lentini,01/05/2024,76.10
-dig-11,Lentini,01/06/2024,3.18
 dig-11,Lentini,01/07/2024,72.98
+dig-11,Lentini,01/09/2024,64.28
+dig-11,Lentini,01/10/2024,59.38
+dig-11,Lentini,01/06/2024,75.18
+dig-12,Leone,01/08/2024,0.00
 dig-12,Leone,01/01/2010,3.88
 dig-12,Leone,01/02/2010,4.19
 dig-12,Leone,02/03/2010,4.19
@@ -1884,8 +1889,11 @@ dig-12,Leone,01/02/2024,1.3
 dig-12,Leone,01/03/2024,1.33
 dig-12,Leone,01/04/2024,1.64
 dig-12,Leone,01/05/2024,1.44
-dig-12,Leone,01/06/2024,1.22
 dig-12,Leone,01/07/2024,0.80
+dig-12,Leone,01/09/2024,0.00
+dig-12,Leone,01/10/2024,0.00
+dig-12,Leone,01/06/2024,1.22
+dig-13,Nicoletti,01/08/2024,1.27
 dig-13,Nicoletti,01/01/2010,17.06
 dig-13,Nicoletti,01/02/2010,16.42
 dig-13,Nicoletti,02/03/2010,16.06
@@ -2059,8 +2067,11 @@ dig-13,Nicoletti,01/02/2024,1.61
 dig-13,Nicoletti,01/03/2024,1.66
 dig-13,Nicoletti,01/04/2024,1.68
 dig-13,Nicoletti,01/05/2024,1.67
-dig-13,Nicoletti,01/06/2024,2.02
 dig-13,Nicoletti,01/07/2024,1.52
+dig-13,Nicoletti,01/09/2024,1.71
+dig-13,Nicoletti,01/10/2024,1.89
+dig-13,Nicoletti,01/06/2024,1.62
+dig-14,Ogliastro (Don Sturzo),01/08/2024,21.39
 dig-14,Ogliastro (Don Sturzo),01/01/2010,80.31
 dig-14,Ogliastro (Don Sturzo),01/02/2010,89.82
 dig-14,Ogliastro (Don Sturzo),02/03/2010,101.46
@@ -2234,8 +2245,11 @@ dig-14,Ogliastro (Don Sturzo),01/02/2024,22.88
 dig-14,Ogliastro (Don Sturzo),01/03/2024,23.18
 dig-14,Ogliastro (Don Sturzo),01/04/2024,23.14
 dig-14,Ogliastro (Don Sturzo),01/05/2024,22.82
-dig-14,Ogliastro (Don Sturzo),01/06/2024,22.49
 dig-14,Ogliastro (Don Sturzo),01/07/2024,21.97
+dig-14,Ogliastro (Don Sturzo),01/09/2024,21.15
+dig-14,Ogliastro (Don Sturzo),01/10/2024,21.34
+dig-14,Ogliastro (Don Sturzo),01/06/2024,22.49
+dig-15,Olivo,01/08/2024,2.89
 dig-15,Olivo,01/01/2010,5.55
 dig-15,Olivo,01/02/2010,6.37
 dig-15,Olivo,02/03/2010,7.32
@@ -2409,8 +2423,11 @@ dig-15,Olivo,01/02/2024,3.76
 dig-15,Olivo,01/03/2024,3.88
 dig-15,Olivo,01/04/2024,3.88
 dig-15,Olivo,01/05/2024,3.83
-dig-15,Olivo,01/06/2024,4.03
 dig-15,Olivo,01/07/2024,3.30
+dig-15,Olivo,01/09/2024,2.63
+dig-15,Olivo,01/10/2024,2.69
+dig-15,Olivo,01/06/2024,3.63
+dig-16,Paceco,01/08/2024,2.67
 dig-16,Paceco,01/04/2022,5.66
 dig-16,Paceco,01/05/2022,5.56
 dig-16,Paceco,01/06/2022,5.38
@@ -2437,8 +2454,11 @@ dig-16,Paceco,01/02/2024,4.01
 dig-16,Paceco,01/03/2024,4.03
 dig-16,Paceco,01/04/2024,4.11
 dig-16,Paceco,01/05/2024,3.92
-dig-16,Paceco,01/06/2024,4.13
 dig-16,Paceco,01/07/2024,3.27
+dig-16,Paceco,01/09/2024,2.28
+dig-16,Paceco,01/10/2024,2.07
+dig-16,Paceco,01/06/2024,3.73
+dig-17,Piana Degli Albanesi,01/08/2024,8.41
 dig-17,Piana Degli Albanesi,01/01/2010,25.43
 dig-17,Piana Degli Albanesi,01/02/2010,28.87
 dig-17,Piana Degli Albanesi,02/03/2010,24.64
@@ -2612,8 +2632,11 @@ dig-17,Piana Degli Albanesi,01/02/2024,11.54
 dig-17,Piana Degli Albanesi,01/03/2024,11.65
 dig-17,Piana Degli Albanesi,01/04/2024,12.33
 dig-17,Piana Degli Albanesi,01/05/2024,11.42
-dig-17,Piana Degli Albanesi,01/06/2024,10.46
 dig-17,Piana Degli Albanesi,01/07/2024,9.71
+dig-17,Piana Degli Albanesi,01/09/2024,7.43
+dig-17,Piana Degli Albanesi,01/10/2024,6.61
+dig-17,Piana Degli Albanesi,01/06/2024,10.46
+dig-18,Poma,01/08/2024,27.73
 dig-18,Poma,01/01/2010,69.05
 dig-18,Poma,01/02/2010,68.83
 dig-18,Poma,02/03/2010,65.31
@@ -2787,8 +2810,11 @@ dig-18,Poma,01/02/2024,35.18
 dig-18,Poma,01/03/2024,34.99
 dig-18,Poma,01/04/2024,39.61
 dig-18,Poma,01/05/2024,37.81
-dig-18,Poma,01/06/2024,12.27
 dig-18,Poma,01/07/2024,32.63
+dig-18,Poma,01/09/2024,23.20
+dig-18,Poma,01/10/2024,20.53
+dig-18,Poma,01/06/2024,35.87
+dig-19,Pozzillo,01/08/2024,2.94
 dig-19,Pozzillo,01/01/2010,59.26
 dig-19,Pozzillo,01/02/2010,76.3
 dig-19,Pozzillo,02/03/2010,89.61
@@ -2962,8 +2988,11 @@ dig-19,Pozzillo,01/02/2024,3.84
 dig-19,Pozzillo,01/03/2024,4.58
 dig-19,Pozzillo,01/04/2024,5.9
 dig-19,Pozzillo,01/05/2024,5.84
-dig-19,Pozzillo,01/06/2024,5.47
 dig-19,Pozzillo,01/07/2024,4.25
+dig-19,Pozzillo,01/09/2024,2.61
+dig-19,Pozzillo,01/10/2024,3.33
+dig-19,Pozzillo,01/06/2024,5.47
+dig-20,Prizzi,01/08/2024,2.11
 dig-20,Prizzi,01/01/2010,8.36
 dig-20,Prizzi,01/02/2010,8.36
 dig-20,Prizzi,02/03/2010,8.36
@@ -3137,8 +3166,11 @@ dig-20,Prizzi,01/02/2024,1.93
 dig-20,Prizzi,01/03/2024,2.21
 dig-20,Prizzi,01/04/2024,3.05
 dig-20,Prizzi,01/05/2024,3.06
-dig-20,Prizzi,01/06/2024,3.38
 dig-20,Prizzi,01/07/2024,2.74
+dig-20,Prizzi,01/09/2024,1.94
+dig-20,Prizzi,01/10/2024,1.87
+dig-20,Prizzi,01/06/2024,2.98
+dig-21,Ragoleto,01/08/2024,6.05
 dig-21,Ragoleto,01/01/2018,
 dig-21,Ragoleto,01/02/2018,
 dig-21,Ragoleto,01/03/2018,
@@ -3216,8 +3248,11 @@ dig-21,Ragoleto,01/02/2024,10
 dig-21,Ragoleto,01/03/2024,9.76
 dig-21,Ragoleto,01/04/2024,9.64
 dig-21,Ragoleto,01/05/2024,9.05
-dig-21,Ragoleto,01/06/2024,8.18
 dig-21,Ragoleto,01/07/2024,7.01
+dig-21,Ragoleto,01/09/2024,5.03
+dig-21,Ragoleto,01/10/2024,4.56
+dig-21,Ragoleto,01/06/2024,8.18
+dig-22,Rosamarina,01/08/2024,16.02
 dig-22,Rosamarina,01/01/2010,83.64
 dig-22,Rosamarina,01/02/2010,102.56
 dig-22,Rosamarina,02/03/2010,98.09
@@ -3391,8 +3426,11 @@ dig-22,Rosamarina,01/02/2024,21.9
 dig-22,Rosamarina,01/03/2024,20.98
 dig-22,Rosamarina,01/04/2024,21.03
 dig-22,Rosamarina,01/05/2024,19.79
-dig-22,Rosamarina,01/06/2024,19.26
 dig-22,Rosamarina,01/07/2024,17.51
+dig-22,Rosamarina,01/09/2024,14.78
+dig-22,Rosamarina,01/10/2024,13.50
+dig-22,Rosamarina,01/06/2024,18.86
+dig-23,Rubino,01/08/2024,0.94
 dig-23,Rubino,01/01/2010,11.5
 dig-23,Rubino,01/02/2010,11.56
 dig-23,Rubino,02/03/2010,11.44
@@ -3566,8 +3604,11 @@ dig-23,Rubino,01/02/2024,2.4
 dig-23,Rubino,01/03/2024,2.53
 dig-23,Rubino,01/04/2024,2.98
 dig-23,Rubino,01/05/2024,2.87
-dig-23,Rubino,01/06/2024,3.15
 dig-23,Rubino,01/07/2024,1.81
+dig-23,Rubino,01/09/2024,0.85
+dig-23,Rubino,01/10/2024,0.81
+dig-23,Rubino,01/06/2024,2.75
+dig-24,San Giovanni,01/08/2024,5.33
 dig-24,San Giovanni,01/01/2010,14.13
 dig-24,San Giovanni,01/02/2010,16.04
 dig-24,San Giovanni,02/03/2010,15.94
@@ -3741,8 +3782,11 @@ dig-24,San Giovanni,01/02/2024,9.41
 dig-24,San Giovanni,01/03/2024,9.83
 dig-24,San Giovanni,01/04/2024,8.98
 dig-24,San Giovanni,01/05/2024,8.82
-dig-24,San Giovanni,01/06/2024,8.47
 dig-24,San Giovanni,01/07/2024,7.22
+dig-24,San Giovanni,01/09/2024,4.22
+dig-24,San Giovanni,01/10/2024,4.00
+dig-24,San Giovanni,01/06/2024,8.47
+dig-25,Santa Rosalia,01/08/2024,10.20
 dig-25,Santa Rosalia,01/01/2010,17.34
 dig-25,Santa Rosalia,01/02/2010,20.13
 dig-25,Santa Rosalia,02/03/2010,20.09
@@ -3916,8 +3960,11 @@ dig-25,Santa Rosalia,01/02/2024,13.95
 dig-25,Santa Rosalia,01/03/2024,13.55
 dig-25,Santa Rosalia,01/04/2024,13.02
 dig-25,Santa Rosalia,01/05/2024,12.38
-dig-25,Santa Rosalia,01/06/2024,12.03
 dig-25,Santa Rosalia,01/07/2024,11.37
+dig-25,Santa Rosalia,01/09/2024,9.26
+dig-25,Santa Rosalia,01/10/2024,8.53
+dig-25,Santa Rosalia,01/06/2024,11.63
+dig-26,Scanzano,01/08/2024,3.72
 dig-26,Scanzano,01/01/2010,8.43
 dig-26,Scanzano,01/02/2010,9.78
 dig-26,Scanzano,02/03/2010,8.67
@@ -4091,8 +4138,11 @@ dig-26,Scanzano,01/02/2024,3.78
 dig-26,Scanzano,01/03/2024,3.9
 dig-26,Scanzano,01/04/2024,5.08
 dig-26,Scanzano,01/05/2024,5.04
-dig-26,Scanzano,01/06/2024,5.36
 dig-26,Scanzano,01/07/2024,3.83
+dig-26,Scanzano,01/09/2024,3.60
+dig-26,Scanzano,01/10/2024,3.55
+dig-26,Scanzano,01/06/2024,4.96
+dig-27,Sciaguana,01/08/2024,3.57
 dig-27,Sciaguana,01/03/2022,3.21
 dig-27,Sciaguana,01/04/2022,3.28
 dig-27,Sciaguana,01/05/2022,3.28
@@ -4120,8 +4170,11 @@ dig-27,Sciaguana,01/02/2024,4.01
 dig-27,Sciaguana,01/03/2024,4.06
 dig-27,Sciaguana,01/04/2024,4.05
 dig-27,Sciaguana,01/05/2024,3.98
-dig-27,Sciaguana,01/06/2024,4.38
 dig-27,Sciaguana,01/07/2024,3.81
+dig-27,Sciaguana,01/09/2024,3.70
+dig-27,Sciaguana,01/10/2024,3.78
+dig-27,Sciaguana,01/06/2024,3.98
+dig-28,Trinità,01/08/2024,3.19
 dig-28,Trinità,01/01/2010,10.3
 dig-28,Trinità,01/02/2010,10.83
 dig-28,Trinità,02/03/2010,9.41
@@ -4295,8 +4348,11 @@ dig-28,Trinità,01/02/2024,4.37
 dig-28,Trinità,01/03/2024,5.2
 dig-28,Trinità,01/04/2024,5.13
 dig-28,Trinità,01/05/2024,5.13
-dig-28,Trinità,01/06/2024,5.08
 dig-28,Trinità,01/07/2024,4.87
+dig-28,Trinità,01/09/2024,2.86
+dig-28,Trinità,01/10/2024,2.77
+dig-28,Trinità,01/06/2024,5.08
+dig-29,Zaffarana,01/08/2024,0.01
 dig-29,Zaffarana,01/03/2022,0.34
 dig-29,Zaffarana,01/04/2022,0.32
 dig-29,Zaffarana,01/05/2022,0.31
@@ -4324,8 +4380,10 @@ dig-29,Zaffarana,01/02/2024,0.04
 dig-29,Zaffarana,01/03/2024,0.04
 dig-29,Zaffarana,01/04/2024,0.04
 dig-29,Zaffarana,01/05/2024,0.03
-dig-29,Zaffarana,01/06/2024,0.02
 dig-29,Zaffarana,01/07/2024,0.02
+dig-29,Zaffarana,01/09/2024,0.01
+dig-29,Zaffarana,01/10/2024,0.01
+dig-29,Zaffarana,01/06/2024,0.02
 dig-30,Biviere,01/01/2010,1.6
 dig-30,Biviere,01/02/2010,1.6
 dig-30,Biviere,02/03/2010,
@@ -4350,62 +4408,4 @@ dig-30,Biviere,02/09/2011,
 dig-30,Biviere,01/10/2011,
 dig-30,Biviere,01/11/2011,
 dig-30,Biviere,02/12/2011,
-dig-01,Àncipa,01/09/2024,2.28
-dig-02,Arancio,01/09/2024,6.54
-dig-03,Castello,01/09/2024,5.10
-dig-04,Cimia,01/09/2024,0.64
-dig-05,Comunelli,01/09/2024,0.00
-dig-06,Disueri,01/09/2024,0.16
-dig-07,Fanaco,01/09/2024,0.00
-dig-08,Furore,01/09/2024,0.75
-dig-09,Garcia (M. Francese),01/09/2024,14.77
-dig-10,Gorgo Lago,01/09/2024,0.48
-dig-11,Lentini,01/09/2024,64.28
-dig-12,Leone,01/09/2024,0.00
-dig-13,Nicoletti,01/09/2024,1.71
-dig-14,Ogliastro (Don Sturzo),01/09/2024,21.15
-dig-15,Olivo,01/09/2024,2.63
-dig-16,Paceco,01/09/2024,2.28
-dig-17,Piana Degli Albanesi,01/09/2024,7.43
-dig-18,Poma,01/09/2024,23.20
-dig-19,Pozzillo,01/09/2024,2.61
-dig-20,Prizzi,01/09/2024,1.94
-dig-21,Ragoleto,01/09/2024,5.03
-dig-22,Rosamarina,01/09/2024,14.78
-dig-23,Rubino,01/09/2024,0.85
-dig-24,San Giovanni,01/09/2024,4.22
-dig-25,Santa Rosalia,01/09/2024,9.26
-dig-26,Scanzano,01/09/2024,3.60
-dig-27,Sciaguana,01/09/2024,3.70
-dig-28,Trinità,01/09/2024,2.86
-dig-29,Zaffarana,01/09/2024,0.01
-dig-01,Àncipa,01/10/2024,1.42
-dig-02,Arancio,01/10/2024,4.70
-dig-03,Castello,01/10/2024,4.51
-dig-04,Cimia,01/10/2024,0.61
-dig-05,Comunelli,01/10/2024,0.00
-dig-06,Disueri,01/10/2024,0.20
-dig-14,Ogliastro (Don Sturzo),01/10/2024,21.34
-dig-07,Fanaco,01/10/2024,0.00
-dig-08,Furore,01/10/2024,0.66
 dig-31,Gammauta,01/10/2024,0.15
-dig-09,Garcia (M. Francese),01/10/2024,13.00
-dig-10,Gorgo Lago,01/10/2024,0.43
-dig-11,Lentini,01/10/2024,59.38
-dig-13,Nicoletti,01/10/2024,1.89
-dig-15,Olivo,01/10/2024,2.69
-dig-16,Paceco,01/10/2024,2.07
-dig-17,Piana Degli Albanesi,01/10/2024,6.61
-dig-12,Leone,01/10/2024,0.00
-dig-18,Poma,01/10/2024,20.53
-dig-19,Pozzillo,01/10/2024,3.33
-dig-20,Prizzi,01/10/2024,1.87
-dig-21,Ragoleto,01/10/2024,4.56
-dig-22,Rosamarina,01/10/2024,13.50
-dig-23,Rubino,01/10/2024,0.81
-dig-24,San Giovanni,01/10/2024,4.00
-dig-25,Santa Rosalia,01/10/2024,8.53
-dig-26,Scanzano,01/10/2024,3.55
-dig-27,Sciaguana,01/10/2024,3.78
-dig-28,Trinità,01/10/2024,2.77
-dig-29,Zaffarana,01/10/2024,0.01
