@@ -78,4 +78,12 @@ description: Mappe e Tabelle by @opendatasicilia
 
     [![](../img/turnazione_pa.png "Palermo, dal giorno 7 ottobre scatta il piano di razionamento idrico: ecco la mappa dei distretti interessati")](distretti_pa_turnazione/index.md)
 
-    [:octicons-arrow-right-24: Apri](distretti_pa_turnazione/index.md "Palermo, dal giorno 7 ottobre scatta il piano di razionamento idrico: ecco la mappa dei distretti interessati")		
+    [:octicons-arrow-right-24: Apri](distretti_pa_turnazione/index.md "Palermo, dal giorno 7 ottobre scatta il piano di razionamento idrico: ecco la mappa dei distretti interessati")
+
+-   __Dashboard dei volumi invasati nelle dighe siciliane__
+
+    ---
+
+    [![](../img/dashboard_volumi.png "I volumi invasati dalle dighe siciliane")](https://lookerstudio.google.com/reporting/241228ac-70d4-4861-88c7-a9058ab28a11/page/gPgUE)
+
+    [:octicons-arrow-right-24: Apri](https://lookerstudio.google.com/reporting/241228ac-70d4-4861-88c7-a9058ab28a11/page/gPgUE "I volumi invasati dalle dighe siciliane")		

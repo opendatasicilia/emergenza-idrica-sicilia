@@ -1,6 +1,6 @@
 ---
 draft: false
-date: 2024-07-16T12:00:00
+date: 2024-07-16
 hide:
   - navigation
   - toc

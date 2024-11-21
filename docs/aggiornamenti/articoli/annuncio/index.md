@@ -1,6 +1,6 @@
 ---
 draft: false
-date: 2024-04-03T11:00:00
+date: 2024-04-03
 hide:
   - navigation
   - toc
