@@ -24,7 +24,10 @@ Sostanzialmente viene **confermato lo stato di severità idrica alto** per tutto
 3. Monitoraggio della situazione dell’**invaso Fanaco** e stato attuazione misure di mitigazione;
 4. Monitoraggio della situazione dell’**invaso Ancipa** e stato attuazione misure di mitigazione. 
 
-Si riporta una sintesi dei contenuti del verbale
+Si riporta di seguito una sintesi dei contenuti del verbale.
+
+<!-- more -->
+
 
 ### Invaso Ragoleto
 
