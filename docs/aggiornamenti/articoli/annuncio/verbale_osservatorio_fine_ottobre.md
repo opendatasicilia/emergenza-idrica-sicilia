@@ -13,7 +13,7 @@ tags:
 
 
 Il giorno **30 ottobre 2024** si è riunito l'Osservatorio Distrettuale Permanente sugli Utilizzi Idrici del distretto Sicilia per discutere sul "Monitoraggio dell'evoluzione della situazione di severità idrica del sistema idropotabile e irriguo e stato di attuazione delle misure di mitigazione".<br>
-Sostanzialmente viene **confermato lo stato di severità idrica alto** per tutto il distretto Sicilia [qui il verbale](https://www.regione.sicilia.it/sites/default/files/2024-11/Verbale_OPUI_30_ottobre_2024.pdf).
+Sostanzialmente viene **confermato lo stato di severità idrica alto** per tutto il distretto Sicilia, [**qui il verbale**](https://www.regione.sicilia.it/sites/default/files/2024-11/Verbale_OPUI_30_ottobre_2024.pdf).
 
 ---
 
