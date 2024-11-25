@@ -37,7 +37,8 @@ nav:
   - Home: index.md
   - Mappe e Tabelle:
      - mappe/index.md
-     - Palermo distretti rete idrica AMAP SpA: mappe/distretti_pa/index.md
+     - Palermo riduzione 2 dicembre 2024: mappe/distretti_pa_2_dicembre_2024/index.md
+     - Palermo riduzione 7 ottobre 2024: mappe/distretti_pa/index.md
      - Comuni con riduzione della fornitura idrica: mappe/riduzione/index.md
      - Dighe e prospetto dei volumi invasati: mappe/volumi/index.md
      - Principali risorse idriche in Sicilia: mappe/risorse/index.md
