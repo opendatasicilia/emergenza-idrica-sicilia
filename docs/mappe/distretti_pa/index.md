@@ -6,7 +6,7 @@ title: Riduzione della fornitura idrica a Palermo
 description: Palermo, mappa dei distretti gestiti dall'AMAP S.p.A. soggetti a riduzione della pressione idrica
 ---
 
-# Palermo, mappa dei distretti gestiti dall'AMAP S.p.A. soggetti a riduzione della pressione idrica
+# Palermo, mappa dei distretti sottoposti a riduzione a partire dal 7 ottobre 2024
 
 !!! info "Emergenza Idrica 2024 — Informazioni ai cittadini"
 
