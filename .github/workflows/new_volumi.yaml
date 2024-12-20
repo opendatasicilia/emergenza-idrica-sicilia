@@ -17,7 +17,7 @@ jobs:
           mkdir -p ~/bin
           cp bin/mlr ~/bin
           chmod +x ~/bin/mlr
-          pip install llm llm-gemini scrape-cli xq 
+          pip install llm llm-gemini scrape-cli yq
 
       - name: Setup llm
         # bisogna creare un secret chiamato GEMINI_KEY che contiene l'api key
