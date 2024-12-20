@@ -21,4 +21,3 @@
 /sites/default/files/2024-11/0__2024.11.01_C_Grafici_volumi_invasi.pdf
 /sites/default/files/2024-12/0__2024.12.01_C_Grafici_volumi_invasi.pdf
 /sites/default/files/2024-10/Tabella_volumi_invasi.pdf
-/sites/default/files/2024-12/1__2024.12.01_A_Tabella_volumi_invasi.pdf

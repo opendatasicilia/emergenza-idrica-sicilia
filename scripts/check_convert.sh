@@ -1,5 +1,8 @@
 #!/bin/bash
 
+set -e
+set -x
+
 # Questo script apre il sito della Regione Sicilia e controlla la presenza di nuovi documenti PDF contenenti
 # dati sui volumi invasati dalle dighe siciliane. Se trova nuovi PDF, li scarica e li converte in CSV sfruttando un llm. 
 
