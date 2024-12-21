@@ -11,7 +11,7 @@ Volumi invasati nelle dighe della Sicilia. Tabella estratta dai [file PDF rilasc
 | --- | --- | --- | --- |
 | cod | string | codice univoco diga | dig-02 |
 | diga | string | denominazione della diga | Arancio |
-| data | date | data nel formato dd/mm/yyyy | 01/01/2010 |
+| data | date | data nel formato YYYY-MM-DD | 2010-01-01 |
 | volume | number | volume in Mmc | 27.04 |
 
 ### 📄 [sicilia_dighe_anagrafica](sicilia_dighe_anagrafica.csv)
