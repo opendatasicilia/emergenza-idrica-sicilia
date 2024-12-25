@@ -21,7 +21,9 @@ jobs:
           cp bin/mlr ~/bin
           cd ~/bin
           chmod +x mlr
-          uv pip install --system llm llm-gemini scrape-cli yq
+          uv pip install llm llm-gemini scrape-cli yq
+        env:
+          UV_SYSTEM_PYTHON: 1
 
       - name: Setup llm
         # bisogna creare un secret chiamato GEMINI_KEY che contiene l'api key
