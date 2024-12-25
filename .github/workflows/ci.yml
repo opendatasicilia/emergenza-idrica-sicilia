@@ -1,9 +1,11 @@
 name: ci
 on:
   push:
-    branches:
-      - master
-      - main
+    paths:
+      - 'docs/**'
+#    branches:
+#      - master
+#      - main
   workflow_dispatch:
 
 permissions:
