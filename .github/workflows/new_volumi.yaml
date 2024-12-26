@@ -26,7 +26,9 @@ jobs:
         uses: astral-sh/setup-uv@v4
       
       - name: Install python requirements
-        run: uv pip install llm llm-gemini scrape-cli yq
+        run: |-
+          echo "VIRTUAL_ENV=${Python_ROOT_DIR}" >> $GITHUB_ENV
+          uv pip install llm llm-gemini scrape-cli yq
   
       - name: Setup llm
         # bisogna creare un secret chiamato GEMINI_KEY che contiene l'api key
