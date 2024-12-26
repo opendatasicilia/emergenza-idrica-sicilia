@@ -1,0 +1,52 @@
+name: MkDocs Deploy
+
+on:
+  push:
+    paths:
+      - 'docs/**'
+#    branches:
+#      - master
+#      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Configure Git Credentials
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email actions@users.noreply.github.com
+      
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.x
+      
+      - name: Cache management
+        run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV
+      
+      - uses: actions/cache@v4
+        with:
+          key: mkdocs-material-${{ env.cache_id }}
+          path: .cache
+          restore-keys: |
+            mkdocs-material-
+      
+      - name: Setup uv
+        run: |
+          curl -LsSf https://astral.sh/uv/install.sh | sh
+          uv venv .venv
+          echo "VIRTUAL_ENV=.venv" >> $GITHUB_ENV
+          echo "$PWD/.venv/bin" >> $GITHUB_PATH
+
+      - name: Install dependencies
+        run: uv pip install mkdocs-material markdown mkdocstrings mkdocs-rss-plugin mkdocs-click mkdocs-table-reader-plugin pillow cairosvg mkdocs-glightbox
+
+      - name: MkDocs Build
+        run: mkdocs gh-deploy --force
