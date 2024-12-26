@@ -12,22 +12,17 @@ jobs:
 
       - uses: actions/checkout@v4
 
-      - name: Install requirements (mlr)
+      - name: Install dependencies
         run: |-
-          mkdir -p ~/bin
-          cp bin/mlr ~/bin
-          cd ~/bin
-          chmod +x mlr
-      
-      - name: Setup uv
-        run: |
           curl -LsSf https://astral.sh/uv/install.sh | sh
           uv venv .venv
           echo "VIRTUAL_ENV=.venv" >> $GITHUB_ENV
           echo "$PWD/.venv/bin" >> $GITHUB_PATH
-      
-      - name: Install python dependencies
-        run: uv pip install llm llm-gemini scrape-cli yq
+          mkdir -p ~/bin
+          cp bin/mlr ~/bin
+          cd ~/bin
+          chmod +x mlr
+          uv pip install llm llm-gemini scrape-cli yq
   
       - name: Setup llm
         # bisogna creare un secret chiamato GEMINI_KEY che contiene l'api key
