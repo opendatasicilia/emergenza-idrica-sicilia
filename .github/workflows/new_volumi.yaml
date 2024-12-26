@@ -5,14 +5,15 @@ on:
     - cron: '0 0 * * *'
   workflow_dispatch:
 
+env:
+  UV_SYSTEM_PYTHON: 1
+
 jobs:
   convert:
     runs-on: ubuntu-latest
     steps:
 
       - uses: actions/checkout@v4
-
-
 
       - name: Install requirements (mlr)
         run: |-
@@ -24,9 +25,6 @@ jobs:
 
       - name: Install uv
         uses: astral-sh/setup-uv@v4
-
-      - name: setup uv 
-        run: echo "VIRTUAL_ENV=${Python_ROOT_DIR}" >> $GITHUB_ENV
       
       - name: Install python requirements
         run: uv pip install --system llm llm-gemini scrape-cli yq
