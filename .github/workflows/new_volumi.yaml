@@ -48,3 +48,7 @@ jobs:
           timestamp=$(date --iso-8601)
           git commit -m "Aggiornati i dati dei volumi invasati ${timestamp}" || exit 0
           git push
+
+      - name: Validate data
+        uses: frictionlessdata/repository@v2
+        # in realtà vorrei validare i dati solo se sono stati modificati e non in ogni caso
