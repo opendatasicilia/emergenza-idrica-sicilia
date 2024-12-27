@@ -4,7 +4,7 @@
 # dati sui volumi invasati dalle dighe siciliane. Se trova nuovi PDF, li scarica e li converte in CSV sfruttando un llm. 
 
 set -e
-set -x
+# set -x
 
 # requirements: xq (yq), scrape-cli, llm, mlr frictionless
 # check if required commands are installed
