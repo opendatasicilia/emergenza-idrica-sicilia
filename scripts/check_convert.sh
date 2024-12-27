@@ -25,7 +25,7 @@ AI_LIMITS=2
 AI_SLEEP=60
 
 # functions
-source ./scripts/check_convert.sh
+source ./scripts/validate_data.sh
 
 # creo funzione "check limits" che controlla se il numero di richieste ai "n_ai" supera un certo limite e in caso mette in pausa il processo per un certo tempo. la funzione deve accettare come argomenti il numero di richieste variabile "n_ai" e e le seguenti costanti: il limite "AI_LIMITS" e il tempo di pausa "AI_SLEEP"
 check_limits() {
@@ -168,7 +168,7 @@ if [ -d "./risorse/tmp" ]; then
    rm -r "./risorse/tmp"
 
    # data validation
-   validate_data
+   validate_data || { exit 1; }
 fi
 
 echo "📍Fine, bye!"

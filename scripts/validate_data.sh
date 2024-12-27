@@ -7,11 +7,11 @@ validate_data() {
    if [ "$frictionless_validity" == "true" ]; then
       echo "✅ Il datapackage è valido!"
       rm frictionless_report_tmp.yaml
+      return 0
    else
       echo "❌ Il datapackage non è valido!"
       cat frictionless_report_tmp.yaml
       rm frictionless_report_tmp.yaml
-      exit 1
-      # esci e non committare nuovi dati
+      return 1
    fi
 }
