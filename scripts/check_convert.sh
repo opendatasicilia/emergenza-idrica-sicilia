@@ -97,6 +97,7 @@ while read -r line; do
          echo "Numero di righe (dighe): $n_dighe_ai_1"
          echo ""
 
+         # check 1 (ai)
          # check estrazione senza anagrafica
          # echo "💬 Double check: verifico estrazione senza anagrafica..."
          # check_limits
@@ -120,7 +121,6 @@ while read -r line; do
          #    echo "✅ Il numero di righe (dighe) estratte dai due metodi corrisponde."
          #    rm ./risorse/tmp/2_$new_filename.csv
          # fi
-
       elif [[ $new_filename == grafici* ]]; then
 
          # scarico il pdf e lo chiamo new_filename
@@ -162,6 +162,20 @@ if [ -d "./risorse/tmp" ]; then
    uniq -a  > all.csv
    mv all.csv ./risorse/sicilia_dighe_volumi.csv
    echo "🔄 Aggiornato storico sicilia_dighe_volumi.csv"
+
+   # check consistency
+   n_cod_name_concatenated=$(< ./risorse/sicilia_dighe_volumi.csv mlr --csv --headerless-csv-output put '$concatenated = $cod . $diga' then cut -f concatenated then uniq -a | wc -l)
+   n_cod=$(< ./risorse/sicilia_dighe_volumi.csv mlr --csv --headerless-csv-output cut -f cod then uniq -a | wc -l)
+
+   # check if n_cod_name_concatenated and n_cod are equal, if not, display an error message and exit
+   if [ $n_cod_name_concatenated -ne $n_cod ]; then
+      echo "❌ Errore: il numero di codici univoci non corrisponde al numero di codici concatenati con i nomi delle dighe!"
+      echo "Questo vuol dire che i nomi delle dighe NON sono stati assegnati correttamente ai codici secondo l'anagrafica."
+      echo "È necessaria una verifica manuale. Revisionare il file di dati."
+      exit 1
+   else
+      echo "✅ Check passed: I nomi delle dighe sono stati assegnati correttamente ai codici secondo l'anagrafica"
+   fi
 
    # temp folder
    rm -r "./risorse/tmp"
