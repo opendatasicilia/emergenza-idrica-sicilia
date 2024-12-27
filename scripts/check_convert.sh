@@ -1,12 +1,16 @@
 #!/bin/bash
 
+
 # Questo script apre il sito della Regione Sicilia e controlla la presenza di nuovi documenti PDF contenenti
 # dati sui volumi invasati dalle dighe siciliane. Se trova nuovi PDF, li scarica e li converte in CSV sfruttando un llm. 
+
 
 set -e
 # set -x
 
-# requirements: xq (yq), scrape-cli, llm, mlr frictionless
+
+# requirements
+# xq (yq), scrape-cli, llm, mlr frictionless
 # check if required commands are installed
 for cmd in curl xq scrape llm mlr frictionless; do
    if ! command -v $cmd &> /dev/null; then
@@ -16,6 +20,7 @@ for cmd in curl xq scrape llm mlr frictionless; do
 done
 echo "✅ Requirements satisfied!"
 
+
 # constants
 URL="https://www.regione.sicilia.it/istituzioni/regione/strutture-regionali/presidenza-regione/autorita-bacino-distretto-idrografico-sicilia/siti-tematici/risorse-idriche/volumi-invasati-nelle-dighe-della-sicilia"
 PATH_PDFS_LIST="./risorse/pdfs_list.txt"
@@ -24,9 +29,8 @@ URL_CSV_ANAGRAFICA_DIGHE="https://raw.githubusercontent.com/opendatasicilia/emer
 AI_LIMITS=2
 AI_SLEEP=60
 
-# functions
-source ./scripts/validate_data.sh
 
+# functions
 # creo funzione "check limits" che controlla se il numero di richieste ai "n_ai" supera un certo limite e in caso mette in pausa il processo per un certo tempo. la funzione deve accettare come argomenti il numero di richieste variabile "n_ai" e e le seguenti costanti: il limite "AI_LIMITS" e il tempo di pausa "AI_SLEEP"
 check_limits() {
    if [ $n_ai -ge $AI_LIMITS ]; then
@@ -108,6 +112,7 @@ while read -r line; do
          #    echo "✅ Il numero di righe (dighe) estratte dai due metodi corrisponde."
          #    rm ./risorse/tmp/2_$new_filename.csv
          # fi
+         
       elif [[ $new_filename == grafici* ]]; then
 
          # scarico il pdf e lo chiamo new_filename
@@ -168,7 +173,7 @@ if [ -d "./risorse/tmp" ]; then
    rm -r "./risorse/tmp"
 
    # data validation
-   validate_data || { exit 1; }
+   frictionless validate datapackage.yaml || exit 1
 fi
 
 echo "📍Fine, bye!"
