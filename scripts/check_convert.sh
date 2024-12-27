@@ -74,44 +74,56 @@ while read -r line; do
          # creo (se non esiste già) la cartella per i csv temporanei
          mkdir -p ./risorse/tmp
 
-         # extract csv data
+         # FIRST EXTRACTION (with anagrafica)
          check_limits
          cat risorse/sicilia_dighe_anagrafica.csv | llm -m gemini-1.5-pro-latest -s "Il tuo compito è quello di estrarre dati da un pdf allegato e di incrociarli con i dati di un'anagrafica csv passata come prompt. Dalla tabella pdf, individua la data di rilevazione e poi estrai tutti i dati della colonna diga (chiamala 'diga_pdf') e quelli della colonna relativa al volume registrato nel mese più recente. Arricchisci la tabella aggiungendo una colonna chiamata 'data' che abbia in ogni riga la data della rilevazione più recente a cui si riferiscono i dati nel formato yyyy-mm-dd. Dal CSV, estrai la colonna 'diga' che chiamerai 'diga_anagrafica' popolata con il nome corretto (da includere esattamente nell'output). Confronta le colonne 'diga_pdf' e 'diga_anagrafica' per fare in modo di arricchire il dataset e assegnare a ogni diga il corrispondente codice identificativo presente nella colonna 'cod' del csv. Attenzione alla diga ogliastro e don sturzo che sono la stessa cosa. In ultimo, cestina la colonna 'diga_pdf' e  nell'output includi i valori di 'diga_anagrafica' sotto il nome di 'diga'. Attenzione ad attribuire correttamente il codice al nome della diga secondo l'anagrafica csv. Se l'anagrafica csv contiene più dighe della tabella pdf, l'output deve contenere solo ed esclusivamente le dighe presenti nel file pdf. Se nell'anagrafica ci sono più dighe del pdf, il volume non deve essere 0 ma deve essere vuoto. L'output deve avere questa struttura 'cod,diga,data,volume' e non deve avere righe vuote finali. Tieni presente che i valori di 'diga' devono essere esattamente coincidenti con quelli di 'diga_anagrafica'. I separatori di decimali dei volumi devono essere i punti e non le virgole. L'output non deve contenere i backtips all'inizio e alla fine ma solo il contenuto del file csv a cominciare dagli header L'output non deve contenere righe vuote alla fine. Se l'output csv contiene righe finali senza valori, rimuovile." -a "./risorse/pdf/Tabelle/$new_filename" | sed -e :a -e '/^\n*$/{$d;N;ba' -e '}' > ./risorse/tmp/$new_filename.csv
-         echo "🟢 Conversione da $new_filename in $new_filename.csv completata"
+         n_ai=$((n_ai+1))
+         echo "🟢 Prima conversione da $new_filename in $new_filename.csv completata"
+         
+         # count rows (dams) in the first extraction
+         n_dighe_ai_1=$(mlr --csv --headerless-csv-output cat -n then stats1 -a max -f n ./risorse/tmp/$new_filename.csv)
+         echo "Numero di righe (dighe) prima estrazione: $n_dighe_ai_1"
+         
+         # SECOND EXTRACTION (without anagrafica)
+         check_limits
+         echo "💬 Double check: eseguo estrazione senza anagrafica..."
+         llm -m gemini-1.5-pro-latest -s "Il tuo compito è quello di estrarre dati da un pdf allegato. Devi fornire un output in csv senza backtics iniziali e finali." "Dalla tabella pdf, individua la data di rilevazione e poi estrai tutti i dati della colonna diga e quelli della colonna relativa al volume registrato nel mese più recente. Arricchisci la tabella aggiungendo una colonna chiamata 'data' che abbia in ogni riga la data della rilevazione più recente a cui si riferiscono i dati nel formato yyyy-mm-dd. L'output deve avere questa struttura 'diga,data,volume' e non deve avere righe vuote finali. I separatori di decimali dei volumi devono essere i punti e non le virgole. L'output non deve contenere i backtips all'inizio e alla fine ma solo il contenuto del file csv a cominciare dagli header. L'output non deve contenere righe vuote alla fine. Se l'output csv contiene righe finali senza valori, rimuovile. csv content:" -a "./risorse/pdf/Tabelle/$new_filename" | sed -e :a -e '/^\n*$/{$d;N;ba' -e '}' > ./risorse/tmp/2_$new_filename.csv
+         n_ai=$((n_ai+1))
+         echo "🟢 Conversione da $new_filename in 2_$new_filename.csv completata"
+ 
+         # count rows (dams) in the second extraction
+         n_dighe_ai_2=$(mlr --csv --headerless-csv-output cat -n then stats1 -a max -f n ./risorse/tmp/2_$new_filename.csv)
+         echo "Numero di righe (dighe) seconda estrazione: $n_dighe_ai_2"
+
+         # check 1
+         # check if n_dighe_ai_1 and n_dighe_ai_2 are equal, if not, display an error message
+         if [ $n_dighe_ai_1 -ne $n_dighe_ai_2 ]; then
+            echo "❌ Check 1 failed: il numero di righe estratte dai due metodi non corrisponde!"
+            echo "È necessario una verifica manuale. Revisionare il file di anagrafica e il file di dati."
+         else
+            echo "✅ Check 1 passed: Il numero di dighe estratte dai due metodi corrisponde."
+         fi
+         
+         # COMPARE 1st and 2nd extraction
+         check_limits
+         echo "🔍 Confronto i due file csv e individuo errori di estrazione..."
+         llm -m gemini-1.5-pro-latest -s "Il tuo compito è quello di confrontare due file csv e comprenderne le differenze" "Ti inserisco di seguito due csv. Forse uno di questi (il secondo) è probabile che abbia delle dighe in più che nell'altro (primo) non sono censite. Fammi un piccolo report di validazione sintetico in json. Il json deve contenere la key 'valid' che può contenere il valore true o false. Se tra i due file csv ci sono discrepanze nel numero di righe o discrepanze nel valore dei volumi allora il report è invalido e la key valid deve contenere il valore false. Nel report includi pure i dettagli sulle dighe mancanti nel primo file e sulle discrepanze dei valori dei volumi. Includi pure una sezione dedicata alla somiglianza dei nomi delle dighe: questo non inficia la validità ( esempio: Se non ci sono discrepanze nel numero di dighe, non ci sono discrepanze sui valori dei volumi, ci sono alcuni nomi di dighe simili, allora il report è valido). Il file json deve avere le key: valid, missing_dams, different_volms, similar_dams. Il primo csv (prima estrazione) è il seguente: $(cat ./risorse/tmp/$new_filename.csv). Il secondo csv (seconda estrazione) è il seguente: $(cat ./risorse/tmp/2_$new_filename.csv)" -o json_object 1 > ./risorse/report_extraction_latest.json
          n_ai=$((n_ai+1))
 
-         echo ""
-         echo "Anteprima di $new_filename.csv:"
-         cat ./risorse/tmp/$new_filename.csv | head -n 5
-         echo "..."
-         n_dighe_ai_1=$(mlr --csv --headerless-csv-output cat -n then stats1 -a max -f n ./risorse/tmp/$new_filename.csv)
-         echo "Numero di righe (dighe): $n_dighe_ai_1"
-         echo ""
+         # add date to report
+         jq '. + {"date": "'$(date +%Y-%m-%d)'"}' ./risorse/report_extraction_latest.json > ./risorse/report_extraction_latest.json.tmp && mv ./risorse/report_extraction_latest.json.tmp ./risorse/report_extraction_latest.json
 
-         # check 1 (ai)
-         # check estrazione senza anagrafica
-         # echo "💬 Double check: verifico estrazione senza anagrafica..."
-         # check_limits
-         # llm -m gemini-1.5-pro-latest -s "Il tuo compito è quello di estrarre dati da un pdf allegato. Dalla tabella pdf, individua la data di rilevazione e poi estrai tutti i dati della colonna diga e quelli della colonna relativa al volume registrato nel mese più recente. Arricchisci la tabella aggiungendo una colonna chiamata 'data' che abbia in ogni riga la data della rilevazione più recente a cui si riferiscono i dati nel formato yyyy-mm-dd. L'output deve avere questa struttura 'diga,data,volume' e non deve avere righe vuote finali. I separatori di decimali dei volumi devono essere i punti e non le virgole. L'output non deve contenere i backtips all'inizio e alla fine ma solo il contenuto del file csv a cominciare dagli header. L'output non deve contenere righe vuote alla fine. Se l'output csv contiene righe finali senza valori, rimuovile." -a "./risorse/pdf/Tabelle/$new_filename" | sed -e :a -e '/^\n*$/{$d;N;ba' -e '}' > ./risorse/tmp/2_$new_filename.csv
-         # echo "Seconda conversione da $new_filename in 2_$new_filename.csv completata"
-         # n_ai=$((n_ai+1))
- 
-         # echo "Anteprima di $2_$new_filename.csv:"
-         # cat ./risorse/tmp/2_$new_filename.csv | head -n 5
-         # echo "..."
-         # n_dighe_ai_2=$(mlr --csv --headerless-csv-output cat -n then stats1 -a max -f n ./risorse/tmp/2_$new_filename.csv)
-         # echo "Numero di righe (dighe): $n_dighe_ai_2"
-         # echo ""
-
-         # # check if n_dighe_ai_1 and n_dighe_ai_2 are equal, if not, display an error message and exit
-         # if [ $n_dighe_ai_1 -ne $n_dighe_ai_2 ]; then
-         #    echo "❌ Errore: il numero di righe estratte dai due metodi non corrisponde!"
-         #    echo "È necessario una verifica manuale. Revisionare il file di anagrafica e il file di dati."
-         #    exit 1
-         # else
-         #    echo "✅ Il numero di righe (dighe) estratte dai due metodi corrisponde."
-         #    rm ./risorse/tmp/2_$new_filename.csv
-         # fi
+         # check 2
+         report_validity=$(< ./risorse/report_extraction_latest.json jq '.valid')
+         if [ "$report_validity" == "true" ]; then
+            echo "✅ Check 2 passed: La validazione non ha riscontrato errori nei dati estratti (nomi dighe e valori volumi)"
+            rm ./risorse/tmp/2_$new_filename.csv
+         else
+            echo "❌ Check 2 failed: la validazione è fallita. Ci sono errori nei dati estratti: potrebbero esserci errori nei nomi delle dighe o nei valori dei volumi."
+            echo "Consulta il report per maggiori dettagli: ./risorse/report_extraction_latest.json"
+            < ./risorse/report_extraction_latest.json jq '.'
+            exit 1
+         fi
 
       elif [[ $new_filename == grafici* ]]; then
 
@@ -155,25 +167,22 @@ if [ -d "./risorse/tmp" ]; then
    mv all.csv ./risorse/sicilia_dighe_volumi.csv
    echo "🔄 Aggiornato storico sicilia_dighe_volumi.csv"
 
-   # check consistency
+   # check 3
    n_cod_name_concatenated=$(< ./risorse/sicilia_dighe_volumi.csv mlr --csv --headerless-csv-output put '$concatenated = $cod . $diga' then cut -f concatenated then uniq -a | wc -l)
    n_cod=$(< ./risorse/sicilia_dighe_volumi.csv mlr --csv --headerless-csv-output cut -f cod then uniq -a | wc -l)
 
    # check if n_cod_name_concatenated and n_cod are equal, if not, display an error message and exit
    if [ $n_cod_name_concatenated -ne $n_cod ]; then
-      echo "❌ Errore: il numero di codici univoci non corrisponde al numero di codici concatenati con i nomi delle dighe!"
+      echo "❌ Check 3 failed: il numero di codici univoci non corrisponde al numero di codici concatenati con i nomi delle dighe!"
       echo "Questo vuol dire che i nomi delle dighe NON sono stati assegnati correttamente ai codici secondo l'anagrafica."
       echo "È necessaria una verifica manuale. Revisionare il file di dati."
       exit 1
    else
-      echo "✅ Check passed: I nomi delle dighe sono stati assegnati correttamente ai codici secondo l'anagrafica"
+      echo "✅ Check 3 passed: I nomi delle dighe sono stati assegnati correttamente ai codici secondo l'anagrafica"
    fi
 
    # temp folder
    rm -r "./risorse/tmp"
-
-   # data validation
-   # frictionless validate datapackage.yaml || exit 1
 fi
 
 echo "📍Fine, bye!"

@@ -25,6 +25,7 @@ jobs:
           cp bin/mlr ~/bin
           cd ~/bin
           chmod +x mlr
+          sudo apt-get install jq
           uv pip install llm llm-gemini scrape-cli yq frictionless
   
       - name: Setup llm
