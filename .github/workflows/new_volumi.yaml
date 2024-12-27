@@ -40,6 +40,9 @@ jobs:
           chmod +x ./scripts/check_convert.sh
           ./scripts/check_convert.sh
       
+      - name: Frictionless data validation
+        run: frictionless validate datapackage.yaml
+
       - name: Commit and push
         run: |-
           git config user.name "estrattore-automatico"

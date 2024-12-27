@@ -10,9 +10,9 @@ set -e
 
 
 # requirements
-# xq (yq), scrape-cli, llm, mlr frictionless
+# xq (yq), scrape-cli, llm, mlr
 # check if required commands are installed
-for cmd in curl xq scrape llm mlr frictionless; do
+for cmd in curl xq scrape llm mlr; do
    if ! command -v $cmd &> /dev/null; then
       echo "❌ Errore: $cmd non è installato."
       exit 1
@@ -112,7 +112,7 @@ while read -r line; do
          #    echo "✅ Il numero di righe (dighe) estratte dai due metodi corrisponde."
          #    rm ./risorse/tmp/2_$new_filename.csv
          # fi
-         
+
       elif [[ $new_filename == grafici* ]]; then
 
          # scarico il pdf e lo chiamo new_filename
@@ -173,7 +173,7 @@ if [ -d "./risorse/tmp" ]; then
    rm -r "./risorse/tmp"
 
    # data validation
-   frictionless validate datapackage.yaml || exit 1
+   # frictionless validate datapackage.yaml || exit 1
 fi
 
 echo "📍Fine, bye!"
