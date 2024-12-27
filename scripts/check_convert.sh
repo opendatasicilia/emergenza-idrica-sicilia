@@ -25,6 +25,8 @@ AI_LIMITS=2
 AI_SLEEP=60
 
 # functions
+source ./scripts/functions.sh
+
 # creo funzione "check limits" che controlla se il numero di richieste ai "n_ai" supera un certo limite e in caso mette in pausa il processo per un certo tempo. la funzione deve accettare come argomenti il numero di richieste variabile "n_ai" e e le seguenti costanti: il limite "AI_LIMITS" e il tempo di pausa "AI_SLEEP"
 check_limits() {
    if [ $n_ai -ge $AI_LIMITS ]; then
@@ -34,21 +36,6 @@ check_limits() {
    fi
 }
 
-# data validation
-validate_data() {
-   frictionless validate datapackage.yaml --yaml > frictionless_report_tmp.yaml
-   frictionless_validity=$(< frictionless_report_tmp.yaml yq '.valid')
-   if [ "$frictionless_validity" == "true" ]; then
-      echo "✅ Il datapackage è valido!"
-      rm frictionless_report_tmp.yaml
-   else
-      echo "❌ Il datapackage non è valido!"
-      cat frictionless_report_tmp.yaml
-      rm frictionless_report_tmp.yaml
-      exit 1
-      # esci e non committare nuovi dati
-   fi
-}
 
 # obtain the last page with pdfs list
 url_page_with_list=$(curl -skL $URL | scrape -e "#it-block-field-blocknodegeneric-pagefield-p-body li:last-of-type a:last-of-type" | xq -r '.a."@href"')
