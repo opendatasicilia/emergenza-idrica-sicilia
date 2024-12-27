@@ -2,17 +2,23 @@
 
 ## Data Dictionary
 ### 📄 [sicilia_dighe_volumi](sicilia_dighe_volumi.csv)
-Volumi invasati nelle dighe della Sicilia. Tabella estratta dai [file PDF rilasciati dalla Regione Siciliana](https://www.regione.sicilia.it/istituzioni/regione/strutture-regionali/presidenza-regione/autorita-bacino-distretto-idrografico-sicilia/siti-tematici/risorse-idriche/volumi-invasati-nelle-dighe-della-sicilia).
+Volumi invasati nelle dighe della Sicilia. 
+
 - Path: `risorse/sicilia_dighe_volumi.csv`
 - URL: https://raw.githubusercontent.com/opendatasicilia/emergenza-idrica-sicilia/main/risorse/sicilia_dighe_volumi.csv
 - Encoding: `utf-8`
 
 | Field | Type | Description | Example |
 | --- | --- | --- | --- |
-| cod | string | codice univoco diga | dig-02 |
+| cod | string | codice univoco diga (codice non standardizzato e creato dalla community Open Data Sicilia) | dig-02 |
 | diga | string | denominazione della diga | Arancio |
 | data | date | data nel formato YYYY-MM-DD | 2010-01-01 |
-| volume | number | volume in Mmc | 27.04 |
+| volume | number | volume in milioni di metri cubi ($Mm^3$) | 27.04 |
+
+La tabella è estratta da
+#### Fonti
+- [File PDF rilasciati da Autorità di Bacino del Distretto Idrografico della Sicilia - Regione Siciliana](https://www.regione.sicilia.it/istituzioni/regione/strutture-regionali/presidenza-regione/autorita-bacino-distretto-idrografico-sicilia/siti-tematici/risorse-idriche/volumi-invasati-nelle-dighe-della-sicilia)
+- [Dataset volumi-invasati-dighe di dati.regione.sicilia.it](https://dati.regione.sicilia.it/catalogo/volumi-invasati-dighe)
 
 ### 📄 [sicilia_dighe_anagrafica](sicilia_dighe_anagrafica.csv)
 Anagrafica delle dighe della Sicilia. File costruito e arricchito dalla comunità Open Data Sicilia.
@@ -31,7 +37,7 @@ Anagrafica delle dighe della Sicilia. File costruito e arricchito dalla comunit�
 | lago | string | lago nel quale è presente la diga | Lago Àncipa |
 | comune | string | comune nel quale è presente la diga | Cesarò |
 | provincia | string | provincia nella quale è presente la diga | ME |
-| capacita | number | capacità: capacità della diga espressa im Mmc | 30.40 |
+| capacita | number | capacità: capacità della diga espressa in milioni di metri cubi ($Mm^3$) | 30.40 |
 | utilizzazione | string | come viene utilizzata l'acqua della diga | Potabile - Irriguo - Elettrico |
 | gestore | string | gestore della diga | E.N.E.L. |
 
