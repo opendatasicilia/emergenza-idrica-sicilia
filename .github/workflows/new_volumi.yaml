@@ -25,7 +25,7 @@ jobs:
           cp bin/mlr ~/bin
           cd ~/bin
           chmod +x mlr
-          uv pip install llm llm-gemini scrape-cli yq
+          uv pip install llm llm-gemini scrape-cli yq frictionless
   
       - name: Setup llm
         # bisogna creare un secret chiamato GEMINI_KEY che contiene l'api key
@@ -48,7 +48,3 @@ jobs:
           timestamp=$(date --iso-8601)
           git commit -m "Aggiornati i dati dei volumi invasati ${timestamp}" || exit 0
           git push
-
-      - name: Validate data
-        uses: frictionlessdata/repository@v2
-        # in realtà vorrei validare i dati solo se sono stati modificati e non in ogni caso

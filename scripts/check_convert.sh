@@ -4,11 +4,11 @@
 # dati sui volumi invasati dalle dighe siciliane. Se trova nuovi PDF, li scarica e li converte in CSV sfruttando un llm. 
 
 set -e
-# set -x
+set -x
 
-# requirements: xq (yq), scrape-cli, llm, mlr
+# requirements: xq (yq), scrape-cli, llm, mlr frictionless
 # check if required commands are installed
-for cmd in curl xq scrape llm mlr; do
+for cmd in curl xq scrape llm mlr frictionless; do
    if ! command -v $cmd &> /dev/null; then
       echo "❌ Errore: $cmd non è installato."
       exit 1
@@ -31,6 +31,22 @@ check_limits() {
       echo "🚨 Superato il limite di richieste, attendo $AI_SLEEP secondi..."
       sleep $AI_SLEEP
       n_ai=0
+   fi
+}
+
+# data validation
+validate_data() {
+   frictionless validate datapackage.yaml --yaml > frictionless_report_tmp.yaml
+   frictionless_validity=$(< frictionless_report_tmp.yaml yq '.valid')
+   if [ "$frictionless_validity" == "true" ]; then
+      echo "✅ Il datapackage è valido!"
+      rm frictionless_report_tmp.yaml
+   else
+      echo "❌ Il datapackage non è valido!"
+      cat frictionless_report_tmp.yaml
+      rm frictionless_report_tmp.yaml
+      exit 1
+      # esci e non committare nuovi dati
    fi
 }
 
@@ -132,7 +148,8 @@ if [ -d "./risorse/tmp" ]; then
    # merge csv data (se ne esistono più di uno)
    # attenzione: può capitare che il csv latest contenga i valori relativi a più date
    mlr --csv cat ./risorse/tmp/*.csv > ./risorse/sicilia_dighe_volumi_latest.csv
-   
+   echo "🔄 Aggiornato sicilia_dighe_volumi_latest.csv"
+
    # add to storico
    # order by date
    # rimuovi righe senza volumi
@@ -144,12 +161,16 @@ if [ -d "./risorse/tmp" ]; then
    filter -S '$volume != ""' then \
    uniq -a  > all.csv
    mv all.csv ./risorse/sicilia_dighe_volumi.csv
+   echo "🔄 Aggiornato storico sicilia_dighe_volumi.csv"
 
    # temp folder
    rm -r "./risorse/tmp"
+
+   # data validation
+   validate_data
 fi
 
 echo "📍Fine, bye!"
 
 # multisort
-# mlr --csv sort -nr volume -f cod ./risorse/sicilia_dighe_volumi_latest.csv 
+# mlr --csv sort -nr volume -f cod ./risorse/sicilia_dighe_volumi_latest.csv
