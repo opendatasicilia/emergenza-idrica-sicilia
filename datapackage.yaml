@@ -12,10 +12,16 @@ licenses:
 resources:
   - name: sicilia_dighe_volumi
     description: Volumi invasati nelle dighe della Sicilia. Tabella estratta dai file PDF rilasciati dalla Regione Siciliana (vd. sources)
+    "dc:temporal": 
+        start: 2007-01-01
+        end: 2024-12-01
     sources: 
-      - title: Volumi invasati nelle dighe della Sicilia (Regione Siciliana)
+      - title: Autorità di Bacino del Distretto Idrografico della Sicilia - Regione Siciliana
         description: Pagina web della Regione Siciliana che raccoglie documenti PDF contenenti le serie storiche dei volumi invasati nelle dighe della Sicilia
         path: https://www.regione.sicilia.it/istituzioni/regione/strutture-regionali/presidenza-regione/autorita-bacino-distretto-idrografico-sicilia/siti-tematici/risorse-idriche/volumi-invasati-nelle-dighe-della-sicilia
+      - title: Catalogo Open Data della Regione Siciliana
+        description: Dataset volumi-invasati-dighe di dati.regione.sicilia.it che espone i dati dal 2007 al 2021.
+        path: https://dati.regione.sicilia.it/catalogo/volumi-invasati-dighe
     type: table
     path: risorse/sicilia_dighe_volumi.csv
     scheme: file
@@ -34,12 +40,42 @@ resources:
           description: denominazione della diga
         - name: data
           type: date
-          format: "%d/%m/%Y"
-          description: data nel formato dd/mm/yyyy
+          format: "%Y-%m-%d"
+          description: data nel formato YYYY-MM-DD
         - name: volume
           type: number
-          description: volume in Mmc
+          description: volume in milioni di metri cubi ($Mm^3$)
   
+  - name: sicilia_dighe_volumi_latest
+    description: Volumi invasati nelle dighe della Sicilia. Tabella estratta dai file PDF rilasciati dalla Regione Siciliana (vd. sources). I dati si riferiscono all'estrazione dati più recente disponibile.
+    sources: 
+      - title: Autorità di Bacino del Distretto Idrografico della Sicilia - Regione Siciliana
+        description: Pagina web della Regione Siciliana che raccoglie documenti PDF contenenti le serie storiche dei volumi invasati nelle dighe della Sicilia
+        path: https://www.regione.sicilia.it/istituzioni/regione/strutture-regionali/presidenza-regione/autorita-bacino-distretto-idrografico-sicilia/siti-tematici/risorse-idriche/volumi-invasati-nelle-dighe-della-sicilia
+    type: table
+    path: risorse/sicilia_dighe_volumi_latest.csv
+    scheme: file
+    format: csv
+    mediatype: text/csv
+    encoding: utf-8
+    dialect:
+      delimiter: ","
+    schema:
+      fields:
+        - name: cod
+          type: string
+          description: codice univoco diga
+        - name: diga
+          type: string
+          description: denominazione della diga
+        - name: data
+          type: date
+          format: "%Y-%m-%d"
+          description: data nel formato YYYY-MM-DD
+        - name: volume
+          type: number
+          description: volume in milioni di metri cubi ($Mm^3$)
+
   - name: sicilia_dighe_anagrafica
     description: Anagrafica delle dighe della Sicilia. File costruito e arricchito dalla comunità Open Data Sicilia.
     type: table
@@ -82,7 +118,7 @@ resources:
         - name: capacita
           title: capacità
           type: number
-          description: capacità della diga espressa im Mmc
+          description: capacità della diga espressa im milioni di metri cubi ($Mm^3$)
         - name: utilizzazione
           type: string
           description: come viene utilizzata l'acqua della diga
@@ -142,7 +178,7 @@ resources:
           type: number
         - name: vol_di_invaso_Mmc
           type: number
-          description: volume dell'invaso in Mm³
+          description: volume dell'invaso in milioni di metri cubi ($Mm^3$)
         - name: quota_max_di_reg_m_slm
           type: number
         - name: uso_prevalente

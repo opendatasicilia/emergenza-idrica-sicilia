@@ -20,6 +20,22 @@ La tabella è estratta da
 - [File PDF rilasciati da Autorità di Bacino del Distretto Idrografico della Sicilia - Regione Siciliana](https://www.regione.sicilia.it/istituzioni/regione/strutture-regionali/presidenza-regione/autorita-bacino-distretto-idrografico-sicilia/siti-tematici/risorse-idriche/volumi-invasati-nelle-dighe-della-sicilia)
 - [Dataset volumi-invasati-dighe di dati.regione.sicilia.it](https://dati.regione.sicilia.it/catalogo/volumi-invasati-dighe)
 
+### 📄 [sicilia_dighe_volumi_latest](sicilia_dighe_volumi_latest.csv)
+Estrazione più recente dei dati relativi ai volumi invasati nelle dighe della Sicilia. La tabella è estratta dal [file PDF più recente rilasciato da Autorità di Bacino del Distretto Idrografico della Sicilia - Regione Siciliana](https://www.regione.sicilia.it/istituzioni/regione/strutture-regionali/presidenza-regione/autorita-bacino-distretto-idrografico-sicilia/siti-tematici/risorse-idriche/volumi-invasati-nelle-dighe-della-sicilia).
+
+- Path: `risorse/sicilia_dighe_volumi_latest.csv`
+- URL: https://raw.githubusercontent.com/opendatasicilia/emergenza-idrica-sicilia/main/risorse/sicilia_dighe_volumi_latest.csv
+- Encoding: `utf-8`
+
+| Field | Type | Description | Example |
+| --- | --- | --- | --- |
+| cod | string | codice univoco diga (codice non standardizzato e creato dalla community Open Data Sicilia) | dig-02 |
+| diga | string | denominazione della diga | Arancio |
+| data | date | data nel formato YYYY-MM-DD | 2010-01-01 |
+| volume | number | volume in milioni di metri cubi ($Mm^3$) | 27.04 |
+
+
+
 ### 📄 [sicilia_dighe_anagrafica](sicilia_dighe_anagrafica.csv)
 Anagrafica delle dighe della Sicilia. File costruito e arricchito dalla comunità Open Data Sicilia.
 - Path: `risorse/sicilia_dighe_anagrafica.csv`
