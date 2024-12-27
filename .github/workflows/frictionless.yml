@@ -15,18 +15,18 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
-      - name: Setup uv
-        run: |
-         curl -LsSf https://astral.sh/uv/install.sh | sh
-         uv venv .venv
-         echo "VIRTUAL_ENV=.venv" >> $GITHUB_ENV
-         echo "$PWD/.venv/bin" >> $GITHUB_PATH
+      # - name: Setup uv
+      #   run: |
+      #    curl -LsSf https://astral.sh/uv/install.sh | sh
+      #    uv venv .venv
+      #    echo "VIRTUAL_ENV=.venv" >> $GITHUB_ENV
+      #    echo "$PWD/.venv/bin" >> $GITHUB_PATH
 
       - name: Install frictionless
-        run: uv pip install frictionless
+        #run: uv pip install frictionless
+        run: pip install frictionless
       
       - name: Validate
         run: |-
-         source ./scripts/validate_data.sh
-         validate_data
+         frictionless validate datapackage.yaml
 
