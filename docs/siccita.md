@@ -6,7 +6,7 @@ title: La siccità
 description: Risorse utili per approfondire il tema.
 ---
 
-## Introduzione
+## Introduzionee
 
 > La siccità non è un mero fenomeno fisico.  È la **condizione di insufficienza idrica per soddisfare i bisogni**. L'effetto cumulato della scarsità di pioggia nel tempo ha impatti diversi sulla società, essendo il risultato dell'interazione fra pericolosità naturale (riduzione delle precipitazioni al di sotto della media) e i fabbisogni idrici per i vari usi. Per questa ragione spesso la siccità viene identificata in quattro tipi: meteorologica, agricola, idrologica e socio-economica (Wilhite, 2000)[^1].
 
