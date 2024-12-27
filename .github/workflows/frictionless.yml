@@ -27,6 +27,6 @@ jobs:
       
       - name: Validate
         run: |-
-         source .scripts/validate_data.sh
+         source ./scripts/validate_data.sh
          validate_data
 
