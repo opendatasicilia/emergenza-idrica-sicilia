@@ -28,7 +28,6 @@ jobs:
           uv pip install llm llm-gemini scrape-cli yq frictionless
   
       - name: Setup llm
-        # bisogna creare un secret chiamato GEMINI_KEY che contiene l'api key
         env:
           GEMINI_KEY: ${{ secrets.GEMINI_KEY }}
         run: |
