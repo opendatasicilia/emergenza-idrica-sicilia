@@ -40,10 +40,8 @@ jobs:
           chmod +x ./scripts/check_convert_volumi.sh
           ./scripts/check_convert_volumi.sh
       
-      - name: Download and summrize PDF document (verbali)
-        run: 
-          chmod +x ./scripts/check_convert_verbali.sh
-          ./scripts/check_convert_verbali.sh
+      - name: Download and summarize PDF document (verbali)
+        run: chmod +x ./scripts/check_convert_verbali.sh && ./scripts/check_convert_verbali.sh
 
       - name: Frictionless data validation
         run: frictionless validate datapackage.yaml
