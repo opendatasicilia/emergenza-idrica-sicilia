@@ -34,12 +34,17 @@ jobs:
         run: |
           echo "$GEMINI_KEY" | llm keys set gemini
 
-      - name: Download and convert PDF
+      - name: Download and convert data (volumi invasati) from PDF
         run: |
           export PATH=$PATH:~/bin
-          chmod +x ./scripts/check_convert.sh
-          ./scripts/check_convert.sh
+          chmod +x ./scripts/check_convert_volumi.sh
+          ./scripts/check_convert_volumi.sh
       
+      - name: Download and summrize PDF document (verbali)
+        run: 
+          chmod +x ./scripts/check_convert_verbali.sh
+          ./scripts/check_convert_verbali.sh
+
       - name: Frictionless data validation
         run: frictionless validate datapackage.yaml
 

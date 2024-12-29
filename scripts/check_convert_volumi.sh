@@ -23,7 +23,7 @@ echo "✅ Requirements satisfied!"
 
 # constants
 URL="https://www.regione.sicilia.it/istituzioni/regione/strutture-regionali/presidenza-regione/autorita-bacino-distretto-idrografico-sicilia/siti-tematici/risorse-idriche/volumi-invasati-nelle-dighe-della-sicilia"
-PATH_PDFS_LIST="./risorse/pdfs_list.txt"
+PATH_PDFS_LIST="./risorse/pdfs_list_volumi.txt"
 URL_HOMEPAGE="https://www.regione.sicilia.it"
 URL_CSV_ANAGRAFICA_DIGHE="https://raw.githubusercontent.com/opendatasicilia/emergenza-idrica-sicilia/refs/heads/main/risorse/sicilia_dighe_anagrafica.csv"
 AI_LIMITS=2
@@ -49,7 +49,7 @@ pdfs_list=$(curl -skL $url_page_with_list | scrape -be "a" | xq -r '.html.body.a
 # inizializzo contatori
 n_pdf=0; n_ai=0
 
-# check pdfs_list contains pdfs that are not in file pdfs_list.txt
+# check pdfs_list contains pdfs that are not in file pdfs_list_volumi.txt
 while read -r line; do
    if ! grep -q "$line" $PATH_PDFS_LIST; then
 
