@@ -133,7 +133,9 @@ markdown_extensions:
 extra_javascript:
   - javascripts/varie.js
 
-
+extra_css:
+  - stylesheets/extra.css
+  
 ## Social Media
 extra:
   social:

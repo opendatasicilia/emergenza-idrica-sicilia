@@ -10,6 +10,9 @@ tags:
 - osservatorio
 ---
 
+!!! asterisk "AI generated content"
+
+    Il contenuto di questo post è generato da un servizio di Intelligenza Artificiale (Gemini): le informazioni di questa pagina potrebbero non essere accurate.
 
 <brevissima descrizione del contenuto del verbale (anteprima blog post. 1-2 frasi)>
 
