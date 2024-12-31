@@ -10,6 +10,5 @@
 /sites/default/files/2024-08/Verbale_OPUI_22luglio2024.pdf
 /sites/default/files/2024-09/Verbale_OPUI_5_settembre_2024.pdf
 /sites/default/files/2024-10/Verbale_OPUI_10_ottobre2024.pdf
-/sites/default/files/2024-11/Verbale_OPUI_30_ottobre_2024.pdf
 /sites/default/files/2024-12/Verbale_OPUI_14_novembre_2024.pdf
 /sites/default/files/2024-12/0_Verbale_OPUI_28_novembre_2024.pdf
