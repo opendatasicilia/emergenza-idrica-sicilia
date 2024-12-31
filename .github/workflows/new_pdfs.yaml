@@ -48,6 +48,17 @@ jobs:
       - name: Frictionless data validation
         run: frictionless validate datapackage.yaml
 
+      - name: Send telegram message (new data)
+        env: 
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          if [ -f ./risorse/msgs/new_volumi.md ]; then
+            curl -s -X POST https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage -d chat_id=$TELEGRAM_CHAT_ID -d parse_mode="Markdown" -d text="$(cat ./risorse/msgs/new_volumi.md)"
+            rm ./risorse/msgs/new_volumi.md
+            echo "Telegram message (new data) sent"
+          fi
+
       - name: Commit and push new data
         run: |-
           git add -A
@@ -56,6 +67,17 @@ jobs:
 
       - name: Download and summarize PDF document (verbali)
         run: chmod +x ./scripts/check_convert_verbali.sh && ./scripts/check_convert_verbali.sh
+
+      - name: Send telegram message (new doc)
+        env: 
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          if [ -f ./risorse/msgs/new_verbale.md ]; then
+            curl -s -X POST https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage -d chat_id=$TELEGRAM_CHAT_ID -d parse_mode="Markdown" -d text="$(cat ./risorse/msgs/new_verbale.md)"
+            rm ./risorse/msgs/new_verbale.md
+            echo "Telegram message sent"
+          fi
 
       - name: Commit and push new doc
         run: |-

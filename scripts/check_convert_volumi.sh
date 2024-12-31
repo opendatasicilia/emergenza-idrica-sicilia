@@ -40,6 +40,25 @@ check_limits() {
    fi
 }
 
+generate_telegram_message() {
+   # inputs:
+   # $1 url_pdf
+   # $2 path message will be saved
+
+   local url_pdf=$1
+   local path_msg=$2
+
+   # crea messaggio da inviare su telegram
+   echo "🔎 [test] Ho trovato ed estratto *nuovi dati* sui *volumi* invasati dalle dighe siciliane!
+
+🔄 In particolare ho convertito [questo file PDF]($url_pdf) in [questo file CSV](https://github.com/opendatasicilia/emergenza-idrica-sicilia/blob/main/risorse/sicilia_dighe_volumi_latest.csv) tramite [✨ Gemini AI](https://gemini.google.com/). 
+
+✅ L'estrazione automatica ha superato alcuni sanity check, ma se trovi un errore [apri una issue](https://github.com/opendatasicilia/emergenza-idrica-sicilia/issues). Grazie!
+
+Se vuoi saperne di più sui dati estratti da ODS nell'ambito di questo progetto, puoi visitare [questa pagina](https://github.com/opendatasicilia/emergenza-idrica-sicilia/tree/main/risorse#dati-sugli-invasi-delle-dighe-e-sulle-riduzioni-idriche-in-sicilia).
+
+_Questo è un messaggio automatico gestito da un_ [workflow di GitHub](https://github.com/opendatasicilia/emergenza-idrica-sicilia/blob/main/.github/workflows/new_pdfs.yaml)" > $path_msg
+}
 
 # obtain the last page with pdfs list
 url_page_with_list=$(curl -skL $URL | scrape -e "#it-block-field-blocknodegeneric-pagefield-p-body li:last-of-type a:last-of-type" | xq -r '.a."@href"')
@@ -61,7 +80,6 @@ while read -r line; do
       echo "✏️  File rinominato in $new_filename"
       n_ai=$((n_ai+1))
       
-
       # check if new_filename start with "volumi", in caso scarico ed estraggo csv. Se contiene "grafici" scarico e stop
       if [[ $new_filename == volumi* ]]; then
 
@@ -118,6 +136,11 @@ while read -r line; do
          if [ "$report_validity" == "true" ]; then
             echo "✅ Check 2 passed: La validazione non ha riscontrato errori nei dati estratti (nomi dighe e valori volumi)"
             rm ./risorse/tmp/2_$new_filename.csv
+
+            # creo messaggio da inviare su telegram
+            mkdir -p ./risorse/msgs
+            generate_telegram_message $URL_HOMEPAGE$line ./risorse/msgs/new_volumi.md
+
          else
             echo "❌ Check 2 failed: la validazione è fallita. Ci sono errori nei dati estratti: potrebbero esserci errori nei nomi delle dighe o nei valori dei volumi."
             echo "Consulta il report per maggiori dettagli: ./risorse/report_extraction_latest.json"
@@ -131,6 +154,8 @@ while read -r line; do
          curl -skL "$URL_HOMEPAGE$line" -o "./risorse/pdf/Grafici/$new_filename"
          echo "⬇️ Scaricato $new_filename"
       fi
+
+      
 
       # aggiungo il pdf alla lista dei pdf scaricati
       echo "$line" >> $PATH_PDFS_LIST

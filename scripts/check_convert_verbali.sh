@@ -86,6 +86,22 @@ normalize_filename() {
    echo "$old_name" | llm -m gemini-1.5-pro-latest -s "Converti il nome di questo file nel formato '$format' tutto minuscolo. Restituisci in output una sola riga senza estensione" | tr -d '\n'
 }
 
+# generate telegram message
+generate_telegram_message() {
+   # inputs:
+   # $1 url_pdf
+   # $2 path message will be saved
+
+   local url_pdf=$1
+   local path_msg=$2
+
+   # crea messaggio da inviare su telegram
+   echo "🆕 Ho trovato un [nuovo verbale]($url_pdf) dell'Osservatorio sugli utilizzi idrici della Regione Siciliana! Mi sono permesso di preparare per voi un *riassunto* che verrà pubblicato a momenti in [questo blog](https://opendatasicilia.github.io/emergenza-idrica-sicilia/aggiornamenti/) usando [✨ Gemini AI](https://gemini.google.com/).
+
+Se trovi degli errori, per favore correggili tramite l'icona di modifica in alto a destra o [apri una issue](https://github.com/opendatasicilia/emergenza-idrica-sicilia/issues). Grazie!
+
+_Questo è un messaggio automatico gestito da un_ [workflow di GitHub](https://github.com/opendatasicilia/emergenza-idrica-sicilia/blob/main/.github/workflows/new_pdfs.yaml)" > $path_msg
+}
 
 # main
 # obtain the last page with pdfs list
@@ -132,6 +148,10 @@ while read -r line; do
          echo "" >> $blog_post
          echo "---" >> $blog_post
          echo "[:fontawesome-solid-file-pdf: Leggi il verbale]($URL_HOMEPAGE$line){ .md-button }" >> $blog_post
+
+         # creo messaggio da inviare su telegram
+         mkdir -p ./risorse/msgs
+         generate_telegram_message $URL_HOMEPAGE$line ./risorse/msgs/new_verbale.md
 
          # aggiungo il pdf alla lista dei pdf scaricati
          echo "$line" >> $PATH_PDFS_LIST
