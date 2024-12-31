@@ -4,125 +4,17 @@
   "different_volms": [],
   "similar_dams": [
     {
-      "first_ext": "Àncipa",
-      "second_ext": "ANCIPA"
+      "first_extr": "Leone",
+      "second_extr": "PIANO DEL LEONE"
     },
     {
-      "first_ext": "Arancio",
-      "second_ext": "ARANCIO"
+      "first_extr": "Ogliastro (Don Sturzo)",
+      "second_extr": "DON STURZO (Ogliastro)"
     },
     {
-      "first_ext": "Castello",
-      "second_ext": "CASTELLO"
-    },
-    {
-      "first_ext": "Cimia",
-      "second_ext": "CIMIA"
-    },
-    {
-      "first_ext": "Comunelli",
-      "second_ext": "COMUNELLI"
-    },
-    {
-      "first_ext": "Disueri",
-      "second_ext": "DISUERI"
-    },
-    {
-      "first_ext": "Ogliastro (Don Sturzo)",
-      "second_ext": "DON STURZO"
-    },
-    {
-      "first_ext": "Fanaco",
-      "second_ext": "FANACO"
-    },
-    {
-      "first_ext": "Furore",
-      "second_ext": "FURORE"
-    },
-    {
-      "first_ext": "Gammauta",
-      "second_ext": "GAMMAUTA"
-    },
-    {
-      "first_ext": "Garcia (M. Francese)",
-      "second_ext": "GARCIA"
-    },
-    {
-      "first_ext": "Gorgo Lago",
-      "second_ext": "GORGO LAGO"
-    },
-    {
-      "first_ext": "Lentini",
-      "second_ext": "LENTINI"
-    },
-    {
-      "first_ext": "Nicoletti",
-      "second_ext": "NICOLETTI"
-    },
-    {
-      "first_ext": "Olivo",
-      "second_ext": "OLIVO"
-    },
-    {
-      "first_ext": "Paceco",
-      "second_ext": "PACECO"
-    },
-    {
-      "first_ext": "Piana Degli Albanesi",
-      "second_ext": "PIANA DEGLI ALBANESI"
-    },
-    {
-      "first_ext": "Leone",
-      "second_ext": "PIANO DEL LEONE"
-    },
-    {
-      "first_ext": "Poma",
-      "second_ext": "POMA"
-    },
-    {
-      "first_ext": "Pozzillo",
-      "second_ext": "POZZILLO"
-    },
-    {
-      "first_ext": "Prizzi",
-      "second_ext": "PRIZZI"
-    },
-    {
-      "first_ext": "Ragoleto",
-      "second_ext": "RAGOLETO"
-    },
-    {
-      "first_ext": "Rosamarina",
-      "second_ext": "ROSAMARINA"
-    },
-    {
-      "first_ext": "Rubino",
-      "second_ext": "RUBINO"
-    },
-    {
-      "first_ext": "San Giovanni",
-      "second_ext": "SAN GIOVANNI"
-    },
-    {
-      "first_ext": "Santa Rosalia",
-      "second_ext": "SANTA ROSALIA"
-    },
-    {
-      "first_ext": "Scanzano",
-      "second_ext": "SCANZANO"
-    },
-    {
-      "first_ext": "Sciaguana",
-      "second_ext": "SCIAGUANA"
-    },
-    {
-      "first_ext": "Trinità",
-      "second_ext": "TRINITA'"
-    },
-    {
-      "first_ext": "Zaffarana",
-      "second_ext": "ZAFFARANA"
+      "first_extr": "Ragoleto",
+      "second_extr": "RAGOLETO (Dirillo)"
     }
   ],
-  "date": "2024-12-27"
+  "date": "2024-12-31"
 }
