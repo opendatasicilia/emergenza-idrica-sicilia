@@ -48,7 +48,7 @@ jobs:
       - name: Commit and push new data
         run: |-
           git add -A
-          git commit -m "[volumi] Aggiornati i dati dei volumi invasati ${date --iso-8601}" || exit 0
+          git commit -m "[volumi] Aggiornati i dati dei volumi invasati $(date --iso-8601)" || exit 0
           git push
 
       - name: Download and summarize PDF document (verbali)
@@ -60,5 +60,5 @@ jobs:
       - name: Commit and push new doc
         run: |-
           git add -A
-          git commit -m "[verbali] Creato nuovo blog post ${date --iso-8601}" || exit 0
+          git commit -m "[verbali] Creato nuovo blog post $(date --iso-8601)" || exit 0
           git push
