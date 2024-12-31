@@ -1,7 +1,7 @@
 ---
 draft: false
 date: 2024-11-21
-title: "Osservatorio: verbale riunione fine ottobre"
+title: "Osservatorio: verbale riunione fine ottobre (manual)"
 hide:
   - navigation
   - toc

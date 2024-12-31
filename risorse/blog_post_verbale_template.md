@@ -1,13 +1,15 @@
 ---
 date: <yyyy-mm-dd>
 title: "Osservatorio: verbale riunione <mese>"
+authors:
+    - odsbot
 hide:
-- navigation
-- toc
+    - navigation
+    - toc
 categories:
-- generale
+    - generale
 tags:
-- osservatorio
+    - osservatorio
 ---
 
 !!! asterisk "AI generated content"

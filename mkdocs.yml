@@ -73,7 +73,7 @@ plugins:
     post_slugify_separator: "-"
     categories_toc: false
     pagination_per_page: 5
-    authors: false
+    authors: true
     post_url_date_format: yyyy/MM/dd
     post_slugify: !!python/object/apply:pymdownx.slugs.slugify
       kwds:
