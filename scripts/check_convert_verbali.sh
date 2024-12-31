@@ -54,7 +54,7 @@ generate_summary() {
 
    # inputs: 
    # $1: template_md
-   # $2: verbale_pdf
+   # $2: local_path_pdf
    # $3: output_filename
    # output: string
    # description:
@@ -64,16 +64,11 @@ generate_summary() {
    #    messaggio di avviso che il contenuto è stato generato automaticamente da un'Intelligenza Artificiale.
 
    local template_md=$1
-   local verbale_pdf=$2
+   local local_path_pdf=$2
    local output_filename=$3
 
    # Generate the blog post using the template and the PDF
-   cat "$template_md" | llm -m gemini-1.5-pro-latest -s "Hai il compito di generare un blog post a partire da un verbale in pdf allegato. Nel prompt trovi la struttura del blog post in markdown e frontmatter yaml che devi rispettare e compilare. Inserisci la data del verbale e una brevissima descrizione del contenuto e poi una descrizione più esaustiva. Se nel verbale vengono citati nomi di invasi, dighe o comuni, riportali nei tuoi riassunti. Se necessario, includi una struttura markdown nel blog post per titoli, sottotitoli ed elenchi puntati. Effettua lo styling del testo con grassetto o corsivo in sintassi markdown se necessario. Ricorda di aggiungere il tag 'osservatorio' e la categoria 'generale' al frontmatter yaml. La tua risposta deve cominciare con il frontmatter in yaml e il contenuto del blog post, non voglio messaggi introduttivi da parte tua." -a "$verbale_pdf" > "$output_filename"
-
-   # add download button to pdf
-   echo "" >> $output_filename
-   echo "---" >> $output_filename
-   echo "[:fontawesome-solid-file-pdf: Leggi il verbale]($URL_RAW_GITHUB_WD/$PATH_VERBALI/$new_filename.pdf){ .md-button }" >> $output_filename
+   cat "$template_md" | llm -m gemini-1.5-pro-latest -s "Hai il compito di generare un blog post a partire da un verbale in pdf allegato. Nel prompt trovi la struttura del blog post in markdown e frontmatter yaml che devi rispettare e compilare. Inserisci la data del verbale e una brevissima descrizione del contenuto e poi una descrizione più esaustiva. Se nel verbale vengono citati nomi di invasi, dighe o comuni, riportali nei tuoi riassunti. Se necessario, includi una struttura markdown nel blog post per titoli, sottotitoli ed elenchi puntati. Effettua lo styling del testo con grassetto o corsivo in sintassi markdown se necessario. Ricorda di aggiungere il tag 'osservatorio' e la categoria 'generale' al frontmatter yaml. La tua risposta deve cominciare con il frontmatter in yaml e il contenuto del blog post, non voglio messaggi introduttivi da parte tua." -a "$local_path_pdf" > "$output_filename"
 }
 
 normalize_filename() {
@@ -127,10 +122,16 @@ while read -r line; do
          echo "⬇️  Scaricato $new_filename.pdf"
 
          # genera un riassunto del pdf
+         blog_post="$PATH_BLOG_POSTS/$new_filename.md"
          check_limits
          echo "📝 Sto generando $new_filename.md"
-         generate_summary ./risorse/blog_post_verbale_template.md $PATH_VERBALI/$new_filename.pdf $PATH_BLOG_POSTS/$new_filename.md
+         generate_summary ./risorse/blog_post_verbale_template.md $PATH_VERBALI/$new_filename.pdf $blog_post
          n_ai=$((n_ai+1))
+
+         # add download button to pdf
+         echo "" >> $blog_post
+         echo "---" >> $blog_post
+         echo "[:fontawesome-solid-file-pdf: Leggi il verbale]($URL_HOMEPAGE$line){ .md-button }" >> $blog_post
 
          # aggiungo il pdf alla lista dei pdf scaricati
          echo "$line" >> $PATH_PDFS_LIST
