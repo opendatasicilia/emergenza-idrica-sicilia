@@ -1,6 +1,6 @@
 ---
 date: <yyyy-mm-dd>
-title: "Osservatorio: verbale riunione <mese>"
+title: "Osservatorio: verbale riunione <inizio/fine mese>"
 authors:
     - odsbot
 hide:

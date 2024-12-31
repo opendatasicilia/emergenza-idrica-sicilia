@@ -44,7 +44,10 @@ jobs:
           export PATH=$PATH:~/bin
           chmod +x ./scripts/check_convert_volumi.sh
           ./scripts/check_convert_volumi.sh
-      
+
+      - name: Frictionless data validation
+        run: frictionless validate datapackage.yaml
+
       - name: Commit and push new data
         run: |-
           git add -A
@@ -53,9 +56,6 @@ jobs:
 
       - name: Download and summarize PDF document (verbali)
         run: chmod +x ./scripts/check_convert_verbali.sh && ./scripts/check_convert_verbali.sh
-
-      - name: Frictionless data validation
-        run: frictionless validate datapackage.yaml
 
       - name: Commit and push new doc
         run: |-
