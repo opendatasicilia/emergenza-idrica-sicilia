@@ -5,6 +5,8 @@ on:
     paths:
       - 'docs/**'
   workflow_dispatch:
+  repository_dispatch:
+    types: [new_verbale_osservatorio]
 
 permissions:
   contents: write
