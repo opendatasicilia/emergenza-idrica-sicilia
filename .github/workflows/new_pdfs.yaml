@@ -48,9 +48,15 @@ jobs:
       - name: Frictionless data validation
         run: frictionless validate datapackage.yaml
 
-      - name: Test nuovi dati
+      - name: (TEST) Send telegram message (new data)
         if: ${{ hashFiles('risorse/msgs/new_volumi.md') != '' }}
-        run: echo "Ho trovato un nuovo file di dati!"
+        env: 
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          curl -s -X POST https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage -d chat_id=$TELEGRAM_CHAT_ID -d parse_mode="Markdown" -d text="$(cat ./risorse/msgs/new_volumi.md)"
+          rm ./risorse/msgs/new_volumi.md
+          echo "Telegram message (new data) sent"
 
       - name: Send telegram message (new data)
         env: 
