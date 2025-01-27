@@ -21,7 +21,15 @@ jobs:
         run: |
           git config user.name github-actions[bot]
           git config user.email actions@users.noreply.github.com
-      
+
+      # non si può fare qui, serve un'altra action o un altro job
+      - name: nuovo verbale osservatorio
+        if: ${{ github.event_name == 'repository_dispatch' && github.event.client_payload.type == 'new_verbale_osservatorio' }}
+        run: |
+          sudo apt-get install jq
+          url=
+          echo "🆕 Ho trovato un nuovo verbale" 
+
       - name: Setup Python
         uses: actions/setup-python@v5
         with:

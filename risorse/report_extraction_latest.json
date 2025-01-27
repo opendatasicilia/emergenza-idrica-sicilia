@@ -1,128 +1,21 @@
 {
-  "valid": true,
-  "missing_dams": [],
-  "different_volms": [],
-  "similar_dams": [
+  "valid": false,
+  "missing_dams": [
+    "PIANA DEGLI ALBANESI",
+    "RAGOLETO",
+    "PIANO DEL LEONE"
+  ],
+  "different_volms": [
     {
-      "first_extr": "Àncipa",
-      "second_extr": "ANCIPA"
-    },
-    {
-      "first_extr": "Arancio",
-      "second_extr": "ARANCIO"
-    },
-    {
-      "first_extr": "Castello",
-      "second_extr": "CASTELLO"
-    },
-    {
-      "first_extr": "Cimia",
-      "second_extr": "CIMIA"
-    },
-    {
-      "first_extr": "Comunelli",
-      "second_extr": "COMUNELLI"
-    },
-    {
-      "first_extr": "Disueri",
-      "second_extr": "DISUERI"
-    },
-    {
-      "first_extr": "Ogliastro (Don Sturzo)",
-      "second_extr": "DON STURZO"
-    },
-    {
-      "first_extr": "Fanaco",
-      "second_extr": "FANACO"
-    },
-    {
-      "first_extr": "Furore",
-      "second_extr": "FURORE"
-    },
-    {
-      "first_extr": "Gammauta",
-      "second_extr": "GAMMAUTA"
-    },
-    {
-      "first_extr": "Garcia (M. Francese)",
-      "second_extr": "GARCIA"
-    },
-    {
-      "first_extr": "Gorgo Lago",
-      "second_extr": "GORGO LAGO"
-    },
-    {
-      "first_extr": "Lentini",
-      "second_extr": "LENTINI"
-    },
-    {
-      "first_extr": "Nicoletti",
-      "second_extr": "NICOLETTI"
-    },
-    {
-      "first_extr": "Olivo",
-      "second_extr": "OLIVO"
-    },
-    {
-      "first_extr": "Paceco",
-      "second_extr": "PACECO"
-    },
-    {
-      "first_extr": "Piana Degli Albanesi",
-      "second_extr": "PIANA DEGLI ALBANESI"
-    },
-    {
-      "first_extr": "Leone",
-      "second_extr": "PIANO DEL LEONE"
-    },
-    {
-      "first_extr": "Poma",
-      "second_extr": "POMA"
-    },
-    {
-      "first_extr": "Pozzillo",
-      "second_extr": "POZZILLO"
-    },
-    {
-      "first_extr": "Prizzi",
-      "second_extr": "PRIZZI"
-    },
-    {
-      "first_extr": "Ragoleto",
-      "second_extr": "RAGOLETO"
-    },
-    {
-      "first_extr": "Rosamarina",
-      "second_extr": "ROSAMARINA"
-    },
-    {
-      "first_extr": "Rubino",
-      "second_extr": "RUBINO"
-    },
-    {
-      "first_extr": "San Giovanni",
-      "second_extr": "SAN GIOVANNI"
-    },
-    {
-      "first_extr": "Santa Rosalia",
-      "second_extr": "SANTA ROSALIA"
-    },
-    {
-      "first_extr": "Scanzano",
-      "second_extr": "SCANZANO"
-    },
-    {
-      "first_extr": "Sciaguana",
-      "second_extr": "SCIAGUANA"
-    },
-    {
-      "first_extr": "Trinità",
-      "second_extr": "TRINITA'"
-    },
-    {
-      "first_extr": "Zaffarana",
-      "second_extr": "ZAFFARANA"
+      "dam": "FANACO",
+      "volume_diff": 9278854
     }
   ],
-  "date": "2025-01-17"
+  "similar_dams": [
+    {
+      "first_file": "Leone",
+      "second_file": "PIANO DEL LEONE"
+    }
+  ],
+  "date": "2025-01-27"
 }

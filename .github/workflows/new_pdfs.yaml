@@ -68,6 +68,7 @@ jobs:
         run: chmod +x ./scripts/check_convert_verbali.sh && ./scripts/check_convert_verbali.sh
 
         # questo secondo me deve essere gestito dal deploy di mkdocs e non da questa action
+        # per avere ultimo post pubblicato curl -s https://raw.githubusercontent.com/opendatasicilia/emergenza-idrica-sicilia/refs/heads/gh-pages/feed_json_created.json | jq -r '.items[0].url'
       - name: Send telegram message (new doc)
         id: new_doc
         if: ${{ hashFiles('risorse/msgs/new_verbale.md') != '' }}
