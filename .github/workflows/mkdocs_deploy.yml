@@ -22,14 +22,6 @@ jobs:
           git config user.name github-actions[bot]
           git config user.email actions@users.noreply.github.com
 
-      # non si può fare qui, serve un'altra action o un altro job
-      - name: nuovo verbale osservatorio
-        if: ${{ github.event_name == 'repository_dispatch' && github.event.client_payload.type == 'new_verbale_osservatorio' }}
-        run: |
-          sudo apt-get install jq
-          url=
-          echo "🆕 Ho trovato un nuovo verbale" 
-
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
@@ -57,3 +49,36 @@ jobs:
 
       - name: MkDocs Build
         run: mkdocs gh-deploy --force
+  
+  # work in progress
+  notify:
+    runs-on: ubuntu-latest
+    needs: deploy
+    steps:
+      - name: Scrivi e invia messaggio (usando rss o json feed per indivudare link ultimo blog post)
+        if: ${{ github.event_name == 'repository_dispatch' && github.event.client_payload.type == 'new_verbale_osservatorio' }}
+        env: 
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          # installo jq
+          sudo apt-get install jq
+
+          # recupero url ultimo blog post e ultimo verbale
+          url_feed="https://raw.githubusercontent.com/opendatasicilia/emergenza-idrica-sicilia/refs/heads/gh-pages/feed_json_created.json"
+          url_latest_blog_post=$(curl -skL "$url_feed" | jq -r '.items[0].url')
+          url_1_latest_verbale="https://www.regione.sicilia.it"
+          url_2_latest_verbale=$(grep -v '^$' risorse/processed-urls/pdfs_list_verbali.txt | tail -n 1)
+          url_latest_verbale=$url_1_latest_verbale$url_2_latest_verbale
+
+          # scrivo messaggio
+          echo "🆕 Ho trovato un [nuovo verbale]($url_latest_verbale) dell'Osservatorio sugli utilizzi idrici della Regione Siciliana! Mi sono permesso di preparare per voi un *riassunto* in [questo blog post](url_latest_blog_post) usando [✨ Gemini AI](https://gemini.google.com/).
+          
+          Se trovi degli errori, per favore correggili tramite l'icona di modifica in alto a destra o [apri una issue](https://github.com/opendatasicilia/emergenza-idrica-sicilia/issues/new?template=Blank+issue). Grazie!
+          
+          Questo è un messaggio automatico gestito da un_ [workflow di GitHub](https://github.com/opendatasicilia/emergenza-idrica-sicilia/blob/main/.github/workflows/new_pdfs.yaml)" > ./risorse/msgs/new_verbale.md
+
+          # invio messaggio
+          curl -s -X POST https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage -d chat_id=$TELEGRAM_CHAT_ID -d parse_mode="Markdown" -d text="$(cat ./risorse/msgs/new_verbale.md)"
+          rm ./risorse/msgs/new_verbale.md
+          echo "Telegram message (new data verbale osservatorio) sent"
