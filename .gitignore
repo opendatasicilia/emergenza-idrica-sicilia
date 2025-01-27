@@ -12,3 +12,7 @@ risorse/pdfs_list_backup.txt
 risorse/sicilia_dighe_volumi_backup.csv
 risorse/sicilia_dighe_volumi_backup_2.csv
 sicilia_dighe_volumi_latest_backup.csv
+
+scripts/send_telegram_message.sh
+
+msgs.md

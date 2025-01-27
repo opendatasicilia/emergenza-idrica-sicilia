@@ -10,9 +10,8 @@ set -e
 # set -x
 
 
-# requirements
-# xq (yq), scrape-cli, llm
-# check if required commands are installed
+#-----------------requirements-----------------#
+# check if required commands are installed: xq (yq), scrape-cli, llm
 for cmd in curl xq scrape llm; do
    if ! command -v $cmd &> /dev/null; then
       echo "❌ Errore: $cmd non è installato."
@@ -22,19 +21,19 @@ done
 echo "✅ Requirements satisfied!"
 
 
-# constants
+#-----------------constants-----------------#
 URL="https://www.regione.sicilia.it/istituzioni/regione/strutture-regionali/presidenza-regione/autorita-bacino-distretto-idrografico-sicilia/verbali"
-PATH_PDFS_LIST="./risorse/pdfs_list_verbali.txt"
-PATH_VERBALI="./risorse/pdf/Verbali"
+PATH_PDFS_LIST="./risorse/processed-urls/pdfs_list_verbali.txt"
+PATH_VERBALI="./risorse/pdf/verbali"
 PATH_BLOG_POSTS="./docs/aggiornamenti/articoli/annuncio"
 URL_HOMEPAGE="https://www.regione.sicilia.it"
 URL_CSV_ANAGRAFICA_DIGHE="https://raw.githubusercontent.com/opendatasicilia/emergenza-idrica-sicilia/refs/heads/main/risorse/sicilia_dighe_anagrafica.csv"
 URL_RAW_GITHUB_WD="https://raw.githubusercontent.com/opendatasicilia/emergenza-idrica-sicilia/refs/heads/main"
-AI_LIMITS=2
+AI_LIMITS=10
 AI_SLEEP=60
 
 
-# functions
+#----------------- functions -----------------#
 check_limits() {
 
    # inputs: none
@@ -68,7 +67,14 @@ generate_summary() {
    local output_filename=$3
 
    # Generate the blog post using the template and the PDF
-   cat "$template_md" | llm -m gemini-1.5-pro-latest -s "Hai il compito di generare un blog post a partire da un verbale in pdf allegato. Nel prompt trovi la struttura del blog post in markdown e frontmatter yaml che devi rispettare e compilare. Inserisci la data del verbale e una brevissima descrizione del contenuto e poi una descrizione più esaustiva. Se nel verbale vengono citati nomi di invasi, dighe o comuni, riportali nei tuoi riassunti. Se nel verbale sono presenti dettagli relativi ai prelievi o agli scenari futuri, includili nel tuo riassunto. Se nel verbale sono presenti punti all'ordine del giorno, includili nel tuo riassunto come elenco numerato e annidato all'interno di un titolo (es. ## Punti allo'ordine del giorno). Se necessario, includi una struttura markdown nel blog post per formattare titoli, sottotitoli, sezioni, elenchi puntati. Effettua lo styling del testo con grassetto o corsivo in sintassi markdown se necessario. Evidenzia in grassetto le date o altri dati importanti (riduzioni, volumi, quote, ecc). Ricorda di aggiungere il tag 'osservatorio' e la categoria 'generale' al frontmatter yaml. La tua risposta deve cominciare con il frontmatter in yaml e il contenuto del blog post, non voglio messaggi introduttivi da parte tua." -a "$local_path_pdf" > "$output_filename"
+   system_prompt="Hai il compito di generare un blog post a partire da un verbale in pdf allegato. Nel prompt trovi la struttura del blog post in markdown e frontmatter yaml che devi rispettare e compilare. Inserisci la data del verbale e una brevissima descrizione del contenuto e poi una descrizione più esaustiva. Se nel verbale vengono citati nomi di invasi, dighe o comuni, riportali nei tuoi riassunti. Se nel verbale sono presenti dettagli relativi ai prelievi o agli scenari futuri, includili nel tuo riassunto. Se nel verbale sono presenti punti all'ordine del giorno, includili nel tuo riassunto come elenco numerato e annidato all'interno di un titolo (es. ## Punti allo'ordine del giorno). Se necessario, includi una struttura markdown nel blog post per formattare titoli, sottotitoli, sezioni, elenchi puntati. Effettua lo styling del testo con grassetto o corsivo in sintassi markdown se necessario. Evidenzia in grassetto le date o altri dati importanti (riduzioni, volumi, quote, ecc). Ricorda di aggiungere il tag 'osservatorio' e la categoria 'generale' al frontmatter yaml. La tua risposta deve cominciare con il frontmatter in yaml e il contenuto del blog post, non voglio messaggi introduttivi da parte tua."
+
+   llm_response=$(cat "$template_md" | llm -m gemini-1.5-flash-latest \
+   -s "$system_prompt" \
+   -a "$local_path_pdf") \
+   || { echo "❌ Errore durante l'esecuzione di llm (generazione blog post)"; exit 1; }
+   
+   echo "$llm_response" > "$output_filename"
 }
 
 normalize_filename() {
@@ -83,7 +89,11 @@ normalize_filename() {
    local old_name=$1
    local format=$2
 
-   echo "$old_name" | llm -m gemini-1.5-pro-latest -s "Converti il nome di questo file nel formato '$format' tutto minuscolo. Restituisci in output una sola riga senza estensione" | tr -d '\n'
+   llm_response=$(echo "$old_name" | llm -m gemini-1.5-flash-latest \
+   -s "Converti il nome di questo file nel formato '$format' tutto minuscolo. Restituisci in output una sola riga senza estensione") \
+   || { echo "❌ Errore durante l'esecuzione di llm (normalizzazione nome file)"; exit 1; }
+
+   echo "$llm_response" | tr -d '\n'
 }
 
 # generate telegram message

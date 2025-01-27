@@ -1,0 +1,23 @@
+{
+  "valid": true,
+  "missing_dams": [],
+  "different_volms": [],
+  "similar_dams": [
+    {
+      "file1": "Leone",
+      "file2": "PIANO DEL LEONE",
+      "comment": "Nomi simili, probabilmente la stessa diga"
+    },
+    {
+      "file1": "Ogliastro (Don Sturzo)",
+      "file2": "DON STURZO (Ogliastro)",
+      "comment": "Nomi simili, probabilmente la stessa diga"
+    },
+    {
+      "file1": "Ragoleto",
+      "file2": "RAGOLETO (Dirillo)",
+      "comment": "Nomi simili, probabilmente la stessa diga"
+    }
+  ],
+  "date": "2025-01-27"
+}

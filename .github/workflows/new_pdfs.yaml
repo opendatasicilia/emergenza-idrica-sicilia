@@ -39,32 +39,54 @@ jobs:
         run: |
           echo "$GEMINI_KEY" | llm keys set gemini
 
-      - name: Download and convert data (volumi invasati) from PDF
+      - name: Download and convert data (volumi invasati mensilmente) from PDF
         run: |
           export PATH=$PATH:~/bin
-          chmod +x ./scripts/check_convert_volumi.sh
-          ./scripts/check_convert_volumi.sh
+          chmod +x ./scripts/check_convert_volumi_mensili.sh
+          ./scripts/check_convert_volumi_mensili.sh
 
       - name: Frictionless data validation
         run: frictionless validate datapackage.yaml
 
       - name: Send telegram message (new data)
-        if: ${{ hashFiles('risorse/msgs/new_volumi.md') != '' }}
+        if: ${{ hashFiles('risorse/msgs/new_volumi_mensili.md') != '' }}
         env: 
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
-          curl -s -X POST https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage -d chat_id=$TELEGRAM_CHAT_ID -d parse_mode="Markdown" -d text="$(cat ./risorse/msgs/new_volumi.md)"
-          rm ./risorse/msgs/new_volumi.md
-          echo "Telegram message (new data [volumi]) sent"
+          curl -s -X POST https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage -d chat_id=$TELEGRAM_CHAT_ID -d parse_mode="Markdown" -d text="$(cat ./risorse/msgs/new_volumi_mensili.md)"
+          rm ./risorse/msgs/new_volumi_mensili.md
+          echo "Telegram message (new data volumi mensili) sent"
 
       - name: Commit and push new data
         run: |-
           git add -A
-          git commit -m "[volumi] Aggiornati i dati dei volumi invasati $(date --iso-8601)" || exit 0
+          git commit -m "[volumi mensili] Aggiornati i dati dei volumi invasati $(date --iso-8601)" || exit 0
           git push
 
-      - name: Download and summarize PDF document (verbali)
+      - name: Download and convert data (volumi invasati giornalieri) from PDF
+        run: |
+          export PATH=$PATH:~/bin
+          chmod +x ./scripts/*.sh
+          ./scripts/launcher.sh scripts/check_convert_volumi_giornalieri.sh 5
+
+      - name: Send telegram message (new volumi giornalieri)
+        if: ${{ hashFiles('risorse/msgs/new_volumi_giornalieri.md') != '' }}
+        env: 
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          curl -s -X POST https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage -d chat_id=$TELEGRAM_CHAT_ID -d parse_mode="Markdown" -d text="$(cat ./risorse/msgs/new_volumi_giornalieri.md)"
+          rm ./risorse/msgs/new_volumi_giornalieri.md
+          echo "Telegram message (new data volumi giornalieri) sent"
+
+      - name: Commit and push new data
+        run: |-
+          git add -A
+          git commit -m "[volumi giornalieri] Aggiornati i dati dei volumi invasati $(date --iso-8601)" || exit 0
+          git push
+
+      - name: Download and summarize PDF document (verbali) 
         run: chmod +x ./scripts/check_convert_verbali.sh && ./scripts/check_convert_verbali.sh
 
         # questo secondo me deve essere gestito dal deploy di mkdocs e non da questa action
