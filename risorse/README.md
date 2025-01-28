@@ -2,7 +2,7 @@
 
 ## Data Dictionary
 
-### 📄 [sicilia_dighe_volumi_giornalieri](risorse/sicilia_dighe_volumi_giornalieri.csv)
+### 📄 [sicilia_dighe_volumi_giornalieri](sicilia_dighe_volumi_giornalieri.csv)
 Dati (con storico) sul monitoraggio giornaliero dei volumi invasati dalle dighe siciliane ad uso potabile. La tabella è estratta dai [file PDF rilasciati da Autorità di Bacino del Distretto Idrografico della Sicilia - Regione Siciliana](https://www.regione.sicilia.it/istituzioni/regione/strutture-regionali/presidenza-regione/autorita-bacino-distretto-idrografico-sicilia/monitoraggio-giornaliero-invasi-ad-uso-potabile).
 
 - Path: `risorse/sicilia_dighe_volumi_giornalieri.csv`
@@ -20,7 +20,7 @@ Dati (con storico) sul monitoraggio giornaliero dei volumi invasati dalle dighe 
 | volume | number | Volume attuale dell'acqua nella diga alla data di rilevazione (in metri cubi) | 18674234.89 |
 | volume_utile | number | Volume d'acqua utile netto per utilizzatori (in metri cubi) | 16674234.89 |
 
-### 📄 [sicilia_dighe_volumi_giornalieri_latest](risorse/sicilia_dighe_volumi_giornalieri_latest.csv)
+### 📄 [sicilia_dighe_volumi_giornalieri_latest](sicilia_dighe_volumi_giornalieri_latest.csv)
 Dati **più recenti** sul monitoraggio giornaliero dei volumi invasati dalle dighe siciliane ad uso potabile. La tabella è estratta dal [file PDF più recente rilasciato da Autorità di Bacino del Distretto Idrografico della Sicilia - Regione Siciliana](https://www.regione.sicilia.it/istituzioni/regione/strutture-regionali/presidenza-regione/autorita-bacino-distretto-idrografico-sicilia/monitoraggio-giornaliero-invasi-ad-uso-potabile)
 
 - Path: `risorse/sicilia_dighe_volumi_giornalieri.csv`
