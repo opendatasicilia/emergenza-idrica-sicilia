@@ -13,7 +13,7 @@ set -e
 #-----------------requirements-----------------#
 # check if required commands are installed: xq (yq), scrape-cli, llm
 for cmd in curl xq scrape llm; do
-   if ! command -v $cmd &> /dev/null; then
+   if ! command -v "$cmd" &> /dev/null; then
       echo "❌ Errore: $cmd non è installato."
       exit 1
    fi
@@ -35,7 +35,6 @@ AI_SLEEP=60
 
 #----------------- functions -----------------#
 check_limits() {
-
    # inputs: none
    # output: none
    # description:
@@ -50,7 +49,6 @@ check_limits() {
 }
 
 generate_summary() {
-
    # inputs: 
    # $1: template_md
    # $2: local_path_pdf
@@ -78,7 +76,6 @@ generate_summary() {
 }
 
 normalize_filename() {
-
    # inputs
    # $1: old_name (e.g. "Verbale del 2021-06-30.pdf")
    # $2: format   (e.g. "verbale_YYYY-MM-DD")
@@ -96,7 +93,6 @@ normalize_filename() {
    echo "$llm_response" | tr -d '\n'
 }
 
-# generate telegram message
 generate_telegram_message() {
    # inputs:
    # $1 url_pdf
@@ -108,77 +104,111 @@ generate_telegram_message() {
    # crea messaggio da inviare su telegram
    echo "🆕 Ho trovato un [nuovo verbale]($url_pdf) dell'Osservatorio sugli utilizzi idrici della Regione Siciliana! Mi sono permesso di preparare per voi un *riassunto* che verrà pubblicato a momenti in [questo blog](https://opendatasicilia.github.io/emergenza-idrica-sicilia/aggiornamenti/) usando [✨ Gemini AI](https://gemini.google.com/).
 
-Se trovi degli errori, per favore correggili tramite l'icona di modifica in alto a destra o [apri una issue](https://github.com/opendatasicilia/emergenza-idrica-sicilia/issues). Grazie!
+   Se trovi degli errori, per favore correggili tramite l'icona di modifica in alto a destra o [apri una issue](https://github.com/opendatasicilia/emergenza-idrica-sicilia/issues). Grazie!
 
-_Questo è un messaggio automatico fatto da quello strafigo di Dennis Angemis e gestito da un_ [workflow di GitHub](https://github.com/opendatasicilia/emergenza-idrica-sicilia/blob/main/.github/workflows/new_pdfs.yaml)" > $path_msg
+   _Questo è un messaggio automatico fatto da quello strafigo di Dennis Angemis e gestito da un_ [workflow di GitHub](https://github.com/opendatasicilia/emergenza-idrica-sicilia/blob/main/.github/workflows/new_pdfs.yaml)" > $path_msg
 }
 
-# main
+compare_lists() {
+   # inputs:
+   # $1: variable name of the first list
+   # $2: path of the second list (file)
+
+   # output: string (stdout)
+
+   local list1=$1
+   local list2=$2
+   local new_pdfs=""
+
+   for file in $list1; do
+      if ! grep -q "$file" "$list2"; then
+         # Aggiungi il file alla lista dei nuovi PDF (con una nuova riga)
+         new_pdfs+="$file"$'\n'
+      fi
+   done
+
+   # Rimuovi eventuali righe vuote
+   echo -e "$new_pdfs" | awk 'NF' 
+}
+
+
+#------------------- main -------------------#
+
 # obtain the last page with pdfs list
 url_page_with_list=$(curl -skL $URL | scrape -be "#it-block-field-blocknodegeneric-pagefield-p-body a:last-of-type" | xq -r '.html.body.a[-1]."@href"')
 
+# list of pdfs in the webpage
 pdfs_list=$(curl -skL $url_page_with_list | scrape -be "a" | xq -r '.html.body.a[]."@href"' | grep ".pdf")
 
-# inizializzo contatori
-n_pdf=0; n_ai=0
+# list of new pdfs
+new_pdfs=$(compare_lists "$pdfs_list" "$PATH_PDFS_LIST") \
+|| { echo "❌ Errore durante la ricerca dei nuovi file da processare."; exit 1; }
 
-# check pdfs_list contains pdfs that are not in file pdfs_list_verbali.txt
-while read -r line; do
-   if ! grep -q "$line" $PATH_PDFS_LIST; then
-      echo "🆕 $line è un nuovo file PDF"
-      n_pdf=$((n_pdf+1))
-      
-      mkdir -p $PATH_VERBALI
-      
-      # Gestione errori per normalize_filename
-      check_limits
-      new_filename=$(normalize_filename "$line" "verbale_YYYY-MM-DD") || {
-         echo "⚠️ Errore nella normalizzazione del nome file per $line, continuo con il prossimo..."
-         continue
-      }
-      n_ai=$((n_ai+1))
+# count new pdfs
+n_pdfs=$(echo "$new_pdfs" | grep -v '^$' | wc -l)
 
-      if [ -n "$new_filename" ]; then
-         echo "✏️  File rinominato in $new_filename"
-         
-         # Gestione errori per il download
-         if ! curl -skL "$URL_HOMEPAGE$line" -o "$PATH_VERBALI/$new_filename.pdf"; then
-            echo "⚠️ Errore nel download del PDF $line, continuo con il prossimo..."
-            continue
-         fi
-         echo "⬇️  Scaricato $new_filename.pdf"
-
-         blog_post="$PATH_BLOG_POSTS/$new_filename.md"
-         check_limits
-         echo "📝 Sto generando $new_filename.md"
-         
-         # Gestione errori per generate_summary
-         if ! generate_summary ./risorse/blog_post_verbale_template.md "$PATH_VERBALI/$new_filename.pdf" "$blog_post"; then
-            echo "⚠️ Errore nella generazione del riassunto per $line, continuo con il prossimo..."
-            continue
-         fi
-         n_ai=$((n_ai+1))
-
-         # add download button to pdf
-         echo "" >> $blog_post
-         echo "---" >> $blog_post
-         echo "[:fontawesome-solid-file-pdf: Leggi il verbale]($URL_HOMEPAGE$line){ .md-button }" >> $blog_post
-
-         # creo messaggio da inviare su telegram
-         mkdir -p ./risorse/msgs
-         generate_telegram_message "$URL_HOMEPAGE$line" ./risorse/msgs/new_verbale.md
-
-         # aggiungo il pdf alla lista dei pdf scaricati
-         echo "$line" >> $PATH_PDFS_LIST
-      fi
-   fi
-done <<< "$pdfs_list"
-
-if [ $n_pdf -gt 0 ]; then
-   echo "📄 Ci sono $n_pdf nuovi PDF"
+# se ci sono nuovi pdf, processali. Altrimenti esci
+if [ $n_pdfs -gt 0 ]; then
+   echo "🆕 Ci sono $n_pdfs nuovi PDF da processare"
 else
    echo "👋 Non ci sono nuovi PDF"
    exit 0
 fi
 
-echo "📍Fine, bye!"
+# create an array with the new pdfs
+mapfile -t pdfs_array <<< "$new_pdfs"
+
+# inizializzo contatori
+n_pdf=0; n_ai=0
+
+for line in "${pdfs_array[@]}"; do
+   n_pdf=$((n_pdf+1))
+   echo ""
+   echo "📄 $n_pdf/$n_pdfs: Processo $line"
+   
+   mkdir -p $PATH_VERBALI
+   
+   # Gestione errori per normalize_filename
+   check_limits
+   new_filename=$(normalize_filename "$line" "verbale_YYYY-MM-DD") \
+   || { echo "❌ Errore durante la normalizzazione del nome del file $n_pdf. Vado col prossimo..."; continue; }
+   n_ai=$((n_ai+1))
+
+   if [ -n "$new_filename" ]; then
+      echo "✏️  File rinominato in $new_filename"
+
+      # download pdf
+      if ! curl -skL "$URL_HOMEPAGE$line" -o "$PATH_VERBALI/$new_filename.pdf"; then
+         echo "❌ Errore nel download del PDF $line, continuo con il prossimo..."
+         continue
+      fi
+      echo "⬇️  Scaricato $new_filename.pdf"
+
+      # build blog post filename
+      blog_post="$PATH_BLOG_POSTS/$new_filename.md"
+      
+      # generate blog post
+      echo "📝 Sto generando $new_filename.md"
+
+      check_limits
+      generate_summary ./risorse/blog_post_verbale_template.md "$PATH_VERBALI/$new_filename.pdf" "$blog_post" \
+      || { echo "❌ Errore durante la generazione del blog post $n_pdf. Vado col prossimo..."; continue; }
+      n_ai=$((n_ai+1))
+
+      # add download button to pdf
+      echo "" >> $blog_post
+      echo "---" >> $blog_post
+      echo "[:fontawesome-solid-file-pdf: Leggi il verbale]($URL_HOMEPAGE$line){ .md-button }" >> $blog_post
+
+      # creo messaggio da inviare su telegram
+      mkdir -p ./risorse/msgs
+      generate_telegram_message "$URL_HOMEPAGE$line" ./risorse/msgs/new_verbale.md
+
+      # aggiungo il pdf alla lista dei pdf scaricati
+      echo "$line" >> $PATH_PDFS_LIST
+      echo "📦 Aggiornata la lista dei PDF scaricati"
+   fi
+done
+
+echo ""
+echo "🚀 Fine, bye!"
