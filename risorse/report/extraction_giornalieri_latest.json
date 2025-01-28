@@ -4,17 +4,9 @@
   "different_volms": [],
   "similar_dams": [
     {
-      "file1": "Leone",
-      "file2": "PIANO DEL LEONE"
-    },
-    {
-      "file1": "Garcia (M. Francese)",
-      "file2": "GARCIA (Mario Francese)"
-    },
-    {
-      "file1": "Ragoleto",
-      "file2": "RAGOLETO (Dirillo)"
+      "dam1": "Leone",
+      "dam2": "PIANO DEL LEONE"
     }
   ],
-  "date": "2025-01-27"
+  "date": "2025-01-28"
 }
