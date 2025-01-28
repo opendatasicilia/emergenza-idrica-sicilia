@@ -56,13 +56,13 @@ jobs:
     needs: deploy
     steps:
       - name: Scrivi e invia messaggio (usando rss o json feed per indivudare link ultimo blog post)
-        if: ${{ github.event_name == 'repository_dispatch' && github.event.client_payload.type == 'new_verbale_osservatorio' }}
+        if: ${{ github.event_name == 'repository_dispatch' && github.event.action == 'new_verbale_osservatorio' }}
         env: 
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
           # installo jq
-          sudo apt-get install jq
+          sudo apt-get install -y jq
 
           # recupero url ultimo blog post e ultimo verbale
           url_feed="https://raw.githubusercontent.com/opendatasicilia/emergenza-idrica-sicilia/refs/heads/gh-pages/feed_json_created.json"
@@ -72,7 +72,7 @@ jobs:
           url_latest_verbale=$url_1_latest_verbale$url_2_latest_verbale
 
           # scrivo messaggio
-          echo "🆕 [[TEST]] Ho trovato un [nuovo verbale]($url_latest_verbale) dell'Osservatorio sugli utilizzi idrici della Regione Siciliana! Mi sono permesso di preparare per voi un *riassunto* in [questo blog post](url_latest_blog_post) usando [✨ Gemini AI](https://gemini.google.com/).
+          echo "🆕 (TEST) Ho trovato un [nuovo verbale]($url_latest_verbale) dell'Osservatorio sugli utilizzi idrici della Regione Siciliana! Mi sono permesso di preparare per voi un *riassunto* in [questo blog post](url_latest_blog_post) usando [✨ Gemini AI](https://gemini.google.com/).
           
           Se trovi degli errori, per favore correggili tramite l'icona di modifica in alto a destra o [apri una issue](https://github.com/opendatasicilia/emergenza-idrica-sicilia/issues/new?template=Blank+issue). Grazie!
           

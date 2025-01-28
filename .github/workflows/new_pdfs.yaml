@@ -89,19 +89,6 @@ jobs:
       - name: Download and summarize PDF document (verbali) 
         run: chmod +x ./scripts/check_convert_verbali.sh && ./scripts/check_convert_verbali.sh
 
-        # questo secondo me deve essere gestito dal deploy di mkdocs e non da questa action
-        # per avere ultimo post pubblicato curl -s https://raw.githubusercontent.com/opendatasicilia/emergenza-idrica-sicilia/refs/heads/gh-pages/feed_json_created.json | jq -r '.items[0].url'
-      - name: Send telegram message (new doc)
-        id: new_doc
-        if: ${{ hashFiles('risorse/msgs/new_verbale.md') != '' }}
-        env: 
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        run: |
-          curl -s -X POST https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage -d chat_id=$TELEGRAM_CHAT_ID -d parse_mode="Markdown" -d text="$(cat ./risorse/msgs/new_verbale.md)"
-          rm ./risorse/msgs/new_verbale.md
-          echo "Telegram message sent"
-
       - name: Commit and push new doc
         run: |-
           git add -A
