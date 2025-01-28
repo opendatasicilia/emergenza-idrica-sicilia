@@ -125,33 +125,38 @@ n_pdf=0; n_ai=0
 # check pdfs_list contains pdfs that are not in file pdfs_list_verbali.txt
 while read -r line; do
    if ! grep -q "$line" $PATH_PDFS_LIST; then
-
       echo "🆕 $line è un nuovo file PDF"
-
-      # incremento il contatore
       n_pdf=$((n_pdf+1))
-
-      # crea cartella verbali se non esiste
+      
       mkdir -p $PATH_VERBALI
       
-      # normalizzo il nome del file pdf
+      # Gestione errori per normalize_filename
       check_limits
-      new_filename=$(normalize_filename "$line" "verbale_YYYY-MM-DD")
+      new_filename=$(normalize_filename "$line" "verbale_YYYY-MM-DD") || {
+         echo "⚠️ Errore nella normalizzazione del nome file per $line, continuo con il prossimo..."
+         continue
+      }
       n_ai=$((n_ai+1))
 
-      # se new_filename non è una variabile vuota
       if [ -n "$new_filename" ]; then
          echo "✏️  File rinominato in $new_filename"
-
-         # scarica il pdf
-         curl -skL "$URL_HOMEPAGE$line" -o "$PATH_VERBALI/$new_filename.pdf"
+         
+         # Gestione errori per il download
+         if ! curl -skL "$URL_HOMEPAGE$line" -o "$PATH_VERBALI/$new_filename.pdf"; then
+            echo "⚠️ Errore nel download del PDF $line, continuo con il prossimo..."
+            continue
+         fi
          echo "⬇️  Scaricato $new_filename.pdf"
 
-         # genera un riassunto del pdf
          blog_post="$PATH_BLOG_POSTS/$new_filename.md"
          check_limits
          echo "📝 Sto generando $new_filename.md"
-         generate_summary ./risorse/blog_post_verbale_template.md $PATH_VERBALI/$new_filename.pdf $blog_post
+         
+         # Gestione errori per generate_summary
+         if ! generate_summary ./risorse/blog_post_verbale_template.md "$PATH_VERBALI/$new_filename.pdf" "$blog_post"; then
+            echo "⚠️ Errore nella generazione del riassunto per $line, continuo con il prossimo..."
+            continue
+         fi
          n_ai=$((n_ai+1))
 
          # add download button to pdf
@@ -161,7 +166,7 @@ while read -r line; do
 
          # creo messaggio da inviare su telegram
          mkdir -p ./risorse/msgs
-         generate_telegram_message $URL_HOMEPAGE$line ./risorse/msgs/new_verbale.md
+         generate_telegram_message "$URL_HOMEPAGE$line" ./risorse/msgs/new_verbale.md
 
          # aggiungo il pdf alla lista dei pdf scaricati
          echo "$line" >> $PATH_PDFS_LIST
