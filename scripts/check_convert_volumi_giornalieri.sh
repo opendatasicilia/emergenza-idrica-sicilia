@@ -61,17 +61,58 @@ generate_telegram_message() {
    # crea messaggio da inviare su telegram
    echo "🔎 Ho trovato ed estratto *nuovi dati* sui *volumi* (giornalieri) invasati dalle dighe siciliane!
 
-🔄 In particolare ho convertito [questo file PDF]($url_pdf) in [questo file CSV](https://github.com/opendatasicilia/emergenza-idrica-sicilia/blob/main/risorse/sicilia_dighe_volumi_giornalieri_latest.csv) tramite [✨ Gemini AI](https://gemini.google.com/). 
+   🔄 In particolare ho convertito [questo file PDF]($url_pdf) in [questo file CSV](https://github.com/opendatasicilia/emergenza-idrica-sicilia/blob/main/risorse/sicilia_dighe_volumi_giornalieri_latest.csv) tramite [✨ Gemini AI](https://gemini.google.com/). 
 
-✅ L'estrazione automatica ha superato alcuni sanity check, ma se trovi un errore [apri una issue](https://github.com/opendatasicilia/emergenza-idrica-sicilia/issues/new?template=Blank+issue). Grazie!
+   ✅ L'estrazione automatica ha superato alcuni sanity check, ma se trovi un errore [apri una issue](https://github.com/opendatasicilia/emergenza-idrica-sicilia/issues/new?template=Blank+issue). Grazie!
 
-Se vuoi saperne di più sui dati estratti da ODS nell'ambito di questo progetto, puoi visitare [questa pagina](https://github.com/opendatasicilia/emergenza-idrica-sicilia/tree/main/risorse#dati-sugli-invasi-delle-dighe-e-sulle-riduzioni-idriche-in-sicilia).
+   Se vuoi saperne di più sui dati estratti da ODS nell'ambito di questo progetto, puoi visitare [questa pagina](https://github.com/opendatasicilia/emergenza-idrica-sicilia/tree/main/risorse#dati-sugli-invasi-delle-dighe-e-sulle-riduzioni-idriche-in-sicilia).
 
-_Questo è un messaggio automatico gestito da un_ [workflow di GitHub](https://github.com/opendatasicilia/emergenza-idrica-sicilia/blob/main/.github/workflows/new_pdfs.yaml)" > $path_msg
+   _Questo è un messaggio automatico gestito da un_ [workflow di GitHub](https://github.com/opendatasicilia/emergenza-idrica-sicilia/blob/main/.github/workflows/new_pdfs.yaml)" > $path_msg
+}
+
+compare_lists() {
+   # inputs:
+   # $1: variable name of the first list
+   # $2: path of the second list (file)
+
+   # output: string (stdout)
+
+   local list1=$1
+   local list2=$2
+   local new_pdfs=""
+
+   for file in $list1; do
+      if ! grep -q "$file" "$list2"; then
+         # Aggiungi il file alla lista dei nuovi PDF (con una nuova riga)
+         new_pdfs+="$file"$'\n'
+      fi
+   done
+
+   # Rimuovi eventuali righe vuote
+   echo -e "$new_pdfs" | awk 'NF' 
+}
+
+normalize_filename() {
+   # inputs
+   # $1: old_name (e.g. "Verbale del 2021-06-30.pdf")
+   # $2: format   (e.g. "verbale_YYYY-MM-DD")
+   # output: string
+   # description:
+   #    normalizza il nome di un file pdf in base a un formato specificato.
+
+   local old_name=$1
+   local format=$2
+
+   llm_response=$(echo "$old_name" | llm -m gemini-1.5-flash-latest \
+   -s "Converti il nome di questo file nel formato '$format' tutto minuscolo. Restituisci in output una sola riga senza estensione") \
+   || { echo "❌ Errore durante l'esecuzione di llm (normalizzazione nome file)"; exit 1; }
+
+   echo "$llm_response" | tr -d '\n'
 }
 
 
 #----------------- main -----------------#
+echo "🔎 Cerco nuovi dati sui volumi giornalieri..."
 
 # dalla pagina con l'elenco degli anni seleziono il link all'ultimo anno
 url_page_with_list_1=$(curl -skL $URL | scrape -e "#it-block-field-blocknodegeneric-pagefield-p-body h3:last-of-type a:last-of-type" | xq -r '.a."@href"')
@@ -80,153 +121,156 @@ url_page_with_list_1=$(curl -skL $URL | scrape -e "#it-block-field-blocknodegene
 url_page_with_list_2=$(curl -skL $url_page_with_list_1 | scrape -e "#it-block-field-blocknodegeneric-pagefield-p-body a:last-of-type" | xq -r '.a."@href"')
 
 # dalla pagina con l'elenco dei pdf dell'ultimo mese seleziono i link ai pdf
-pdfs_list=$(curl -skL $url_page_with_list_2 | scrape -be "a" | xq -r '.html.body.a[]."@href"' | grep ".pdf")
+pdfs_list=$(curl -skL "$url_page_with_list_2" | scrape -be "a" | xq -r '.html.body.a[]."@href"' | grep ".pdf")
+
+# list of new pdfs
+new_pdfs=$(compare_lists "$pdfs_list" "$PATH_PDFS_LIST") \
+|| { echo "❌ Errore durante la ricerca dei nuovi file da processare."; exit 1; }
+
+# count new pdfs
+n_pdfs=$(echo "$new_pdfs" | grep -v '^$' | wc -l)
+
+# se ci sono nuovi pdf, processali. Altrimenti esci
+if [ $n_pdfs -gt 0 ]; then
+   echo "🆕 Ci sono $n_pdfs nuovi PDF da processare"
+else
+   echo "👋 Non ci sono nuovi PDF"
+   exit 0
+fi
+
+# create an array with the new pdfs
+mapfile -t pdfs_array <<< "$new_pdfs"
 
 # inizializzo contatori
 n_pdf=0; n_ai=0
 
 # check pdfs_list contains pdfs that are not in file pdfs_list_volumi.txt
-while read -r line; do
-   if ! grep -q "$line" $PATH_PDFS_LIST; then
+for line in "${pdfs_array[@]}"; do
+   n_pdf=$((n_pdf+1))
+   echo ""
+   echo "📄 $n_pdf/$n_pdfs... Processo $line"
 
-      echo "🆕 $line è un nuovo file PDF"
+   # converto il nome del pdf YYYY-MM-DD.pdf tramite ai llm
+   check_limits
+   new_filename=$(normalize_filename "$line" "YYYY-MM-DD") \
+   || { echo "❌ Errore durante la normalizzazione del nome del file $n_pdf. Vado col prossimo..."; continue; }
+   n_ai=$((n_ai+1))
+
+   # scarico il pdf e lo chiamo new_filename
+   curl -skL "$URL_HOMEPAGE$line" -o "./risorse/pdf/volumi-giornalieri/$new_filename.pdf"
+   echo "   ⬇️  File scaricato e rinominato in $new_filename.pdf"
+
+   echo "   🔄 Converto in CSV..."
    
-      # converto il nome del pdf YYYY-MM-DD.pdf tramite ai llm
-      system_prompt="converti il nome di questo file pdf nel formato YYYY-MM-DD senza estensione. Restituisci in output una sola riga"
+   # creo (se non esiste già) la cartella per i csv temporanei
+   mkdir -p ./risorse/tmp
 
-      check_limits
-      llm_response=$(echo "$line" | llm -m gemini-1.5-flash-latest \
-      -s "$system_prompt" \
-      -o temperature 0.1) \
-      || { echo "❌ Errore durante l'esecuzione di llm (operazione di conversione nome pdf)"; exit 1; }
-      n_ai=$((n_ai+1))
+   # FIRST EXTRACTION (with anagrafica)
+   system_prompt="Il tuo compito è quello di estrarre dati da un pdf allegato e di incrociarli con i dati di un'anagrafica csv passata come prompt. Dalla tabella pdf, individua la data di rilevazione e poi estrai tutti i dati della colonna invaso (chiamala 'diga_pdf') e quelli della colonne relative alla quota autorizzata, volume autorizzato, quota, volume, volume utile netto per utilizzatori (chiamale rispettivamente: quota_autorizzata, volume_autorizzato, quota, volume, volume_utile). Arricchisci la tabella aggiungendo una colonna chiamata 'data' che abbia in ogni riga la data della rilevazione più recente a cui si riferiscono i dati nel formato yyyy-mm-dd. Dal CSV, estrai la colonna 'diga' che chiamerai 'diga_anagrafica' popolata con il nome corretto (da includere esattamente nell'output). Confronta le colonne 'diga_pdf' e 'diga_anagrafica' per fare in modo di arricchire il dataset e assegnare a ogni diga il corrispondente codice identificativo presente nella colonna 'cod' del csv. Attenzione alla diga ogliastro e don sturzo che sono la stessa cosa. In ultimo, cestina la colonna 'diga_pdf' e  nell'output includi i valori di 'diga_anagrafica' sotto il nome di 'diga'. Attenzione ad attribuire correttamente il codice al nome della diga secondo l'anagrafica csv. Se l'anagrafica csv contiene più dighe della tabella pdf, l'output deve contenere solo ed esclusivamente le dighe presenti nel file pdf. Se nell'anagrafica ci sono più dighe del pdf, il volume non deve essere 0 ma deve essere vuoto. L'output deve avere questa struttura 'cod,diga,data,quota_autorizzata,volume_autorizzato,quota,volume,volume_utile' e non deve avere righe vuote finali. Tieni presente che i valori di 'diga' devono essere esattamente coincidenti con quelli di 'diga_anagrafica'. I separatori di decimali dei volumi devono essere i punti e non le virgole (correggi la sintassi dei numeri da formato italiano a formato internazionale). Se l'output csv contiene righe finali senza valori, rimuovile."
 
-      new_filename=$(echo "$llm_response" | tr -d '\n')
+   check_limits
+   llm_response=$(cat risorse/sicilia_dighe_anagrafica.csv | llm -x \
+   -m gemini-1.5-flash-latest \
+   -s "$system_prompt" \
+   -a "./risorse/pdf/volumi-giornalieri/$new_filename.pdf" \
+   -o temperature 0.1) \
+   || { echo "❌ Errore durante l'esecuzione di llm (operazione di estrazione dati)"; exit 1; }
+   n_ai=$((n_ai+1))
 
-      # scarico il pdf e lo chiamo new_filename
-      curl -skL "$URL_HOMEPAGE$line" -o "./risorse/pdf/volumi-giornalieri/$new_filename.pdf"
-      echo "⬇️  File scaricato e rinominato in $new_filename.pdf"
+   # rimuovo eventuali righe vuote finali e salvo il csv
+   echo "$llm_response" | sed -e :a -e '/^\n*$/{$d;N;ba' -e '}' > ./risorse/tmp/$new_filename.csv
+   echo "   🟢 Prima conversione da $new_filename.pdf in $new_filename.csv completata"
 
-      echo "🔄 Converto in CSV..."
+   # count rows (dams) in the first extraction
+   n_dighe_ai_1=$(mlr --csv --headerless-csv-output cat -n then stats1 -a max -f n ./risorse/tmp/$new_filename.csv)
+   echo "   Numero di righe (dighe) prima estrazione: $n_dighe_ai_1"
       
-      # creo (se non esiste già) la cartella per i csv temporanei
-      mkdir -p ./risorse/tmp
+   # SECOND EXTRACTION (without anagrafica)
+   echo "   💬 Double check: eseguo estrazione senza anagrafica..."
 
-      # FIRST EXTRACTION (with anagrafica)
-      system_prompt="Il tuo compito è quello di estrarre dati da un pdf allegato e di incrociarli con i dati di un'anagrafica csv passata come prompt. Dalla tabella pdf, individua la data di rilevazione e poi estrai tutti i dati della colonna invaso (chiamala 'diga_pdf') e quelli della colonne relative alla quota autorizzata, volume autorizzato, quota, volume, volume utile netto per utilizzatori (chiamale rispettivamente: quota_autorizzata, volume_autorizzato, quota, volume, volume_utile). Arricchisci la tabella aggiungendo una colonna chiamata 'data' che abbia in ogni riga la data della rilevazione più recente a cui si riferiscono i dati nel formato yyyy-mm-dd. Dal CSV, estrai la colonna 'diga' che chiamerai 'diga_anagrafica' popolata con il nome corretto (da includere esattamente nell'output). Confronta le colonne 'diga_pdf' e 'diga_anagrafica' per fare in modo di arricchire il dataset e assegnare a ogni diga il corrispondente codice identificativo presente nella colonna 'cod' del csv. Attenzione alla diga ogliastro e don sturzo che sono la stessa cosa. In ultimo, cestina la colonna 'diga_pdf' e  nell'output includi i valori di 'diga_anagrafica' sotto il nome di 'diga'. Attenzione ad attribuire correttamente il codice al nome della diga secondo l'anagrafica csv. Se l'anagrafica csv contiene più dighe della tabella pdf, l'output deve contenere solo ed esclusivamente le dighe presenti nel file pdf. Se nell'anagrafica ci sono più dighe del pdf, il volume non deve essere 0 ma deve essere vuoto. L'output deve avere questa struttura 'cod,diga,data,quota_autorizzata,volume_autorizzato,quota,volume,volume_utile' e non deve avere righe vuote finali. Tieni presente che i valori di 'diga' devono essere esattamente coincidenti con quelli di 'diga_anagrafica'. I separatori di decimali dei volumi devono essere i punti e non le virgole (correggi la sintassi dei numeri da formato italiano a formato internazionale). Se l'output csv contiene righe finali senza valori, rimuovile."
+   system_prompt="Il tuo compito è quello di estrarre dati da un pdf allegato. Devi fornire un output in csv senza backtics iniziali e finali."
 
-      check_limits
-      llm_response=$(cat risorse/sicilia_dighe_anagrafica.csv | llm -x \
-      -m gemini-1.5-flash-latest \
-      -s "$system_prompt" \
-      -a "./risorse/pdf/volumi-giornalieri/$new_filename.pdf" \
-      -o temperature 0.1) \
-      || { echo "❌ Errore durante l'esecuzione di llm (operazione di estrazione dati)"; exit 1; }
-      n_ai=$((n_ai+1))
+   prompt="Dalla tabella pdf, individua la data di rilevazione e poi estrai tutti i dati della colonna invaso e quelli della colonne relative alla quota autorizzata, volume autorizzato, quota, volume, volume utile netto per utilizzatori (chiamale rispettivamente: quota_autorizzata, volume_autorizzato, quota, volume, volume_utile). Arricchisci la tabella aggiungendo una colonna chiamata 'data' che abbia in ogni riga la data della rilevazione più recente a cui si riferiscono i dati nel formato yyyy-mm-dd. L'output deve avere questa struttura 'cod,diga,data,quota_autorizzata,volume_autorizzato,quota,volume,volume_utile' e non deve avere righe vuote finali. I separatori di decimali dei volumi devono essere i punti e non le virgole (correggi la sintassi dei numeri da formato italiano a formato internazionale). Se l'output csv contiene righe finali senza valori, rimuovile."
 
-      # rimuovo eventuali righe vuote finali e salvo il csv
-      echo "$llm_response" | sed -e :a -e '/^\n*$/{$d;N;ba' -e '}' > ./risorse/tmp/$new_filename.csv
-      echo "🟢 Prima conversione da $new_filename.pdf in $new_filename.csv completata"
-         
-      # count rows (dams) in the first extraction
-      n_dighe_ai_1=$(mlr --csv --headerless-csv-output cat -n then stats1 -a max -f n ./risorse/tmp/$new_filename.csv)
-      echo "Numero di righe (dighe) prima estrazione: $n_dighe_ai_1"
-         
-      # SECOND EXTRACTION (without anagrafica)
-      echo "💬 Double check: eseguo estrazione senza anagrafica..."
+   check_limits
+   llm_response=$(llm -x \
+   -m gemini-1.5-flash-latest \
+   -s "$system_prompt" \
+   "$prompt" \
+   -a "./risorse/pdf/volumi-giornalieri/$new_filename.pdf" \
+   -o temperature 0.1) \
+   || { echo "❌ Errore durante l'esecuzione di llm (operazione di estrazione dati)"; exit 1; }
+   n_ai=$((n_ai+1))
 
-      system_prompt="Il tuo compito è quello di estrarre dati da un pdf allegato. Devi fornire un output in csv senza backtics iniziali e finali."
+   # rimuovo eventuali righe vuote finali e salvo il csv
+   echo "$llm_response" | sed -e :a -e '/^\n*$/{$d;N;ba' -e '}' > ./risorse/tmp/2_$new_filename.csv
+   echo "   🟢 Conversione da $new_filename.pdf in 2_$new_filename.csv completata"
 
-      prompt="Dalla tabella pdf, individua la data di rilevazione e poi estrai tutti i dati della colonna invaso e quelli della colonne relative alla quota autorizzata, volume autorizzato, quota, volume, volume utile netto per utilizzatori (chiamale rispettivamente: quota_autorizzata, volume_autorizzato, quota, volume, volume_utile). Arricchisci la tabella aggiungendo una colonna chiamata 'data' che abbia in ogni riga la data della rilevazione più recente a cui si riferiscono i dati nel formato yyyy-mm-dd. L'output deve avere questa struttura 'cod,diga,data,quota_autorizzata,volume_autorizzato,quota,volume,volume_utile' e non deve avere righe vuote finali. I separatori di decimali dei volumi devono essere i punti e non le virgole (correggi la sintassi dei numeri da formato italiano a formato internazionale). Se l'output csv contiene righe finali senza valori, rimuovile."
+   # count rows (dams) in the second extraction
+   n_dighe_ai_2=$(mlr --csv --headerless-csv-output cat -n then stats1 -a max -f n ./risorse/tmp/2_$new_filename.csv)
+   echo "   Numero di righe (dighe) seconda estrazione: $n_dighe_ai_2"
 
-      check_limits
-      llm_response=$(llm -x \
-      -m gemini-1.5-flash-latest \
-      -s "$system_prompt" \
-      "$prompt" \
-      -a "./risorse/pdf/volumi-giornalieri/$new_filename.pdf" \
-      -o temperature 0.1) \
-      || { echo "❌ Errore durante l'esecuzione di llm (operazione di estrazione dati)"; exit 1; }
-      n_ai=$((n_ai+1))
-
-      # rimuovo eventuali righe vuote finali e salvo il csv
-      echo "$llm_response" | sed -e :a -e '/^\n*$/{$d;N;ba' -e '}' > ./risorse/tmp/2_$new_filename.csv
-      echo "🟢 Conversione da $new_filename.pdf in 2_$new_filename.csv completata"
- 
-      # count rows (dams) in the second extraction
-      n_dighe_ai_2=$(mlr --csv --headerless-csv-output cat -n then stats1 -a max -f n ./risorse/tmp/2_$new_filename.csv)
-      echo "Numero di righe (dighe) seconda estrazione: $n_dighe_ai_2"
-
-      # check 1
-      # check if n_dighe_ai_1 and n_dighe_ai_2 are equal, if not, display an error message
-      if [ $n_dighe_ai_1 -ne $n_dighe_ai_2 ]; then
-         echo "❌ Check 1 failed: il numero di righe estratte dai due metodi non corrisponde!"
-         echo "È necessario una verifica manuale. Revisionare il file di anagrafica e il file di dati."
-      else
-         echo "✅ Check 1 passed: Il numero di dighe estratte dai due metodi corrisponde."
-      fi
-         
-      # COMPARE 1st and 2nd extraction
-      echo "🔍 Confronto i due file csv e individuo errori di estrazione..."
-
-      system_prompt="Il tuo compito è quello di confrontare due file csv e comprenderne le differenze"
-
-      prompt="Ti inserisco di seguito due csv. Forse uno di questi (il secondo) è probabile che abbia delle dighe in più che nell'altro (primo) non sono censite. Fammi un piccolo report di validazione sintetico in json. Il json deve contenere la key 'valid' che può contenere il valore true o false. Se tra i due file csv ci sono discrepanze nel numero di righe o discrepanze nel valore dei volumi allora il report è invalido e la key valid deve contenere il valore false. Nel report includi pure i dettagli sulle dighe mancanti nel primo file e sulle discrepanze dei valori dei volumi. Includi pure una sezione dedicata alla somiglianza dei nomi delle dighe: questo non inficia la validità ( esempio: Se non ci sono discrepanze nel numero di dighe, non ci sono discrepanze sui valori dei volumi, ci sono alcuni nomi di dighe simili, allora il report è valido). Fai attenzione alle dighe che hanno nomi simili: ad esempio 'leone' e 'piano del leone' indicano la stessa diga. Il file json deve avere le key: valid, missing_dams, different_volms, similar_dams. Il primo csv (prima estrazione) è il seguente: $(cat ./risorse/tmp/$new_filename.csv). Il secondo csv (seconda estrazione) è il seguente: $(cat ./risorse/tmp/2_$new_filename.csv)"
-
-      check_limits
-      llm_response=$(llm -m gemini-1.5-flash-latest \
-      -s "$system_prompt" \
-      "$prompt" \
-      -o json_object 1) \
-      || { echo "❌ Errore durante l'esecuzione di llm (operazione di confronto dati)"; exit 1; }
-      n_ai=$((n_ai+1))
-
-      # salvo il report di validazione
-      echo "$llm_response" > $PATH_EXTRACTION_REPORT
-
-      # add date to report
-      jq '. + {"date": "'$(date +%Y-%m-%d)'"}' $PATH_EXTRACTION_REPORT > $PATH_EXTRACTION_REPORT.tmp && mv $PATH_EXTRACTION_REPORT.tmp $PATH_EXTRACTION_REPORT
-
-      # check 2
-      report_validity=$(< $PATH_EXTRACTION_REPORT jq '.valid')
-      if [ "$report_validity" == "true" ]; then
-         echo "✅ Check 2 passed: Il confronto tramite AI dei dati delle due estrazioni non ha riscontrato errori nei dati estratti (nomi dighe e valori volumi)"
-         rm ./risorse/tmp/2_$new_filename.csv
-
-         # creo messaggio da inviare su telegram
-         mkdir -p ./risorse/msgs
-         generate_telegram_message $URL_HOMEPAGE$line $PATH_MSG_TELEGRAM
-
-         # copio il csv generato nella cartella dei volumi giornalieri
-         mkdir -p ./risorse/volumi-giornalieri
-         #date_filename=$(echo $new_filename | sed 's/^volumi_giornalieri_//')
-         cp ./risorse/tmp/$new_filename.csv ./risorse/volumi-giornalieri/$new_filename.csv
-
-         # aggiorno il csv latest dei volumi giornalieri 
-         cp ./risorse/tmp/$new_filename.csv $PATH_CSV_VOLUMI_GIORNALIERI_LATEST
-         echo "🔄 Aggiornato $(basename $PATH_CSV_VOLUMI_GIORNALIERI_LATEST)"
-      else
-         echo "❌ Check 2 failed: la validazione è fallita. Ci sono errori nei dati estratti: potrebbero esserci errori nei nomi delle dighe o nei valori dei volumi."
-         echo "Consulta il report per maggiori dettagli: $PATH_EXTRACTION_REPORT"
-         < $PATH_EXTRACTION_REPORT jq '.'
-         # qui si potrebbe aggiungere un ulteriore tentativo di correzione tramite AI #
-         exit 1
-      fi
-
-      # aggiungo il pdf alla lista dei pdf scaricati
-      echo "$line" >> $PATH_PDFS_LIST
-
-      # incremento il contatore
-      n_pdf=$((n_pdf+1))
+   # check 1
+   # check if n_dighe_ai_1 and n_dighe_ai_2 are equal, if not, display an error message
+   if [ $n_dighe_ai_1 -ne $n_dighe_ai_2 ]; then
+      echo "   ❌ Check 1 failed: il numero di righe estratte dai due metodi non corrisponde!"
+      echo "   È necessario una verifica manuale. Revisionare il file di anagrafica e il file di dati."
+   else
+      echo "   ✅ Check 1 passed: Il numero di dighe estratte dai due metodi corrisponde."
    fi
-done <<< "$pdfs_list"
+      
+   # COMPARE 1st and 2nd extraction
+   echo "   🔍 Confronto i due file csv e individuo errori di estrazione..."
 
-if [ $n_pdf -gt 0 ]; then
-   echo "📄 Ci sono $n_pdf nuovi PDF"
-else
-   echo "👋 Non ci sono nuovi PDF"
-   exit 0
-fi
+   system_prompt="Il tuo compito è quello di confrontare due file csv e comprenderne le differenze"
+
+   prompt="Ti inserisco di seguito due csv. Forse uno di questi (il secondo) è probabile che abbia delle dighe in più che nell'altro (primo) non sono censite. Fammi un piccolo report di validazione sintetico in json. Il json deve contenere la key 'valid' che può contenere il valore true o false. Se tra i due file csv ci sono discrepanze nel numero di righe o discrepanze nel valore dei volumi allora il report è invalido e la key valid deve contenere il valore false. Nel report includi pure i dettagli sulle dighe mancanti nel primo file e sulle discrepanze dei valori dei volumi. Includi pure una sezione dedicata alla somiglianza dei nomi delle dighe: questo non inficia la validità ( esempio: Se non ci sono discrepanze nel numero di dighe, non ci sono discrepanze sui valori dei volumi, ci sono alcuni nomi di dighe simili, allora il report è valido). Fai attenzione alle dighe che hanno nomi simili: ad esempio 'leone' e 'piano del leone' indicano la stessa diga. Il file json deve avere le key: valid, missing_dams, different_volms, similar_dams. Il primo csv (prima estrazione) è il seguente: $(cat ./risorse/tmp/$new_filename.csv). Il secondo csv (seconda estrazione) è il seguente: $(cat ./risorse/tmp/2_$new_filename.csv)"
+
+   check_limits
+   llm_response=$(llm -m gemini-1.5-flash-latest \
+   -s "$system_prompt" \
+   "$prompt" \
+   -o json_object 1) \
+   || { echo "❌ Errore durante l'esecuzione di llm (operazione di confronto dati)"; exit 1; }
+   n_ai=$((n_ai+1))
+
+   # salvo il report di validazione
+   echo "$llm_response" > $PATH_EXTRACTION_REPORT
+
+   # add date to report
+   jq '. + {"date": "'$(date +%Y-%m-%d)'"}' $PATH_EXTRACTION_REPORT > $PATH_EXTRACTION_REPORT.tmp && mv $PATH_EXTRACTION_REPORT.tmp $PATH_EXTRACTION_REPORT
+
+   # check 2
+   report_validity=$(< $PATH_EXTRACTION_REPORT jq '.valid')
+   if [ "$report_validity" == "true" ]; then
+      echo "   ✅ Check 2 passed: Il confronto tramite AI dei dati delle due estrazioni non ha riscontrato errori nei dati estratti (nomi dighe e valori volumi)"
+      rm ./risorse/tmp/2_$new_filename.csv
+
+      # creo messaggio da inviare su telegram
+      mkdir -p ./risorse/msgs
+      generate_telegram_message $URL_HOMEPAGE$line $PATH_MSG_TELEGRAM
+
+      # copio il csv generato nella cartella dei volumi giornalieri
+      mkdir -p ./risorse/volumi-giornalieri
+      #date_filename=$(echo $new_filename | sed 's/^volumi_giornalieri_//')
+      cp ./risorse/tmp/$new_filename.csv ./risorse/volumi-giornalieri/$new_filename.csv
+
+      # aggiorno il csv latest dei volumi giornalieri 
+      cp ./risorse/tmp/$new_filename.csv $PATH_CSV_VOLUMI_GIORNALIERI_LATEST
+      echo "   🔄 Aggiornato $(basename $PATH_CSV_VOLUMI_GIORNALIERI_LATEST)"
+   else
+      echo "   ❌ Check 2 failed: la validazione è fallita. Ci sono errori nei dati estratti: potrebbero esserci errori nei nomi delle dighe o nei valori dei volumi."
+      echo "Consulta il report per maggiori dettagli: $PATH_EXTRACTION_REPORT"
+      < $PATH_EXTRACTION_REPORT jq '.'
+      # qui si potrebbe aggiungere un ulteriore tentativo di correzione tramite AI #
+      exit 1
+   fi
+
+   # aggiungo il pdf alla lista dei pdf scaricati
+   echo "$line" >> $PATH_PDFS_LIST
+   echo "   📦 Aggiornata la lista dei PDF processati"
+   echo ""
+done
 
 # if temp folder exists
 if [ -d "./risorse/tmp" ]; then
@@ -262,6 +306,7 @@ if [ -d "./risorse/tmp" ]; then
    rm -r "./risorse/tmp"
 fi
 
+echo ""
 echo "🚀 Tutto fatto, bye!"
 exit 0
 

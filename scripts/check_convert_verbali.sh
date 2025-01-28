@@ -168,7 +168,7 @@ for line in "${pdfs_array[@]}"; do
    
    mkdir -p $PATH_VERBALI
    
-   # Gestione errori per normalize_filename
+   # normalize filename 
    check_limits
    new_filename=$(normalize_filename "$line" "verbale_YYYY-MM-DD") \
    || { echo "❌ Errore durante la normalizzazione del nome del file $n_pdf. Vado col prossimo..."; continue; }
@@ -206,7 +206,7 @@ for line in "${pdfs_array[@]}"; do
 
       # aggiungo il pdf alla lista dei pdf scaricati
       echo "$line" >> $PATH_PDFS_LIST
-      echo "📦 Aggiornata la lista dei PDF scaricati"
+      echo "📦 Aggiornata la lista dei PDF processati"
    fi
 done
 
