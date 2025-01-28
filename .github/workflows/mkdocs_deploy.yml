@@ -79,14 +79,16 @@ jobs:
           url_latest_verbale=$url_1_latest_verbale$url_2_latest_verbale
 
           # scrivo messaggio
-          echo "🆕 (TEST) Ho trovato un [nuovo verbale]($url_latest_verbale) dell'Osservatorio sugli utilizzi idrici della Regione Siciliana! Mi sono permesso di preparare per voi un *riassunto* in [questo blog post](url_latest_blog_post) usando [✨ Gemini AI](https://gemini.google.com/).
+          echo "🆕 (TEST) Ho trovato un [nuovo verbale]($url_latest_verbale) dell'Osservatorio sugli utilizzi idrici della Regione Siciliana! Mi sono permesso di preparare per voi un *riassunto* in [questo blog post]($url_latest_blog_post) usando [✨ Gemini AI](https://gemini.google.com/).
           
           Se trovi degli errori, per favore correggili tramite l'icona di modifica in alto a destra o [apri una issue](https://github.com/opendatasicilia/emergenza-idrica-sicilia/issues/new?template=Blank+issue). Grazie!
           
-          Questo è un messaggio automatico gestito da un_ [workflow di GitHub](https://github.com/opendatasicilia/emergenza-idrica-sicilia/blob/main/.github/workflows/new_pdfs.yaml)" > ./risorse/msgs/new_verbale.md
+          _Questo è un messaggio automatico gestito da un_ [workflow di GitHub](https://github.com/opendatasicilia/emergenza-idrica-sicilia/blob/main/.github/workflows/new_pdfs.yaml)" > ./risorse/msgs/new_verbale.md
+
+          cat ./risorse/msgs/new_verbale.md
 
           # invio messaggio
-          curl -s -X POST https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage -d chat_id=$TELEGRAM_CHAT_ID -d parse_mode="Markdown" -d text="$(cat ./risorse/msgs/new_verbale.md)"
+          # curl -s -X POST https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage -d chat_id=$TELEGRAM_CHAT_ID -d parse_mode="Markdown" -d text="$(cat ./risorse/msgs/new_verbale.md)"
           rm ./risorse/msgs/new_verbale.md
           echo "Telegram message (new data verbale osservatorio) sent"
       
