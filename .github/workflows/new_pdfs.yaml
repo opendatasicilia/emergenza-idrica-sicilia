@@ -88,6 +88,12 @@ jobs:
 
       - name: Download and summarize PDF document (verbali) 
         run: chmod +x ./scripts/check_convert_verbali.sh && ./scripts/check_convert_verbali.sh
+      
+      - name: Setup for trigger (new doc)
+        id: new_doc
+        if: ${{ hashFiles('risorse/msgs/new_verbale.md') != '' }}
+        run: |
+          echo "C'è un messaggio telegram da inviare"
 
       - name: Commit and push new doc
         run: |-
