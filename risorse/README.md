@@ -1,8 +1,45 @@
 # Dati sugli invasi delle dighe e sulle riduzioni idriche in Sicilia
 
 ## Data Dictionary
+
+### 📄 [sicilia_dighe_volumi_giornalieri](risorse/sicilia_dighe_volumi_giornalieri.csv)
+Dati (con storico) sul monitoraggio giornaliero dei volumi invasati dalle dighe siciliane ad uso potabile. La tabella è estratta dai [file PDF rilasciati da Autorità di Bacino del Distretto Idrografico della Sicilia - Regione Siciliana](https://www.regione.sicilia.it/istituzioni/regione/strutture-regionali/presidenza-regione/autorita-bacino-distretto-idrografico-sicilia/monitoraggio-giornaliero-invasi-ad-uso-potabile).
+
+- Path: `risorse/sicilia_dighe_volumi_giornalieri.csv`
+- URL: https://raw.githubusercontent.com/opendatasicilia/emergenza-idrica-sicilia/main/risorse/sicilia_dighe_volumi_giornalieri.csv
+- Encoding: `utf-8`
+
+| Field | Type | Description | Example |
+| --- | --- | --- | --- |
+| cod | string | Codice identificativo della diga (predisposto dalla community Open Data Sicilia) | dig-01 |
+| diga | string | Nome della diga | Àncipa |
+| data | date | Data del rilevamento | 2025-01-28 |
+| quota_autorizzata | number | Quota d'acqua autorizzata nella diga (in metri sul livello del mare) | 939.00 |
+| volume_autorizzato | number | Volume d'acqua autorizzato nella diga (in metri cubi) | 30410000.00 |
+| quota | number | Quota dell'acqua nella diga alla data di rilevazione (in metri sul livello del mare) | 941.64 |
+| volume | number | Volume attuale dell'acqua nella diga alla data di rilevazione (in metri cubi) | 18674234.89 |
+| volume_utile | number | Volume d'acqua utile netto per utilizzatori (in metri cubi) | 16674234.89 |
+
+### 📄 [sicilia_dighe_volumi_giornalieri_latest](risorse/sicilia_dighe_volumi_giornalieri_latest.csv)
+Dati **più recenti** sul monitoraggio giornaliero dei volumi invasati dalle dighe siciliane ad uso potabile. La tabella è estratta dal [file PDF più recente rilasciato da Autorità di Bacino del Distretto Idrografico della Sicilia - Regione Siciliana](https://www.regione.sicilia.it/istituzioni/regione/strutture-regionali/presidenza-regione/autorita-bacino-distretto-idrografico-sicilia/monitoraggio-giornaliero-invasi-ad-uso-potabile)
+
+- Path: `risorse/sicilia_dighe_volumi_giornalieri.csv`
+- URL: https://raw.githubusercontent.com/opendatasicilia/emergenza-idrica-sicilia/main/risorse/sicilia_dighe_volumi_giornalieri_latest.csv
+- Encoding: `utf-8`
+
+| Field | Type | Description | Example |
+| --- | --- | --- | --- |
+| cod | string | Codice identificativo della diga (predisposto dalla community Open Data Sicilia) | dig-01 |
+| diga | string | Nome della diga | Àncipa |
+| data | date | Data del rilevamento | 2025-01-28 |
+| quota_autorizzata | number | Quota d'acqua autorizzata nella diga (in metri sul livello del mare) | 939.00 |
+| volume_autorizzato | number | Volume d'acqua autorizzato nella diga (in metri cubi) | 30410000.00 |
+| quota | number | Quota dell'acqua nella diga alla data di rilevazione (in metri sul livello del mare) | 941.64 |
+| volume | number | Volume attuale dell'acqua nella diga alla data di rilevazione (in metri cubi) | 18674234.89 |
+| volume_utile | number | Volume d'acqua utile netto per utilizzatori (in metri cubi) | 16674234.89 |
+
 ### 📄 [sicilia_dighe_volumi](sicilia_dighe_volumi.csv)
-Volumi invasati nelle dighe della Sicilia. 
+Volumi invasati nelle dighe della Sicilia (con storico). 
 
 - Path: `risorse/sicilia_dighe_volumi.csv`
 - URL: https://raw.githubusercontent.com/opendatasicilia/emergenza-idrica-sicilia/main/risorse/sicilia_dighe_volumi.csv
@@ -21,7 +58,7 @@ La tabella è estratta da
 - [Dataset volumi-invasati-dighe di dati.regione.sicilia.it](https://dati.regione.sicilia.it/catalogo/volumi-invasati-dighe)
 
 ### 📄 [sicilia_dighe_volumi_latest](sicilia_dighe_volumi_latest.csv)
-Estrazione più recente dei dati relativi ai volumi invasati nelle dighe della Sicilia. La tabella è estratta dal [file PDF più recente rilasciato da Autorità di Bacino del Distretto Idrografico della Sicilia - Regione Siciliana](https://www.regione.sicilia.it/istituzioni/regione/strutture-regionali/presidenza-regione/autorita-bacino-distretto-idrografico-sicilia/siti-tematici/risorse-idriche/volumi-invasati-nelle-dighe-della-sicilia).
+Estrazione **più recente** dei dati relativi ai volumi invasati nelle dighe della Sicilia. La tabella è estratta dal [file PDF più recente rilasciato da Autorità di Bacino del Distretto Idrografico della Sicilia - Regione Siciliana](https://www.regione.sicilia.it/istituzioni/regione/strutture-regionali/presidenza-regione/autorita-bacino-distretto-idrografico-sicilia/siti-tematici/risorse-idriche/volumi-invasati-nelle-dighe-della-sicilia).
 
 - Path: `risorse/sicilia_dighe_volumi_latest.csv`
 - URL: https://raw.githubusercontent.com/opendatasicilia/emergenza-idrica-sicilia/main/risorse/sicilia_dighe_volumi_latest.csv
@@ -33,7 +70,6 @@ Estrazione più recente dei dati relativi ai volumi invasati nelle dighe della S
 | diga | string | denominazione della diga | Arancio |
 | data | date | data nel formato YYYY-MM-DD | 2010-01-01 |
 | volume | number | volume in milioni di metri cubi ($Mm^3$) | 27.04 |
-
 
 
 ### 📄 [sicilia_dighe_anagrafica](sicilia_dighe_anagrafica.csv)

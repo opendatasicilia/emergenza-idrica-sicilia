@@ -10,11 +10,94 @@ licenses:
     path: https://creativecommons.org/licenses/by/4.0/
 
 resources:
+  - name: sicilia_dighe_volumi_giornalieri
+    description: Dati sul monitoraggio giornaliero dei volumi invasati dalle dighe siciliane ad uso potabile.
+    sources: 
+      - title: Autorità di Bacino del Distretto Idrografico della Sicilia - Regione Siciliana
+        description: Pagina web della Regione Siciliana che raccoglie documenti PDF contenenti le serie storiche dei volumi invasati nelle dighe della Sicilia
+        path: https://www.regione.sicilia.it/istituzioni/regione/strutture-regionali/presidenza-regione/autorita-bacino-distretto-idrografico-sicilia/monitoraggio-giornaliero-invasi-ad-uso-potabile
+    path: risorse/sicilia_dighe_volumi_giornalieri.csv
+    type: table
+    scheme: file
+    format: csv
+    mediatype: text/csv
+    encoding: utf-8
+    dialect:
+      delimiter: ","
+    schema:
+      fields:
+      - name: cod
+        type: string
+        description: Codice identificativo della diga (predisposto dalla community Open Data Sicilia)
+      - name: diga
+        type: string
+        description: Nome della diga
+      - name: data
+        type: date
+        format: '%Y-%m-%d'
+        description: Data del rilevamento
+      - name: quota_autorizzata
+        type: number
+        description: Quota d'acqua autorizzata nella diga (in metri sul livello del mare)
+      - name: volume_autorizzato
+        type: number
+        description: Volume d'acqua autorizzato nella diga (in metri cubi)
+      - name: quota
+        type: number
+        description: Quota dell'acqua nella diga alla data di rilevazione (in metri sul livello del mare)
+      - name: volume
+        type: number
+        description: Volume attuale dell'acqua nella diga alla data di rilevazione (in metri cubi)
+      - name: volume_utile
+        type: number
+        description: Volume d'acqua utile netto per utilizzatori (in metri cubi)
+  
+  - name: sicilia_dighe_volumi_giornalieri_latest
+    description: Dati sul monitoraggio giornaliero dei volumi invasati dalle dighe siciliane ad uso potabile.
+    sources: 
+      - title: Autorità di Bacino del Distretto Idrografico della Sicilia - Regione Siciliana
+        description: Pagina web della Regione Siciliana che raccoglie documenti PDF contenenti le serie storiche dei volumi invasati nelle dighe della Sicilia
+        path: https://www.regione.sicilia.it/istituzioni/regione/strutture-regionali/presidenza-regione/autorita-bacino-distretto-idrografico-sicilia/monitoraggio-giornaliero-invasi-ad-uso-potabile
+    path: risorse/sicilia_dighe_volumi_giornalieri_latest.csv
+    type: table
+    scheme: file
+    format: csv
+    mediatype: text/csv
+    encoding: utf-8
+    dialect:
+      delimiter: ","
+    schema:
+      fields:
+      - name: cod
+        type: string
+        description: Codice identificativo della diga (predisposto dalla community Open Data Sicilia)
+      - name: diga
+        type: string
+        description: Nome della diga
+      - name: data
+        type: date
+        format: '%Y-%m-%d'
+        description: Data del rilevamento
+      - name: quota_autorizzata
+        type: number
+        description: Quota d'acqua autorizzata nella diga (in metri sul livello del mare)
+      - name: volume_autorizzato
+        type: number
+        description: Volume d'acqua autorizzato nella diga (in metri cubi)
+      - name: quota
+        type: number
+        description: Quota dell'acqua nella diga alla data di rilevazione (in metri sul livello del mare)
+      - name: volume
+        type: number
+        description: Volume attuale dell'acqua nella diga alla data di rilevazione (in metri cubi)
+      - name: volume_utile
+        type: number
+        description: Volume d'acqua utile netto per utilizzatori (in metri cubi)
+      
   - name: sicilia_dighe_volumi
     description: Volumi invasati nelle dighe della Sicilia. Tabella estratta dai file PDF rilasciati dalla Regione Siciliana (vd. sources)
     "dc:temporal": 
         start: 2007-01-01
-        end: 2024-12-01
     sources: 
       - title: Autorità di Bacino del Distretto Idrografico della Sicilia - Regione Siciliana
         description: Pagina web della Regione Siciliana che raccoglie documenti PDF contenenti le serie storiche dei volumi invasati nelle dighe della Sicilia
@@ -34,7 +117,7 @@ resources:
       fields:
         - name: cod
           type: string
-          description: codice univoco diga
+          description: codice univoco diga (predisposto dalla community Open Data Sicilia)
         - name: diga
           type: string
           description: denominazione della diga
@@ -64,7 +147,7 @@ resources:
       fields:
         - name: cod
           type: string
-          description: codice univoco diga
+          description: codice univoco diga (predisposto dalla community Open Data Sicilia)
         - name: diga
           type: string
           description: denominazione della diga
@@ -99,7 +182,7 @@ resources:
           description: longitudine (EPSG:4326)
         - name: cod
           type: string
-          description: codice univoco diga
+          description: codice univoco diga (predisposto dalla community Open Data Sicilia)
         - name: diga
           type: string
           description: nome della diga
