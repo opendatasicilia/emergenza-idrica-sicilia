@@ -1,5 +1,7 @@
 # Dati sugli invasi delle dighe e sulle riduzioni idriche in Sicilia
 
+I metadati visualizzati in questa pagina sono disponibili nel file [datapackage.yaml](https://github.com/opendatasicilia/emergenza-idrica-sicilia/blob/main/datapackage.yaml) secondo gli standard elaborati da [Frictionless Data]([url](https://frictionlessdata.io/)).
+
 ## Data Dictionary
 
 ### 📄 [sicilia_dighe_volumi_giornalieri](sicilia_dighe_volumi_giornalieri.csv)
