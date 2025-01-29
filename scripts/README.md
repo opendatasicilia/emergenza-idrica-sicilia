@@ -16,6 +16,7 @@ Questa cartella contiene gli script per l'automazione del processo di raccolta e
 
 Gli script richiedono i seguenti tool:
 - curl 
+- jq
 - xq (yq)
 - scrape-cli
 - llm
