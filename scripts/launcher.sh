@@ -1,5 +1,17 @@
 #!/bin/bash
 
+# Launcher script per eseguire script di estrazione dati tramite LLM
+# con un numero massimo di tentativi.
+# Sript supportati:
+# - check_convert_volumi_giornalieri.sh
+# - check_convert_volumi_mensili.sh
+
+# Esempio di utilizzo:
+# ./launcher.sh scripts/check_convert_volumi_giornalieri.sh 10
+
+# To do:
+# - [ ] Aggiungere verifica requirements (rimuoverla dai singoli script)
+
 # accetta 2 argomenti: il nome dello script da lanciare e il numero di tentativi massimi
 if [ $# -ne 2 ]; then
    echo "❌ Errore: questo launcher accetta 2 argomenti."
@@ -31,18 +43,17 @@ while [ $n -le $max_attempts ]; do
       echo ""
       echo "✅ Lo script è stato eseguito con successo all'iterazione n. $n."
       exit 0
+   else
+      if [ $n -eq $max_attempts ]; then
+         echo ""
+         echo "❌ Numero massimo di tentativi raggiunto."
+         exit 1
+      else
+         echo "⚠️ L'esecuzione n. $n non è andata a buon fine."
+         echo "⏳ Riprovo tra 10 secondi..."
+         sleep 10
+      fi
    fi
-
-   echo "❌ L'esecuzione n. $n non è andata a buon fine."
-
-   if [ $n -eq $max_attempts ]; then
-      echo ""
-      echo "❌ Numero massimo di tentativi raggiunto."
-      exit 1
-   fi
-
-   echo "⏳ Riprovo tra 10 secondi..."
-   sleep 5
 
    # incrementa il contatore
    n=$((n+1))

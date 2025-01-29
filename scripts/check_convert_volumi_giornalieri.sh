@@ -33,6 +33,10 @@ URL_CSV_ANAGRAFICA_DIGHE="https://raw.githubusercontent.com/opendatasicilia/emer
 AI_LIMITS=15
 AI_SLEEP=60
 
+# To do:
+# - [ ] rimuovere verifica requirements e lasciarla gestire al launcher
+# - [ ] migliorare il main creando funzioni
+# - [ ] staccare le funzioni in un file a parte
 
 #----------------- functions -----------------#
 check_limits() {
