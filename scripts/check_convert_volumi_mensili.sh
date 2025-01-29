@@ -10,9 +10,9 @@ set -e
 
 
 #-----------------requirements-----------------#
-# xq (yq), scrape-cli, llm, mlr
+# jq xq (yq), scrape-cli, llm, mlr
 # check if required commands are installed
-for cmd in curl xq scrape llm mlr; do
+for cmd in curl jq xq scrape llm mlr; do
    if ! command -v $cmd &> /dev/null; then
       echo "❌ Errore: $cmd non è installato."
       exit 1

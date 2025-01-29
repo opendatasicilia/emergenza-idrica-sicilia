@@ -4,17 +4,14 @@
 # Questo script apre il sito della Regione Sicilia e controlla la presenza di nuovi documenti PDF contenenti
 # dati sui volumi invasati dalle dighe siciliane con aggiornamento mensile. Se trova nuovi PDF, li scarica e li converte in CSV sfruttando un llm. 
 
-# TODO
-# - comportamento anomalo: per come l'ho scritto, vorrei che questo script facesse un ciclo sui di tutti i nuovi pdf trovati
-#                          inveve, se trova un nuovo pdf, lo scarica, lo converte e poi si ferma.
 
 set -e
 # set -x
 
 
 #-----------------requirements-----------------#
-# check if required commands are installed: xq (yq), scrape-cli, llm, mlr
-for cmd in curl xq scrape llm mlr; do
+# check if required commands are installed: jq xq (yq), scrape-cli, llm, mlr
+for cmd in curl jq xq scrape llm mlr; do
    if ! command -v $cmd &> /dev/null; then
       echo "❌ Errore: $cmd non è installato."
       exit 1
@@ -105,7 +102,7 @@ normalize_filename() {
 
    llm_response=$(echo "$old_name" | llm -m gemini-1.5-flash-latest \
    -s "Converti il nome di questo file nel formato '$format' tutto minuscolo. Restituisci in output una sola riga senza estensione") \
-   || { echo "❌ Errore durante l'esecuzione di llm (normalizzazione nome file)"; exit 1; }
+   || { echo "❌ Errore durante l'esecuzione di llm (normalizzazione nome file)"; return 1; }
 
    echo "$llm_response" | tr -d '\n'
 }
@@ -125,7 +122,7 @@ pdfs_list=$(curl -skL "$url_page_with_list_2" | scrape -be "a" | xq -r '.html.bo
 
 # list of new pdfs
 new_pdfs=$(compare_lists "$pdfs_list" "$PATH_PDFS_LIST") \
-|| { echo "❌ Errore durante la ricerca dei nuovi file da processare."; exit 1; }
+|| { echo "   ❌ Errore durante la ricerca dei nuovi file da processare."; exit 1; }
 
 # count new pdfs
 n_pdfs=$(echo "$new_pdfs" | grep -v '^$' | wc -l)
@@ -153,7 +150,7 @@ for line in "${pdfs_array[@]}"; do
    # converto il nome del pdf YYYY-MM-DD.pdf tramite ai llm
    check_limits
    new_filename=$(normalize_filename "$line" "YYYY-MM-DD") \
-   || { echo "❌ Errore durante la normalizzazione del nome del file $n_pdf. Vado col prossimo..."; continue; }
+   || { echo "   ❌ Errore durante la normalizzazione del nome del file $n_pdf."; exit 1; }
    n_ai=$((n_ai+1))
 
    # scarico il pdf e lo chiamo new_filename
@@ -174,11 +171,13 @@ for line in "${pdfs_array[@]}"; do
    -s "$system_prompt" \
    -a "./risorse/pdf/volumi-giornalieri/$new_filename.pdf" \
    -o temperature 0.1) \
-   || { echo "❌ Errore durante l'esecuzione di llm (operazione di estrazione dati)"; exit 1; }
+   || { echo "   ❌ Errore durante l'esecuzione di llm (operazione di estrazione dati)"; exit 1; }
    n_ai=$((n_ai+1))
 
    # rimuovo eventuali righe vuote finali e salvo il csv
-   echo "$llm_response" | sed -e :a -e '/^\n*$/{$d;N;ba' -e '}' > ./risorse/tmp/$new_filename.csv
+   echo "$llm_response" \
+   | sed -e :a -e '/^\n*$/{$d;N;ba' -e '}' \
+   | mlr --csv filter '$volume != ""' then clean-whitespace then skip-trivial-records > ./risorse/tmp/$new_filename.csv
    echo "   🟢 Prima conversione da $new_filename.pdf in $new_filename.csv completata"
 
    # count rows (dams) in the first extraction
@@ -199,11 +198,13 @@ for line in "${pdfs_array[@]}"; do
    "$prompt" \
    -a "./risorse/pdf/volumi-giornalieri/$new_filename.pdf" \
    -o temperature 0.1) \
-   || { echo "❌ Errore durante l'esecuzione di llm (operazione di estrazione dati)"; exit 1; }
+   || { echo "   ❌ Errore durante l'esecuzione di llm (operazione di estrazione dati)"; exit 1; }
    n_ai=$((n_ai+1))
 
-   # rimuovo eventuali righe vuote finali e salvo il csv
-   echo "$llm_response" | sed -e :a -e '/^\n*$/{$d;N;ba' -e '}' > ./risorse/tmp/2_$new_filename.csv
+   # rimuovo eventuali righe vuote finali, pulisco e salvo il csv
+   echo "$llm_response" \
+   | sed -e :a -e '/^\n*$/{$d;N;ba' -e '}' \
+   | mlr --csv filter '$volume != ""' then clean-whitespace then skip-trivial-records > ./risorse/tmp/2_$new_filename.csv
    echo "   🟢 Conversione da $new_filename.pdf in 2_$new_filename.csv completata"
 
    # count rows (dams) in the second extraction
@@ -213,8 +214,8 @@ for line in "${pdfs_array[@]}"; do
    # check 1
    # check if n_dighe_ai_1 and n_dighe_ai_2 are equal, if not, display an error message
    if [ $n_dighe_ai_1 -ne $n_dighe_ai_2 ]; then
-      echo "   ❌ Check 1 failed: il numero di righe estratte dai due metodi non corrisponde!"
-      echo "   È necessario una verifica manuale. Revisionare il file di anagrafica e il file di dati."
+      echo "   ⚠️ Check 1 failed: il numero di righe estratte dai due metodi non corrisponde!"
+      echo "   Sarebbe necessaria una verifica manuale: revisionare il file di anagrafica e il file di dati. Provo a condurre una verifica automatica tramite AI."
    else
       echo "   ✅ Check 1 passed: Il numero di dighe estratte dai due metodi corrisponde."
    fi
