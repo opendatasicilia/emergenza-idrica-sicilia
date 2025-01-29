@@ -6,6 +6,7 @@
 # blog post qui https://opendatasicilia.github.io/emergenza-idrica-sicilia/aggiornamenti/
 #
 # To do:
+# - [ ] implementare la scelta del modello llm in fase di lancio (far scegliere 2 modelli)
 # - [ ] cambiare nome di compare_lists() in find_new_pdfs()
 # - [ ] Verificare che sia effettivamente questo script a gestire il testo del messaggio
 #       altrimenti, rimuovere la funzione generate_telegram_message()

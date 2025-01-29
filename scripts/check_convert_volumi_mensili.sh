@@ -7,6 +7,7 @@
 # sfruttando un LLM. 
 #
 # To do:
+# - [ ] implementare la scelta del modello llm in fase di lancio (far scegliere 2 modelli)
 # - [ ] implementare funzione per normalizzare il nome del file (vd. estrazione giornaliera)
 # - [ ] implementare gestione array (vd. estrazione giornaliera)
 # - [ ] gestire merging (aggiornamento storico) e aggiornamento latest

@@ -8,6 +8,7 @@
 # Istruzioni: Si consiglia di lanciare questo script tramite il launcher.sh
 #
 # To do:
+# - [ ] implementare la scelta del modello llm in fase di lancio (far scegliere 2 modelli)
 # - [ ] cambiare nome di compare_lists() in find_new_pdfs()
 # - [ ] rimuovere verifica requirements e lasciarla gestire al launcher
 # - [ ] migliorare il main creando funzioni
