@@ -13,23 +13,36 @@ script=$1
 max_attempts=$2
 
 # crea contatore tentativi
-n=0
+n=1
+
+echo "🚀 Eseguo lo script $script..."
 
 # esegui script max_attempts finchè non restituisce 0
-while [ $n -lt $max_attempts ]; do
+while [ $n -le $max_attempts ]; do
    # stampa il numero del tentativo
-   echo "🔁 Tentativo $n"
+   echo "🔁 Tentativo $n/$max_attempts"
+   echo ""
 
-   # esegui lo script ma non mostrare output
-   ./$script #> /dev/null
+   # esegui lo script
+   ./$script
 
    # se lo script è andato a buon fine, esci
    if [ $? -eq 0 ]; then
-      echo "✅ Lo script $script è stato eseguito con successo all'iterazione n. $n."
+      echo ""
+      echo "✅ Lo script è stato eseguito con successo all'iterazione n. $n."
       exit 0
    fi
 
-   echo "❌ Lo script n. $n non è andato a buon fine."
+   echo "❌ L'esecuzione n. $n non è andata a buon fine."
+
+   if [ $n -eq $max_attempts ]; then
+      echo ""
+      echo "❌ Numero massimo di tentativi raggiunto."
+      exit 1
+   fi
+
+   echo "⏳ Riprovo tra 10 secondi..."
+   sleep 5
 
    # incrementa il contatore
    n=$((n+1))
