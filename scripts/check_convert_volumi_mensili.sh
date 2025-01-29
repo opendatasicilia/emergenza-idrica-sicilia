@@ -1,9 +1,11 @@
 #!/bin/bash
 
-
-# Questo script apre il sito della Regione Sicilia e controlla la presenza di nuovi documenti PDF contenenti
-# dati sui volumi invasati dalle dighe siciliane con aggiornamento mensile. Se trova nuovi PDF, li scarica e li converte in CSV sfruttando un llm. 
-
+# ------------------------------------------------------------------------------------------#
+# Questo script apre il sito della Regione Sicilia e controlla la presenza di 
+# nuovi documenti PDF contenenti dati sui volumi invasati dalle dighe siciliane
+# con aggiornamento mensile. Se trova nuovi PDF, li scarica e li converte in CSV 
+# sfruttando un LLM. 
+#
 # To do:
 # - [ ] implementare funzione per normalizzare il nome del file (vd. estrazione giornaliera)
 # - [ ] implementare gestione array (vd. estrazione giornaliera)
@@ -15,6 +17,7 @@
 # - [ ] rimuovere requirements e lasciarli gestire al launcher
 # - [ ] migliorare il main creando funzioni
 # - [ ] staccare le funzioni in un file a parte
+# ------------------------------------------------------------------------------------------#
 
 
 set -e

@@ -1,8 +1,18 @@
 #!/bin/bash
 
-
-# Questo script apre il sito della Regione Sicilia e controlla la presenza di nuovi documenti PDF contenenti
-# dati sui volumi invasati dalle dighe siciliane con aggiornamento mensile. Se trova nuovi PDF, li scarica e li converte in CSV sfruttando un llm. 
+# ------------------------------------------------------------------------------------------#
+# Questo script apre il sito della Regione Sicilia e controlla la presenza di nuovi 
+# documenti PDF contenenti # dati sui volumi invasati dalle dighe siciliane con aggiornamento 
+# mensile. Se trova nuovi PDF, li scarica e li converte in CSV sfruttando un LLM. 
+#
+# Istruzioni: Si consiglia di lanciare questo script tramite il launcher.sh
+#
+# To do:
+# - [ ] cambiare nome di compare_lists() in find_new_pdfs()
+# - [ ] rimuovere verifica requirements e lasciarla gestire al launcher
+# - [ ] migliorare il main creando funzioni
+# - [ ] staccare le funzioni in un file a parte
+# ------------------------------------------------------------------------------------------#
 
 
 set -e
@@ -33,10 +43,6 @@ URL_CSV_ANAGRAFICA_DIGHE="https://raw.githubusercontent.com/opendatasicilia/emer
 AI_LIMITS=15
 AI_SLEEP=60
 
-# To do:
-# - [ ] rimuovere verifica requirements e lasciarla gestire al launcher
-# - [ ] migliorare il main creando funzioni
-# - [ ] staccare le funzioni in un file a parte
 
 #----------------- functions -----------------#
 check_limits() {

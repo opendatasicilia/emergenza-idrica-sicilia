@@ -1,9 +1,16 @@
 #!/bin/bash
 
-
-# Questo script apre il sito della Regione Sicilia e controlla la presenza di nuovi verbali PDF
-# dell'Osservatorio Distrettuale Permanente sugli Utilizzi Idrici, li riassume e pubblica blog post qui
-# https://opendatasicilia.github.io/emergenza-idrica-sicilia/aggiornamenti/
+# -------------------------------------------------------------------------------------------#
+# Questo script apre il sito della Regione Sicilia e controlla la presenza di nuovi verbali 
+# PDF dell'Osservatorio Distrettuale Permanente sugli Utilizzi Idrici, li riassume e pubblica
+# blog post qui https://opendatasicilia.github.io/emergenza-idrica-sicilia/aggiornamenti/
+#
+# To do:
+# - [ ] cambiare nome di compare_lists() in find_new_pdfs()
+# - [ ] Verificare che sia effettivamente questo script a gestire il testo del messaggio
+#       altrimenti, rimuovere la funzione generate_telegram_message()
+# - [ ] Capire se ha senso lanciare questo script con il launcher, in caso adeguare tutto.
+# -------------------------------------------------------------------------------------------#
 
 
 set -e
