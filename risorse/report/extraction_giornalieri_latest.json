@@ -5,8 +5,56 @@
   "similar_dams": [
     {
       "original_name": "Leone",
-      "similar_name": "PIANO DEL LEONE"
+      "new_name": "PIANO DEL LEONE"
+    },
+    {
+      "original_name": "Ogliastro (Don Sturzo)",
+      "new_name": null
+    },
+    {
+      "original_name": "Ragoleto",
+      "new_name": "RAGOLETO (Dirillo)"
+    },
+    {
+      "original_name": "Garcia (M. Francese)",
+      "new_name": "GARCIA (Mario Francese)"
+    },
+    {
+      "original_name": "Àncipa",
+      "new_name": "ANCIPA"
+    },
+    {
+      "original_name": "Castello",
+      "new_name": "CASTELLO"
+    },
+    {
+      "original_name": "Fanaco",
+      "new_name": "FANACO"
+    },
+    {
+      "original_name": "Piana Degli Albanesi",
+      "new_name": "PIANA DEGLI ALBANESI"
+    },
+    {
+      "original_name": "Poma",
+      "new_name": "POMA"
+    },
+    {
+      "original_name": "Prizzi",
+      "new_name": "PRIZZI"
+    },
+    {
+      "original_name": "Rosamarina",
+      "new_name": "ROSAMARINA"
+    },
+    {
+      "original_name": "Santa Rosalia",
+      "new_name": "SANTA ROSALIA"
+    },
+    {
+      "original_name": "Scanzano",
+      "new_name": "SCANZANO"
     }
   ],
-  "date": "2025-01-28"
+  "date": "2025-01-29"
 }
