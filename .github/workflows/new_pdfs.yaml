@@ -45,7 +45,8 @@ jobs:
           chmod +x ./scripts/check_convert_volumi_mensili.sh
           ./scripts/check_convert_volumi_mensili.sh
 
-      - name: Frictionless data validation
+      - name: Frictionless 1st data validation
+        # se questo step fallisce, l'intera action si blocca quindi non si invia il messaggio e non si committano i dati, nè si va avanti con la ricerca di dati giornalieri.
         run: frictionless validate datapackage.yaml
 
       - name: Send telegram message (new data)
@@ -69,6 +70,9 @@ jobs:
           export PATH=$PATH:~/bin
           chmod +x ./scripts/*.sh
           ./scripts/launcher.sh scripts/check_convert_volumi_giornalieri.sh 5
+
+      - name: Frictionless 2nd data validation
+        run: frictionless validate datapackage.yaml
 
       - name: Send telegram message (new volumi giornalieri)
         if: ${{ hashFiles('risorse/msgs/new_volumi_giornalieri.md') != '' }}
