@@ -282,55 +282,57 @@ for line in "${pdfs_array[@]}"; do
 
       # scarico il pdf e lo chiamo new_filename
       curl -skL "$URL_HOMEPAGE$line" -o "./risorse/pdf/grafici-mensili/$new_filename.pdf"
-      echo "⬇️ Scaricato $new_filename.pdf"
+      echo "⬇️  Scaricato $new_filename.pdf"
    fi
 
    # aggiungo il pdf alla lista dei pdf scaricati
    echo "$line" >> $PATH_PDFS_LIST
-
-   # incremento il contatore
-   n_pdf=$((n_pdf+1))
 done
 
 # if temp folder exists
 if [ -d "./risorse/tmp" ]; then
    # merge csv data (se ne esistono più di uno)
    # attenzione: può capitare che il csv latest contenga i valori relativi a più date
-   mlr --csv cat ./risorse/tmp/*.csv > $PATH_CSV_VOLUMI_MENSILI_LATEST
-   echo "🔄 Aggiornato $(basename $PATH_CSV_VOLUMI_MENSILI_LATEST)"
 
-   # add to storico
-   # order by date
-   # rimuovi righe senza volumi
-   # remove duplicates
-   mlr --csv cat $PATH_CSV_VOLUMI_MENSILI_LATEST $PATH_CSV_VOLUMI_MENSILI \
-   | mlr --csv put '$date_key = strptime($data, "%Y-%m-%d")' then \
-   sort -nr date_key then \
-   cut -x -f date_key then \
-   filter -S '$volume != ""' then \
-   uniq -a  > all.csv
-   mv all.csv $PATH_CSV_VOLUMI_MENSILI
-   echo "🔄 Aggiornato storico $(basename $PATH_CSV_VOLUMI_MENSILI)"
+   # controllo se ci sono csv
+   if [ -f ./risorse/tmp/*.csv ]; then
+      mlr --csv cat ./risorse/tmp/*.csv > $PATH_CSV_VOLUMI_MENSILI_LATEST
+      echo ""
+      echo "🔄 Aggiornato $(basename $PATH_CSV_VOLUMI_MENSILI_LATEST)"
 
-   # check 3
-   n_cod_name_concatenated=$(< $PATH_CSV_VOLUMI_MENSILI mlr --csv --headerless-csv-output put '$concatenated = $cod . $diga' then cut -f concatenated then uniq -a | wc -l)
-   n_cod=$(< $PATH_CSV_VOLUMI_MENSILI mlr --csv --headerless-csv-output cut -f cod then uniq -a | wc -l)
+      # add to storico
+      # order by date
+      # rimuovi righe senza volumi
+      # remove duplicates
+      mlr --csv cat $PATH_CSV_VOLUMI_MENSILI_LATEST $PATH_CSV_VOLUMI_MENSILI \
+      | mlr --csv put '$date_key = strptime($data, "%Y-%m-%d")' then \
+      sort -nr date_key then \
+      cut -x -f date_key then \
+      filter -S '$volume != ""' then \
+      uniq -a  > all.csv
+      mv all.csv $PATH_CSV_VOLUMI_MENSILI
+      echo "🔄 Aggiornato storico $(basename $PATH_CSV_VOLUMI_MENSILI)"
 
-   # check if n_cod_name_concatenated and n_cod are equal, if not, display an error message and exit
-   if [ $n_cod_name_concatenated -ne $n_cod ]; then
-      echo "❌ Check 3 failed: il numero di codici univoci non corrisponde al numero di codici concatenati con i nomi delle dighe!"
-      echo "Questo vuol dire che i nomi delle dighe NON sono stati assegnati correttamente ai codici secondo l'anagrafica."
-      echo "È necessaria una verifica manuale. Revisionare il file di dati."
-      exit 1
-   else
-      echo "✅ Check 3 passed: I nomi delle dighe sono stati assegnati correttamente ai codici secondo l'anagrafica"
+      # check 3
+      n_cod_name_concatenated=$(< $PATH_CSV_VOLUMI_MENSILI mlr --csv --headerless-csv-output put '$concatenated = $cod . $diga' then cut -f concatenated then uniq -a | wc -l)
+      n_cod=$(< $PATH_CSV_VOLUMI_MENSILI mlr --csv --headerless-csv-output cut -f cod then uniq -a | wc -l)
+
+      # check if n_cod_name_concatenated and n_cod are equal, if not, display an error message and exit
+      if [ $n_cod_name_concatenated -ne $n_cod ]; then
+         echo "❌ Check 3 failed: il numero di codici univoci non corrisponde al numero di codici concatenati con i nomi delle dighe!"
+         echo "Questo vuol dire che i nomi delle dighe NON sono stati assegnati correttamente ai codici secondo l'anagrafica."
+         echo "È necessaria una verifica manuale. Revisionare il file di dati."
+         exit 1
+      else
+         echo "✅ Check 3 passed: I nomi delle dighe sono stati assegnati correttamente ai codici secondo l'anagrafica"
+      fi
+
+      # temp folder
+      rm -r "./risorse/tmp"
    fi
-
-   # temp folder
-   rm -r "./risorse/tmp"
 fi
 
-echo "📍Fine, bye!"
+echo "📍 Fine, bye!"
 
 # multisort
 # mlr --csv sort -nr volume -f cod $PATH_CSV_VOLUMI_MENSILI_LATEST
