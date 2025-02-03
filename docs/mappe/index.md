@@ -10,7 +10,7 @@ description: Mappe e Tabelle by @opendatasicilia
 .md-typeset .grid {grid-gap: .4rem;   display: grid; grid-template-columns: repeat(auto-fit,minmax(min(100%,12rem),1fr));  margin: 1em 0;     font-size: .7rem;}
 </style>
 
-# Mappe
+# Mappe e Tabelle
 
 <div class="grid cards" markdown>
 
