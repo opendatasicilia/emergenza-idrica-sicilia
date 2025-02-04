@@ -1,20 +1,22 @@
 {
   "valid": true,
-  "missing_dams": [],
+  "missing_dams": [
+    "Ogliastro (Don Sturzo)"
+  ],
   "different_volms": [],
   "similar_dams": [
     {
-      "original_name": "Leone",
-      "new_name": "PIANO DEL LEONE"
+      "file1": "Leone",
+      "file2": "PIANO DEL LEONE"
     },
     {
-      "original_name": "Garcia (M. Francese)",
-      "new_name": "GARCIA (Mario Francese)"
+      "file1": "Garcia (M. Francese)",
+      "file2": "GARCIA (Mario Francese)"
     },
     {
-      "original_name": "Ragoleto",
-      "new_name": "RAGOLETO (Dirillo)"
+      "file1": "Ragoleto",
+      "file2": "RAGOLETO (Dirillo)"
     }
   ],
-  "date": "2025-01-31"
+  "date": "2025-02-04"
 }
