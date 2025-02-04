@@ -17,7 +17,7 @@
 
 
 set -e
-# set -x
+set -x
 
 
 #-----------------requirements-----------------#
@@ -126,7 +126,7 @@ echo "🔎 Cerco nuovi dati sui volumi giornalieri..."
 url_page_with_list_1=$(curl -skL $URL | scrape -e "#it-block-field-blocknodegeneric-pagefield-p-body h3:last-of-type a:last-of-type" | xq -r '.a."@href"')
 
 # dalla pagina con l'elenco dei mesi seleziono il link all'ultimo mese
-url_page_with_list_2=$(curl -skL $url_page_with_list_1 | scrape -e "#it-block-field-blocknodegeneric-pagefield-p-body a:last-of-type" | xq -r '.a."@href"')
+url_page_with_list_2=$(curl -skL $url_page_with_list_1 | scrape -be "#it-block-field-blocknodegeneric-pagefield-p-body a:last-of-type" | xq -r '.html.body.a[-1]."@href"')
 
 # dalla pagina con l'elenco dei pdf dell'ultimo mese seleziono i link ai pdf
 pdfs_list=$(curl -skL "$url_page_with_list_2" | scrape -be "a" | xq -r '.html.body.a[]."@href"' | grep ".pdf")
