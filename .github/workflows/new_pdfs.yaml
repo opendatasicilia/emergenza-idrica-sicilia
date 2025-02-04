@@ -17,6 +17,11 @@ jobs:
           git config user.name ODS[bot]
           git config user.email actions@users.noreply.github.com
 
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.x
+          
       - name: Setup uv
         run: |
           curl -LsSf https://astral.sh/uv/install.sh | sh
