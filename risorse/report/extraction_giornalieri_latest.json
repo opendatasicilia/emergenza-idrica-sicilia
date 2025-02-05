@@ -1,8 +1,6 @@
 {
   "valid": true,
-  "missing_dams": [
-    "Ogliastro (Don Sturzo)"
-  ],
+  "missing_dams": [],
   "different_volms": [],
   "similar_dams": [
     {
@@ -10,5 +8,5 @@
       "file2": "PIANO DEL LEONE"
     }
   ],
-  "date": "2025-02-04"
+  "date": "2025-02-05"
 }
