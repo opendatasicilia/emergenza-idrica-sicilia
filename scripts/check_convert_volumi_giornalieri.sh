@@ -239,7 +239,7 @@ for line in "${pdfs_array[@]}"; do
    prompt="Ti inserisco di seguito due csv. Forse uno di questi (il secondo) è probabile che abbia delle dighe in più che nell'altro (primo) non sono censite. Fammi un piccolo report di validazione sintetico in json. Il json deve contenere la key 'valid' che può contenere il valore true o false. Se tra i due file csv ci sono discrepanze nel numero di righe o discrepanze nel valore dei volumi allora il report è invalido e la key valid deve contenere il valore false. Nel report includi pure i dettagli sulle dighe mancanti nel primo file e sulle discrepanze dei valori dei volumi. Includi pure una sezione dedicata alla somiglianza dei nomi delle dighe: questo non inficia la validità ( esempio: Se non ci sono discrepanze nel numero di dighe, non ci sono discrepanze sui valori dei volumi, ci sono alcuni nomi di dighe simili, allora il report è valido). Fai attenzione alle dighe che hanno nomi simili: ad esempio 'leone' e 'piano del leone' indicano la stessa diga. Il file json deve avere le key: valid, missing_dams, different_volms, similar_dams. Il primo csv (prima estrazione) è il seguente: $(cat ./risorse/tmp/$new_filename.csv). Il secondo csv (seconda estrazione) è il seguente: $(cat ./risorse/tmp/2_$new_filename.csv)"
 
    check_limits
-   llm_response=$(llm -m gemini-2.0-flash-thinking-exp-01-21 \
+   llm_response=$(llm -m gemini-2.0-flash \
    -s "$system_prompt" \
    "$prompt" \
    -o json_object 1) \
