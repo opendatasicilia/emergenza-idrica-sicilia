@@ -4,9 +4,13 @@
   "different_volms": [],
   "similar_dams": [
     {
-      "file1": "Leone",
-      "file2": "PIANO DEL LEONE"
+      "diga1": "Leone",
+      "diga2": "Piano Del Leone"
+    },
+    {
+      "diga1": "Garcia (M. Francese)",
+      "diga2": "GARCIA"
     }
   ],
-  "date": "2025-02-05"
+  "date": "2025-02-11"
 }

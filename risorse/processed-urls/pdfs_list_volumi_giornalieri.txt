@@ -23,3 +23,9 @@
 /sites/default/files/2025-02/2025-02-3-Volume%20Giornaliero%20potabile.pdf
 /sites/default/files/2025-02/2025-02-4-Volume%20Giornaliero%20potabile.pdf
 /sites/default/files/2025-02/2025-02-5-Volume%20Giornaliero%20potabile.pdf
+/sites/default/files/2025-02/2025-02-6-Volume%20Giornaliero%20potabile.pdf
+/sites/default/files/2025-02/2025-02-7-Volume%20Giornaliero%20potabile.pdf
+/sites/default/files/2025-02/2025-02-8-Volume%20Giornaliero%20potabile.pdf
+/sites/default/files/2025-02/2025-02-9-Volume%20Giornaliero%20potabile.pdf
+/sites/default/files/2025-02/2025-02-10-Volume%20Giornaliero%20potabile.pdf
+/sites/default/files/2025-02/2025-02-11-Volume%20Giornaliero%20potabile.pdf
