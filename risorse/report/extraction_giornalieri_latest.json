@@ -1,7 +1,7 @@
 {
   "valid": true,
   "missing_dams": [],
-  "different_volms": [],
+  "different_volms": {},
   "similar_dams": [
     {
       "diga1": "Leone",
@@ -9,8 +9,8 @@
     },
     {
       "diga1": "Garcia (M. Francese)",
-      "diga2": "GARCIA"
+      "diga2": "Garcia"
     }
   ],
-  "date": "2025-02-12"
+  "date": "2025-02-13"
 }
