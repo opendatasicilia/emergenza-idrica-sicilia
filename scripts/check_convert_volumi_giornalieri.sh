@@ -126,7 +126,9 @@ echo "🔎 Cerco nuovi dati sui volumi giornalieri..."
 url_page_with_list_1=$(curl -skL $URL | scrape -e "#it-block-field-blocknodegeneric-pagefield-p-body h3:last-of-type a:last-of-type" | xq -r '.a."@href"')
 
 # dalla pagina con l'elenco dei mesi seleziono il link all'ultimo mese
-url_page_with_list_2=$(curl -skL $url_page_with_list_1 | scrape -be "#it-block-field-blocknodegeneric-pagefield-p-body a:last-of-type" | xq -r '.html.body.a[-1]."@href"')
+#url_page_with_list_2=$(curl -skL $url_page_with_list_1 | scrape -be "#it-block-field-blocknodegeneric-pagefield-p-body a:last-of-type" | xq -r '.html.body.a[-1]."@href"')
+
+url_page_with_list_2="https://www.regione.sicilia.it/istituzioni/regione/strutture-regionali/presidenza-regione/autorita-bacino-distretto-idrografico-sicilia/febbraio-0"
 
 # dalla pagina con l'elenco dei pdf dell'ultimo mese seleziono i link ai pdf
 pdfs_list=$(curl -skL "$url_page_with_list_2" | scrape -be "a" | xq -r '.html.body.a[]."@href"' | grep ".pdf")
@@ -234,9 +236,9 @@ for line in "${pdfs_array[@]}"; do
    # COMPARE 1st and 2nd extraction
    echo "   🔍 Confronto i due file csv e individuo errori di estrazione..."
 
-   system_prompt="Il tuo compito è quello di confrontare due file csv e comprenderne le differenze"
+   system_prompt="Il tuo compito è quello di confrontare due file CSV contententi dati relativi a dighe e volumi. Devi comprenderne le differenze. Se due dighe hanno nomi simili ma diversi, non è un problema. Concentrati sul confronto dei valori numerici."
 
-   prompt="Ti inserisco di seguito due csv. Forse uno di questi (il secondo) è probabile che abbia delle dighe in più che nell'altro (primo) non sono censite. Fammi un piccolo report di validazione sintetico in json. Il json deve contenere la key 'valid' che può contenere il valore true o false. Il json deve contenere anche una chiave 'summary' in cui spieghi sinteticamente e in modo discorsivo perchè il confronto è fallito. Se tra i due file csv ci sono discrepanze nel numero di righe o discrepanze nel valore dei volumi allora il report è invalido e la key valid deve contenere il valore false. Nel report includi pure i dettagli sulle dighe mancanti nel primo file e sulle discrepanze dei valori dei volumi. Includi pure una sezione dedicata alla somiglianza dei nomi delle dighe: questo non inficia la validità ( esempio: Se non ci sono discrepanze nel numero di dighe, non ci sono discrepanze sui valori dei volumi, ci sono alcuni nomi di dighe simili, allora il report è valido). Fai attenzione alle dighe che hanno nomi simili: ad esempio 'leone' e 'piano del leone' indicano la stessa diga e non è un errore il fatto che abbiano nomi diversi ma simili. Il file json deve avere le key: valid, missing_dams, different_volms, similar_dams. Il primo csv (prima estrazione) è il seguente: $(cat ./risorse/tmp/$new_filename.csv). Il secondo csv (seconda estrazione) è il seguente: $(cat ./risorse/tmp/2_$new_filename.csv)"
+   prompt="Ti inserisco di seguito due CSV. Il secondo CSV è probabile che abbia delle dighe in più nel primo file non sono censite. Fammi un piccolo report di validazione sintetico in json con due chiavi. Il json deve contenere le key 'valid' (booleana) e 'summary'. La key 'summary' deve contenere il motivo discorsivo del perchè il confronto è fallito (se è fallito). Se tra i due file csv ci sono discrepanze nel numero di righe o discrepanze nel valore dei volumi allora il report è invalido e la key 'valid' deve contenere il valore false. Nel report includi pure i dettagli sulle eventuali dighe mancanti nel primo file e sulle discrepanze dei valori dei volumi. Includi pure una sezione dedicata alla somiglianza dei nomi delle dighe. Se due dighe presentano nomi diversi ma simili, non è un errore. La presenza di nomi diversi ma simili non inficia la validità ( esempio: Se non ci sono discrepanze nel numero di dighe, non ci sono discrepanze sui valori dei volumi, ci sono alcuni nomi di dighe simili, allora il report è valido). Di seguito ti riporto esempi di dighe con nomi simili: 'leone' e 'piano del leone' indicano la stessa diga e non è un errore il fatto che abbiano nomi diversi ma simili. Il primo csv (prima estrazione) è il seguente: $(cat ./risorse/tmp/$new_filename.csv). Il secondo csv (seconda estrazione) è il seguente: $(cat ./risorse/tmp/2_$new_filename.csv)"
 
    check_limits
    llm_response=$(llm -m gemini-2.0-flash \
