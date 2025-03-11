@@ -1,16 +1,27 @@
 {
   "valid": true,
-  "missing_dams": [],
-  "different_volms": {},
-  "similar_dams": [
-    {
-      "diga1": "Leone",
-      "diga2": "Piano del Leone"
-    },
-    {
-      "diga1": "Garcia (M. Francese)",
-      "diga2": "Garcia"
-    }
-  ],
-  "date": "2025-02-13"
+  "summary": "The comparison between the two CSV files is valid. The number of dams is the same in both files. There are no discrepancies in the volume values. Some dam names are slightly different (e.g., 'Leone' vs 'Piano del Leone', 'Garcia (M. Francese)' vs 'GARCIA', 'Àncipa' vs 'ANCIPA', 'Piana Degli Albanesi' vs 'PIANA DEGLI ALBANESI') but this is acceptable.",
+  "details": {
+    "missing_dams_in_first_file": [],
+    "volume_discrepancies": [],
+    "similar_dam_names": [
+      {
+        "first_file": "Àncipa",
+        "second_file": "ANCIPA"
+      },
+      {
+        "first_file": "Garcia (M. Francese)",
+        "second_file": "GARCIA"
+      },
+      {
+        "first_file": "Piana Degli Albanesi",
+        "second_file": "PIANA DEGLI ALBANESI"
+      },
+      {
+        "first_file": "Leone",
+        "second_file": "PIANO DEL LEONE"
+      }
+    ]
+  },
+  "date": "2025-03-11"
 }
