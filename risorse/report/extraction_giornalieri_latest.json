@@ -1,21 +1,5 @@
 {
   "valid": true,
-  "summary": "The comparison is valid. Both CSV files have the same number of dams and the volume values match. There are some dams with similar names like 'Leone' and 'Piano del Leone', and 'Garcia (M. Francese)' and 'Garcia' but this is not considered an error. 'Àncipa' and 'ANCIPA' are considered the same dam.",
-  "missing_dams": [],
-  "volume_discrepancies": [],
-  "similar_names": [
-    {
-      "file1": "Garcia (M. Francese)",
-      "file2": "GARCIA"
-    },
-    {
-      "file1": "Leone",
-      "file2": "PIANO DEL LEONE"
-    },
-    {
-      "file1": "Àncipa",
-      "file2": "ANCIPA"
-    }
-  ],
-  "date": "2025-03-14"
+  "summary": "The comparison is valid. The two CSV files have the same number of rows (12). There are no discrepancies in the volume values. Some dam names are similar but not identical (e.g., 'Leone' vs 'Piano del Leone', 'Garcia (M. Francese)' vs 'GARCIA'). These similarities do not invalidate the report.",
+  "date": "2025-03-17"
 }
