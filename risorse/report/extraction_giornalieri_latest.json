@@ -1,25 +1,5 @@
 {
   "valid": true,
-  "summary": "The validation was successful. Both CSV files have the same number of rows (12). The values for the volume_autorizzato, volume, and volume_utile columns are identical across corresponding rows in both files. There are some differences in the 'diga' names, such as 'Àncipa' vs 'ANCIPA', 'Garcia (M. Francese)' vs 'GARCIA', 'Piana Degli Albanesi' vs 'PIANA DEGLI ALBANESI', 'Leone' vs 'PIANO DEL LEONE'. However, these are considered acceptable variations and do not invalidate the report, since it seems that refer to the same 'diga'.",
-  "missing_dams": [],
-  "volume_discrepancies": [],
-  "similar_dam_names": [
-    {
-      "file1": "Àncipa",
-      "file2": "ANCIPA"
-    },
-    {
-      "file1": "Garcia (M. Francese)",
-      "file2": "GARCIA"
-    },
-    {
-      "file1": "Piana Degli Albanesi",
-      "file2": "PIANA DEGLI ALBANESI"
-    },
-    {
-      "file1": "Leone",
-      "file2": "PIANO DEL LEONE"
-    }
-  ],
-  "date": "2025-03-25"
+  "summary": "The validation was successful. Both CSV files contain the same number of rows (dams), and the values for 'volume_autorizzato', 'volume', and 'volume_utile' are identical across corresponding dams in both files. There are minor differences in dam names (e.g., 'Garcia (M. Francese)' vs. 'GARCIA', 'Leone' vs. 'PIANO DEL LEONE') but these do not indicate a data discrepancy.",
+  "date": "2025-03-26"
 }
