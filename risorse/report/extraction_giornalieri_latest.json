@@ -1,5 +1,5 @@
 {
   "valid": true,
-  "summary": "The two CSV files are valid. They have the same number of rows and the volume values match. Some dam names are similar but not identical, such as 'Leone' and 'Piano del Leone', and 'Garcia (M. Francese)' and 'Garcia', which is acceptable.",
-  "date": "2025-03-27"
+  "summary": "The validation was successful. The number of dams is the same in both files. The volumes are consistent across the two files. Some dam names are slightly different (e.g., 'Leone' vs. 'Piano del Leone' and 'Garcia (M. Francese)' vs 'GARCIA'). These discrepancies in names are considered acceptable as they might refer to the same dam. The volume values are consistent.",
+  "date": "2025-03-28"
 }
