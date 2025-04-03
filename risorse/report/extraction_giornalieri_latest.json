@@ -1,5 +1,5 @@
 {
   "valid": true,
-  "summary": "The validation was successful. The number of dams is the same in both files. The volumes are consistent across the two files. Some dam names are slightly different (e.g., 'Leone' vs. 'Piano del Leone' and 'Garcia (M. Francese)' vs 'GARCIA'). These discrepancies in names are considered acceptable as they might refer to the same dam. The volume values are consistent.",
-  "date": "2025-03-28"
+  "summary": "The comparison is valid. The number of dams is the same in both files. There are no discrepancies in the numerical values of 'quota_autorizzata', 'volume_autorizzato', 'quota', 'volume', and 'volume_utile'. Some dam names are slightly different (e.g., 'Leone' vs. 'Piano del Leone', 'Garcia (M. Francese)' vs. 'GARCIA'), but these are considered similar and do not invalidate the comparison. All volume values are consistent.",
+  "date": "2025-04-03"
 }

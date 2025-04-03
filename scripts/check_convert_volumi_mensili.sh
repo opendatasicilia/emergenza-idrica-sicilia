@@ -117,7 +117,7 @@ normalize_filename() {
    local old_name=$1
    local format=$2
 
-   llm_response=$(echo "$old_name" | llm -m gemini-1.5-flash-latest \
+   llm_response=$(echo "$old_name" | llm -m gemini-2.0-flash-lite \
    -s "Converti il nome di questo file nel formato '$format' tutto minuscolo. Restituisci in output una sola riga senza estensione") \
    || { echo "❌ Errore durante l'esecuzione di llm (normalizzazione nome file)"; return 1; }
 
@@ -165,7 +165,7 @@ for line in "${pdfs_array[@]}"; do
    system_prompt="converti il nome di questo file pdf nel formato volumi_YYYY-MM (senza estensione) se si tratta di una tabella, oppure grafici_YYYY-MM (senza estensione) se invece si tratta di grafici. Restituisci in output una sola riga"
 
    #check_limits
-   llm_response=$(echo "$line" | llm -m gemini-1.5-flash-latest \
+   llm_response=$(echo "$line" | llm -m gemini-2.0-flash-lite \
    -s "$system_prompt") \
    || { echo "❌ Errore durante l'esecuzione di llm (operazione di conversione nome pdf)"; exit 1; }
    #n_ai=$((n_ai+1))
@@ -191,7 +191,7 @@ for line in "${pdfs_array[@]}"; do
       check_limits
       llm_response=$(cat risorse/sicilia_dighe_anagrafica.csv | \
       llm -x \
-      -m gemini-2.0-flash-exp \
+      -m gemini-2.0-flash \
       -s "$system_prompt" \
       -a "./risorse/pdf/volumi-mensili/$new_filename.pdf" \
       -o temperature 0.1) \
@@ -214,7 +214,7 @@ for line in "${pdfs_array[@]}"; do
 
       check_limits
       llm_response=$(llm -x \
-      -m gemini-2.0-flash-exp \
+      -m gemini-2.0-flash \
       -s "$system_prompt" \
       "$prompt" \
       -a "./risorse/pdf/volumi-mensili/$new_filename.pdf" \
@@ -247,7 +247,7 @@ for line in "${pdfs_array[@]}"; do
 
       #check_limits
       llm_response=$(llm -x \
-      -m gemini-1.5-flash-latest \
+      -m gemini-2.0-flash \
       -s "$system_prompt" \
       "$prompt" \
       -o json_object 1 \

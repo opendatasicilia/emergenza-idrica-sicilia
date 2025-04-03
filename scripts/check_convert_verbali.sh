@@ -73,9 +73,9 @@ generate_summary() {
    local output_filename=$3
 
    # Generate the blog post using the template and the PDF
-   system_prompt="Hai il compito di generare un blog post a partire da un verbale in pdf allegato. Nel prompt trovi la struttura del blog post in markdown e frontmatter yaml che devi rispettare e compilare. Inserisci la data del verbale e una brevissima descrizione del contenuto e poi una descrizione più esaustiva. Se nel verbale vengono citati nomi di invasi, dighe o comuni, riportali nei tuoi riassunti. Se nel verbale sono presenti dettagli relativi ai prelievi o agli scenari futuri, includili nel tuo riassunto. Se nel verbale sono presenti punti all'ordine del giorno, includili nel tuo riassunto come elenco numerato e annidato all'interno di un titolo (es. ## Punti allo'ordine del giorno). Se necessario, includi una struttura markdown nel blog post per formattare titoli, sottotitoli, sezioni, elenchi puntati. Effettua lo styling del testo con grassetto o corsivo in sintassi markdown se necessario. Evidenzia in grassetto le date o altri dati importanti (riduzioni, volumi, quote, ecc). Ricorda di aggiungere il tag 'osservatorio' e la categoria 'generale' al frontmatter yaml. La tua risposta deve cominciare con il frontmatter in yaml e il contenuto del blog post, non voglio messaggi introduttivi da parte tua."
+   system_prompt="Hai il compito di generare un blog post a partire da un verbale in pdf allegato. Nel prompt trovi la struttura del blog post in markdown e frontmatter yaml che devi rispettare e compilare. Inserisci la data del verbale e una brevissima descrizione del contenuto e poi una descrizione più esaustiva. Usa uno stile di scrittura che produca un copy molto leggibile, scorrevole e piacevole. Assicurati di usare uno stile di scrittura discorsivo e non troppo schematico. Assicurati di aggiungere le adeguate intestazioni con la sintassi markdown per strutturare il contenuto del post. Se nel verbale vengono citati nomi di invasi, dighe o comuni, riportali nei tuoi riassunti. Se nel verbale sono presenti dettagli relativi ai prelievi o agli scenari futuri, includili nel tuo riassunto. Se nel verbale sono presenti punti all'ordine del giorno, includili nel tuo riassunto. Includi una struttura markdown nel blog post per formattare titoli, sottotitoli, sezioni, elenchi puntati. Effettua lo styling del testo con grassetto o corsivo in sintassi markdown ove necessario. Evidenzia in grassetto le date o altri dati importanti (riduzioni, volumi, quote, ecc). Assicurati di aggiungere il tag 'osservatorio' e la categoria 'generale' al frontmatter yaml. Assicurati di inserire il frontmatter in yaml come indicato nel prompt. Per favore assicurati di includere il tuo output dentro un code block che io posso estrarre. Grazie!"
 
-   llm_response=$(cat "$template_md" | llm -m gemini-1.5-flash-latest \
+   llm_response=$(cat "$template_md" | llm -x -m gemini-2.0-flash-thinking-exp-01-21 \
    -s "$system_prompt" \
    -a "$local_path_pdf") \
    || { echo "❌ Errore durante l'esecuzione di llm (generazione blog post)"; exit 1; }
@@ -94,7 +94,7 @@ normalize_filename() {
    local old_name=$1
    local format=$2
 
-   llm_response=$(echo "$old_name" | llm -m gemini-1.5-flash-latest \
+   llm_response=$(echo "$old_name" | llm -m gemini-2.0-flash-lite \
    -s "Converti il nome di questo file nel formato '$format' tutto minuscolo. Restituisci in output una sola riga senza estensione") \
    || { echo "❌ Errore durante l'esecuzione di llm (normalizzazione nome file)"; exit 1; }
 
