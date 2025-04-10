@@ -1,5 +1,21 @@
 {
   "valid": true,
-  "summary": "The comparison is valid. The number of dams is the same in both files. There are no discrepancies in the numerical values of 'quota_autorizzata', 'volume_autorizzato', 'quota', 'volume', and 'volume_utile'. Some dam names are slightly different (e.g., 'Leone' vs. 'Piano del Leone', 'Garcia (M. Francese)' vs. 'GARCIA'), but these are considered similar and do not invalidate the comparison. All volume values are consistent.",
-  "date": "2025-04-03"
+  "summary": "The comparison is valid. The number of dams is the same in both files. There are no discrepancies in the volume values. Some dam names are slightly different, such as 'Garcia (M. Francese)' vs 'GARCIA' and 'Leone' vs 'PIANO DEL LEONE', and 'PIANA DEGLI ALBANESI' vs 'Piana Degli Albanesi', but these are considered acceptable variations.",
+  "missing_dams": [],
+  "volume_discrepancies": [],
+  "similar_names": [
+    {
+      "file1": "Garcia (M. Francese)",
+      "file2": "GARCIA"
+    },
+    {
+      "file1": "Leone",
+      "file2": "PIANO DEL LEONE"
+    },
+    {
+      "file1": "Piana Degli Albanesi",
+      "file2": "PIANA DEGLI ALBANESI"
+    }
+  ],
+  "date": "2025-04-10"
 }
