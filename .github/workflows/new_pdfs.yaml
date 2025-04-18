@@ -47,8 +47,7 @@ jobs:
       - name: Download and convert data (volumi invasati mensilmente) from PDF
         run: |
           export PATH=$PATH:~/bin
-          chmod +x ./scripts/check_convert_volumi_mensili.sh
-          ./scripts/launcher.sh ./scripts/check_convert_volumi_mensili.sh 5
+          chmod +x ./scripts/*.sh && ./scripts/check_convert_volumi_mensili.sh
 
       - name: Frictionless 1st data validation
         # se questo step fallisce, l'intera action si blocca quindi non si invia il messaggio e non si committano i dati, nè si va avanti con la ricerca di dati giornalieri.
@@ -73,8 +72,7 @@ jobs:
       - name: Download and convert data (volumi invasati giornalieri) from PDF
         run: |
           export PATH=$PATH:~/bin
-          chmod +x ./scripts/*.sh
-          ./scripts/launcher.sh scripts/check_convert_volumi_giornalieri.sh 5
+          chmod +x ./scripts/*.sh && ./scripts/check_convert_volumi_giornalieri.sh
 
       - name: Frictionless 2nd data validation
         run: frictionless validate datapackage.yaml
