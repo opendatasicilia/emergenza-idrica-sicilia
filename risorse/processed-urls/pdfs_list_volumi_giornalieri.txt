@@ -90,3 +90,7 @@
 /sites/default/files/2025-04/2025-04-16-Volume%20Giornaliero%20Potabile.pdf
 /sites/default/files/2025-04/2025-04-17-Volume%20Giornaliero%20Potabile.pdf
 /sites/default/files/2025-04/Volumi%20del%2018.04.25.pdf
+/sites/default/files/2025-04/2025-04-19-Volume%20Giornaliero%20Potabile.pdf
+/sites/default/files/2025-04/2025-04-20-Volume%20Giornaliero%20Potabile.pdf
+/sites/default/files/2025-04/2025-04-21-Volume%20Giornaliero%20Potabile.pdf
+/sites/default/files/2025-04/2025-04-22-Volume%20Giornaliero%20Potabile.pdf
