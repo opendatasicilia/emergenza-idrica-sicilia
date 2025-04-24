@@ -192,8 +192,8 @@ try_extraction() {
          rm ./risorse/tmp/2_$new_filename.csv
 
          # creo messaggio da inviare su telegram
-         mkdir -p ./risorse/msgs
-         generate_telegram_message $URL_HOMEPAGE$line $PATH_MSG_TELEGRAM
+         # mkdir -p ./risorse/msgs
+         # generate_telegram_message $URL_HOMEPAGE$line $PATH_MSG_TELEGRAM
 
          # copio il csv generato nella cartella dei volumi giornalieri
          mkdir -p ./risorse/volumi-giornalieri
