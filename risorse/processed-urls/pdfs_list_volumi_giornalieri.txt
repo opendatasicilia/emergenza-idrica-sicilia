@@ -101,3 +101,4 @@
 /sites/default/files/2025-04/2025-04-27-Volume%20Giornaliero%20Potabile.pdf
 /sites/default/files/2025-04/2025-04-28-Volume%20Giornaliero%20Potabile.pdf
 /sites/default/files/2025-04/2025-04-29-Volume%20Giornaliero%20Potabile.pdf
+/sites/default/files/2025-04/2025-04-30-Volume%20Giornaliero%20Potabile.pdf
