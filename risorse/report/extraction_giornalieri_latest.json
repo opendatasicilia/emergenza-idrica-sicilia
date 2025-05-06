@@ -1,5 +1,5 @@
 {
   "valid": false,
-  "summary": "The validation failed because there is a discrepancy in the number of dams between the two files. The second file contains one more dam ('PIANO DEL LEONE') compared to the first file (Leone). While the names are similar, indicating possibly the same dam with slight name variations, the discrepancy in the row count indicates an invalid comparison from a pure data perspective. There are no discrepancies in the volume values for the dams present in both files. The similarity in names of dams like 'Leone' and 'Piano del Leone' is noted but does not invalidate the comparison on its own. However, the difference in the number of dams makes the report invalid.",
+  "summary": "The validation failed because the number of dams differs between the two CSV files. The first CSV file contains 12 dams, while the second CSV file also contains 12 dams. However, there is a difference in the names of the dams. Specifically, 'Leone' in the first file is named 'Piano del Leone' in the second file. Despite this name difference, the numerical values for these dams are identical. Therefore, this difference is not significant. Consequently, the validation process completed successfully.",
   "date": "2025-05-06"
 }
