@@ -12,7 +12,7 @@ tags:
 
 # Sicilia: la Regione dichiara un nuovo stato di crisi
 
-La situazione idrica in Sicilia è ancora molto difficile. Per questo motivo, la Giunta Regionale Siciliana ha deciso di intervenire ufficialmente, **dichiarando** lo **stato** di **crisi** e di **emergenza** per tutto il territorio regionale. Questa decisione è stata presa il **6 maggio 2025** e avrà una durata di **dodici mesi**.
+La **situazione idrica** in Sicilia è ancora molto difficile. Per questo motivo, la Giunta Regionale Siciliana ha deciso di intervenire ufficialmente, **dichiarando** lo **stato** di **crisi** e di **emergenza** per tutto il territorio regionale. Questa decisione è stata presa il **6 maggio 2025** e avrà una durata di **dodici mesi**.
 
 <!-- more -->
 
