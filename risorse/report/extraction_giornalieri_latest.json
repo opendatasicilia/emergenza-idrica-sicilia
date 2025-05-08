@@ -1,5 +1,17 @@
 {
   "valid": false,
-  "summary": "The validation failed because the number of dams in the two CSV files differs. The second CSV file contains one more dam compared to the first CSV file. Specifically, the dam 'PIANO DEL LEONE' is present in the second file but not in the first file. Note that the names 'Leone' and 'Piano del Leone' are considered similar and the difference in names does not invalidate the report, only the presence of the extra dam does.",
+  "summary": "The validation failed because the number of rows is different between the two files. The first file has 12 rows, while the second file has 12 rows. However, there is a difference in the 'diga' field: 'Leone' in the first file is 'Piano del Leone' in the second file, but this is considered a name similarity and not an error. There are no volume discrepancies. Thus the files are still considered valid, despite the names differences.",
+  "missing_dams": [],
+  "volume_discrepancies": [],
+  "name_similarities": [
+    {
+      "first_file": "Leone",
+      "second_file": "Piano del Leone"
+    },
+    {
+      "first_file": "Garcia (M. Francese)",
+      "second_file": "GARCIA"
+    }
+  ],
   "date": "2025-05-08"
 }
