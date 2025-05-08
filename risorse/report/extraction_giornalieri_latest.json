@@ -1,15 +1,5 @@
 {
   "valid": false,
-  "summary": "Il confronto tra i due file CSV è fallito a causa di differenze nel numero di righe e nella corrispondenza dei nomi delle dighe. Il secondo file CSV contiene una diga in più rispetto al primo file CSV ('Piano del Leone'), ed una diga nel primo file ('Leone') ha un nome simile ma non identico. Non ci sono discrepanze sui valori dei volumi per le dighe comuni ad entrambi i file. Le differenze nel case dei nomi delle dighe sono irrilevanti.",
-  "missing_dams": [
-    "Piano del Leone"
-  ],
-  "volume_discrepancies": [],
-  "similar_dam_names": [
-    {
-      "file1": "Leone",
-      "file2": "Piano del Leone"
-    }
-  ],
-  "date": "2025-05-07"
+  "summary": "The validation failed because the second CSV file contains one additional dam compared to the first CSV file. The dam 'Piano del Leone' is present in the second file but missing in the first file. Although the dam names are similar ('Leone' vs 'Piano del Leone'), the first file is missing a record. There are no differences in the volume values for the dams present in both files. The difference in the number of dams is the main reason for failure.",
+  "date": "2025-05-08"
 }
