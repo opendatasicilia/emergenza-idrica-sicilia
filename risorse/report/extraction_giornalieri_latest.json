@@ -1,7 +1,17 @@
 {
-  "valid": false,
-  "summary": "The validation failed. The number of rows is the same but there are some discrepancies in the names of the dams (Leone vs Piano del Leone). The validation does NOT depend on the names. The validation depends only on the number of rows and the values of the volumes. There are no discrepancies in the volume values. The dam 'Leone' in the first CSV corresponds to 'Piano del Leone' in the second CSV. The names are similar. The keys of the 'cod' column are different but this is not relevant for the validation.",
+  "valid": true,
+  "summary": "The validation was successful. The number of dams is consistent between the two files. No discrepancies were found in the volume values. There are similar dam names between the two files, such as 'Leone' and 'Piano del Leone', 'Garcia (M. Francese)' and 'GARCIA', however these are name variations and not errors.",
   "missing_dams": [],
   "volume_discrepancies": [],
+  "similar_dam_names": [
+    {
+      "file1": "Garcia (M. Francese)",
+      "file2": "GARCIA"
+    },
+    {
+      "file1": "Leone",
+      "file2": "PIANO DEL LEONE"
+    }
+  ],
   "date": "2025-05-09"
 }
