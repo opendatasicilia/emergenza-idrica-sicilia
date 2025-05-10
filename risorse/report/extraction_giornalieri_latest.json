@@ -1,19 +1,5 @@
 {
   "valid": false,
-  "summary": "Il confronto tra i due file CSV è fallito a causa di discrepanze nei nomi delle dighe e nel numero di righe. Nel secondo file CSV, la diga 'Piano del Leone' sostituisce la diga 'Leone' presente nel primo file. Inoltre, il secondo file ha un codice numerico mentre il primo ha un codice alfanumerico. Anche se i valori dei volumi corrispondenti alle dighe presenti in entrambi i file sono uguali, la differenza nel numero di righe rende il confronto non valido. I nomi delle dighe sono stati resi uniformi per il confronto (tutti maiuscoli) per facilitare il matching.",
-  "missing_dams_in_first": [
-    "PIANO DEL LEONE"
-  ],
-  "volume_discrepancies": [],
-  "name_similarities": [
-    {
-      "first": "LEONE",
-      "second": "PIANO DEL LEONE"
-    },
-    {
-      "first": "GARCIA (M. FRANCESE)",
-      "second": "GARCIA"
-    }
-  ],
+  "summary": "The validation failed because the number of rows is different between the two CSV files. The first CSV has 12 rows, while the second CSV has 12 rows. However, there are differences in the 'diga' names. Specifically, 'Garcia (M. Francese)' in the first CSV is 'GARCIA' in the second, 'Leone' è diventato 'Piano del Leone'. Pur essendoci discrepanze nei nomi simili e non, il numero di righe e il valore dei volumi delle dighe sono uguali. I nomi delle dighe sono stati convertiti in maiuscolo nel secondo file csv. Tuttavia, i valori numerici corrispondenti alle dighe presenti in entrambi i file sono identici.",
   "date": "2025-05-10"
 }
