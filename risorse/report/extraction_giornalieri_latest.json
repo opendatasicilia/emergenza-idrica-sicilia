@@ -1,17 +1,17 @@
 {
   "valid": false,
-  "summary": "The validation failed because there are discrepancies between the two CSV files. Specifically, the first CSV file (prima estrazione) has fewer dams than the second CSV file (seconda estrazione). In the first CSV, the dam 'Piano del Leone' is missing. The numerical values for the common dams are identical across the two files. The different naming of the 'Garcia' and 'Leone' dams is not considered an error.",
+  "summary": "Il confronto tra i due file CSV è fallito a causa di discrepanze nei nomi delle dighe e nel numero di righe. Nel secondo file CSV, la diga 'Piano del Leone' sostituisce la diga 'Leone' presente nel primo file. Inoltre, il secondo file ha un codice numerico mentre il primo ha un codice alfanumerico. Anche se i valori dei volumi corrispondenti alle dighe presenti in entrambi i file sono uguali, la differenza nel numero di righe rende il confronto non valido. I nomi delle dighe sono stati resi uniformi per il confronto (tutti maiuscoli) per facilitare il matching.",
   "missing_dams_in_first": [
-    "Piano del Leone"
+    "PIANO DEL LEONE"
   ],
   "volume_discrepancies": [],
-  "similar_names": [
+  "name_similarities": [
     {
-      "first": "Leone",
-      "second": "Piano del Leone"
+      "first": "LEONE",
+      "second": "PIANO DEL LEONE"
     },
     {
-      "first": "Garcia (M. Francese)",
+      "first": "GARCIA (M. FRANCESE)",
       "second": "GARCIA"
     }
   ],
