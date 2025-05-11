@@ -1,5 +1,5 @@
 {
   "valid": false,
-  "summary": "The validation failed because the two CSV files have different dam names: 'Leone' is present in the first CSV, while 'Piano del Leone' is present in the second CSV. Although the names are similar, there are no discrepancies in the values of the volumes, quotas, authorized quotas, authorized volumes, or useful volumes. However, the difference in the names of the dams causes the validation to fail.",
+  "summary": "The validation failed because the second CSV file contains 'PIANO DEL LEONE' while the first CSV file contains 'Leone'. While the names are similar, the tool has detected an inconsistency in the number of dams. No discrepancies were found in the values of the volumes.",
   "date": "2025-05-11"
 }
