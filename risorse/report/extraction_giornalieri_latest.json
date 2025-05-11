@@ -1,5 +1,19 @@
 {
   "valid": false,
-  "summary": "The validation failed because there is a discrepancy in the number of dams between the two files. The second file contains the dam 'PIANO DEL LEONE' (codice 6) which is missing in the first file. While 'Leone' and 'Piano del Leone' have similar names, the second file has 'Piano del Leone' while the first file has 'Leone'. Considering the task requirements, the absence of 'Piano del Leone' (present in the second file) in the first one means there is a mismatch. The remaining dam volume values match between the two files.",
-  "date": "2025-05-10"
+  "summary": "The validation failed. The second CSV file contains one additional dam ('PIANO DEL LEONE') that is not present in the first CSV file. There is also a difference in the 'diga' names (but similar). Specifically 'Leone' in the first file is 'PIANO DEL LEONE' in the second file and 'Garcia (M. Francese)' in the first file is 'GARCIA' in the second file. However, the 'volume' and 'volume_utile' values are consistent across the common dams in both files.",
+  "missing_dams": [
+    "PIANO DEL LEONE"
+  ],
+  "volume_discrepancies": [],
+  "similar_names": [
+    {
+      "first_file": "Leone",
+      "second_file": "PIANO DEL LEONE"
+    },
+    {
+      "first_file": "Garcia (M. Francese)",
+      "second_file": "GARCIA"
+    }
+  ],
+  "date": "2025-05-11"
 }
