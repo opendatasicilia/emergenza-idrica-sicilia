@@ -1,5 +1,10 @@
 {
   "valid": false,
-  "summary": "The validation failed because the number of rows is different between the two CSV files and also because one diga name differs from the first CSV. The first CSV has 12 rows, while the second CSV has 12 rows. However, 'Leone' in the first CSV appears as 'Piano Del Leone' in the second CSV, which is a similar name. There are no discrepancies in volume values for the common dams. No dams are missing.",
+  "summary": "The validation failed because the second CSV file contains more dams than the first CSV file. Specifically, the second file contains 'PIANO DEL LEONE' and 'RAGOLETO (Dirillo)' which are not present in the first file. Names like 'Garcia (M. Francese)' and 'GARCIA (Mario Francese)' are considered similar and don't cause validation failure. Similarly, 'Leone' and 'Piano del Leone' are considered similar. 'Ragoleto' and 'Ragoleto (Dirillo)' sono considerati simili.",
+  "missing_dams_in_first_file": [
+    "PIANO DEL LEONE",
+    "RAGOLETO (Dirillo)"
+  ],
+  "volume_discrepancies": [],
   "date": "2025-05-12"
 }
