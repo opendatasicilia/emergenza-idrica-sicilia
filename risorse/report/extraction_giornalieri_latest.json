@@ -1,5 +1,5 @@
 {
   "valid": false,
-  "summary": "The comparison failed due to differences in the number of dams and slight variations in dam names. Specifically, the second CSV file contains one additional dam ('PIANO DEL LEONE' or 'Ragoleto (Dirillo)') that is not present in the first CSV file ('Leone' or 'Ragoleto'). While the volume values for the common dams are identical, the discrepancy in the dam count and naming conventions leads to an invalid comparison. The first CSV file contains 'Leone' and 'Ragoleto' while the second file contains 'Piano del Leone' e 'Ragoleto (Dirillo)'.",
-  "date": "2025-05-12"
+  "summary": "The validation failed. The second CSV file contains more dams than the first CSV file. Specifically, the first CSV is missing 'PIANO DEL LEONE'. Some dam names are similar but not identical, such as 'Garcia (M. Francese)' vs 'GARCIA (Mario Francese)' and 'Ragoleto' vs 'RAGOLETO (Dirillo)', but these are not considered errors. The codes are also different. The dams in the first CSV uses a cod like 'dig-01' while the second CSV uses codes like '1'.",
+  "date": "2025-05-13"
 }
