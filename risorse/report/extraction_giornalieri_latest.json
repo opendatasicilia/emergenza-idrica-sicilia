@@ -1,5 +1,5 @@
 {
   "valid": false,
-  "summary": "The validation failed because the second CSV file contains additional dams compared to the first CSV file. Specifically, 'Piano del Leone' is present in the second file but not in the first. The values for the common dams are identical between the two files. The names of the dams in the two csvs are similar, but not exactly the same (example 'Àncipa' and 'ANCIPA', 'Garcia (M. Francese)' and 'GARCIA', 'Piana Degli Albanesi' and 'PIANA DEGLI ALBANESI', 'Leone' and 'PIANO DEL LEONE'. Such similarity does not inficiate the validation outcome.",
+  "summary": "The validation failed because there are discrepancies between the two CSV files. The second CSV file contains 'PIANO DEL LEONE' which is considered similar to 'LEONE' in the first CSV file. However the codici diga are different. In definitiva il secondo file contiene una diga in più rispetto al primo. I volumi risultano essere uguali per le dighe in comune.",
   "date": "2025-05-15"
 }
