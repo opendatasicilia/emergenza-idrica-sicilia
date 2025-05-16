@@ -1,20 +1,18 @@
 {
-  "valid": true,
-  "summary": "The validation was successful. The number of dams is equal in both files. There are no discrepancies in the volume values. Some dam names are similar but not identical (e.g., 'Leone' and 'Piano del Leone', 'Garcia (M. Francese)' and 'GARCIA (Mario Francese)', 'Ragoleto' and 'RAGOLETO (Dirillo)'). These similar names do not affect the validity.",
-  "missing_dams": [],
+  "valid": false,
+  "summary": "The comparison failed. The first CSV file has 12 rows, while the second CSV file has 12 rows. The names of the dams are slightly different. The second file has dighe that are missing in the first file or have similar names such as 'Piano del Leone' instead of 'Leone' and 'Garcia' instead of 'Garcia (M. Francese)'. There are no discrepancies in the volume values.",
+  "missing_dams_first_file": [
+    "PIANO DEL LEONE"
+  ],
   "volume_discrepancies": [],
-  "similar_names": [
+  "similar_dam_names": [
     {
       "first_file": "Garcia (M. Francese)",
-      "second_file": "GARCIA (Mario Francese)"
+      "second_file": "GARCIA"
     },
     {
       "first_file": "Leone",
       "second_file": "PIANO DEL LEONE"
-    },
-    {
-      "first_file": "Ragoleto",
-      "second_file": "RAGOLETO (Dirillo)"
     }
   ],
   "date": "2025-05-16"
