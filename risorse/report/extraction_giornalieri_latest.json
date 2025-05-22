@@ -1,5 +1,5 @@
 {
   "valid": true,
-  "summary": "Nessuna discrepanza rilevata nei volumi.\nSezione 'Somiglianza Nomi Dighe':\nLe seguenti dighe hanno nomi leggermente diversi ma sono state riconosciute come la stessa entità:\n'Àncipa' (File 1) e 'ANCIPA' (File 2)\n'Castello' (File 1) e 'CASTELLO' (File 2)\n'Fanaco' (File 1) e 'FANACO' (File 2)\n'Garcia (M. Francese)' (File 1) e 'GARCIA' (File 2)\n'Piana Degli Albanesi' (File 1) e 'PIANA DEGLI ALBANESI' (File 2)\n'Leone' (File 1) e 'PIANO DEL LEONE' (File 2)\n'Poma' (File 1) e 'POMA' (File 2)\n'Prizzi' (File 1) e 'PRIZZI' (File 2)\n'Ragoleto' (File 1) e 'RAGOLETO' (File 2)\n'Rosamarina' (File 1) e 'ROSAMARINA' (File 2)\n'Santa Rosalia' (File 1) e 'SANTA ROSALIA' (File 2)\n'Scanzano' (File 1) e 'SCANZANO' (File 2)",
+  "summary": "Il report è VALIDO: nessun volume di dighe corrispondenti presenta discrepanze. Tutte le dighe presenti nel secondo file hanno un corrispondente nel primo file (dopo la normalizzazione dei nomi). Si sono riscontrate somiglianze nei nomi delle dighe tra i due file che non inficiano la validità del confronto: La diga 'Àncipa' nel primo file corrisponde a 'ANCIPA' nel secondo file. La diga 'Garcia (M. Francese)' nel primo file corrisponde a 'GARCIA' nel secondo file. La diga 'Leone' nel primo file corrisponde a 'PIANO DEL LEONE' nel secondo file.",
   "date": "2025-05-22"
 }
