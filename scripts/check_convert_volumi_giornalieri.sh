@@ -29,8 +29,8 @@ readonly AI_RPM=15
 readonly AI_SLEEP=60
 readonly LLM_MODEL_LITE="gemini-2.0-flash-lite"
 readonly LLM_MODEL_EXTRACTION="gemini-2.0-flash"
-readonly LLM_MODEL_COMPARISON="gemini-2.0-flash"
-readonly N_ATTEMPTS=3
+readonly LLM_MODEL_COMPARISON="gemini-2.5-flash-preview-05-20"
+readonly N_ATTEMPTS=2
 
 
 
@@ -159,17 +159,18 @@ try_extraction() {
       # check if n_dighe_ai_1 and n_dighe_ai_2 are equal, if not, display an error message
       if [ $n_dighe_ai_1 -ne $n_dighe_ai_2 ]; then
          echo "   ⚠️ Check 1 failed: il numero di righe estratte dai due metodi non corrisponde!"
-         echo "   Sarebbe necessaria una verifica manuale: revisionare il file di anagrafica e il file di dati. Provo a condurre una verifica automatica tramite AI."
+         success=false
+         break
       else
          echo "   ✅ Check 1 passed: Il numero di dighe estratte dai due metodi corrisponde."
       fi
          
       # COMPARE 1st and 2nd extraction
-      echo "   🔍 Confronto i due file csv e individuo errori di estrazione..."
+      echo "   🔍 Confronto i due file csv e individuo eventuali errori di estrazione..."
 
-      system_prompt="Il tuo compito è quello di confrontare due file CSV contententi dati relativi a dighe e volumi. Devi comprenderne le differenze. Se due dighe hanno nomi simili ma diversi, non è un problema. Concentrati sul confronto dei valori numerici."
+      system_prompt="Il tuo compito è quello di confrontare due file CSV contententi dati relativi a dighe e volumi e creare un report di validazione in json. Il report deve avere valid: false se i dati dei volumi non coincidono nei due file csv. I nomi delle dighe possono essere leggermente diversi e questo non incide sulla validità del report."
 
-      prompt="Ti inserisco di seguito due CSV. Il secondo CSV è probabile che abbia delle dighe in più che nel primo file non sono censite. Fammi un piccolo report di validazione sintetico in json con due chiavi. Il json deve contenere le key 'valid' (booleana) e 'summary'. La key 'summary' deve contenere il motivo discorsivo del perchè il confronto è fallito (se è fallito). Se tra i due file csv ci sono discrepanze nel numero di righe o discrepanze nel valore dei volumi allora il report è invalido e la key 'valid' deve contenere il valore false. Nel report includi pure i dettagli sulle eventuali dighe mancanti nel primo file e sulle discrepanze dei valori dei volumi. Includi pure una sezione dedicata alla somiglianza dei nomi delle dighe. Se due dighe presentano nomi diversi ma simili, non è un errore. La presenza di nomi diversi ma simili non inficia la validità ( esempio: Se non ci sono discrepanze nel numero di dighe, non ci sono discrepanze sui valori dei volumi, ci sono alcuni nomi di dighe simili, allora il report è valido). Di seguito ti riporto esempi di dighe con nomi simili: 'leone' e 'piano del leone' indicano la stessa diga e non è un errore il fatto che abbiano nomi diversi ma simili. Assicurati di non considerare come errore le discrepanze nei nomi delle dighe. Il primo csv (prima estrazione) è il seguente: <primo_csv> $(cat ./risorse/tmp/$new_filename.csv) <\primo_csv>. Il secondo csv (seconda estrazione) è il seguente: <secondo_csv> $(cat ./risorse/tmp/2_$new_filename.csv) <\secondo_csv>"
+      prompt="Ti inserisco di seguito due CSV. Il secondo CSV è probabile che abbia delle dighe in più che nel primo file non sono censite. Fammi un piccolo report di validazione sintetico in json con due chiavi. Il json deve contenere le key 'valid' (booleana) e 'summary'. La key 'summary' deve contenere il motivo discorsivo in italiano del perchè il confronto è fallito (se è fallito). Se tra i due file csv ci sono discrepanze nel valore dei volumi allora il report è invalido e la key 'valid' deve contenere il valore false. Nel summary del report includi pure i dettagli sulle eventuali dighe mancanti nel primo file. Includi pure una sezione dedicata alla somiglianza dei nomi delle dighe. Se due dighe presentano nomi diversi ma simili, non è un errore e questo non inficia la key 'valid'. La presenza di nomi diversi ma simili non inficia la validità ( esempio: Se non ci sono discrepanze sui valori dei volumi, ci sono alcuni nomi di dighe simili, allora il report è valid: true). Di seguito ti riporto esempi di dighe con nomi simili: 'leone' e 'piano del leone' indicano la stessa diga. Assicurati di non considerare come errore le discrepanze nei nomi delle dighe. Il primo csv (prima estrazione) è il seguente: <primo_csv> $(cat ./risorse/tmp/$new_filename.csv) <\primo_csv>. Il secondo csv (seconda estrazione) è il seguente: <secondo_csv> $(cat ./risorse/tmp/2_$new_filename.csv) <\secondo_csv>"
 
       check_limits $AI_RPM $AI_SLEEP
       llm_response=$(llm -m "$LLM_MODEL_COMPARISON" \
@@ -206,13 +207,12 @@ try_extraction() {
          success=true
          break
       else
-         echo "   ❌ Tentativo $attempt: La validazione è fallita. Ci sono errori nei dati estratti."
-         echo "   Dettagli: $(< $PATH_EXTRACTION_REPORT jq -r '.summary')"
+         echo "   ⚠️ Tentativo $attempt: La validazione è fallita. Ci sono errori nei dati estratti."
+         echo "   Dettagli: $(cat $PATH_EXTRACTION_REPORT)"
          
          if [ $attempt -eq $max_attempts ]; then
-            echo "   ⚠️ Falliti tutti i $max_attempts tentativi di estrazione per $new_filename.pdf"
-            echo "   Consulta il report completo per maggiori dettagli: $PATH_EXTRACTION_REPORT"
-            < $PATH_EXTRACTION_REPORT jq '.'
+            echo "   ❌ Falliti tutti i $max_attempts tentativi di estrazione per $new_filename.pdf"
+            rm $PATH_EXTRACTION_REPORT
          else
             echo "   🔄 Riprovo con un altro tentativo tra qualche secondo..."
             sleep 20

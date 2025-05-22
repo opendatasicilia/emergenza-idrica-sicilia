@@ -1,5 +1,5 @@
 {
-  "valid": false,
-  "summary": "The validation failed because the second CSV file contains one more dam than the first CSV file. Specifically, the dam 'PIANO DEL LEONE' is present in the second file but not in the first. Also, dam names have slight differences in letter casing and extra characters (e.g., 'Garcia (M. Francese)' vs 'GARCIA'). These name discrepancies are considered acceptable, and the validation would still succeed if the number of dams and volume values matched. The extra dam is the cause of the failure.",
-  "date": "2025-05-17"
+  "valid": true,
+  "summary": "Nessuna discrepanza rilevata nei volumi.\nSezione 'Somiglianza Nomi Dighe':\nLe seguenti dighe hanno nomi leggermente diversi ma sono state riconosciute come la stessa entità:\n'Àncipa' (File 1) e 'ANCIPA' (File 2)\n'Castello' (File 1) e 'CASTELLO' (File 2)\n'Fanaco' (File 1) e 'FANACO' (File 2)\n'Garcia (M. Francese)' (File 1) e 'GARCIA' (File 2)\n'Piana Degli Albanesi' (File 1) e 'PIANA DEGLI ALBANESI' (File 2)\n'Leone' (File 1) e 'PIANO DEL LEONE' (File 2)\n'Poma' (File 1) e 'POMA' (File 2)\n'Prizzi' (File 1) e 'PRIZZI' (File 2)\n'Ragoleto' (File 1) e 'RAGOLETO' (File 2)\n'Rosamarina' (File 1) e 'ROSAMARINA' (File 2)\n'Santa Rosalia' (File 1) e 'SANTA ROSALIA' (File 2)\n'Scanzano' (File 1) e 'SCANZANO' (File 2)",
+  "date": "2025-05-22"
 }
