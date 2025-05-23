@@ -1,5 +1,5 @@
 {
   "valid": true,
-  "summary": "Il report è VALIDO: nessun volume di dighe corrispondenti presenta discrepanze. Tutte le dighe presenti nel secondo file hanno un corrispondente nel primo file (dopo la normalizzazione dei nomi). Si sono riscontrate somiglianze nei nomi delle dighe tra i due file che non inficiano la validità del confronto: La diga 'Àncipa' nel primo file corrisponde a 'ANCIPA' nel secondo file. La diga 'Garcia (M. Francese)' nel primo file corrisponde a 'GARCIA' nel secondo file. La diga 'Leone' nel primo file corrisponde a 'PIANO DEL LEONE' nel secondo file.",
-  "date": "2025-05-22"
+  "summary": "Nessuna discrepanza di volume trovata.\nTutte le dighe del secondo file CSV sono state abbinate a quelle del primo file.\nSono stati rilevati nomi di dighe simili ma non identici, che non inficiano la validità del report:\n- 'Àncipa' (file 1) vs 'ANCIPA' (file 2)\n- 'Castello' (file 1) vs 'CASTELLO' (file 2)\n- 'Fanaco' (file 1) vs 'FANACO' (file 2)\n- 'Garcia (M. Francese)' (file 1) vs 'GARCIA' (file 2)\n- 'Piana Degli Albanesi' (file 1) vs 'PIANA DEGLI ALBANESI' (file 2)\n- 'Poma' (file 1) vs 'POMA' (file 2)\n- 'Prizzi' (file 1) vs 'PRIZZI' (file 2)\n- 'Ragoleto' (file 1) vs 'RAGOLETO' (file 2)\n- 'Rosamarina' (file 1) vs 'ROSAMARINA' (file 2)\n- 'Santa Rosalia' (file 1) vs 'SANTA ROSALIA' (file 2)\n- 'Scanzano' (file 1) vs 'SCANZANO' (file 2)\n- 'Leone' (file 1) vs 'PIANO DEL LEONE' (file 2)",
+  "date": "2025-05-23"
 }
