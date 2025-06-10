@@ -1,5 +1,5 @@
 {
   "valid": true,
-  "summary": "Report di validazione del confronto tra i file CSV.\nNessuna discrepanza significativa riscontrata nei volumi delle dighe.\nLe seguenti dighe sono presenti nel secondo file ma non nel primo:\n  - Nessuna.\nDIFFERENZE NEI NOMI DELLE DIGHE (non invalidano il report):\n  - Primo file: 'Àncipa', Secondo file: 'ANCIPA'\n  - Primo file: 'Castello', Secondo file: 'CASTELLO'\n  - Primo file: 'Fanaco', Secondo file: 'FANACO'\n  - Primo file: 'Garcia (M. Francese)', Secondo file: 'GARCIA'\n  - Primo file: 'Piana Degli Albanesi', Secondo file: 'PIANA DEGLI ALBANESI'\n  - Primo file: 'Leone', Secondo file: 'PIANO DEL LEONE'\n  - Primo file: 'Poma', Secondo file: 'POMA'\n  - Primo file: 'Prizzi', Secondo file: 'PRIZZI'\n  - Primo file: 'Ragoleto', Secondo file: 'RAGOLETO'\n  - Primo file: 'Rosamarina', Secondo file: 'ROSAMARINA'\n  - Primo file: 'Santa Rosalia', Secondo file: 'SANTA ROSALIA'\n  - Primo file: 'Scanzano', Secondo file: 'SCANZANO'",
-  "date": "2025-06-09"
+  "summary": "Il report è valido. Non sono state riscontrate discrepanze nei volumi delle dighe comuni.\n\nNon ci sono dighe aggiuntive nel secondo file CSV non presenti nel primo.\n\nSono state riscontrate delle somiglianze nei nomi delle dighe tra i due file (ad esempio, maiuscole/minuscole o abbreviazioni), che sono state gestite e non inficiano la validità del report.\nEsempi: 'Àncipa' (CSV1) e 'ANCIPA' (CSV2), 'Castello' (CSV1) e 'CASTELLO' (CSV2), 'Fanaco' (CSV1) e 'FANACO' (CSV2), ...",
+  "date": "2025-06-10"
 }
