@@ -13,19 +13,22 @@ Questa cartella contiene gli script per l'automazione del processo di raccolta e
     D --> E["Estrazione #1<br/>(con anagrafica)"];
     D --> F["Estrazione #2<br/>(semplice)"];
 
-    E --> G{"Controllo #1<br/>N. Righe corrisponde?"};
+    E --> G{"Controllo #1<br/>'N. Righe' corrisponde?"};
     F --> G;
 
     G -- "No" --> H["❌ Tentativo Fallito"];
-    G -- "Sì" --> I["Validazione Incrociata AI<br/>(Confronto CSV)"];
+    G -- "Sì" --> I["Confronto CSV tramite AI"];
     
-    I --> J{"Controllo #2<br/>Report JSON è 'valid: true'?"};
+    I --> I2["Produzione report di validazione (JSON)"];
+    I2 --> J{"Controllo #2<br/>Il report è valido?"};
+
     J -- "No" --> H;
     J -- "Sì" --> K["✅ Successo!"];
     
     H --> L{"Altri tentativi rimasti?"};
-    L -- "No" --> N["❌ Fallimento Definitivo<br/>Passa al prossimo PDF"];
+    L -- "No" --> N["❌ Fallimento Definitivo"];
     L -- "Sì" --> D
+
   ```
 
 - `check_convert_volumi_mensili.sh`: Script per il download e la conversione dei dati mensili sui volumi invasati dalle dighe siciliane. Scarica i PDF dal sito della Regione, estrae i dati tramite AI e li converte in formato CSV, effettuando vari controlli di qualità.
