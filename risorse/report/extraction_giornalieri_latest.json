@@ -1,5 +1,5 @@
 {
   "valid": true,
-  "summary": "Il report è valido. Non sono state riscontrate discrepanze nei volumi delle dighe comuni.\n\nNon ci sono dighe aggiuntive nel secondo file CSV non presenti nel primo.\n\nSono state riscontrate delle somiglianze nei nomi delle dighe tra i due file (ad esempio, maiuscole/minuscole o abbreviazioni), che sono state gestite e non inficiano la validità del report.\nEsempi: 'Àncipa' (CSV1) e 'ANCIPA' (CSV2), 'Castello' (CSV1) e 'CASTELLO' (CSV2), 'Fanaco' (CSV1) e 'FANACO' (CSV2), ...",
-  "date": "2025-06-10"
+  "summary": "Il confronto è riuscito: i volumi corrispondono tra i due file.\n\nSezione nomi dighe simili:\n- Nome in CSV1: 'Àncipa', nome in CSV2: 'ANCIPA'\n- Nome in CSV1: 'Castello', nome in CSV2: 'CASTELLO'\n- Nome in CSV1: 'Fanaco', nome in CSV2: 'FANACO'\n- Nome in CSV1: 'Garcia (M. Francese)', nome in CSV2: 'GARCIA'\n- Nome in CSV1: 'Piana Degli Albanesi', nome in CSV2: 'PIANA DEGLI ALBANESI'\n- Nome in CSV1: 'Leone', nome in CSV2: 'PIANO DEL LEONE'\n- Nome in CSV1: 'Poma', nome in CSV2: 'POMA'\n- Nome in CSV1: 'Prizzi', nome in CSV2: 'PRIZZI'\n- Nome in CSV1: 'Ragoleto', nome in CSV2: 'RAGOLETO'\n- Nome in CSV1: 'Rosamarina', nome in CSV2: 'ROSAMARINA'\n- Nome in CSV1: 'Santa Rosalia', nome in CSV2: 'SANTA ROSALIA'\n- Nome in CSV1: 'Scanzano', nome in CSV2: 'SCANZANO'\n\nTutte le dighe del secondo file CSV sono state abbinate a dighe nel primo file.",
+  "date": "2025-06-11"
 }
