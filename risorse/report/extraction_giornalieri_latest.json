@@ -1,5 +1,5 @@
 {
   "valid": true,
-  "summary": "Il confronto è valido: i volumi delle dighe corrispondenti nei due file CSV coincidono.\n\nSono state identificate dighe con nomi simili ma considerate corrispondenti:\n- 'Garcia (M. Francese)' (nel primo CSV) e 'GARCIA' (nel secondo CSV).\n- 'Leone' (nel primo CSV) e 'PIANO DEL LEONE' (nel secondo CSV).",
-  "date": "2025-06-27"
+  "summary": "Il confronto è avvenuto con successo. Nessuna discrepanza nei volumi. Sono state identificate le seguenti somiglianze nei nomi delle dighe (non considerate errori e non inficiano la validità del report): Diga 'Àncipa' (Primo CSV) e 'ANCIPA' (Secondo CSV) hanno nomi diversi ma sono state riconosciute come la stessa diga (stessa normalizzazione). Diga 'Garcia (M. Francese)' (Primo CSV) e 'GARCIA' (Secondo CSV) hanno nomi diversi ma sono state riconosciute come la stessa diga (stessa normalizzazione). Diga 'Leone' (Primo CSV) e 'PIANO DEL LEONE' (Secondo CSV) hanno nomi simili.",
+  "date": "2025-06-30"
 }
