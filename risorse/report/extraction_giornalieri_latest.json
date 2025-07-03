@@ -1,5 +1,5 @@
 {
   "valid": true,
-  "summary": "Il confronto è avvenuto con successo. Nessuna discrepanza nei volumi. Sono state identificate le seguenti somiglianze nei nomi delle dighe (non considerate errori e non inficiano la validità del report): Diga 'Àncipa' (Primo CSV) e 'ANCIPA' (Secondo CSV) hanno nomi diversi ma sono state riconosciute come la stessa diga (stessa normalizzazione). Diga 'Garcia (M. Francese)' (Primo CSV) e 'GARCIA' (Secondo CSV) hanno nomi diversi ma sono state riconosciute come la stessa diga (stessa normalizzazione). Diga 'Leone' (Primo CSV) e 'PIANO DEL LEONE' (Secondo CSV) hanno nomi simili.",
-  "date": "2025-06-30"
+  "summary": "Il confronto è riuscito. Nessuna discrepanza critica nei volumi.\nRilevate dighe con nomi diversi ma considerate equivalenti (non influisce sulla validità):\n- 'Àncipa' (CSV1) e 'ANCIPA' (CSV2)\n- 'Castello' (CSV1) e 'CASTELLO' (CSV2)\n- 'Fanaco' (CSV1) e 'FANACO' (CSV2)\n- 'Garcia (M. Francese)' (CSV1) e 'GARCIA' (CSV2)\n- 'Piana Degli Albanesi' (CSV1) e 'PIANA DEGLI ALBANESI' (CSV2)\n- 'Leone' (CSV1) e 'PIANO DEL LEONE' (CSV2)\n- 'Poma' (CSV1) e 'POMA' (CSV2)\n- 'Prizzi' (CSV1) e 'PRIZZI' (CSV2)\n- 'Ragoleto' (CSV1) e 'RAGOLETO' (CSV2)\n- 'Rosamarina' (CSV1) e 'ROSAMARINA' (CSV2)\n- 'Santa Rosalia' (CSV1) e 'SANTA ROSALIA' (CSV2)\n- 'Scanzano' (CSV1) e 'SCANZANO' (CSV2)",
+  "date": "2025-07-03"
 }
