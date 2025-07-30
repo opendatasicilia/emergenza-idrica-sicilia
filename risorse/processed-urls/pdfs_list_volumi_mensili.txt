@@ -37,3 +37,6 @@
 /sites/default/files/2025-06/1__2025.06.01_A_Tabella_volumi_invasi.pdf
 /sites/default/files/2025-06/1__2025.06.01_A_Tabella_volumi_invasi.pdf
 /sites/default/files/2025-06/0__2025.06.01_C_Grafici_volumi_invasi.pdf
+/sites/default/files/2025-07/1__2025.07.01-A_Tabella_volumi_invasi.pdf
+/sites/default/files/2025-07/1__2025.07.01-A_Tabella_volumi_invasi.pdf
+/sites/default/files/2025-07/0__2025.07.01-C_Grafici_volumi_invasi.pdf
