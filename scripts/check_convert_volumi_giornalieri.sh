@@ -29,7 +29,7 @@ readonly AI_RPM=15
 readonly AI_SLEEP=60
 readonly LLM_MODEL_LITE="gemini-2.0-flash-lite"
 readonly LLM_MODEL_EXTRACTION="gemini-2.0-flash"
-readonly LLM_MODEL_COMPARISON="gemini-2.5-flash-preview-05-20"
+readonly LLM_MODEL_COMPARISON="gemini-2.5-flash"
 readonly N_ATTEMPTS=2
 
 
