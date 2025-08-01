@@ -1,5 +1,5 @@
 {
   "valid": true,
-  "summary": "Il report è valido: non sono state riscontrate discrepanze nei volumi delle dighe confrontate.\n\nSono state identificate le seguenti dighe con nomi simili ma valori corrispondenti:\n- CSV1: 'Àncipa', CSV2: 'ANCIPA'\n- CSV1: 'Castello', CSV2: 'CASTELLO'\n- CSV1: 'Fanaco', CSV2: 'FANACO'\n- CSV1: 'Garcia (M. Francese)', CSV2: 'GARCIA'\n- CSV1: 'Piana Degli Albanesi', CSV2: 'PIANA DEGLI ALBANESI'\n- CSV1: 'Poma', CSV2: 'POMA'\n- CSV1: 'Prizzi', CSV2: 'PRIZZI'\n- CSV1: 'Ragoleto', CSV2: 'RAGOLETO'\n- CSV1: 'Rosamarina', CSV2: 'ROSAMARINA'\n- CSV1: 'Santa Rosalia', CSV2: 'SANTA ROSALIA'\n- CSV1: 'Scanzano', CSV2: 'SCANZANO'\n- CSV1: 'Leone', CSV2: 'PIANO DEL LEONE'\n\nNon sono state trovate dighe nel secondo file CSV che non fossero presenti nel primo.",
-  "date": "2025-07-30"
+  "summary": "Il report è valido. Nessuna discrepanza significativa è stata trovata nei volumi delle dighe comuni. Tutte le dighe presenti nel secondo file CSV sono state trovate anche nel primo file. Sono state identificate dighe con nomi simili ma considerati equivalenti (questo non inficia la validità del report): 'ANCIPA' e 'Àncipa', 'CASTELLO' e 'Castello', 'FANACO' e 'Fanaco', 'GARCIA' e 'Garcia (M. Francese)', 'Leone' e 'PIANO DEL LEONE', 'PIANA DEGLI ALBANESI' e 'Piana Degli Albanesi', 'POMA' e 'Poma', 'PRIZZI' e 'Prizzi', 'RAGOLETO' e 'Ragoleto', 'ROSAMARINA' e 'Rosamarina', 'SANTA ROSALIA' e 'Santa Rosalia', 'SCANZANO' e 'Scanzano'.",
+  "date": "2025-08-01"
 }

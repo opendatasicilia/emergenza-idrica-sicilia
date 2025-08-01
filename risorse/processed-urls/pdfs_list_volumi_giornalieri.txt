@@ -189,3 +189,9 @@
 /sites/default/files/2025-07/2025-07-23-Volume%20Giornaliero%20Potabile.pdf
 /sites/default/files/2025-07/2025-07-24-Volume%20Giornaliero%20Potabile.pdf
 /sites/default/files/2025-07/2025-07-25-Volume%20Giornaliero%20Potabile.pdf
+/sites/default/files/2025-08/2025-07-26-Volume%20Giornaliero%20Potabile.pdf
+/sites/default/files/2025-08/2025-07-27-Volume%20Giornaliero%20Potabile_0.pdf
+/sites/default/files/2025-08/2025-07-28-Volume%20Giornaliero%20Potabile.pdf
+/sites/default/files/2025-08/2025-07-29-Volume%20Giornaliero%20Potabile.pdf
+/sites/default/files/2025-08/2025-07-30-Volume%20Giornaliero%20Potabile.pdf
+/sites/default/files/2025-08/2025-07-31-Volume%20Giornaliero%20Potabile.pdf
