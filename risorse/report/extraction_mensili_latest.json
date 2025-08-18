@@ -1,21 +1,5 @@
 {
   "valid": true,
-  "summary": "The validation was successful. The number of dams and their volumes match between the two CSV files. There are some differences in the dam names, but they are considered similar and do not affect the validity. Specifically, 'Leone' and 'Piano del Leone' are considered the same dam, as are 'Ogliastro (Don Sturzo)' and 'DON STURZO (Ogliastro)', and 'Ragoleto' and 'RAGOLETO (Dirillo)'.",
-  "missing_dams": [],
-  "volume_discrepancies": [],
-  "similar_dam_names": [
-    {
-      "first_file": "Leone",
-      "second_file": "PIANO DEL LEONE"
-    },
-    {
-      "first_file": "Ogliastro (Don Sturzo)",
-      "second_file": "DON STURZO (Ogliastro)"
-    },
-    {
-      "first_file": "Ragoleto",
-      "second_file": "RAGOLETO (Dirillo)"
-    }
-  ],
-  "date": "2025-07-30"
+  "summary": "The validation was successful. The number of dams and their volumes match between the two files. There are some differences in the dam names, but they are considered similar and do not affect the validity. Specifically, 'Leone' and 'Piano del Leone' are considered the same dam, as are 'Ogliastro (Don Sturzo)' and 'DON STURZO (Ogliastro)', and 'Ragoleto' and 'RAGOLETO (Dirillo)'. The case of the names is ignored.",
+  "date": "2025-08-18"
 }
