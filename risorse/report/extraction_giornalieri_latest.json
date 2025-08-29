@@ -1,5 +1,5 @@
 {
   "valid": true,
-  "summary": "Il confronto dei volumi tra i due file CSV non ha rilevato discrepanze.\nNon sono state trovate dighe nel secondo file CSV non censite nel primo.\nÈ stata rilevata la seguente somiglianza nei nomi delle dighe tra i due file (non considerata un errore):\n- La diga 'Àncipa' (File 1) corrisponde a 'ANCIPA' (File 2).\n- La diga 'Castello' (File 1) corrisponde a 'CASTELLO' (File 2).\n- La diga 'Fanaco' (File 1) corrisponde a 'FANACO' (File 2).\n- La diga 'Garcia (M. Francese)' (File 1) corrisponde a 'GARCIA (Mario Francese)' (File 2).\n- La diga 'Piana Degli Albanesi' (File 1) corrisponde a 'PIANA DEGLI ALBANESI (con Guadalami) (4)' (File 2).\n- La diga 'Leone' (File 1) corrisponde a 'PIANO DEL LEONE' (File 2).\n- La diga 'Poma' (File 1) corrisponde a 'POMA' (File 2).\n- La diga 'Prizzi' (File 1) corrisponde a 'PRIZZI' (File 2).\n- La diga 'Ragoleto' (File 1) corrisponde a 'RAGOLETO (Dirillo)' (File 2).\n- La diga 'Rosamarina' (File 1) corrisponde a 'ROSAMARINA' (File 2).\n- La diga 'Santa Rosalia' (File 1) corrisponde a 'SANTA ROSALIA' (File 2).\n- La diga 'Scanzano' (File 1) corrisponde a 'SCANZANO' (File 2).",
-  "date": "2025-08-28"
+  "summary": "I volumi delle dighe presenti in entrambi i file CSV coincidono.\nSono state identificate dighe con nomi simili ma considerate corrispondenti:\n  - 'Leone' (CSV1) e 'PIANO DEL LEONE' (CSV2)",
+  "date": "2025-08-29"
 }
