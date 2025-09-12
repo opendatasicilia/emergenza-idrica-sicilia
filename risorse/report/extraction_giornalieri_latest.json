@@ -1,5 +1,5 @@
 {
   "valid": true,
-  "summary": "Il report è VALIDO. Nessuna discrepanza significativa nei volumi tra i file.\nSono state riscontrate differenze nei nomi originali delle dighe che sono considerate simili (e non inficiano la validità del report):\n- 'Àncipa' (File 1) e 'ANCIPA' (File 2)\n- 'Castello' (File 1) e 'CASTELLO' (File 2)\n- 'Fanaco' (File 1) e 'FANACO' (File 2)\n- 'Garcia (M. Francese)' (File 1) e 'GARCIA' (File 2)\n- 'Piana Degli Albanesi' (File 1) e 'PIANA DEGLI ALBANESI' (File 2)\n- 'Leone' (File 1) e 'PIANO DEL LEONE' (File 2)\n- 'Poma' (File 1) e 'POMA' (File 2)\n- 'Prizzi' (File 1) e 'PRIZZI' (File 2)\n- 'Ragoleto' (File 1) e 'RAGOLETO' (File 2)\n- 'Rosamarina' (File 1) e 'ROSAMARINA' (File 2)\n- 'Santa Rosalia' (File 1) e 'SANTA ROSALIA' (File 2)\n- 'Scanzano' (File 1) e 'SCANZANO' (File 2)",
-  "date": "2025-09-09"
+  "summary": "Nessuna discrepanza sui valori dei volumi è stata trovata tra i due file CSV. Sezione somiglianza nomi dighe: Sono state identificate le seguenti corrispondenze tra dighe con nomi simili: - 'PIANO DEL LEONE' (CSV2) è simile a 'Leone' (CSV1). Queste differenze nei nomi non inficiano la validità del report in assenza di discrepanze sui volumi. In sintesi, i volumi per tutte le dighe corrispondenti coincidono. Il report è quindi considerato 'valido'.",
+  "date": "2025-09-12"
 }
