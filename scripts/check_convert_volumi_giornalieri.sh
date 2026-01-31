@@ -27,8 +27,8 @@ readonly URL_HOMEPAGE="https://www.regione.sicilia.it"
 readonly URL_CSV_ANAGRAFICA_DIGHE="https://raw.githubusercontent.com/opendatasicilia/emergenza-idrica-sicilia/refs/heads/main/risorse/sicilia_dighe_anagrafica.csv"
 readonly AI_RPM=15
 readonly AI_SLEEP=60
-readonly LLM_MODEL_LITE="gemini-2.0-flash-lite"
-readonly LLM_MODEL_EXTRACTION="gemini-2.0-flash"
+readonly LLM_MODEL_LITE="gemini-2.5-flash-lite"
+readonly LLM_MODEL_EXTRACTION="gemini-2.5-flash"
 readonly LLM_MODEL_COMPARISON="gemini-2.5-flash"
 readonly N_ATTEMPTS=2
 
@@ -242,7 +242,9 @@ echo "🔎 Cerco nuovi dati sui volumi giornalieri..."
 url_page_with_list_1=$(curl -skL $URL | scrape -e "#it-block-field-blocknodegeneric-pagefield-p-body h3:last-of-type a:last-of-type" | xq -r '.a."@href"')
 
 # dalla pagina con l'elenco dei mesi seleziono il link all'ultimo mese
-url_page_with_list_2=$(curl -skL $url_page_with_list_1 | scrape -be "#it-block-field-blocknodegeneric-pagefield-p-body a:last-of-type" | xq -r '.html.body.a[-1]."@href"')
+# url_page_with_list_2=$(curl -skL $url_page_with_list_1 | scrape -be "#it-block-field-blocknodegeneric-pagefield-p-body a:last-of-type" | xq -r '.html.body.a[-1]."@href"')
+
+url_page_with_list_2="https://www.regione.sicilia.it/istituzioni/regione/strutture-regionali/presidenza-regione/autorita-bacino-distretto-idrografico-sicilia/settembre-0"
 
 # dalla pagina con l'elenco dei pdf dell'ultimo mese seleziono i link ai pdf
 pdfs_list=$(curl -skL "$url_page_with_list_2" | scrape -be "a" | xq -r '.html.body.a[]."@href"' | grep ".pdf")

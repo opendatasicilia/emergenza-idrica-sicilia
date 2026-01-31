@@ -14,6 +14,23 @@ risorse/sicilia_dighe_volumi_backup_2.csv
 sicilia_dighe_volumi_latest_backup.csv
 
 scripts/send_telegram_message.sh
+scripts/check_convert_volumi_settimanali.sh
+
+fix.sh
+lau.sh
+datapackage.txt
+corrected_sicilia_dighe_volumi_settimanali.csv
+
+risorse/sicilia_dighe_volumi_settimanali*
+risorse/volumi-settimanali
+risorse/processed-urls/pdfs_list_volumi_settimanali.txt
+risorse/report/extraction_settimanali*
+risorse/pdf/volumi-settimanali/*
+
+README_new.md
+datapackage_new.yaml
+
+.github/workflows/new_pdfs_new.yaml
 
 msgs.md
 .aider*

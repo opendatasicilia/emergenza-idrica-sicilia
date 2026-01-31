@@ -1,5 +1,5 @@
 {
   "valid": true,
-  "summary": "Nessuna discrepanza sui valori dei volumi è stata trovata tra i due file CSV. Sezione somiglianza nomi dighe: Sono state identificate le seguenti corrispondenze tra dighe con nomi simili: - 'PIANO DEL LEONE' (CSV2) è simile a 'Leone' (CSV1). Queste differenze nei nomi non inficiano la validità del report in assenza di discrepanze sui volumi. In sintesi, i volumi per tutte le dighe corrispondenti coincidono. Il report è quindi considerato 'valido'.",
-  "date": "2025-09-12"
+  "summary": "Il confronto dei volumi è valido: non sono state riscontrate discrepanze nei valori dei volumi delle dighe corrispondenti.\nSono state identificate dighe con nomi simili o formati diversi ma che si riferiscono alla stessa entità, e sono state abbinate correttamente:\n  - CSV1: 'Àncipa', CSV2: 'ANCIPA' (abbinamento basato su 'ANCIPA' (CSV1) vs 'ANCIPA' (CSV2)).\n  - CSV1: 'Garcia (M. Francese)', CSV2: 'GARCIA (Mario Francese)' (abbinamento basato su 'GARCIA' (CSV1) vs 'GARCIA' (CSV2)).\n  - CSV1: 'Piana Degli Albanesi', CSV2: 'PIANA DEGLI ALBANESI (con Guadalami)' (abbinamento basato su 'PIANA DEGLI ALBANESI' (CSV1) vs 'PIANA DEGLI ALBANESI' (CSV2)).\n  - CSV1: 'Leone', CSV2: 'PIANO DEL LEONE' (abbinamento basato su 'LEONE' (CSV1) vs 'PIANO DEL LEONE' (CSV2)).\n  - CSV1: 'Ragoleto', CSV2: 'RAGOLETO (Dirillo)' (abbinamento basato su 'RAGOLETO' (CSV1) vs 'RAGOLETO' (CSV2)).\nTutte le dighe presenti nel secondo file CSV sono state trovate e abbinate a dighe nel primo file CSV.",
+  "date": "2026-01-31"
 }
