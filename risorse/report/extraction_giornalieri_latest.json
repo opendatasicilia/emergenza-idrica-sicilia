@@ -1,5 +1,5 @@
 {
-  "valid": true,
-  "summary": "Il confronto dei volumi è stato superato con successo. Nessuna diga presente nel secondo CSV non è stata trovata nel primo. Sono state riscontrate le seguenti corrispondenze tra dighe con nomi simili (non considerate un errore): - Diga CSV1: 'Àncipa' <-> Diga CSV2: 'ANCIPA' - Diga CSV1: 'Garcia (M. Francese)' <-> Diga CSV2: 'GARCIA (Mario Francese)' - Diga CSV1: 'Piana Degli Albanesi' <-> Diga CSV2: 'PIANA DEGLI ALBANESI (con Guadalami) (4)' - Diga CSV1: 'Leone' <-> Diga CSV2: 'PIANO DEL LEONE' - Diga CSV1: 'Ragoleto' <-> Diga CSV2: 'RAGOLETO (Dirillo)'",
-  "date": "2026-02-10"
+  "valid": false,
+  "summary": "Il confronto è fallito a causa di una discrepanza nel valore del volume per la diga 'Gammauta', che riporta '0.00' nella prima estrazione e 'n.d.' nella seconda. Non sono state riscontrate dighe mancanti nel primo file, in quanto entrambi i CSV contengono lo stesso numero di record (13). Per quanto riguarda la somiglianza dei nomi, sono state rilevate e correttamente identificate come corrispondenti diverse dighe con nomi leggermente differenti (ad esempio: 'Leone' vs 'PIANO DEL LEONE', 'Ragoleto' vs 'RAGOLETO (Dirillo)', 'Garcia (M. Francese)' vs 'GARCIA (Mario Francese)'); queste variazioni formali non hanno influito sulla validità del report, che è stata compromessa unicamente dalla discrepanza numerica/testuale sui volumi.",
+  "date": "2026-02-17"
 }

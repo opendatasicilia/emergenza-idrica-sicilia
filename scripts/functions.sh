@@ -111,8 +111,7 @@ normalize_filename() {
    local format=$2
    local llm_model=$3
 
-   llm_response=$(echo "$old_name" | llm -m "$llm_model" \
-   -s "Converti il nome di questo file nel formato '$format' tutto minuscolo. Restituisci in output una sola riga senza estensione") \
+   llm_response=$(echo "Converti il nome di questo file $old_name nel formato '$format' tutto minuscolo. Restituisci in output una sola riga senza estensione" | llm -m "$llm_model" ) \
    || { echo "❌ Errore durante l'esecuzione di llm (normalizzazione nome file)"; return 1; }
 
    echo "$llm_response" | tr -d '\n'

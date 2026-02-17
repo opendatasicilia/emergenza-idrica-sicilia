@@ -27,9 +27,12 @@ readonly URL_HOMEPAGE="https://www.regione.sicilia.it"
 readonly URL_CSV_ANAGRAFICA_DIGHE="https://raw.githubusercontent.com/opendatasicilia/emergenza-idrica-sicilia/refs/heads/main/risorse/sicilia_dighe_anagrafica.csv"
 readonly AI_RPM=15
 readonly AI_SLEEP=60
-readonly LLM_MODEL_LITE="gemini-2.5-flash-lite"
-readonly LLM_MODEL_EXTRACTION="gemini-2.5-flash"
-readonly LLM_MODEL_COMPARISON="gemini-2.5-flash"
+#readonly LLM_MODEL_LITE="gemini-2.5-flash-lite"
+readonly LLM_MODEL_LITE="gemma-3-4b-it"
+#readonly LLM_MODEL_EXTRACTION="gemini-2.5-flash"
+#readonly LLM_MODEL_COMPARISON="gemini-2.5-flash"
+readonly LLM_MODEL_EXTRACTION="gemini-3-flash-preview"
+readonly LLM_MODEL_COMPARISON="gemini-3-flash-preview"
 readonly N_ATTEMPTS=2
 
 
