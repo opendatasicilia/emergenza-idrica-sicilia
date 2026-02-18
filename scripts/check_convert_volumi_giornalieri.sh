@@ -25,14 +25,15 @@ readonly PATH_MSG_TELEGRAM="./risorse/msgs/new_volumi_giornalieri.md"
 readonly PATH_EXTRACTION_REPORT="./risorse/report/extraction_giornalieri_latest.json"
 readonly URL_HOMEPAGE="https://www.regione.sicilia.it"
 readonly URL_CSV_ANAGRAFICA_DIGHE="https://raw.githubusercontent.com/opendatasicilia/emergenza-idrica-sicilia/refs/heads/main/risorse/sicilia_dighe_anagrafica.csv"
-readonly AI_RPM=15
+readonly AI_RPM=5
+readonly AI_RPD=20
 readonly AI_SLEEP=60
 #readonly LLM_MODEL_LITE="gemini-2.5-flash-lite"
 readonly LLM_MODEL_LITE="gemma-3-4b-it"
-#readonly LLM_MODEL_EXTRACTION="gemini-2.5-flash"
-#readonly LLM_MODEL_COMPARISON="gemini-2.5-flash"
-readonly LLM_MODEL_EXTRACTION="gemini-3-flash-preview"
-readonly LLM_MODEL_COMPARISON="gemini-3-flash-preview"
+readonly LLM_MODEL_EXTRACTION="gemini-2.5-flash"
+readonly LLM_MODEL_COMPARISON="gemini-2.5-flash"
+#readonly LLM_MODEL_EXTRACTION="gemini-3-flash-preview"
+#readonly LLM_MODEL_COMPARISON="gemini-3-flash-preview"
 readonly N_ATTEMPTS=2
 
 
@@ -125,6 +126,18 @@ try_extraction() {
       || { echo "   ❌ Tentativo $attempt: Errore durante l'estrazione dati (prima estrazione)"; continue; }
       n_ai=$((n_ai+1))
 
+      # controlla se llm_response è vuota
+      if [ -z "$llm_response" ]; then
+         echo "   ❌ Tentativo $attempt: L'estrazione dati ha prodotto una risposta vuota. Riprovo..."
+         continue
+      fi
+      
+      # controlla sintassi csv con mlr --csv check
+      if ! echo "$llm_response" | mlr --csv check 2>/dev/null; then
+         echo "   ❌ Tentativo $attempt: L'estrazione dati ha prodotto un CSV con sintassi errata. Riprovo..."
+         continue
+      fi
+
       # rimuovo eventuali righe vuote finali e salvo il csv
       save_clean_csv "$llm_response" "./risorse/tmp/$new_filename.csv"
       echo "   🟢 Prima conversione da $new_filename.pdf in $new_filename.csv completata"
@@ -132,6 +145,12 @@ try_extraction() {
       # count rows (dams) in the first extraction
       n_dighe_ai_1=$(mlr --csv --headerless-csv-output cat -n then stats1 -a max -f n ./risorse/tmp/$new_filename.csv)
       echo "   Numero di righe (dighe) prima estrazione: $n_dighe_ai_1"
+
+      # se n_dighe_ai_1 è uguale a 0 oppure è vuoto, riprova l'estrazione
+      if [ -z "$n_dighe_ai_1" ] || [ "$n_dighe_ai_1" -eq 0 ]; then
+         echo "   ❌ Tentativo $attempt: L'estrazione dati ha prodotto un CSV senza righe di dati (dighe). Riprovo..."
+         continue
+      fi
          
       # SECOND EXTRACTION (without anagrafica)
       echo "   💬 Double check: eseguo estrazione senza anagrafica..."
@@ -149,6 +168,18 @@ try_extraction() {
       -o temperature 0.1) \
       || { echo "   ❌ Tentativo $attempt: Errore durante l'estrazione dati (seconda estrazione)"; continue; }
       n_ai=$((n_ai+1))
+
+      # controlla se llm_response è vuota
+      if [ -z "$llm_response" ]; then
+         echo "   ❌ Tentativo $attempt: L'estrazione dati ha prodotto una risposta vuota. Riprovo..."
+         continue
+      fi
+
+      # controlla sintassi csv con mlr --csv check
+      if ! echo "$llm_response" | mlr --csv check 2>/dev/null; then
+         echo "   ❌ Tentativo $attempt: L'estrazione dati ha prodotto un CSV con sintassi errata. Riprovo..."
+         continue
+      fi
 
       # rimuovo eventuali righe vuote finali, pulisco e salvo il csv
       save_clean_csv "$llm_response" "./risorse/tmp/2_$new_filename.csv"
@@ -247,7 +278,7 @@ url_page_with_list_1=$(curl -skL $URL | scrape -e "#it-block-field-blocknodegene
 # dalla pagina con l'elenco dei mesi seleziono il link all'ultimo mese
 # url_page_with_list_2=$(curl -skL $url_page_with_list_1 | scrape -be "#it-block-field-blocknodegeneric-pagefield-p-body a:last-of-type" | xq -r '.html.body.a[-1]."@href"')
 
-url_page_with_list_2="https://www.regione.sicilia.it/istituzioni/regione/strutture-regionali/presidenza-regione/autorita-bacino-distretto-idrografico-sicilia/ottobre-0"
+url_page_with_list_2="https://www.regione.sicilia.it/istituzioni/regione/strutture-regionali/presidenza-regione/autorita-bacino-distretto-idrografico-sicilia/novembre-0"
 
 # dalla pagina con l'elenco dei pdf dell'ultimo mese seleziono i link ai pdf
 pdfs_list=$(curl -skL "$url_page_with_list_2" | scrape -be "a" | xq -r '.html.body.a[]."@href"' | grep ".pdf")
