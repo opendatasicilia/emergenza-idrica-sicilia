@@ -278,7 +278,7 @@ url_page_with_list_1=$(curl -skL $URL | scrape -e "#it-block-field-blocknodegene
 # dalla pagina con l'elenco dei mesi seleziono il link all'ultimo mese
 # url_page_with_list_2=$(curl -skL $url_page_with_list_1 | scrape -be "#it-block-field-blocknodegeneric-pagefield-p-body a:last-of-type" | xq -r '.html.body.a[-1]."@href"')
 
-url_page_with_list_2="https://www.regione.sicilia.it/istituzioni/regione/strutture-regionali/presidenza-regione/autorita-bacino-distretto-idrografico-sicilia/novembre-0"
+url_page_with_list_2="https://www.regione.sicilia.it/istituzioni/regione/strutture-regionali/presidenza-regione/autorita-bacino-distretto-idrografico-sicilia/dicembre-0"
 
 # dalla pagina con l'elenco dei pdf dell'ultimo mese seleziono i link ai pdf
 pdfs_list=$(curl -skL "$url_page_with_list_2" | scrape -be "a" | xq -r '.html.body.a[]."@href"' | grep ".pdf")
