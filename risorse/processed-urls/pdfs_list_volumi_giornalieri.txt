@@ -310,3 +310,7 @@
 /sites/default/files/2025-11/2025-11-24-Volume%20Giornaliero%20Potabile.pdf
 /sites/default/files/2025-11/2025-11-25-Volume%20Giornaliero%20Potabile.pdf
 /sites/default/files/2025-11/2025-11-26-Volume%20Giornaliero%20Potabile.pdf
+/sites/default/files/2025-11/2025-11-27-Volume%20Giornaliero%20Potabile.pdf
+/sites/default/files/2025-12/2025-11-28-volume_giornaliero_potabile.pdf
+/sites/default/files/2025-12/2025-11-29-volume_giornaliero_potabile.pdf
+/sites/default/files/2025-12/2025-11-30-volume_giornaliero_potabile.pdf
