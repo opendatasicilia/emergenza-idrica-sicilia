@@ -18,6 +18,7 @@ set -e
 #-----------------constants-----------------#
 readonly URL="https://www.regione.sicilia.it/istituzioni/regione/strutture-regionali/presidenza-regione/autorita-bacino-distretto-idrografico-sicilia/monitoraggio-giornaliero-invasi-ad-uso-potabile"
 readonly PATH_PDFS_LIST="./risorse/processed-urls/pdfs_list_volumi_giornalieri.txt"
+readonly PATH_DIR_CACHE_MONTHS="./risorse/processed-urls/cache_months_giornalieri"
 readonly PATH_DIR_VOLUMI_GIORNALIERI="./risorse/volumi-giornalieri"
 readonly PATH_CSV_VOLUMI_GIORNALIERI="./risorse/sicilia_dighe_volumi_giornalieri.csv"
 readonly PATH_CSV_VOLUMI_GIORNALIERI_LATEST="./risorse/sicilia_dighe_volumi_giornalieri_latest.csv"
@@ -29,8 +30,13 @@ readonly AI_RPM=5
 readonly AI_RPD=20
 readonly AI_RPD_LIMIT=19   # soglia oltre la quale si cambia modello (free tier = 20 RPD)
 readonly AI_SLEEP=60
-#readonly LLM_MODEL_LITE="gemini-2.5-flash-lite"
-readonly LLM_MODEL_LITE="gemma-3-4b-it"
+# LLM_MODEL_LITE viene usato SOLO come fallback dalla normalize_pdf_date,
+# se la regex non riesce a estrarre la data dal nome file. In pratica
+# raramente o mai (regex copre il 100% dei pattern storici noti).
+# NB: i modelli gemma-3-* sono stati rimossi dall'API; gemma-4-31b-it è
+# il sostituto. Per evitare il falso-positivo del safety filter su path
+# con slash, la chiamata sostituisce '/' con ' ' nel prompt.
+readonly LLM_MODEL_LITE="gemma-4-31b-it"
 readonly LLM_MODEL_PRIMARY="gemini-2.5-flash"
 readonly LLM_MODEL_FALLBACK="gemini-3-flash-preview"
 readonly N_ATTEMPTS=2
@@ -103,6 +109,55 @@ count_ai_call() {
 source ./scripts/functions.sh
 
 # custom
+
+normalize_pdf_date() {
+   # Estrae la data (YYYY-MM-DD) dal nome di un PDF dei volumi giornalieri.
+   # Ordine dei tentativi:
+   #   1) regex YYYY-MM-DD o YYYY-MM-D nel basename (copre il 99% dei file)
+   #   2) regex DD.MM.YYYY o DD.MM.YY (es. "05.03.2025.pdf", "Volumi del 18.04.25.pdf")
+   #   3) fallback AI con gemma-4-31b-it: il prompt sostituisce '/' con ' ' per
+   #      evitare il falso positivo del content filter Gemini sui path filesystem-like
+   # Stampa la data normalizzata su stdout, oppure ritorna 1 se nessun pattern matcha.
+   local url=$1
+   local fname=$(basename "$url")
+   # url-decode minimale (%20 → spazio) per gestire nomi file con spazi
+   fname=${fname//%20/ }
+
+   # Pattern 1: YYYY-MM-DD o YYYY-MM-D
+   local d=$(echo "$fname" | grep -oE '[0-9]{4}-[0-9]{2}-[0-9]{1,2}' | head -1)
+   if [ -n "$d" ]; then
+      local y=${d%%-*}
+      local rest=${d#*-}
+      local m=${rest%%-*}
+      local dd=${rest#*-}
+      [ ${#dd} -eq 1 ] && dd="0$dd"
+      echo "$y-$m-$dd"
+      return 0
+   fi
+
+   # Pattern 2: DD.MM.YYYY o DD.MM.YY
+   d=$(echo "$fname" | grep -oE '[0-9]{1,2}\.[0-9]{1,2}\.[0-9]{2,4}' | head -1)
+   if [ -n "$d" ]; then
+      local dd=$(echo "$d" | cut -d. -f1)
+      local m=$(echo "$d" | cut -d. -f2)
+      local y=$(echo "$d" | cut -d. -f3)
+      [ ${#dd} -eq 1 ] && dd="0$dd"
+      [ ${#m} -eq 1 ] && m="0$m"
+      [ ${#y} -eq 2 ] && y="20$y"
+      echo "$y-$m-$dd"
+      return 0
+   fi
+
+   # Fallback AI: prompt-only (gemma-4 non supporta system prompt e va in
+   # "Internal error" sui path con slash → li sostituisco con spazi)
+   echo "   ⚠️  regex fallita su '$fname', uso LLM fallback ($LLM_MODEL_LITE)" >&2
+   local safe_url=${url//\// }
+   local llm_out
+   llm_out=$(llm -m "$LLM_MODEL_LITE" -o temperature 0 \
+      "Estrai la data dal nome '$safe_url' e formattala come YYYY-MM-DD. Output: solo la data, una riga." 2>/dev/null) || return 1
+   # gemma-4 a volte restituisce reasoning verboso: estraggo l'ultima occorrenza valida
+   echo "$llm_out" | grep -oE '[0-9]{4}-[0-9]{2}-[0-9]{2}' | tail -1 | grep . || return 1
+}
 
 save_clean_csv() {
    # Save LLM response to CSV with basic cleaning operations
@@ -370,16 +425,49 @@ done
 month_urls=$(echo "$month_urls" | awk 'NF')
 echo "   Trovati $(echo "$month_urls" | grep -c .) link mensili"
 
-# 3) per ogni mese, tutti i PDF
+# 3) per ogni mese, tutti i PDF (con cache su disco per i mesi "chiusi")
+#
+# Strategia di caching:
+# - I mesi del passato non vengono più aggiornati: salviamo la loro lista PDF
+#   in $PATH_DIR_CACHE_MONTHS/<slug>.txt e la riusiamo nelle run successive.
+# - Gli ultimi 2 mesi nell'ordine di iterazione (mese corrente + precedente)
+#   vengono SEMPRE rifetchati: questo copre PDF caricati in ritardo dopo il
+#   rollover del mese.
+# - Al primo run la cache è vuota → tutti i mesi vengono fetchati e la cache
+#   viene popolata. Dalla run successiva il discovery diventa quasi istantaneo.
+# - I file di cache vengono committati dal workflow (sono piccoli txt) così
+#   il beneficio si propaga tra esecuzioni in CI.
+mkdir -p "$PATH_DIR_CACHE_MONTHS"
+
+# ultimi 2 mesi nell'ordine pagina (= corrente + precedente, sempre rifetchati)
+fresh_months=$(echo "$month_urls" | tail -n 2)
+
 pdfs_list=""
+n_cached=0; n_fetched=0
 while IFS= read -r month_url; do
    [ -z "$month_url" ] && continue
-   month_pdfs=$(curl -skL "$month_url" | scrape -be "a" 2>/dev/null | xq -r '.html.body.a[]?."@href" // empty' 2>/dev/null | grep "\.pdf" || true)
+   slug=$(basename "$month_url")
+   cache_file="$PATH_DIR_CACHE_MONTHS/$slug.txt"
+
+   if grep -qFx "$month_url" <<< "$fresh_months" || [ ! -s "$cache_file" ]; then
+      echo "   ⬇️  fetch $slug..."
+      # grep diretto sugli href .pdf: niente scrape+xq (Python startup × N mesi)
+      month_pdfs=$(curl -skL "$month_url" | grep -oE 'href="[^"]+\.pdf"' | sed 's/^href="//;s/"$//' || true)
+      if [ -n "$month_pdfs" ]; then
+         echo "$month_pdfs" > "$cache_file"
+      fi
+      n_fetched=$((n_fetched+1))
+   else
+      month_pdfs=$(cat "$cache_file")
+      n_cached=$((n_cached+1))
+   fi
+
    if [ -n "$month_pdfs" ]; then
       pdfs_list+="$month_pdfs"$'\n'
    fi
 done <<< "$month_urls"
 pdfs_list=$(echo "$pdfs_list" | awk 'NF')
+echo "   📦 Mesi da cache: $n_cached, da rete: $n_fetched"
 echo "   Trovati $(echo "$pdfs_list" | grep -c .) PDF totali sul sito"
 
 # create list of new pdfs
@@ -413,11 +501,10 @@ for line in "${pdfs_array[@]}"; do
    echo ""
    echo "📄 $n_pdf/$n_pdfs... Processo $line"
    
-   # converto il nome del pdf YYYY-MM-DD.pdf tramite ai (una sola volta)
-   # check_limits $AI_RPM $AI_SLEEP
-   new_filename=$(normalize_filename "$line" "YYYY-MM-DD" "$LLM_MODEL_LITE") \
-   || { echo "   ❌ Errore durante la normalizzazione del nome del file."; continue; }
-   # n_ai=$((n_ai+1))
+   # estraggo la data dal nome del PDF: regex deterministica (no AI per il
+   # caso comune); LLM solo come fallback per pattern futuri non previsti.
+   new_filename=$(normalize_pdf_date "$line") \
+   || { echo "   ❌ Impossibile estrarre la data dal nome file '$line'. Skip."; continue; }
    
    # scarico il pdf e lo chiamo $new_filename
    curl -skL "$URL_HOMEPAGE$line" -o "./risorse/pdf/volumi-giornalieri/$new_filename.pdf"
