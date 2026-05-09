@@ -27,14 +27,73 @@ readonly URL_HOMEPAGE="https://www.regione.sicilia.it"
 readonly URL_CSV_ANAGRAFICA_DIGHE="https://raw.githubusercontent.com/opendatasicilia/emergenza-idrica-sicilia/refs/heads/main/risorse/sicilia_dighe_anagrafica.csv"
 readonly AI_RPM=5
 readonly AI_RPD=20
+readonly AI_RPD_LIMIT=19   # soglia oltre la quale si cambia modello (free tier = 20 RPD)
 readonly AI_SLEEP=60
 #readonly LLM_MODEL_LITE="gemini-2.5-flash-lite"
 readonly LLM_MODEL_LITE="gemma-3-4b-it"
-readonly LLM_MODEL_EXTRACTION="gemini-2.5-flash"
-readonly LLM_MODEL_COMPARISON="gemini-2.5-flash"
-#readonly LLM_MODEL_EXTRACTION="gemini-3-flash-preview"
-#readonly LLM_MODEL_COMPARISON="gemini-3-flash-preview"
+readonly LLM_MODEL_PRIMARY="gemini-2.5-flash"
+readonly LLM_MODEL_FALLBACK="gemini-3-flash-preview"
 readonly N_ATTEMPTS=2
+
+# contatori per quota giornaliera per-modello (gestiti in pick_ai_model / count_ai_call)
+n_ai_primary=0
+n_ai_fallback=0
+current_ai_model="$LLM_MODEL_PRIMARY"
+
+# rotazione API key: il workflow esporta GEMINI_KEY (già impostata via `llm keys set gemini`)
+# ed eventualmente GEMINI_KEY_2, GEMINI_KEY_3, ... Quando i contatori di entrambi i modelli
+# sono saturi sulla key corrente, passo alla successiva e resetto i contatori.
+api_keys=()
+[ -n "${GEMINI_KEY:-}" ]   && api_keys+=("$GEMINI_KEY")
+[ -n "${GEMINI_KEY_2:-}" ] && api_keys+=("$GEMINI_KEY_2")
+[ -n "${GEMINI_KEY_3:-}" ] && api_keys+=("$GEMINI_KEY_3")
+current_key_idx=0
+
+rotate_api_key() {
+   # Passa alla prossima API key disponibile e resetta i contatori per-modello.
+   # Ritorna 0 se la rotazione è avvenuta, 1 se non ci sono altre key.
+   local next_idx=$((current_key_idx+1))
+   if [ $next_idx -ge ${#api_keys[@]} ]; then
+      return 1
+   fi
+   current_key_idx=$next_idx
+   echo "🔑 Passo alla API key #$((current_key_idx+1)) e resetto i contatori" >&2
+   echo "${api_keys[$current_key_idx]}" | llm keys set gemini >/dev/null 2>&1 \
+      || { echo "   ❌ Errore impostando la nuova API key" >&2; return 1; }
+   n_ai_primary=0
+   n_ai_fallback=0
+   current_ai_model="$LLM_MODEL_PRIMARY"
+   return 0
+}
+
+selected_model=""
+pick_ai_model() {
+   # Sceglie il modello da usare in base ai contatori giornalieri.
+   # IMPORTANTE: NON va chiamata in subshell `$(...)`, altrimenti le modifiche
+   # ai contatori globali e a current_ai_model non si propagano. Imposta la
+   # variabile globale `selected_model`. Ritorna 1 se tutte le quote sono esaurite.
+   if [ "$current_ai_model" = "$LLM_MODEL_PRIMARY" ] && [ $n_ai_primary -ge $AI_RPD_LIMIT ]; then
+      echo "🔄 Raggiunte $n_ai_primary chiamate a $LLM_MODEL_PRIMARY, passo a $LLM_MODEL_FALLBACK" >&2
+      current_ai_model="$LLM_MODEL_FALLBACK"
+   fi
+   if [ "$current_ai_model" = "$LLM_MODEL_FALLBACK" ] && [ $n_ai_fallback -ge $AI_RPD_LIMIT ]; then
+      # provo a passare alla prossima API key (riparto da PRIMARY con contatori a zero)
+      if ! rotate_api_key; then
+         return 1
+      fi
+   fi
+   selected_model="$current_ai_model"
+   return 0
+}
+
+count_ai_call() {
+   # Incrementa il contatore del modello attualmente in uso.
+   if [ "$current_ai_model" = "$LLM_MODEL_PRIMARY" ]; then
+      n_ai_primary=$((n_ai_primary+1))
+   else
+      n_ai_fallback=$((n_ai_fallback+1))
+   fi
+}
 
 
 
@@ -118,13 +177,15 @@ try_extraction() {
       system_prompt="Il tuo compito è quello di estrarre dati da un pdf allegato e di incrociarli con i dati di un'anagrafica csv passata come prompt. Dalla tabella pdf, individua la data di rilevazione e poi estrai tutti i dati della colonna invaso (chiamala 'diga_pdf') e quelli della colonne relative alla quota autorizzata, volume autorizzato, quota, volume, volume utile netto per utilizzatori (chiamale rispettivamente: quota_autorizzata, volume_autorizzato, quota, volume, volume_utile). Arricchisci la tabella aggiungendo una colonna chiamata 'data' che abbia in ogni riga la data della rilevazione più recente a cui si riferiscono i dati nel formato yyyy-mm-dd. Dal CSV, estrai la colonna 'diga' che chiamerai 'diga_anagrafica' popolata con il nome corretto (da includere esattamente nell'output). Confronta le colonne 'diga_pdf' e 'diga_anagrafica' per fare in modo di arricchire il dataset e assegnare a ogni diga il corrispondente codice identificativo presente nella colonna 'cod' del csv. Talvolta è presente una diga chiamata ogliastro che coincide don sturzo; se questa diga non è presente nel pdf, non la includere nel tuo output. Assicurati di estrarre correttamente i dati relativi a tutte le dighe presenti nel pdf. Se il PDF contiene la diga castello, assicurati di estrarre i dati anche di questa diga. In ultimo, cestina la colonna 'diga_pdf' e  nell'output includi i valori di 'diga_anagrafica' sotto il nome di 'diga'. Attenzione ad attribuire correttamente il codice al nome della diga secondo l'anagrafica csv. Se l'anagrafica csv contiene più dighe della tabella pdf, l'output deve contenere solo ed esclusivamente le dighe presenti nel file pdf. L'output deve avere questa struttura 'cod,diga,data,quota_autorizzata,volume_autorizzato,quota,volume,volume_utile' e non deve avere righe vuote finali. Tieni presente che i valori di 'diga' devono essere esattamente coincidenti con quelli di 'diga_anagrafica'. I separatori di decimali dei volumi devono essere i punti e non le virgole (correggi la sintassi dei numeri da formato italiano a formato internazionale). Se l'output csv contiene righe finali senza valori, rimuovile."
 
       check_limits $AI_RPM $AI_SLEEP
+      if ! pick_ai_model; then echo "   🛑 Quota giornaliera esaurita per tutte le API key."; return 2; fi
+      model="$selected_model"
       llm_response=$(cat risorse/sicilia_dighe_anagrafica.csv | llm -x \
-      -m "$LLM_MODEL_EXTRACTION" \
+      -m "$model" \
       -s "$system_prompt" \
       -a "./risorse/pdf/volumi-giornalieri/$new_filename.pdf" \
       -o temperature 0.11) \
-      || { echo "   ❌ Tentativo $attempt: Errore durante l'estrazione dati (prima estrazione)"; continue; }
-      n_ai=$((n_ai+1))
+      || { echo "   ❌ Tentativo $attempt: Errore durante l'estrazione dati (prima estrazione)"; count_ai_call; n_ai=$((n_ai+1)); continue; }
+      count_ai_call; n_ai=$((n_ai+1))
 
       # controlla se llm_response è vuota
       if [ -z "$llm_response" ]; then
@@ -160,14 +221,16 @@ try_extraction() {
       prompt="Dalla tabella pdf, individua la data di rilevazione e poi estrai tutti i dati della colonna invaso e quelli della colonne relative alla quota autorizzata, volume autorizzato, quota, volume, volume utile netto per utilizzatori (chiamale rispettivamente: quota_autorizzata, volume_autorizzato, quota, volume, volume_utile). Arricchisci la tabella aggiungendo una colonna chiamata 'data' che abbia in ogni riga la data della rilevazione più recente a cui si riferiscono i dati nel formato yyyy-mm-dd. L'output deve avere questa struttura 'cod,diga,data,quota_autorizzata,volume_autorizzato,quota,volume,volume_utile' e non deve avere righe vuote finali. I separatori di decimali dei volumi devono essere i punti e non le virgole (correggi la sintassi dei numeri da formato italiano a formato internazionale). Se l'output csv contiene righe finali senza valori, rimuovile."
 
       check_limits $AI_RPM $AI_SLEEP
+      if ! pick_ai_model; then echo "   🛑 Quota giornaliera esaurita per tutte le API key."; return 2; fi
+      model="$selected_model"
       llm_response=$(llm -x \
-      -m "$LLM_MODEL_EXTRACTION" \
+      -m "$model" \
       -s "$system_prompt" \
       "$prompt" \
       -a "./risorse/pdf/volumi-giornalieri/$new_filename.pdf" \
       -o temperature 0.1) \
-      || { echo "   ❌ Tentativo $attempt: Errore durante l'estrazione dati (seconda estrazione)"; continue; }
-      n_ai=$((n_ai+1))
+      || { echo "   ❌ Tentativo $attempt: Errore durante l'estrazione dati (seconda estrazione)"; count_ai_call; n_ai=$((n_ai+1)); continue; }
+      count_ai_call; n_ai=$((n_ai+1))
 
       # controlla se llm_response è vuota
       if [ -z "$llm_response" ]; then
@@ -207,12 +270,14 @@ try_extraction() {
       prompt="Ti inserisco di seguito due CSV. Il secondo CSV è probabile che abbia delle dighe in più che nel primo file non sono censite. Fammi un piccolo report di validazione sintetico in json con due chiavi. Il json deve contenere le key 'valid' (booleana) e 'summary'. La key 'summary' deve contenere il motivo discorsivo in italiano del perchè il confronto è fallito (se è fallito). Se tra i due file csv ci sono discrepanze nel valore dei volumi allora il report è invalido e la key 'valid' deve contenere il valore false. Nel summary del report includi pure i dettagli sulle eventuali dighe mancanti nel primo file. Includi pure una sezione dedicata alla somiglianza dei nomi delle dighe. Se due dighe presentano nomi diversi ma simili, non è un errore e questo non inficia la key 'valid'. La presenza di nomi diversi ma simili non inficia la validità ( esempio: Se non ci sono discrepanze sui valori dei volumi, ci sono alcuni nomi di dighe simili, allora il report è valid: true). Di seguito ti riporto esempi di dighe con nomi simili: 'leone' e 'piano del leone' indicano la stessa diga. Assicurati di non considerare come errore le discrepanze nei nomi delle dighe. Il primo csv (prima estrazione) è il seguente: <primo_csv> $(cat ./risorse/tmp/$new_filename.csv) <\primo_csv>. Il secondo csv (seconda estrazione) è il seguente: <secondo_csv> $(cat ./risorse/tmp/2_$new_filename.csv) <\secondo_csv>"
 
       check_limits $AI_RPM $AI_SLEEP
-      llm_response=$(llm -m "$LLM_MODEL_COMPARISON" \
+      if ! pick_ai_model; then echo "   🛑 Quota giornaliera esaurita per tutte le API key."; return 2; fi
+      model="$selected_model"
+      llm_response=$(llm -m "$model" \
       -s "$system_prompt" \
       "$prompt" \
       -o json_object 1) \
-      || { echo "❌ Tentativo $attempt: Errore durante il confronto dati"; continue; }
-      n_ai=$((n_ai+1))
+      || { echo "❌ Tentativo $attempt: Errore durante il confronto dati"; count_ai_call; n_ai=$((n_ai+1)); continue; }
+      count_ai_call; n_ai=$((n_ai+1))
 
       # salvo il report di validazione
       echo "$llm_response" > $PATH_EXTRACTION_REPORT
@@ -234,9 +299,21 @@ try_extraction() {
          mkdir -p ./risorse/volumi-giornalieri
          cp ./risorse/tmp/$new_filename.csv ./risorse/volumi-giornalieri/$new_filename.csv
 
-         # aggiorno il csv latest dei volumi giornalieri 
-         cp ./risorse/tmp/$new_filename.csv $PATH_CSV_VOLUMI_GIORNALIERI_LATEST
-         echo "   🔄 Aggiornato $(basename $PATH_CSV_VOLUMI_GIORNALIERI_LATEST)"
+         # aggiorno il csv latest dei volumi giornalieri SOLO se la data del PDF
+         # processato è più recente di quella attualmente in _latest.csv
+         # (importante quando si recupera lo storico: non vogliamo sovrascrivere
+         # latest con un PDF di mesi/anni precedenti)
+         pdf_date=$(< ./risorse/tmp/$new_filename.csv mlr --csv --headerless-csv-output cut -f data | head -1)
+         current_latest_date=""
+         if [ -f "$PATH_CSV_VOLUMI_GIORNALIERI_LATEST" ]; then
+            current_latest_date=$(< $PATH_CSV_VOLUMI_GIORNALIERI_LATEST mlr --csv --headerless-csv-output cut -f data 2>/dev/null | head -1)
+         fi
+         if [ -z "$current_latest_date" ] || [[ "$pdf_date" > "$current_latest_date" ]]; then
+            cp ./risorse/tmp/$new_filename.csv $PATH_CSV_VOLUMI_GIORNALIERI_LATEST
+            echo "   🔄 Aggiornato $(basename $PATH_CSV_VOLUMI_GIORNALIERI_LATEST) (data $pdf_date)"
+         else
+            echo "   ⏭️  $(basename $PATH_CSV_VOLUMI_GIORNALIERI_LATEST) NON aggiornato: data PDF ($pdf_date) <= data latest ($current_latest_date)"
+         fi
          
          success=true
          break
@@ -272,20 +349,46 @@ echo "✅ Requirements satisfied!"
 #----------------- main -----------------#
 echo "🔎 Cerco nuovi dati sui volumi giornalieri..."
 
-# dalla pagina con l'elenco degli anni seleziono il link all'ultimo anno
-url_page_with_list_1=$(curl -skL $URL | scrape -e "#it-block-field-blocknodegeneric-pagefield-p-body h3:last-of-type a:last-of-type" | xq -r '.a."@href"')
+# funzione per estrarre gli href dai blocchi h3 a (anni/mesi)
+extract_h3_links() {
+   local page_url=$1
+   curl -skL "$page_url" \
+   | scrape -e "#it-block-field-blocknodegeneric-pagefield-p-body h3 a" 2>/dev/null \
+   | grep -oE 'href="[^"]+"' | sed 's/^href="//;s/"$//'
+}
 
-# dalla pagina con l'elenco dei mesi seleziono il link all'ultimo mese
-# url_page_with_list_2=$(curl -skL $url_page_with_list_1 | scrape -be "#it-block-field-blocknodegeneric-pagefield-p-body a:last-of-type" | xq -r '.html.body.a[-1]."@href"')
+# 1) tutti gli anni dalla pagina principale
+year_urls=$(extract_h3_links "$URL")
+echo "   Trovati $(echo "$year_urls" | grep -c .) link annuali"
 
-url_page_with_list_2="https://www.regione.sicilia.it/istituzioni/regione/strutture-regionali/presidenza-regione/autorita-bacino-distretto-idrografico-sicilia/dicembre-0"
+# 2) per ogni anno, tutti i mesi
+month_urls=""
+for year_url in $year_urls; do
+   m=$(extract_h3_links "$year_url")
+   month_urls+="$m"$'\n'
+done
+month_urls=$(echo "$month_urls" | awk 'NF')
+echo "   Trovati $(echo "$month_urls" | grep -c .) link mensili"
 
-# dalla pagina con l'elenco dei pdf dell'ultimo mese seleziono i link ai pdf
-pdfs_list=$(curl -skL "$url_page_with_list_2" | scrape -be "a" | xq -r '.html.body.a[]."@href"' | grep ".pdf")
+# 3) per ogni mese, tutti i PDF
+pdfs_list=""
+while IFS= read -r month_url; do
+   [ -z "$month_url" ] && continue
+   month_pdfs=$(curl -skL "$month_url" | scrape -be "a" 2>/dev/null | xq -r '.html.body.a[]?."@href" // empty' 2>/dev/null | grep "\.pdf" || true)
+   if [ -n "$month_pdfs" ]; then
+      pdfs_list+="$month_pdfs"$'\n'
+   fi
+done <<< "$month_urls"
+pdfs_list=$(echo "$pdfs_list" | awk 'NF')
+echo "   Trovati $(echo "$pdfs_list" | grep -c .) PDF totali sul sito"
 
 # create list of new pdfs
 new_pdfs=$(compare_lists "$pdfs_list" "$PATH_PDFS_LIST") \
 || { echo "   ❌ Errore durante la ricerca dei nuovi file da processare."; exit 1; }
+
+# ordina dal più recente al più vecchio (i path contengono /YYYY-MM/YYYY-MM-DD-...)
+# così, se la quota AI si esaurisce a metà run, i PDF più recenti sono già processati.
+new_pdfs=$(echo "$new_pdfs" | grep -v '^$' | sort -r)
 
 # count new pdfs
 n_pdfs=$(echo "$new_pdfs" | grep -v '^$' | wc -l)
@@ -321,15 +424,30 @@ for line in "${pdfs_array[@]}"; do
    echo "   ⬇️  File scaricato e rinominato in $new_filename.pdf"
    
    # prova l'estrazione con massimo $N_ATTEMPTS tentativi
-   if ! try_extraction "$new_filename" "$N_ATTEMPTS"; then
-      echo "   ❌ Fallimento nell'elaborazione del PDF $n_pdf. Passo al prossimo file."
-   else
+   set +e
+   try_extraction "$new_filename" "$N_ATTEMPTS"
+   extraction_rc=$?
+   set -e
+
+   if [ $extraction_rc -eq 0 ]; then
       # aggiungo il pdf alla lista dei pdf scaricati
       echo "$line" >> $PATH_PDFS_LIST
       echo "   📦 Aggiornata la lista dei PDF processati"
+   elif [ $extraction_rc -eq 2 ]; then
+      # quota giornaliera AI esaurita su entrambi i modelli: stop pulito
+      echo "   🛑 Interrompo il processing dei PDF: riprenderò domani con quota fresca."
+      echo "      (chiamate $LLM_MODEL_PRIMARY: $n_ai_primary, $LLM_MODEL_FALLBACK: $n_ai_fallback)"
+      break
+   else
+      echo "   ❌ Fallimento nell'elaborazione del PDF $n_pdf. Passo al prossimo file."
    fi
    echo ""
 done
+
+echo ""
+echo "📊 Riepilogo chiamate AI (key corrente #$((current_key_idx+1))/${#api_keys[@]}):"
+echo "   $LLM_MODEL_PRIMARY: $n_ai_primary/$AI_RPD_LIMIT"
+echo "   $LLM_MODEL_FALLBACK: $n_ai_fallback/$AI_RPD_LIMIT"
 
 # if temp folder exists
 if [ -d "./risorse/tmp" ]; then

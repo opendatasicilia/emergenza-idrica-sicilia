@@ -44,50 +44,59 @@ jobs:
         run: |
           echo "$GEMINI_KEY" | llm keys set gemini
 
-      - name: Download and convert data (volumi invasati mensilmente) from PDF
-        run: |
-          export PATH=$PATH:~/bin
-          chmod +x ./scripts/*.sh && ./scripts/check_convert_volumi_mensili.sh
-
-      - name: Frictionless 1st data validation
-        # se questo step fallisce, l'intera action si blocca quindi non si invia il messaggio e non si committano i dati, nè si va avanti con la ricerca di dati giornalieri.
-        run: frictionless validate datapackage.yaml
-
-      - name: Send telegram message (new data)
-        if: ${{ hashFiles('risorse/msgs/new_volumi_mensili.md') != '' }}
-        env: 
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        run: |
-          curl -s -X POST https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage -d chat_id=$TELEGRAM_CHAT_ID -d parse_mode="Markdown" -d text="$(cat ./risorse/msgs/new_volumi_mensili.md)"
-          rm ./risorse/msgs/new_volumi_mensili.md
-          echo "Telegram message (new data volumi mensili) sent"
-
-      - name: Commit and push new data
-        run: |-
-          git add -A
-          git commit -m "[volumi mensili] Aggiornati i dati dei volumi invasati $(date --iso-8601)" || exit 0
-          git push
+      # ──────────────────────────────────────────────────────────────────
+      # VOLUMI MENSILI + relativo telegram: temporaneamente disabilitati
+      # per concentrarsi sul recupero dello storico dei volumi giornalieri.
+      # ──────────────────────────────────────────────────────────────────
+      # - name: Download and convert data (volumi invasati mensilmente) from PDF
+      #   run: |
+      #     export PATH=$PATH:~/bin
+      #     chmod +x ./scripts/*.sh && ./scripts/check_convert_volumi_mensili.sh
+      #
+      # - name: Frictionless 1st data validation
+      #   # se questo step fallisce, l'intera action si blocca quindi non si invia il messaggio e non si committano i dati, nè si va avanti con la ricerca di dati giornalieri.
+      #   run: frictionless validate datapackage.yaml
+      #
+      # - name: Send telegram message (new data)
+      #   if: ${{ hashFiles('risorse/msgs/new_volumi_mensili.md') != '' }}
+      #   env:
+      #     TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      #     TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      #   run: |
+      #     curl -s -X POST https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage -d chat_id=$TELEGRAM_CHAT_ID -d parse_mode="Markdown" -d text="$(cat ./risorse/msgs/new_volumi_mensili.md)"
+      #     rm ./risorse/msgs/new_volumi_mensili.md
+      #     echo "Telegram message (new data volumi mensili) sent"
+      #
+      # - name: Commit and push new data (mensili)
+      #   run: |-
+      #     git add -A
+      #     git commit -m "[volumi mensili] Aggiornati i dati dei volumi invasati $(date --iso-8601)" || exit 0
+      #     git push
 
       - name: Download and convert data (volumi invasati giornalieri) from PDF
+        env:
+          # Esposte allo script per la rotazione delle API key quando la quota
+          # giornaliera (free tier: 20 RPD per modello) si esaurisce.
+          GEMINI_KEY: ${{ secrets.GEMINI_KEY }}
+          GEMINI_KEY_2: ${{ secrets.GEMINI_KEY_2 }}
         run: |
           export PATH=$PATH:~/bin
           chmod +x ./scripts/*.sh && ./scripts/check_convert_volumi_giornalieri.sh
 
-      - name: Frictionless 2nd data validation
+      - name: Frictionless data validation (giornalieri)
         run: frictionless validate datapackage.yaml
 
-      - name: Send telegram message (new volumi giornalieri)
-        if: ${{ hashFiles('risorse/msgs/new_volumi_giornalieri.md') != '' }}
-        env: 
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        run: |
-          curl -s -X POST https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage -d chat_id=$TELEGRAM_CHAT_ID -d parse_mode="Markdown" -d text="$(cat ./risorse/msgs/new_volumi_giornalieri.md)"
-          rm ./risorse/msgs/new_volumi_giornalieri.md
-          echo "Telegram message (new data volumi giornalieri) sent"
+      # - name: Send telegram message (new volumi giornalieri)
+      #   if: ${{ hashFiles('risorse/msgs/new_volumi_giornalieri.md') != '' }}
+      #   env:
+      #     TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      #     TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      #   run: |
+      #     curl -s -X POST https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage -d chat_id=$TELEGRAM_CHAT_ID -d parse_mode="Markdown" -d text="$(cat ./risorse/msgs/new_volumi_giornalieri.md)"
+      #     rm ./risorse/msgs/new_volumi_giornalieri.md
+      #     echo "Telegram message (new data volumi giornalieri) sent"
 
-      - name: Commit and push new data
+      - name: Commit and push new data (giornalieri)
         run: |-
           git add -A
           git commit -m "[volumi giornalieri] Aggiornati i dati dei volumi invasati $(date --iso-8601)" || exit 0
