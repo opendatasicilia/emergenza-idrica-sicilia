@@ -30,6 +30,9 @@ readonly AI_RPM=5          # max richieste/minuto per modello (Gemini free tier)
 readonly AI_RPD=20         # max richieste/giorno per modello (Gemini free tier)
 readonly AI_RPD_LIMIT=19   # soglia di sicurezza: a 19 chiamate/giorno si cambia modello/key (e poi si esce)
 readonly AI_SLEEP=60       # attesa di default (s) quando l'API segnala un rate-limit senza retryDelay
+readonly AI_OVERLOAD_SLEEP=30        # backoff base (s) per modello sovraccarico (503 / "high demand")
+readonly AI_OVERLOAD_MAX_RETRIES=3   # tentativi con backoff prima di cambiare modello / interrompere
+readonly AI_OVERLOAD_MAX_WAIT=240    # tetto (s) al backoff esponenziale per il sovraccarico
 # LLM_MODEL_LITE viene usato SOLO come fallback dalla normalize_pdf_date,
 # se la regex non riesce a estrarre la data dal nome file. In pratica
 # raramente o mai (regex copre il 100% dei pattern storici noti).
@@ -115,6 +118,19 @@ exhaust_current_model() {
    fi
 }
 
+switch_model_on_overload() {
+   # Il sovraccarico è lato-server e per-modello: se quello in uso è "high
+   # demand", l'altro modello potrebbe rispondere. Alterna PRIMARY<->FALLBACK
+   # SENZA toccare i contatori di quota (non è un problema di quota).
+   # Ritorna 0 se ha cambiato modello, 1 se non c'è alternativa.
+   if [ "$current_ai_model" = "$LLM_MODEL_PRIMARY" ]; then
+      echo "   🔀 $LLM_MODEL_PRIMARY sovraccarico: provo con $LLM_MODEL_FALLBACK" >&2
+      current_ai_model="$LLM_MODEL_FALLBACK"
+      return 0
+   fi
+   return 1
+}
+
 throttle_rpm() {
    # Limitatore RPM a finestra scorrevole di 60 secondi.
    #
@@ -145,15 +161,20 @@ throttle_rpm() {
 classify_ai_error() {
    # Classifica una chiamata `llm` fallita a partire dal testo di errore
    # (stderr + eventuale stdout). Stampa una di queste etichette:
-   #   rpd    -> superato il limite GIORNALIERO del modello (429)
-   #   rpm    -> superato il limite al MINUTO (429)
-   #   quota  -> 429 / quota esaurita non meglio specificato
-   #   other  -> errore NON di quota (rete, timeout, 5xx, output malformato...)
+   #   rpd      -> superato il limite GIORNALIERO del modello (429)
+   #   rpm      -> superato il limite al MINUTO (429)
+   #   overload -> modello sovraccarico / temporaneamente non disponibile (503,
+   #               "high demand", "try again later", UNAVAILABLE): NON è quota,
+   #               va gestito con backoff e ritentato, non sprecando 200 chiamate
+   #   quota    -> 429 / quota esaurita non meglio specificato
+   #   other    -> errore NON di quota (rete, timeout, output malformato...)
    local err=$1
    if echo "$err" | grep -qiE 'per.?day|perday|per project per day|daily'; then
       echo rpd
    elif echo "$err" | grep -qiE 'per.?minute|perminute|per project per minute'; then
       echo rpm
+   elif echo "$err" | grep -qiE 'overload|high demand|please try again later|temporarily unavailable|(^|[^0-9])503([^0-9]|$)|unavailable'; then
+      echo overload
    elif echo "$err" | grep -qiE '(^|[^0-9])429([^0-9]|$)|resource[_ ]?exhausted|too many requests|quota'; then
       echo quota
    else
@@ -170,6 +191,21 @@ parse_retry_delay() {
       echo $((d + 2))
    else
       echo "$AI_SLEEP"
+   fi
+}
+
+overload_backoff() {
+   # Ritardo (s) per un errore di sovraccarico modello. Usa il retryDelay
+   # suggerito dall'API se presente e maggiore, altrimenti backoff esponenziale
+   # AI_OVERLOAD_SLEEP * 2^(n-1) con tetto AI_OVERLOAD_MAX_WAIT.
+   local n=$1 err=$2 suggested backoff
+   backoff=$(( AI_OVERLOAD_SLEEP * (1 << (n - 1)) ))
+   [ "$backoff" -gt "$AI_OVERLOAD_MAX_WAIT" ] && backoff=$AI_OVERLOAD_MAX_WAIT
+   suggested=$(echo "$err" | grep -oiE 'retry[-_ ]?delay[^0-9]*[0-9]+' | grep -oE '[0-9]+' | head -1)
+   if [ -n "$suggested" ] && [ "$suggested" -gt "$backoff" ] 2>/dev/null; then
+      echo $((suggested + 2))
+   else
+      echo "$backoff"
    fi
 }
 
@@ -192,7 +228,9 @@ ai_call() {
    #   0 -> ok            ($ai_response valorizzata)
    #   1 -> errore generico NON di quota (il chiamante può ritentare)
    #   2 -> quota esaurita su TUTTI i modelli/key (il chiamante deve uscire)
-   local err_file rc err_text kind wait rpm_retries=0
+   #   3 -> servizio AI sovraccarico in modo persistente (il chiamante deve
+   #        uscire: inutile e dannoso martellare il modello su ogni PDF)
+   local err_file rc err_text kind wait rpm_retries=0 overload_retries=0 overload_switched=0
    err_file=$(mktemp)
 
    while true; do
@@ -229,6 +267,23 @@ ai_call() {
             wait=$(parse_retry_delay "$err_text")
             echo "   ⏳ $selected_model: rate-limit al minuto, attendo ${wait}s e ritento..." >&2
             sleep "$wait"
+            ;;
+         overload)
+            # modello sovraccarico (503 / "high demand"): NON è quota. Ritento
+            # con backoff crescente per non martellare il server; se persiste,
+            # provo l'altro modello una volta; se anche quello è giù, ESCO (3).
+            overload_retries=$((overload_retries+1))
+            if [ "$overload_retries" -le "$AI_OVERLOAD_MAX_RETRIES" ]; then
+               wait=$(overload_backoff "$overload_retries" "$err_text")
+               echo "   🚧 $selected_model sovraccarico (tentativo $overload_retries/$AI_OVERLOAD_MAX_RETRIES): attendo ${wait}s e ritento..." >&2
+               sleep "$wait"
+            elif [ "$overload_switched" -eq 0 ] && switch_model_on_overload; then
+               overload_switched=1
+               overload_retries=0
+            else
+               echo "   🛑 Servizio AI sovraccarico in modo persistente: interrompo per non martellare il modello." >&2
+               rm -f "$err_file"; return 3
+            fi
             ;;
          *)
             # errore non di quota: lo gestisce il chiamante come tentativo fallito
@@ -417,6 +472,7 @@ try_extraction() {
       -o temperature 0.11
       rc=$?
       if [ $rc -eq 2 ]; then echo "   🛑 Quota AI giornaliera esaurita su tutti i modelli/key."; return 2; fi
+      if [ $rc -eq 3 ]; then echo "   🛑 Servizio AI sovraccarico: interrompo l'estrazione."; return 3; fi
       if [ $rc -ne 0 ]; then echo "   ❌ Tentativo $attempt: Errore durante l'estrazione dati (prima estrazione)"; continue; fi
       llm_response=$ai_response
 
@@ -460,6 +516,7 @@ try_extraction() {
       -o temperature 0.1
       rc=$?
       if [ $rc -eq 2 ]; then echo "   🛑 Quota AI giornaliera esaurita su tutti i modelli/key."; return 2; fi
+      if [ $rc -eq 3 ]; then echo "   🛑 Servizio AI sovraccarico: interrompo l'estrazione."; return 3; fi
       if [ $rc -ne 0 ]; then echo "   ❌ Tentativo $attempt: Errore durante l'estrazione dati (seconda estrazione)"; continue; fi
       llm_response=$ai_response
 
@@ -506,6 +563,7 @@ try_extraction() {
       -o json_object 1
       rc=$?
       if [ $rc -eq 2 ]; then echo "   🛑 Quota AI giornaliera esaurita su tutti i modelli/key."; return 2; fi
+      if [ $rc -eq 3 ]; then echo "   🛑 Servizio AI sovraccarico: interrompo l'estrazione."; return 3; fi
       if [ $rc -ne 0 ]; then echo "   ❌ Tentativo $attempt: Errore durante il confronto dati"; continue; fi
       llm_response=$ai_response
 
@@ -702,6 +760,13 @@ for line in "${pdfs_array[@]}"; do
       # quota giornaliera AI esaurita su entrambi i modelli: stop pulito
       echo "   🛑 Interrompo il processing dei PDF: riprenderò domani con quota fresca."
       echo "      (chiamate $LLM_MODEL_PRIMARY: $n_ai_primary, $LLM_MODEL_FALLBACK: $n_ai_fallback)"
+      break
+   elif [ $extraction_rc -eq 3 ]; then
+      # servizio AI sovraccarico in modo persistente: stop pulito senza
+      # martellare il modello sui PDF restanti. I PDF già processati sono
+      # salvi (commit incrementale); la prossima run riprenderà da qui.
+      echo "   🛑 Interrompo il processing dei PDF: il servizio AI è sovraccarico."
+      echo "      Riproverò alla prossima esecuzione schedulata."
       break
    else
       echo "   ❌ Fallimento nell'elaborazione del PDF $n_pdf. Passo al prossimo file."
