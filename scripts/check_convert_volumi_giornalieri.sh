@@ -26,10 +26,10 @@ readonly PATH_MSG_TELEGRAM="./risorse/msgs/new_volumi_giornalieri.md"
 readonly PATH_EXTRACTION_REPORT="./risorse/report/extraction_giornalieri_latest.json"
 readonly URL_HOMEPAGE="https://www.regione.sicilia.it"
 readonly URL_CSV_ANAGRAFICA_DIGHE="https://raw.githubusercontent.com/opendatasicilia/emergenza-idrica-sicilia/refs/heads/main/risorse/sicilia_dighe_anagrafica.csv"
-readonly AI_RPM=5
-readonly AI_RPD=20
-readonly AI_RPD_LIMIT=19   # soglia oltre la quale si cambia modello (free tier = 20 RPD)
-readonly AI_SLEEP=60
+readonly AI_RPM=5          # max richieste/minuto per modello (Gemini free tier)
+readonly AI_RPD=20         # max richieste/giorno per modello (Gemini free tier)
+readonly AI_RPD_LIMIT=19   # soglia di sicurezza: a 19 chiamate/giorno si cambia modello/key (e poi si esce)
+readonly AI_SLEEP=60       # attesa di default (s) quando l'API segnala un rate-limit senza retryDelay
 # LLM_MODEL_LITE viene usato SOLO come fallback dalla normalize_pdf_date,
 # se la regex non riesce a estrarre la data dal nome file. In pratica
 # raramente o mai (regex copre il 100% dei pattern storici noti).
@@ -41,10 +41,13 @@ readonly LLM_MODEL_PRIMARY="gemini-2.5-flash"
 readonly LLM_MODEL_FALLBACK="gemini-3-flash-preview"
 readonly N_ATTEMPTS=2
 
-# contatori per quota giornaliera per-modello (gestiti in pick_ai_model / count_ai_call)
+# contatori per quota giornaliera (RPD) per-modello (gestiti in pick_ai_model / count_ai_call)
 n_ai_primary=0
 n_ai_fallback=0
 current_ai_model="$LLM_MODEL_PRIMARY"
+
+# timestamp (epoch) delle chiamate AI recenti: finestra scorrevole per il limite RPM
+ai_call_times=()
 
 # rotazione API key: il workflow esporta GEMINI_KEY (già impostata via `llm keys set gemini`)
 # ed eventualmente GEMINI_KEY_2, GEMINI_KEY_3, ... Quando i contatori di entrambi i modelli
@@ -93,7 +96,7 @@ pick_ai_model() {
 }
 
 count_ai_call() {
-   # Incrementa il contatore del modello attualmente in uso.
+   # Incrementa il contatore RPD (richieste/giorno) del modello in uso.
    if [ "$current_ai_model" = "$LLM_MODEL_PRIMARY" ]; then
       n_ai_primary=$((n_ai_primary+1))
    else
@@ -101,12 +104,187 @@ count_ai_call() {
    fi
 }
 
+exhaust_current_model() {
+   # Marca il modello attualmente in uso come "quota giornaliera esaurita".
+   # Si usa quando è l'API stessa a rispondere 429/RESOURCE_EXHAUSTED: al giro
+   # successivo pick_ai_model passerà al fallback o ruoterà la API key.
+   if [ "$current_ai_model" = "$LLM_MODEL_PRIMARY" ]; then
+      n_ai_primary=$AI_RPD_LIMIT
+   else
+      n_ai_fallback=$AI_RPD_LIMIT
+   fi
+}
+
+throttle_rpm() {
+   # Limitatore RPM a finestra scorrevole di 60 secondi.
+   #
+   # Tiene in `ai_call_times` i timestamp delle chiamate fatte negli ultimi 60s.
+   # Se la finestra è già piena (>= AI_RPM chiamate) dorme ESATTAMENTE il tempo
+   # che manca alla chiamata più vecchia per uscire dalla finestra — niente
+   # sleep fisso da 60s "a caso". Dato che ogni estrazione dura decine di
+   # secondi, in pratica quasi mai serve davvero dormire.
+   # Infine registra il timestamp della chiamata che sta per essere autorizzata.
+   local now cutoff oldest wait kept=()
+   now=$(date +%s)
+   cutoff=$((now - 60))
+   for t in "${ai_call_times[@]}"; do
+      [ "$t" -gt "$cutoff" ] && kept+=("$t")
+   done
+   ai_call_times=("${kept[@]}")
+   if [ "${#ai_call_times[@]}" -ge "$AI_RPM" ]; then
+      oldest=${ai_call_times[0]}
+      wait=$(( oldest + 61 - now ))
+      if [ "$wait" -gt 0 ]; then
+         echo "   ⏳ Limite $AI_RPM richieste/minuto raggiunto: attendo ${wait}s..." >&2
+         sleep "$wait"
+      fi
+   fi
+   ai_call_times+=("$(date +%s)")
+}
+
+classify_ai_error() {
+   # Classifica una chiamata `llm` fallita a partire dal testo di errore
+   # (stderr + eventuale stdout). Stampa una di queste etichette:
+   #   rpd    -> superato il limite GIORNALIERO del modello (429)
+   #   rpm    -> superato il limite al MINUTO (429)
+   #   quota  -> 429 / quota esaurita non meglio specificato
+   #   other  -> errore NON di quota (rete, timeout, 5xx, output malformato...)
+   local err=$1
+   if echo "$err" | grep -qiE 'per.?day|perday|per project per day|daily'; then
+      echo rpd
+   elif echo "$err" | grep -qiE 'per.?minute|perminute|per project per minute'; then
+      echo rpm
+   elif echo "$err" | grep -qiE '(^|[^0-9])429([^0-9]|$)|resource[_ ]?exhausted|too many requests|quota'; then
+      echo quota
+   else
+      echo other
+   fi
+}
+
+parse_retry_delay() {
+   # Estrae il retryDelay (in secondi) suggerito dall'API in un errore 429.
+   # Se assente ritorna AI_SLEEP. Aggiunge 2s di margine.
+   local err=$1 d
+   d=$(echo "$err" | grep -oiE 'retry[-_ ]?delay[^0-9]*[0-9]+' | grep -oE '[0-9]+' | head -1)
+   if [ -n "$d" ] && [ "$d" -gt 0 ] 2>/dev/null; then
+      echo $((d + 2))
+   else
+      echo "$AI_SLEEP"
+   fi
+}
+
+ai_call() {
+   # Wrapper unico per le chiamate a `llm`. Va invocato con gli argomenti di
+   # `llm` SENZA `-m` (il modello lo sceglie questa funzione).
+   #
+   # Concentra in un solo punto:
+   #   - selezione del modello in base alla quota giornaliera per-modello
+   #   - throttling RPM a finestra scorrevole (dorme solo il minimo necessario)
+   #   - conteggio della quota giornaliera (RPD)
+   #   - controllo dello STATO della risposta: se l'API risponde 429 /
+   #     RESOURCE_EXHAUSTED il modello viene marcato come saturo e si passa al
+   #     fallback o si ruota la API key — così non si sprecano decine di
+   #     chiamate tutte fuori quota.
+   #
+   # L'output del modello finisce nella variabile globale `ai_response`.
+   #
+   # Codici di ritorno:
+   #   0 -> ok            ($ai_response valorizzata)
+   #   1 -> errore generico NON di quota (il chiamante può ritentare)
+   #   2 -> quota esaurita su TUTTI i modelli/key (il chiamante deve uscire)
+   local err_file rc err_text kind wait rpm_retries=0
+   err_file=$(mktemp)
+
+   while true; do
+      # 1) scelgo il modello rispettando la quota giornaliera locale
+      if ! pick_ai_model; then rm -f "$err_file"; return 2; fi
+
+      # 2) rispetto il limite al minuto (dorme solo se davvero necessario)
+      throttle_rpm
+
+      # 3) eseguo la chiamata catturando stdout, stderr ed exit code
+      rc=0
+      ai_response=$(llm -m "$selected_model" "$@" 2>"$err_file") || rc=$?
+      count_ai_call
+
+      # 4) chiamata riuscita
+      if [ $rc -eq 0 ]; then rm -f "$err_file"; return 0; fi
+
+      # 5) chiamata fallita: controllo lo stato/errore restituito dall'API
+      err_text="$(cat "$err_file")"$'\n'"$ai_response"
+      kind=$(classify_ai_error "$err_text")
+      case "$kind" in
+         rpd|quota)
+            # l'API dice che la quota del modello è finita: inutile insistere
+            echo "   🚫 $selected_model: quota giornaliera esaurita lato API (429). Cambio modello/key." >&2
+            exhaust_current_model
+            rpm_retries=0
+            ;;
+         rpm)
+            rpm_retries=$((rpm_retries+1))
+            if [ "$rpm_retries" -gt 2 ]; then
+               echo "   ⚠️  $selected_model: rate-limit al minuto persistente, rinuncio a questa chiamata." >&2
+               rm -f "$err_file"; return 1
+            fi
+            wait=$(parse_retry_delay "$err_text")
+            echo "   ⏳ $selected_model: rate-limit al minuto, attendo ${wait}s e ritento..." >&2
+            sleep "$wait"
+            ;;
+         *)
+            # errore non di quota: lo gestisce il chiamante come tentativo fallito
+            echo "   ❌ Errore chiamata AI ($selected_model): $(echo "$err_text" | tr '\n' ' ' | cut -c1-200)" >&2
+            rm -f "$err_file"; return 1
+            ;;
+      esac
+   done
+}
+
 
 
 #----------------- functions -----------------#
 
-# importing external 
+# importing external
 source ./scripts/functions.sh
+
+#----------------- git helpers (commit incrementale) -----------------#
+# In CI rendiamo durevole il lavoro su OGNI pdf processato: un crash dello
+# script, un timeout del runner o una cancellazione manuale a metà run NON
+# devono far perdere i pdf già estratti. Fuori dalla CI (AUTO_COMMIT diverso
+# da "true") sono no-op, così i run locali non toccano il repo.
+# GITHUB_ACTIONS="true" è impostata automaticamente da GitHub Actions.
+AUTO_COMMIT=${AUTO_COMMIT:-${GITHUB_ACTIONS:-false}}
+
+git_safe_push() {
+   # Push tollerante: se nel frattempo il remoto è avanzato (run successivo,
+   # commit dei verbali, push manuale...) fa rebase e ritenta. Non fa MAI
+   # fallire lo script: in caso di insuccesso i dati restano committati in
+   # locale e verranno pushati al giro dopo.
+   local attempt
+   for attempt in 1 2 3; do
+      if git push 2>/dev/null; then return 0; fi
+      echo "   ⚠️  push #$attempt non riuscito: rebase sul remoto e ritento..." >&2
+      git pull --rebase --autostash 2>/dev/null || true
+      sleep $((attempt * 3))
+   done
+   echo "   ❌ push non riuscito dopo 3 tentativi: i dati restano committati in locale." >&2
+   return 1
+}
+
+commit_progress() {
+   # Committa (e pusha) lo stato attuale dei dati. No-op se AUTO_COMMIT != true
+   # o se non c'è nulla di nuovo da committare. set -e safe: un fallimento di
+   # commit/push non deve mai interrompere il processing dei PDF.
+   # NB: risorse/tmp è gitignorato, quindi `git add -A` non include i csv
+   # temporanei delle estrazioni in corso.
+   local msg=$1
+   [ "$AUTO_COMMIT" = "true" ] || return 0
+   git add -A
+   if git diff --cached --quiet; then
+      return 0   # niente di nuovo da committare
+   fi
+   git commit -q -m "$msg" && git_safe_push || true
+   return 0
+}
 
 # custom
 
@@ -221,6 +399,7 @@ try_extraction() {
    local new_filename=$1
    local max_attempts=$2
    local success=false
+   local rc=0
    
    # creo (se non esiste già) la cartella per i csv temporanei
    mkdir -p ./risorse/tmp
@@ -231,16 +410,15 @@ try_extraction() {
       # FIRST EXTRACTION (with anagrafica)
       system_prompt="Il tuo compito è quello di estrarre dati da un pdf allegato e di incrociarli con i dati di un'anagrafica csv passata come prompt. Dalla tabella pdf, individua la data di rilevazione e poi estrai tutti i dati della colonna invaso (chiamala 'diga_pdf') e quelli della colonne relative alla quota autorizzata, volume autorizzato, quota, volume, volume utile netto per utilizzatori (chiamale rispettivamente: quota_autorizzata, volume_autorizzato, quota, volume, volume_utile). Arricchisci la tabella aggiungendo una colonna chiamata 'data' che abbia in ogni riga la data della rilevazione più recente a cui si riferiscono i dati nel formato yyyy-mm-dd. Dal CSV, estrai la colonna 'diga' che chiamerai 'diga_anagrafica' popolata con il nome corretto (da includere esattamente nell'output). Confronta le colonne 'diga_pdf' e 'diga_anagrafica' per fare in modo di arricchire il dataset e assegnare a ogni diga il corrispondente codice identificativo presente nella colonna 'cod' del csv. Talvolta è presente una diga chiamata ogliastro che coincide don sturzo; se questa diga non è presente nel pdf, non la includere nel tuo output. Assicurati di estrarre correttamente i dati relativi a tutte le dighe presenti nel pdf. Se il PDF contiene la diga castello, assicurati di estrarre i dati anche di questa diga. In ultimo, cestina la colonna 'diga_pdf' e  nell'output includi i valori di 'diga_anagrafica' sotto il nome di 'diga'. Attenzione ad attribuire correttamente il codice al nome della diga secondo l'anagrafica csv. Se l'anagrafica csv contiene più dighe della tabella pdf, l'output deve contenere solo ed esclusivamente le dighe presenti nel file pdf. L'output deve avere questa struttura 'cod,diga,data,quota_autorizzata,volume_autorizzato,quota,volume,volume_utile' e non deve avere righe vuote finali. Tieni presente che i valori di 'diga' devono essere esattamente coincidenti con quelli di 'diga_anagrafica'. I separatori di decimali dei volumi devono essere i punti e non le virgole (correggi la sintassi dei numeri da formato italiano a formato internazionale). Se l'output csv contiene righe finali senza valori, rimuovile."
 
-      check_limits $AI_RPM $AI_SLEEP
-      if ! pick_ai_model; then echo "   🛑 Quota giornaliera esaurita per tutte le API key."; return 2; fi
-      model="$selected_model"
-      llm_response=$(cat risorse/sicilia_dighe_anagrafica.csv | llm -x \
-      -m "$model" \
+      ai_call -x \
       -s "$system_prompt" \
+      "$(cat risorse/sicilia_dighe_anagrafica.csv)" \
       -a "./risorse/pdf/volumi-giornalieri/$new_filename.pdf" \
-      -o temperature 0.11) \
-      || { echo "   ❌ Tentativo $attempt: Errore durante l'estrazione dati (prima estrazione)"; count_ai_call; n_ai=$((n_ai+1)); continue; }
-      count_ai_call; n_ai=$((n_ai+1))
+      -o temperature 0.11
+      rc=$?
+      if [ $rc -eq 2 ]; then echo "   🛑 Quota AI giornaliera esaurita su tutti i modelli/key."; return 2; fi
+      if [ $rc -ne 0 ]; then echo "   ❌ Tentativo $attempt: Errore durante l'estrazione dati (prima estrazione)"; continue; fi
+      llm_response=$ai_response
 
       # controlla se llm_response è vuota
       if [ -z "$llm_response" ]; then
@@ -275,17 +453,15 @@ try_extraction() {
 
       prompt="Dalla tabella pdf, individua la data di rilevazione e poi estrai tutti i dati della colonna invaso e quelli della colonne relative alla quota autorizzata, volume autorizzato, quota, volume, volume utile netto per utilizzatori (chiamale rispettivamente: quota_autorizzata, volume_autorizzato, quota, volume, volume_utile). Arricchisci la tabella aggiungendo una colonna chiamata 'data' che abbia in ogni riga la data della rilevazione più recente a cui si riferiscono i dati nel formato yyyy-mm-dd. L'output deve avere questa struttura 'cod,diga,data,quota_autorizzata,volume_autorizzato,quota,volume,volume_utile' e non deve avere righe vuote finali. I separatori di decimali dei volumi devono essere i punti e non le virgole (correggi la sintassi dei numeri da formato italiano a formato internazionale). Se l'output csv contiene righe finali senza valori, rimuovile."
 
-      check_limits $AI_RPM $AI_SLEEP
-      if ! pick_ai_model; then echo "   🛑 Quota giornaliera esaurita per tutte le API key."; return 2; fi
-      model="$selected_model"
-      llm_response=$(llm -x \
-      -m "$model" \
+      ai_call -x \
       -s "$system_prompt" \
       "$prompt" \
       -a "./risorse/pdf/volumi-giornalieri/$new_filename.pdf" \
-      -o temperature 0.1) \
-      || { echo "   ❌ Tentativo $attempt: Errore durante l'estrazione dati (seconda estrazione)"; count_ai_call; n_ai=$((n_ai+1)); continue; }
-      count_ai_call; n_ai=$((n_ai+1))
+      -o temperature 0.1
+      rc=$?
+      if [ $rc -eq 2 ]; then echo "   🛑 Quota AI giornaliera esaurita su tutti i modelli/key."; return 2; fi
+      if [ $rc -ne 0 ]; then echo "   ❌ Tentativo $attempt: Errore durante l'estrazione dati (seconda estrazione)"; continue; fi
+      llm_response=$ai_response
 
       # controlla se llm_response è vuota
       if [ -z "$llm_response" ]; then
@@ -324,15 +500,14 @@ try_extraction() {
 
       prompt="Ti inserisco di seguito due CSV. Il secondo CSV è probabile che abbia delle dighe in più che nel primo file non sono censite. Fammi un piccolo report di validazione sintetico in json con due chiavi. Il json deve contenere le key 'valid' (booleana) e 'summary'. La key 'summary' deve contenere il motivo discorsivo in italiano del perchè il confronto è fallito (se è fallito). Se tra i due file csv ci sono discrepanze nel valore dei volumi allora il report è invalido e la key 'valid' deve contenere il valore false. Nel summary del report includi pure i dettagli sulle eventuali dighe mancanti nel primo file. Includi pure una sezione dedicata alla somiglianza dei nomi delle dighe. Se due dighe presentano nomi diversi ma simili, non è un errore e questo non inficia la key 'valid'. La presenza di nomi diversi ma simili non inficia la validità ( esempio: Se non ci sono discrepanze sui valori dei volumi, ci sono alcuni nomi di dighe simili, allora il report è valid: true). Di seguito ti riporto esempi di dighe con nomi simili: 'leone' e 'piano del leone' indicano la stessa diga. Assicurati di non considerare come errore le discrepanze nei nomi delle dighe. Il primo csv (prima estrazione) è il seguente: <primo_csv> $(cat ./risorse/tmp/$new_filename.csv) <\primo_csv>. Il secondo csv (seconda estrazione) è il seguente: <secondo_csv> $(cat ./risorse/tmp/2_$new_filename.csv) <\secondo_csv>"
 
-      check_limits $AI_RPM $AI_SLEEP
-      if ! pick_ai_model; then echo "   🛑 Quota giornaliera esaurita per tutte le API key."; return 2; fi
-      model="$selected_model"
-      llm_response=$(llm -m "$model" \
+      ai_call \
       -s "$system_prompt" \
       "$prompt" \
-      -o json_object 1) \
-      || { echo "❌ Tentativo $attempt: Errore durante il confronto dati"; count_ai_call; n_ai=$((n_ai+1)); continue; }
-      count_ai_call; n_ai=$((n_ai+1))
+      -o json_object 1
+      rc=$?
+      if [ $rc -eq 2 ]; then echo "   🛑 Quota AI giornaliera esaurita su tutti i modelli/key."; return 2; fi
+      if [ $rc -ne 0 ]; then echo "   ❌ Tentativo $attempt: Errore durante il confronto dati"; continue; fi
+      llm_response=$ai_response
 
       # salvo il report di validazione
       echo "$llm_response" > $PATH_EXTRACTION_REPORT
@@ -493,7 +668,7 @@ fi
 mapfile -t pdfs_array <<< "$new_pdfs"
 
 # inizializzo contatori
-n_pdf=0; n_ai=0
+n_pdf=0
 
 # extract csv from pdfs; process each pdf
 for line in "${pdfs_array[@]}"; do
@@ -520,6 +695,9 @@ for line in "${pdfs_array[@]}"; do
       # aggiungo il pdf alla lista dei pdf scaricati
       echo "$line" >> $PATH_PDFS_LIST
       echo "   📦 Aggiornata la lista dei PDF processati"
+      # commit incrementale: da qui il lavoro su questo PDF è al sicuro anche
+      # se la run si interrompe (crash/timeout/cancellazione) sul prossimo file.
+      commit_progress "[volumi giornalieri] dati $new_filename ($(date --iso-8601))"
    elif [ $extraction_rc -eq 2 ]; then
       # quota giornaliera AI esaurita su entrambi i modelli: stop pulito
       echo "   🛑 Interrompo il processing dei PDF: riprenderò domani con quota fresca."
@@ -568,6 +746,9 @@ if [ -d "./risorse/tmp" ]; then
 
    # temp folder
    rm -r "./risorse/tmp"
+
+   # commit finale: storico ricostruito e check 3 superato.
+   commit_progress "[volumi giornalieri] aggiornato storico ($(date --iso-8601))"
 fi
 
 echo ""

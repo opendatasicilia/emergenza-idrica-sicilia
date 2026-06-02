@@ -5,6 +5,13 @@ on:
     - cron: '0 6,13,17,20 * * *'
   workflow_dispatch:
 
+# Serializza i run: mai due esecuzioni in parallelo che si contendono il push.
+# cancel-in-progress: false => un nuovo cron NON uccide un run in corso (utile
+# durante il recupero dello storico), ma lo mette in coda.
+concurrency:
+  group: download-convert-pdf
+  cancel-in-progress: false
+
 jobs:
   convert:
     runs-on: ubuntu-latest
@@ -96,11 +103,23 @@ jobs:
       #     rm ./risorse/msgs/new_volumi_giornalieri.md
       #     echo "Telegram message (new data volumi giornalieri) sent"
 
+      # Rete di sicurezza: lo script committa già in modo incrementale ad ogni
+      # PDF processato. Questo step gira SEMPRE (if: always()) e raccoglie
+      # qualsiasi cosa lo script non sia riuscito a pushare — anche se lo step
+      # precedente è fallito, frictionless ha dato errore o il job è stato
+      # cancellato. Push con rebase+retry per tollerare un remoto avanzato.
       - name: Commit and push new data (giornalieri)
+        if: always()
         run: |-
           git add -A
           git commit -m "[volumi giornalieri] Aggiornati i dati dei volumi invasati $(date --iso-8601)" || exit 0
-          git push
+          for i in 1 2 3; do
+            git push && exit 0
+            echo "⚠️ push #$i non riuscito: rebase sul remoto e ritento..."
+            git pull --rebase --autostash || true
+            sleep $((i * 3))
+          done
+          echo "❌ push non riuscito dopo 3 tentativi"; exit 1
 
       - name: Download and summarize PDF document (verbali) 
         run: chmod +x ./scripts/check_convert_verbali.sh && ./scripts/check_convert_verbali.sh
@@ -115,7 +134,13 @@ jobs:
         run: |-
           git add -A
           git commit -m "[verbali] Creato nuovo blog post $(date --iso-8601)" || exit 0
-          git push
+          for i in 1 2 3; do
+            git push && exit 0
+            echo "⚠️ push #$i non riuscito: rebase sul remoto e ritento..."
+            git pull --rebase --autostash || true
+            sleep $((i * 3))
+          done
+          echo "❌ push non riuscito dopo 3 tentativi"; exit 1
 
       - name: Trigger to deploy MkDocs
         if: ${{steps.new_doc.outcome == 'success' }}
