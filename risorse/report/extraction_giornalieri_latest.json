@@ -1,5 +1,5 @@
 {
   "valid": true,
-  "summary": "Il confronto dei dati tra i due file CSV è andato a buon fine. Tutti i volumi riportati per le 13 dighe corrispondono esattamente in entrambe le estrazioni. Sebbene siano state riscontrate differenze nei nomi delle dighe (ad esempio 'Leone' vs 'PIANO DEL LEONE', 'Ragoleto' vs 'RAGOLETO (Dirillo)' e 'Garcia (M. Francese)' vs 'GARCIA (Mario Francese)'), tali discrepanze sono state considerate trascurabili ai fini della validità come da istruzioni. Inoltre, contrariamente alle previsioni, non sono state rilevate dighe aggiuntive nel secondo file: entrambi i file contengono lo stesso set di 13 infrastrutture.",
-  "date": "2026-06-04"
+  "summary": "Il confronto tra i due file CSV è avvenuto con successo. Tutti i valori dei volumi per le dighe corrispondenti coincidono esattamente. Sono state riscontrate discrepanze puramente formali nei nomi delle dighe (es. 'Leone' vs 'PIANO DEL LEONE', 'Garcia (M. Francese)' vs 'GARCIA (Mario Francese)', 'Ragoleto' vs 'RAGOLETO (Dirillo)'), che come da istruzioni non inficiano la validità del report. Entrambi i file contengono lo stesso numero di dighe (13 record), pertanto non risultano dighe mancanti nel primo file rispetto al secondo in questa estrazione.",
+  "date": "2026-06-13"
 }

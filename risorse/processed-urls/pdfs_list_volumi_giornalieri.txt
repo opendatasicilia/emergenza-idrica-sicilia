@@ -382,3 +382,10 @@
 /sites/default/files/2026-01/2026-01-7-volume_giornaliero_potabile.pdf
 /sites/default/files/2026-01/2026-01-6-volume_giornaliero_potabile.pdf
 /sites/default/files/2026-01/2026-01-3-volume_giornaliero_potabile.pdf
+/sites/default/files/2026-02/2026-02-11-volume_giornaliero_potabile.pdf
+/sites/default/files/2026-02/2026-02-10-volume_giornaliero_potabile.pdf
+/sites/default/files/2026-01/2026-01-28-volume_giornaliero_potabile.pdf
+/sites/default/files/2026-01/2026-01-27-volume_giornaliero_potabile.pdf
+/sites/default/files/2026-01/2026-01-26-volume_giornaliero_potabile.pdf
+/sites/default/files/2026-01/2026-01-25-volume_giornaliero_potabile.pdf
+/sites/default/files/2026-01/2026-01-24-volume_giornaliero_potabile.pdf
